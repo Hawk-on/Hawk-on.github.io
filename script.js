@@ -5,55 +5,55 @@ const translations = {
             about: "Om meg",
             experience: "Erfaring",
             education: "Utdanning",
-            skills: "Ferdigheiter", // Ferdigheter -> Ferdigheiter
+            skills: "Ferdigheiter",
             contact: "Kontakt"
         },
         hero: {
-            greeting: "Hei, eg er", // jeg -> eg
-            title: "Full-Stack Utviklar & Teknologientusiast", // Utvikler -> Utviklar
-            description: "Spesialist innan .NET, Azure og moderne webutvikling. Eg brenn for å lære nye domene og byggje robuste løysingar som skaper verdi.", // innen -> innan, Jeg brenner -> Eg brenn, lære -> lære, domener -> domene, bygge -> byggje, løsninger -> løysingar
+            greeting: "Hei, eg er",
+            title: "Full-Stack Utviklar",
+            description: ".NET, Azure og moderne webutvikling. Eg brenn for å lære nye domene og byggje robuste løysingar som skapar verdi.",
             contact: "Kontakt meg",
-            experience: "Sjå erfaring" // Se -> Sjå
+            experience: "Sjå erfaring"
         },
         section: {
             about: "Om meg",
             experience: "Arbeidserfaring",
             education: "Utdanning",
-            skills: "Ferdigheiter", // Ferdigheter -> Ferdigheiter
+            skills: "Ferdigheiter",
             contact: "Ta kontakt"
         },
         about: {
-            p1: "Eg bur med kone og barn i Bergen, men kjem opphavleg frå Osterøy. På fritida likar eg å byggje PC og spele dataspel, men eg er også veldig glad i å gå turar i fjell og skog, samt fiske og jakte.", // Jeg bor -> Eg bur, kommer opprinnelig -> kjem opphavleg, fra -> frå, fritiden -> fritida, liker jeg -> likar eg, bygge -> byggje, spille -> spele, gå turer -> gå turar
-            p2: "Det som driv meg innan programutvikling er gleda av å lære nye domene og teknologiar. Det fantastiske med dette faget er variasjonen og den konstante straumen av nye ting å lære." // driver -> driv, innen -> innan, gleden -> gleda, domener -> domene, teknologier -> teknologiar, strømmen -> straumen
+            p1: "Eg bur med kone og barn i Bergen, men kjem opphavleg frå Osterøy. På fritida likar eg å byggje PC og spele dataspel, men eg er også veldig glad i å gå turar i fjell og skog, samt fiske og jakte.",
+            p2: "Det som driv meg innan programutvikling er gleda av å lære nye domene og teknologiar. Det fantastiske med dette faget er variasjonen og den konstante straumen av nye ting å lære."
         },
         job: {
-            developer: "Utviklar", // Utvikler -> Utviklar
-            fullstack: "Full-Stack Utviklar" // Utvikler -> Utviklar
+            developer: "Utviklar",
+            fullstack: "Full-Stack Utviklar"
         },
         job1: {
-            date: "Juni 2024 - No", // Nå -> No
+            date: "Juni 2024 - No",
             desc: "Arbeider med moderne helseteknologi, inkludert ny plattform på Azure Arc og Kubernetes."
         },
         job2: {
             date: "Nov 2021 - Mai 2024",
-            desc: "Jobba med genetikkportalen.no og simple.no." // Jobbet -> Jobba
+            desc: "Jobba med genetikkportalen.no og simple.no."
         },
         job3: {
             date: "Aug 2019 - Nov 2021",
-            desc: "Jobba med sjølvbeteningsløysing (Interact) og prosessflytverktøy (Interact Flow)." // Jobbet -> Jobba, selvbetjeningsløsning -> sjølvbeteningsløysing
+            desc: "Jobba med sjølvbeteningsløysing (Interact) og prosessflytverktøy (Interact Flow)."
         },
         job4: {
             date: "Des 2012 - Aug 2019",
-            title: "Vektar", // Vekter -> Vektar
-            desc: "Hadde mange forskjellige oppdrag. Objektleiar, mobilvektar, områdevektar, arrangementsvakthald." // Objektleder -> Objektleiar, vekter -> vektar
+            title: "Vektar",
+            desc: "Hadde mange forskjellige oppdrag. Objektleiar, mobilvektar, områdevektar, arrangementsvakthald."
         },
         edu1: {
             date: "Aug 2015 - Juni 2019",
-            title: "Bachelor i informasjonsvitskap" // informasjonsvitenskap -> informasjonsvitskap
+            title: "Bachelor i informasjonsvitskap"
         },
         edu2: {
             date: "Aug 2011 - Des 2012",
-            title: "Grunnskolelærarutdanning 5-10" // lærer -> lærar
+            title: "Grunnskolelærarutdanning 5-10"
         },
         edu3: {
             date: "Aug 2009 - Juni 2011",
@@ -66,17 +66,17 @@ const translations = {
         },
         skills: {
             languages: "Språk",
-            tech: "Teknologiar" // Teknologier -> Teknologiar
+            tech: "Teknologiar"
         },
         lang: {
             norwegian: "Norsk (Nynorsk)",
             english: "Engelsk (God)"
         },
         contact: {
-            desc: "Eg er alltid interessert i ein hyggeleg prat om teknologi og moglegheiter." // Jeg -> Eg, en hyggelig -> ein hyggeleg, muligheter -> moglegheiter
+            desc: "Eg er alltid interessert i ein hyggeleg prat om teknologi og moglegheiter."
         },
         footer: {
-            text: "&copy; 2025 Håkon Høie Lønning. Laga med HTML, CSS og JS." // Bygget -> Laga, 2024 -> 2025 (User made this change manually just before, keeping it)
+            text: "&copy; 2025 Håkon Høie Lønning. Laga med HTML, CSS og JS."
         }
     },
     en: {
@@ -89,7 +89,7 @@ const translations = {
         },
         hero: {
             greeting: "Hi, I'm",
-            title: "Full-Stack Developer & Tech Enthusiast",
+            title: "Full-Stack Developer",
             description: "Specialist in .NET, Azure, and modern web development. I am passionate about learning new domains and building robust solutions that create value.",
             contact: "Contact Me",
             experience: "See Experience"
@@ -160,14 +160,11 @@ const translations = {
     }
 };
 
-// Language Handling
-let currentLang = 'no'; // Default fallback
+let currentLang = 'no';
 
 function initLanguage() {
-    // Force default to Norwegian (Nynorsk)
     currentLang = 'no';
 
-    // Apply lang
     updateContent();
     updateLangButton();
 }
@@ -181,7 +178,6 @@ function toggleLanguage() {
 function updateContent() {
     document.documentElement.lang = currentLang;
 
-    // Update all elements with data-i18n
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         const value = key.split('.').reduce((obj, i) => obj[i], translations[currentLang]);
@@ -195,12 +191,10 @@ function updateContent() {
 function updateLangButton() {
     const btn = document.getElementById('lang-toggle');
     if (btn) {
-        // Show the option we can switch TO
         btn.textContent = currentLang === 'no' ? 'EN' : 'NO';
     }
 }
 
-// Event Listener for Language Toggle
 document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
 
@@ -211,8 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Existing Animation & Logic
-// Smooth Scroll for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -224,7 +216,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
 
-            // Close mobile menu if open
             const navLinks = document.querySelector('.nav-links');
             const hamburger = document.querySelector('.hamburger');
             if (navLinks.classList.contains('active')) {
@@ -235,7 +226,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -245,7 +235,6 @@ if (hamburger) {
     });
 }
 
-// Intersection Observer for Reveal Animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"
@@ -266,7 +255,6 @@ animatedElements.forEach(el => {
     observer.observe(el);
 });
 
-// Navbar Scroll Effect
 window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
     if (window.scrollY > 50) {
