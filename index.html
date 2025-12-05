@@ -1,80 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Håkon Hole Lønning - Curriculum Vitae</title>
+    <meta name="description" content="Håkon Hole Lønning - Full-Stack Developer | .NET & Azure Specialist">
+    <title>Håkon Hole Lønning - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-
-    <div class="container">
-        <header>
-            <h1>Håkon Hole Lønning</h1>
-            <p>Software Developer at AVO Consulting</p>
-            <div class="contact-info">
-                <p><a href="mailto:hhl1987@hotmail.com">hhl1987@hotmail.com</a> | <a href="https://github.com/Hawk-on">GitHub Profile</a></p>
-                <!-- This is a sample badge. For best results, generate your own from your LinkedIn public profile settings. -->
-                <div class="badge-base LI-profile-badge" data-locale="no" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="hawkon" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://no.linkedin.com/in/hawkon?trk=profile-badge">Håkon Hole Lønning</a></div>
-                <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-            </div>
-        </header>
-
-        <main>
-            <section id="summary">
-                <h2>Professional Summary</h2>
-                <p>
-                    Software developer with a passion for creating and learning. Currently working at AVO Consulting with RPA and Intelligent Automation.
-                </p>
-            </section>
-
-            <section id="experience">
-                <h2>Work Experience</h2>
-                <div class="job">
-                    <h3>Software Developer</h3>
-                    <p><strong>AVO Consulting</strong> | Oslo, Norway | Aug 2021 - Present</p>
-                    <ul>
-                        <li>Working with RPA and Intelligent Automation.</li>
-                        <li>Primarily using UiPath and C#.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Summer Intern</h3>
-                    <p><strong>AVO Consulting</strong> | Oslo, Norway | Jun 2021 - Aug 2021</p>
-                    <ul>
-                        <li>Developed a solution in C# and .NET for आसान (Aasaan), a non-profit organization that helps refugees in India.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Teaching Assistant</h3>
-                    <p><strong>Norwegian University of Science and Technology (NTNU)</strong> | Trondheim, Norway | Jan 2019 - Jun 2021</p>
-                    <ul>
-                        <li>Teaching assistant in the courses ITGK, TDT4109 and TDT4140.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="education">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <h3>Master's degree, Computer Science</h3>
-                    <p><strong>Norwegian University of Science and Technology (NTNU)</strong> | 2016 - 2021</p>
-                </div>
-            </section>
-
-            <section id="skills">
-                <h2>Skills</h2>
-                <ul class="skills-list">
-                    <li><strong>Languages & Frameworks:</strong> C#, .NET, Python, Java, SQL</li>
-                    <li><strong>Tools & Platforms:</strong> UiPath, Git, Azure</li>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">HHL</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about" data-i18n="nav.about">Om meg</a></li>
+                    <li><a href="#experience" data-i18n="nav.experience">Erfaring</a></li>
+                    <li><a href="#education" data-i18n="nav.education">Utdanning</a></li>
+                    <li><a href="#skills" data-i18n="nav.skills">Ferdigheter</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
                 </ul>
-            </section>
-        </main>
+                <button id="lang-toggle" class="lang-btn" aria-label="Switch Language">EN</button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <footer>
-            <p>&copy; 2024 Håkon Hole Lønning. All rights reserved.</p>
-        </footer>
-    </div>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <p class="hero-greeting" data-i18n="hero.greeting">Hei, eg er</p>
+                    <h1 class="hero-name">Håkon Hole Lønning</h1>
+                    <h2 class="hero-title" data-i18n="hero.title">Full-Stack Utviklar & Teknologientusiast</h2>
+                    <p class="hero-description" data-i18n="hero.description">
+                        Spesialist innan .NET, Azure og moderne webutvikling. Eg brenn for å lære nye domene og byggje
+                        robuste løysingar som skaper verdi.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary" data-i18n="hero.contact">Kontakt meg</a>
+                        <a href="#experience" class="btn btn-secondary" data-i18n="hero.experience">Sjå erfaring</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/img/me.jpg" alt="Håkon Hole Lønning" class="profile-img">
+                </div>
+            </div>
+        </section>
 
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section.about">Om meg</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-i18n="about.p1">
+                            Jeg bor med kone og barn i Bergen, men kommer opprinnelig fra Osterøy. På fritiden liker jeg
+                            å bygge PC og spille dataspill, men jeg er også veldig glad i å gå turer i fjell og skog,
+                            samt fiske og jakte.
+                        </p>
+                        <p data-i18n="about.p2">
+                            Det som driver meg innen programutvikling er gleden av å lære nye domener og teknologier.
+                            Det fantastiske med dette faget er variasjonen og den konstante strømmen av nye ting å lære.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section.experience">Arbeidserfaring</h2>
+                <div class="timeline">
+                    <!-- Job 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-i18n="job1.date">Juni 2024 - Nå</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="job.developer">Utvikler</h3>
+                            <h4>Folkehelseinstituttet | Bergen</h4>
+                            <p data-i18n="job1.desc">Arbeider med moderne helseteknologi, inkludert ny plattform på
+                                Azure Arc og Kubernetes.</p>
+                            <div class="tags">
+                                <span>ASP.NET Core</span>
+                                <span>C#.NET</span>
+                                <span>Azure Arc</span>
+                                <span>Kubernetes</span>
+                                <span>TypeScript</span>
+                                <span>Angular</span>
+                                <span>Azure DevOps</span>
+                                <span>Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-i18n="job2.date">Nov 2021 - Mai 2024</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="job.developer">Utvikler</h3>
+                            <h4>Helse Vest IKT AS | Bergen</h4>
+                            <p data-i18n="job2.desc">Jobbet med genetikkportalen.no og simple.no.</p>
+                            <div class="tags">
+                                <span>Angular</span>
+                                <span>.NET Core</span>
+                                <span>Azure AD</span>
+                                <span>Bicep</span>
+                                <span>Web API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-i18n="job3.date">Aug 2019 - Nov 2021</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="job.fullstack">Full-Stack Utvikler</h3>
+                            <h4>Acos AS | Øygarden</h4>
+                            <p data-i18n="job3.desc">Jobbet med selvbetjeningsløsning (Interact) og prosessflytverktøy
+                                (Interact Flow).</p>
+                            <div class="tags">
+                                <span>VB.NET</span>
+                                <span>Angular</span>
+                                <span>TypeScript</span>
+                                <span>ASP.NET Core</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date" data-i18n="job4.date">Des 2012 - Aug 2019</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="job4.title">Vekter</h3>
+                            <h4>Avarn Security | Bergen</h4>
+                            <p data-i18n="job4.desc">Hadde mange forskjellige oppdrag. Objektleder, mobilvekter,
+                                områdevekter, arrangementsvakthold.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section.education">Utdanning</h2>
+                <div class="grid-cards">
+                    <div class="card">
+                        <div class="card-header" data-i18n="edu1.date">Aug 2015 - Juni 2019</div>
+                        <h3 data-i18n="edu1.title">Bachelor i informasjonsvitenskap</h3>
+                        <p>Høgskulen på Vestlandet (HVL)</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" data-i18n="edu2.date">Aug 2011 - Des 2012</div>
+                        <h3 data-i18n="edu2.title">Grunnskolelærerutdanning 5-10</h3>
+                        <p>Høgskolen i Bergen (HiB)</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" data-i18n="edu3.date">Aug 2009 - Juni 2011</div>
+                        <h3 data-i18n="edu3.title">Bachelor i engelsk</h3>
+                        <p>Universitetet i Bergen (UiB)</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" data-i18n="edu4.date">Aug 2003 - Juni 2007</div>
+                        <h3 data-i18n="edu4.title">Tekniske og allmenne fag (TAF)</h3>
+                        <p>Knarvik videregående skule</p>
+                        <p class="small" data-i18n="edu4.desc">Studiekompetanse og fagbrev som maskinarbeidar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section.skills">Ferdigheter</h2>
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h3 data-i18n="skills.languages">Språk</h3>
+                        <ul class="skill-list">
+                            <li data-i18n="lang.norwegian">Norsk (Morsmål)</li>
+                            <li data-i18n="lang.english">Engelsk (God)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skills.tech">Teknologier</h3>
+                        <div class="tags large-tags">
+                            <span>C# / .NET</span>
+                            <span>Azure</span>
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>Kubernetes</span>
+                            <span>Azure Arc</span>
+                            <span>Docker</span>
+                            <span>SQL</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container text-center">
+                <h2 class="section-title" data-i18n="section.contact">Ta kontakt</h2>
+                <p data-i18n="contact.desc">Jeg er alltid interessert i en hyggelig prat om teknologi og muligheter.</p>
+                <div class="contact-links">
+                    <a href="mailto:hhl1987@hotmail.com" class="contact-card">
+                        <span class="icon">✉️</span>
+                        <span>hhl1987@hotmail.com</span>
+                    </a>
+                    <a href="tel:+4791717578" class="contact-card">
+                        <span class="icon">📱</span>
+                        <span>+47 917 17 578</span>
+                    </a>
+                    <a href="https://github.com/Hawk-on" class="contact-card" target="_blank">
+                        <span class="icon">💻</span>
+                        <span class="screen-text">GitHub</span>
+                        <span class="print-text">github.com/Hawk-on</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer.text">&copy; 2025 Håkon Høie Lønning. Bygget med HTML, CSS og JS.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
