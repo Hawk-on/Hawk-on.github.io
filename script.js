@@ -11,7 +11,7 @@ const translations = {
         hero: {
             greeting: "Hei, eg er",
             title: "Full-Stack Utviklar",
-            description: ".NET, Azure og moderne webutvikling. Eg brenn for å lære nye domene og byggje robuste løysingar som skapar verdi.",
+            description: ".NET, Azure og moderne webutvikling. Eg likar å lære nye domene og byggje robuste løysingar som skapar verdi.",
             contact: "Kontakt meg",
             experience: "Sjå erfaring"
         },
@@ -23,7 +23,7 @@ const translations = {
             contact: "Ta kontakt"
         },
         about: {
-            p1: "Eg bur med kone og barn i Bergen, men kjem opphavleg frå Osterøy. På fritida likar eg å byggje PC og spele dataspel, men eg er også veldig glad i å gå turar i fjell og skog, samt fiske og jakte.",
+            p1: "Eg bur med kone og born i Bergen, men kjem opphavleg frå Osterøy. Fritida mi liker eg å bruke på PC, fiske og turar i fjell og skog.",
             p2: "Det som driv meg innan programutvikling er gleda av å lære nye domene og teknologiar. Det fantastiske med dette faget er variasjonen og den konstante straumen av nye ting å lære."
         },
         job: {
@@ -73,7 +73,7 @@ const translations = {
             english: "Engelsk (God)"
         },
         contact: {
-            desc: "Eg er alltid interessert i ein hyggeleg prat om teknologi og moglegheiter."
+            desc: "Eg er alltid interessert i ein prat om teknologi og moglegheiter."
         },
         footer: {
             text: "&copy; 2025 Håkon Høie Lønning. Laga med HTML, CSS og JS."
@@ -90,7 +90,7 @@ const translations = {
         hero: {
             greeting: "Hi, I'm",
             title: "Full-Stack Developer",
-            description: "Specialist in .NET, Azure, and modern web development. I am passionate about learning new domains and building robust solutions that create value.",
+            description: ".NET, Azure, and modern web development. I enjoy learning new domains and building robust solutions that create value.",
             contact: "Contact Me",
             experience: "See Experience"
         },
@@ -102,7 +102,7 @@ const translations = {
             contact: "Get in Touch"
         },
         about: {
-            p1: "I live with my wife and children in Bergen, but originally come from Osterøy. In my spare time, I enjoy building PCs and playing video games. I also love hiking in the mountains and woods, as well as fishing and hunting.",
+            p1: "I live with my wife and children in Bergen, but originally come from Osterøy. In my spare time, I enjoy using PCs, fishing, and hiking in the mountains and woods.",
             p2: "What drives me in software development is the joy of learning new domains and technologies. The amazing thing about this field is the variety and the constant stream of new things to learn."
         },
         job: {

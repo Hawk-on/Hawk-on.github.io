@@ -50,6 +50,8 @@ ul {
 section {
     padding: 5rem 1rem;
     overflow: hidden;
+    scroll-margin-top: 80px;
+    /* Prevent navbar overlap on desktop */
 }
 
 .container {
@@ -267,12 +269,18 @@ h4 {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.8rem 2rem;
     border-radius: 50px;
     font-weight: 600;
+    line-height: 1.5;
+    /* Ensure room for descenders */
     cursor: pointer;
     transition: var(--transition);
+    border: 2px solid transparent;
+    /* Reserve space for border to prevent layout shifts */
 }
 
 .btn-primary {
@@ -288,7 +296,7 @@ h4 {
 }
 
 .btn-secondary {
-    border: 2px solid var(--text-muted);
+    border-color: var(--text-muted);
     color: var(--text-main);
 }
 
@@ -582,12 +590,27 @@ footer {
         display: flex;
     }
 
+    /* Fix mobile nav cutoff */
+    section {
+        scroll-margin-top: 100px;
+    }
+
     .hero-container {
-        padding-top: 2rem;
+        padding-top: 6rem;
+        /* Extra space for image on mobile */
     }
 
     .hero-name {
         font-size: 2.5rem;
+    }
+
+    /* Reduce section title size to prevent overflow */
+    .section-title {
+        font-size: 2rem;
+        width: 100%;
+        /* Ensure it doesn't overflow container */
+        left: auto;
+        transform: none;
     }
 
     .hero-title {
