@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /private/
+
+# Allow indexing of main pages
+Allow: /
