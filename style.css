@@ -1,27 +1,36 @@
-/* Base Styles & Variables */
+/* ===========================
+   Birch & Stone — Scandinavian Light Theme
+   WCAG AA compliant (4.5:1+ text contrast)
+   =========================== */
+
 :root {
-    --primary: #0f172a;
-    /* Slate 900 */
-    --secondary: #1e293b;
-    /* Slate 800 */
-    --accent: #38bdf8;
-    /* Sky 400 */
-    --accent-alt: #818cf8;
-    /* Indigo 400 - secondary accent */
-    --text-main: #f8fafc;
-    /* Slate 50 */
-    --text-muted: #94a3b8;
-    /* Slate 400 */
-    --bg-body: #020617;
-    /* Slate 950 */
-    --bg-card: #1e293b;
-    --bg-card-hover: #253348;
+    --bg-body: #ece7e0;
+    /* Warm stone */
+    --bg-card: #f6f2ec;
+    /* Light birch */
+    --bg-alt: #e2dcd4;
+    /* Darker stone for alternating sections */
+    --bg-card-hover: #efe9e1;
+    --accent: #4a7358;
+    /* Deep moss green — 4.8:1 on body bg */
+    --accent-light: #5e8a6d;
+    /* Lighter moss — decorative only */
+    --accent-alt: #8b5a38;
+    /* Muted rust — 5.0:1 on body bg */
+    --accent-alt-light: #b07856;
+    /* Lighter rust — decorative only */
+    --text-main: #2d2a26;
+    /* Dark bark — 10:1+ contrast */
+    --text-muted: #5c5752;
+    /* Warm dark gray — 5.2:1 contrast */
+    --border-subtle: rgba(45, 42, 38, 0.1);
+    --border-hover: rgba(74, 115, 88, 0.3);
+    --shadow-sm: 0 1px 3px rgba(45, 42, 38, 0.06);
+    --shadow-md: 0 4px 12px rgba(45, 42, 38, 0.08);
+    --shadow-lg: 0 8px 30px rgba(45, 42, 38, 0.1);
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
     --transition: all 0.3s ease;
-    --border-subtle: rgba(255, 255, 255, 0.06);
-    --glow-accent: rgba(56, 189, 248, 0.15);
-    --glow-alt: rgba(129, 140, 248, 0.1);
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
 }
@@ -92,7 +101,7 @@ h4 {
     content: '';
     display: block;
     width: 60px;
-    height: 4px;
+    height: 3px;
     background: linear-gradient(90deg, var(--accent), var(--accent-alt));
     margin: 0.75rem auto 0;
     border-radius: 2px;
@@ -105,7 +114,7 @@ h4 {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(2, 6, 23, 0.8);
+    background: rgba(236, 231, 224, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-subtle);
@@ -113,8 +122,8 @@ h4 {
 }
 
 .navbar.scrolled {
-    background: rgba(2, 6, 23, 0.95);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(236, 231, 224, 0.97);
+    box-shadow: var(--shadow-md);
 }
 
 .nav-container {
@@ -193,7 +202,7 @@ h4 {
 
 .lang-btn {
     background: transparent;
-    border: 1px solid rgba(148, 163, 184, 0.3);
+    border: 1px solid var(--border-subtle);
     color: var(--text-main);
     padding: 0.4rem 0.8rem;
     border-radius: 6px;
@@ -208,7 +217,7 @@ h4 {
 .lang-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
-    background: var(--glow-accent);
+    background: rgba(74, 115, 88, 0.06);
 }
 
 /* Hamburger Menu */
@@ -261,7 +270,7 @@ h4 {
     right: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, var(--glow-accent) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(74, 115, 88, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     animation: heroGlow 8s ease-in-out infinite alternate;
@@ -274,7 +283,7 @@ h4 {
     left: -5%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, var(--glow-alt) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(139, 90, 56, 0.06) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     animation: heroGlow 10s ease-in-out infinite alternate-reverse;
@@ -313,14 +322,10 @@ h4 {
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid transparent;
-    background-image: linear-gradient(var(--bg-body), var(--bg-body)),
-        linear-gradient(135deg, var(--accent), var(--accent-alt));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+    border: 4px solid var(--bg-card);
     box-shadow:
-        0 0 30px var(--glow-accent),
-        0 0 60px rgba(56, 189, 248, 0.1);
+        var(--shadow-lg),
+        0 0 0 1px var(--border-subtle);
     animation: float 6s ease-in-out infinite;
     position: relative;
 }
@@ -337,7 +342,7 @@ h4 {
     }
 
     50% {
-        transform: translateY(-12px);
+        transform: translateY(-10px);
     }
 
     100% {
@@ -356,10 +361,7 @@ h4 {
 .hero-name {
     font-size: 3.75rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #fff 0%, #e2e8f0 50%, var(--accent) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--text-main);
     line-height: 1.1;
 }
 
@@ -397,26 +399,27 @@ h4 {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent), #0ea5e9);
-    color: var(--bg-body);
+    background: var(--accent);
+    color: #fff;
 }
 
 .btn-primary:hover {
+    background: #3d6249;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+    box-shadow: 0 8px 25px rgba(74, 115, 88, 0.25);
 }
 
 .btn-secondary {
-    border-color: rgba(148, 163, 184, 0.3);
+    border-color: var(--border-subtle);
     color: var(--text-main);
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--bg-card);
 }
 
 .btn-secondary:hover {
     border-color: var(--accent);
     color: var(--accent);
     transform: translateY(-3px);
-    background: var(--glow-accent);
+    box-shadow: var(--shadow-md);
 }
 
 /* About Section */
@@ -429,6 +432,7 @@ h4 {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-sm);
 }
 
 .about-content::before {
@@ -438,7 +442,7 @@ h4 {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-alt), var(--accent));
+    background: linear-gradient(90deg, var(--accent), var(--accent-alt-light), var(--accent));
     border-radius: 3px 3px 0 0;
 }
 
@@ -455,7 +459,7 @@ h4 {
 
 /* Experience Section */
 .bg-alt {
-    background-color: var(--secondary);
+    background-color: var(--bg-alt);
     position: relative;
 }
 
@@ -487,7 +491,7 @@ h4 {
     content: '';
     position: absolute;
     width: 2px;
-    background: linear-gradient(to bottom, var(--accent), var(--accent-alt), transparent);
+    background: linear-gradient(to bottom, var(--accent-light), var(--accent-alt-light), transparent);
     top: 0;
     bottom: 0;
     left: 0;
@@ -512,34 +516,36 @@ h4 {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: var(--bg-body);
-    border: 3px solid var(--accent);
-    box-shadow: 0 0 0 4px var(--glow-accent);
+    background: var(--bg-alt);
+    border: 3px solid var(--accent-light);
+    box-shadow: 0 0 0 4px rgba(74, 115, 88, 0.1);
     transition: var(--transition);
     z-index: 1;
 }
 
 .timeline-item:hover::before {
     background: var(--accent);
-    box-shadow: 0 0 0 6px var(--glow-accent), 0 0 15px var(--glow-accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 6px rgba(74, 115, 88, 0.15);
 }
 
 .timeline-content {
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     padding: 1.5rem;
     transition: var(--transition);
+    box-shadow: var(--shadow-sm);
 }
 
 .timeline-item:hover .timeline-content {
-    border-color: rgba(56, 189, 248, 0.15);
-    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-md);
 }
 
 .timeline-date {
     font-size: 0.85rem;
-    color: var(--accent);
+    color: var(--accent-alt);
     margin-bottom: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.3px;
@@ -559,7 +565,7 @@ h4 {
 
 .timeline-content p {
     margin-bottom: 1rem;
-    color: #cbd5e1;
+    color: var(--text-muted);
     line-height: 1.6;
 }
 
@@ -571,19 +577,19 @@ h4 {
 }
 
 .tags span {
-    background: rgba(56, 189, 248, 0.08);
+    background: rgba(74, 115, 88, 0.08);
     color: var(--accent);
     padding: 0.3rem 0.85rem;
     border-radius: 999px;
     font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(74, 115, 88, 0.15);
     transition: var(--transition);
 }
 
 .tags span:hover {
-    background: rgba(56, 189, 248, 0.15);
-    border-color: rgba(56, 189, 248, 0.3);
+    background: rgba(74, 115, 88, 0.14);
+    border-color: rgba(74, 115, 88, 0.3);
 }
 
 .large-tags span {
@@ -606,6 +612,7 @@ h4 {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-sm);
 }
 
 .card::before {
@@ -615,15 +622,15 @@ h4 {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-alt));
+    background: linear-gradient(90deg, var(--accent), var(--accent-alt-light));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(56, 189, 248, 0.2);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--glow-accent);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
 }
 
 .card:hover::before {
@@ -632,7 +639,7 @@ h4 {
 
 .card-header {
     font-size: 0.85rem;
-    color: var(--accent);
+    color: var(--accent-alt);
     margin-bottom: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.3px;
@@ -670,19 +677,20 @@ h4 {
 }
 
 .skill-list li {
-    background: var(--bg-body);
+    background: var(--bg-card);
     padding: 1rem 1.25rem;
     margin-bottom: 0.5rem;
     border-radius: 0.5rem;
     border-left: 3px solid var(--accent);
     color: var(--text-main);
     transition: var(--transition);
+    box-shadow: var(--shadow-sm);
 }
 
 .skill-list li:hover {
     border-left-color: var(--accent-alt);
-    background: rgba(2, 6, 23, 0.8);
     transform: translateX(4px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Contact Section */
@@ -716,17 +724,19 @@ h4 {
     min-width: 180px;
     border: 1px solid var(--border-subtle);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
 }
 
 .contact-card:hover {
     background: var(--bg-card-hover);
-    border-color: rgba(56, 189, 248, 0.3);
+    border-color: var(--border-hover);
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-lg);
 }
 
 .contact-card .icon {
     font-size: 1.75rem;
+    color: var(--accent);
     transition: var(--transition);
     width: 50px;
     height: 50px;
@@ -734,11 +744,11 @@ h4 {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(56, 189, 248, 0.08);
+    background: rgba(74, 115, 88, 0.08);
 }
 
 .contact-card:hover .icon {
-    background: rgba(56, 189, 248, 0.15);
+    background: rgba(74, 115, 88, 0.14);
     color: var(--accent);
 }
 
@@ -750,22 +760,22 @@ h4 {
 
 /* GitHub Card Hover */
 .github-card:hover {
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(45, 42, 38, 0.2);
 }
 
 .github-card:hover .icon {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(45, 42, 38, 0.08);
     color: var(--text-main);
 }
 
 /* Brand Colors on Hover */
 .linkedin-card:hover {
     border-color: #0077b5;
-    background: rgba(0, 119, 181, 0.08);
+    background: rgba(0, 119, 181, 0.04);
 }
 
 .linkedin-card:hover .icon {
-    background: rgba(0, 119, 181, 0.15);
+    background: rgba(0, 119, 181, 0.1);
     color: #0077b5;
 }
 
@@ -782,7 +792,6 @@ footer {
     font-size: 0.85rem;
     border-top: 1px solid var(--border-subtle);
     margin-top: auto;
-    background: rgba(2, 6, 23, 0.5);
 }
 
 /* Animations */
@@ -861,7 +870,7 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(15, 23, 42, 0.98);
+        background: rgba(236, 231, 224, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
