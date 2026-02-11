@@ -155,7 +155,7 @@ const translations = {
             desc: "I am always interested in a nice chat about technology and opportunities."
         },
         footer: {
-            text: "&copy; 2024 Håkon Høie Lønning. Built with HTML, CSS, and JS."
+            text: "&copy; 2025 Håkon Høie Lønning. Built with HTML, CSS, and JS."
         }
     }
 };
@@ -210,7 +210,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
 
-        // Only prevent default if it's an internal link
         if (targetId && targetId.startsWith('#')) {
             e.preventDefault();
             const targetElement = document.querySelector(targetId);
@@ -232,15 +231,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Hamburger menu toggle with animation
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
 }
 
+// Scroll-triggered fade-in animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px"
@@ -255,19 +257,44 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-const animatedElements = document.querySelectorAll('.section-title, .timeline-item, .card, .about-content, .hero-greeting, .hero-name, .hero-title, .hero-description, .hero-buttons');
+const animatedElements = document.querySelectorAll('.section-title, .timeline-item, .card, .about-content, .hero-greeting, .hero-name, .hero-title, .hero-description, .hero-buttons, .contact-card, .skill-category');
 animatedElements.forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
 });
 
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+// Navbar scroll effect and active section highlighting
+const navbar = document.getElementById('navbar');
+const sections = document.querySelectorAll('section[id]');
+const navLinksAll = document.querySelectorAll('.nav-links a[href^="#"]');
+
+function updateActiveNav() {
+    const scrollY = window.scrollY;
+
+    // Navbar background on scroll
+    if (scrollY > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(15, 23, 42, 0.9)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
-});
+
+    // Active nav link based on scroll position
+    let currentSection = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navLinksAll.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSection) {
+            link.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
