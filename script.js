@@ -173,6 +173,9 @@ function toggleLanguage() {
     currentLang = currentLang === 'no' ? 'en' : 'no';
     updateContent();
     updateLangButton();
+    if (typeof umami !== 'undefined') {
+        umami.track('language-switch', { lang: currentLang });
+    }
 }
 
 function updateContent() {
@@ -298,3 +301,17 @@ function updateActiveNav() {
 }
 
 window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+// Umami: Track section visibility
+const sectionTracker = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && typeof umami !== 'undefined') {
+            umami.track('section-view', { section: entry.target.id });
+            sectionTracker.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('section[id]').forEach(section => {
+    sectionTracker.observe(section);
+});
