@@ -1,26 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" fill="#f6f2ec"/>
 
-  <!-- Venstreveng -->
+  <!-- Venstreveng — spiss og swept-back -->
   <path d="
-    M 32,22
-    C 26,16 18,13 8,16
-    C 13,20 22,23 28,25
+    M 32,26
+    C 27,19 19,15 6,17
+    C 11,19 20,23 26,28
     Z
   " fill="#4a7358"/>
 
-  <!-- Høgreveng -->
+  <!-- Høgreveng — spegla -->
   <path d="
-    M 32,22
-    C 38,16 46,13 56,16
-    C 51,20 42,23 36,25
+    M 32,26
+    C 37,19 45,15 58,17
+    C 53,19 44,23 38,28
     Z
   " fill="#4a7358"/>
 
   <!-- HHL monogram -->
   <text
-    x="32"
-    y="50"
+    x="32" y="50"
     font-family="'Outfit', 'Inter', sans-serif"
     font-weight="700"
     font-size="20"
@@ -30,5 +29,6 @@
   >HHL</text>
 
   <!-- Strek under -->
-  <line x1="16" y1="55" x2="48" y2="55" stroke="#4a7358" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="16" y1="56" x2="48" y2="56"
+        stroke="#4a7358" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
