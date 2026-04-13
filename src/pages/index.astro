@@ -1,0 +1,335 @@
+---
+import Grunnoppsett from '../layouts/Grunnoppsett.astro';
+---
+
+<Grunnoppsett tittel="Håkon Hole Lønning">
+  <div class="container">
+
+    <!-- Hero -->
+    <section class="cv-hero" id="hero">
+      <p class="cv-hero__kicker" data-i18n="hero.kicker">Full-Stack Utviklar · .NET · Azure</p>
+      <div class="cv-hero__indre">
+        <div class="cv-hero__tekst">
+          <h1 class="cv-hero__namn">Håkon Hole Lønning</h1>
+          <p class="cv-hero__rolle" data-i18n="hero.role">Full-Stack Utviklar</p>
+          <p class="cv-hero__beskriving" data-i18n="hero.description">
+            .NET, Azure og moderne webutvikling. Eg likar å lære nye domene og byggje robuste løysingar som skapar verdi.
+          </p>
+          <div class="cv-hero__knappar">
+            <a href="#kontakt" class="knapp knapp--fylt" data-i18n="hero.contact" data-umami-event="cta-kontakt">Kontakt meg</a>
+            <a href="#erfaring" class="knapp" data-i18n="hero.experience" data-umami-event="cta-erfaring">Sjå erfaring</a>
+          </div>
+        </div>
+        <img src="/assets/img/me.jpg" alt="Håkon Hole Lønning" class="cv-hero__foto" />
+      </div>
+    </section>
+
+    <!-- Om meg -->
+    <section id="om" class="innfading">
+      <p class="seksjon-kicker" data-i18n="section.about">Om meg</p>
+      <p data-i18n="about.p1">
+        Eg bur med kone og born i Bergen, men kjem opphavleg frå Osterøy. Fritida mi liker eg å bruke på PC, fiske og turar i fjell og skog.
+      </p>
+      <p data-i18n="about.p2">
+        Det som driv meg innan programutvikling er gleda av å lære nye domene og teknologiar. Det fantastiske med dette faget er variasjonen og den konstante straumen av nye ting å lære.
+      </p>
+    </section>
+
+    <!-- Erfaring -->
+    <section id="erfaring" class="innfading">
+      <p class="seksjon-kicker" data-i18n="section.experience">Arbeidserfaring</p>
+      <div class="tidslinje">
+
+        <div class="tidslinje-item">
+          <div class="tidslinje-item__dato" data-i18n="job1.date">Juni 2024 – No</div>
+          <div>
+            <h2 class="tidslinje-item__rolle" data-i18n="job.developer">Utviklar</h2>
+            <p class="tidslinje-item__stad">Folkehelseinstituttet · Bergen</p>
+            <p class="tidslinje-item__beskriving" data-i18n="job1.desc">Arbeider med moderne helseteknologi, inkludert ny plattform på Azure Arc og Kubernetes.</p>
+            <div class="etikkettar">
+              <span class="etikett">ASP.NET Core</span>
+              <span class="etikett">C#</span>
+              <span class="etikett">Azure Arc</span>
+              <span class="etikett">Kubernetes</span>
+              <span class="etikett">TypeScript</span>
+              <span class="etikett">Angular</span>
+              <span class="etikett">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tidslinje-item">
+          <div class="tidslinje-item__dato" data-i18n="job2.date">Nov 2021 – Mai 2024</div>
+          <div>
+            <h2 class="tidslinje-item__rolle" data-i18n="job.developer">Utviklar</h2>
+            <p class="tidslinje-item__stad">Helse Vest IKT · Bergen</p>
+            <p class="tidslinje-item__beskriving" data-i18n="job2.desc">Jobba med genetikkportalen.no og simple.no.</p>
+            <div class="etikkettar">
+              <span class="etikett">Angular</span>
+              <span class="etikett">.NET Core</span>
+              <span class="etikett">Azure AD</span>
+              <span class="etikett">Bicep</span>
+              <span class="etikett">Web API</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tidslinje-item">
+          <div class="tidslinje-item__dato" data-i18n="job3.date">Aug 2019 – Nov 2021</div>
+          <div>
+            <h2 class="tidslinje-item__rolle" data-i18n="job.fullstack">Full-Stack Utviklar</h2>
+            <p class="tidslinje-item__stad">Acos AS · Øygarden</p>
+            <p class="tidslinje-item__beskriving" data-i18n="job3.desc">Jobba med sjølvbeteningsløysing (Interact) og prosessflytverktøy (Interact Flow).</p>
+            <div class="etikkettar">
+              <span class="etikett">VB.NET</span>
+              <span class="etikett">Angular</span>
+              <span class="etikett">TypeScript</span>
+              <span class="etikett">ASP.NET Core</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tidslinje-item">
+          <div class="tidslinje-item__dato" data-i18n="job4.date">Des 2012 – Aug 2019</div>
+          <div>
+            <h2 class="tidslinje-item__rolle" data-i18n="job4.title">Vektar</h2>
+            <p class="tidslinje-item__stad">Avarn Security · Bergen</p>
+            <p class="tidslinje-item__beskriving" data-i18n="job4.desc">Hadde mange forskjellige oppdrag. Objektleiar, mobilvektar, områdevektar, arrangementsvakthald.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Utdanning -->
+    <section id="utdanning" class="innfading">
+      <p class="seksjon-kicker" data-i18n="section.education">Utdanning</p>
+      <div class="utdanning-grid">
+
+        <div class="utdanning-kort">
+          <p class="utdanning-kort__dato" data-i18n="edu1.date">Aug 2015 – Juni 2019</p>
+          <h3 class="utdanning-kort__tittel" data-i18n="edu1.title">Bachelor i informasjonsvitskap</h3>
+          <p class="utdanning-kort__stad">Høgskulen på Vestlandet (HVL)</p>
+        </div>
+
+        <div class="utdanning-kort">
+          <p class="utdanning-kort__dato" data-i18n="edu2.date">Aug 2011 – Des 2012</p>
+          <h3 class="utdanning-kort__tittel" data-i18n="edu2.title">Grunnskolelærarutdanning 5–10</h3>
+          <p class="utdanning-kort__stad">Høgskolen i Bergen (HiB)</p>
+        </div>
+
+        <div class="utdanning-kort">
+          <p class="utdanning-kort__dato" data-i18n="edu3.date">Aug 2009 – Juni 2011</p>
+          <h3 class="utdanning-kort__tittel" data-i18n="edu3.title">Bachelor i engelsk</h3>
+          <p class="utdanning-kort__stad">Universitetet i Bergen (UiB)</p>
+        </div>
+
+        <div class="utdanning-kort">
+          <p class="utdanning-kort__dato" data-i18n="edu4.date">Aug 2003 – Juni 2007</p>
+          <h3 class="utdanning-kort__tittel" data-i18n="edu4.title">Tekniske og allmenne fag (TAF)</h3>
+          <p class="utdanning-kort__stad">Knarvik videregående skule</p>
+          <p class="utdanning-kort__merknad" data-i18n="edu4.desc">Studiekompetanse og fagbrev som maskinarbeidar.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Ferdigheiter -->
+    <section id="ferdigheiter" class="innfading">
+      <p class="seksjon-kicker" data-i18n="section.skills">Ferdigheiter</p>
+      <div class="ferdigheiter-wrapper">
+
+        <div class="ferdigheit-kategori">
+          <p class="ferdigheit-kategori__tittel" data-i18n="skills.languages">Språk</p>
+          <ul class="ferdigheit-liste">
+            <li data-i18n="lang.norwegian">Norsk (Nynorsk)</li>
+            <li data-i18n="lang.english">Engelsk (God)</li>
+          </ul>
+        </div>
+
+        <div class="ferdigheit-kategori">
+          <p class="ferdigheit-kategori__tittel" data-i18n="skills.tech">Teknologiar</p>
+          <div class="etikkettar">
+            <span class="etikett">C# / .NET</span>
+            <span class="etikett">Azure</span>
+            <span class="etikett">Angular</span>
+            <span class="etikett">TypeScript</span>
+            <span class="etikett">Kubernetes</span>
+            <span class="etikett">Azure Arc</span>
+            <span class="etikett">Docker</span>
+            <span class="etikett">SQL</span>
+            <span class="etikett">Git</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="innfading">
+      <p class="seksjon-kicker" data-i18n="section.contact">Ta kontakt</p>
+      <p class="kontakt-intro" data-i18n="contact.desc">Eg er alltid interessert i ein prat om teknologi og moglegheiter.</p>
+      <div class="kontakt-lenker">
+
+        <a href="#" class="kontakt-item" id="kontakt-epost" data-umami-event="kontakt-epost">
+          <span class="kontakt-item__type" data-i18n="contact.emailLabel">E-post</span>
+          <span class="kontakt-item__verdi skjerm-tekst">Laster…</span>
+          <span class="kontakt-item__verdi print-tekst">hhl1987@hotmail.com</span>
+        </a>
+
+        <a href="#" class="kontakt-item" id="kontakt-tlf" data-umami-event="kontakt-telefon">
+          <span class="kontakt-item__type" data-i18n="contact.phoneLabel">Telefon</span>
+          <span class="kontakt-item__verdi skjerm-tekst">Laster…</span>
+          <span class="kontakt-item__verdi print-tekst">+47 917 17 578</span>
+        </a>
+
+        <a href="https://github.com/Hawk-on" class="kontakt-item" target="_blank" rel="noopener" data-umami-event="kontakt-github">
+          <span class="kontakt-item__type">GitHub</span>
+          <span class="kontakt-item__verdi">github.com/Hawk-on</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/hawkon" class="kontakt-item" target="_blank" rel="noopener" data-umami-event="kontakt-linkedin">
+          <span class="kontakt-item__type">LinkedIn</span>
+          <span class="kontakt-item__verdi">linkedin.com/in/hawkon</span>
+        </a>
+
+      </div>
+    </section>
+
+  </div>
+</Grunnoppsett>
+
+<script is:inline>
+// ── i18n ──────────────────────────────────────────────────────────
+var omsetjingar = {
+  no: {
+    nav: { about: 'Om meg', experience: 'Erfaring', education: 'Utdanning', skills: 'Ferdigheiter', contact: 'Kontakt' },
+    hero: {
+      kicker: 'Full-Stack Utviklar · .NET · Azure',
+      role: 'Full-Stack Utviklar',
+      description: '.NET, Azure og moderne webutvikling. Eg likar å lære nye domene og byggje robuste løysingar som skapar verdi.',
+      contact: 'Kontakt meg',
+      experience: 'Sjå erfaring'
+    },
+    section: { about: 'Om meg', experience: 'Arbeidserfaring', education: 'Utdanning', skills: 'Ferdigheiter', contact: 'Ta kontakt' },
+    about: {
+      p1: 'Eg bur med kone og born i Bergen, men kjem opphavleg frå Osterøy. Fritida mi liker eg å bruke på PC, fiske og turar i fjell og skog.',
+      p2: 'Det som driv meg innan programutvikling er gleda av å lære nye domene og teknologiar. Det fantastiske med dette faget er variasjonen og den konstante straumen av nye ting å lære.'
+    },
+    job: { developer: 'Utviklar', fullstack: 'Full-Stack Utviklar' },
+    job1: { date: 'Juni 2024 – No', desc: 'Arbeider med moderne helseteknologi, inkludert ny plattform på Azure Arc og Kubernetes.' },
+    job2: { date: 'Nov 2021 – Mai 2024', desc: 'Jobba med genetikkportalen.no og simple.no.' },
+    job3: { date: 'Aug 2019 – Nov 2021', desc: 'Jobba med sjølvbeteningsløysing (Interact) og prosessflytverktøy (Interact Flow).' },
+    job4: { date: 'Des 2012 – Aug 2019', title: 'Vektar', desc: 'Hadde mange forskjellige oppdrag. Objektleiar, mobilvektar, områdevektar, arrangementsvakthald.' },
+    edu1: { date: 'Aug 2015 – Juni 2019', title: 'Bachelor i informasjonsvitskap' },
+    edu2: { date: 'Aug 2011 – Des 2012', title: 'Grunnskolelærarutdanning 5–10' },
+    edu3: { date: 'Aug 2009 – Juni 2011', title: 'Bachelor i engelsk' },
+    edu4: { date: 'Aug 2003 – Juni 2007', title: 'Tekniske og allmenne fag (TAF)', desc: 'Studiekompetanse og fagbrev som maskinarbeidar.' },
+    skills: { languages: 'Språk', tech: 'Teknologiar' },
+    lang: { norwegian: 'Norsk (Nynorsk)', english: 'Engelsk (God)' },
+    contact: { desc: 'Eg er alltid interessert i ein prat om teknologi og moglegheiter.', emailLabel: 'E-post', phoneLabel: 'Telefon' }
+  },
+  en: {
+    nav: { about: 'About Me', experience: 'Experience', education: 'Education', skills: 'Skills', contact: 'Contact' },
+    hero: {
+      kicker: 'Full-Stack Developer · .NET · Azure',
+      role: 'Full-Stack Developer',
+      description: '.NET, Azure, and modern web development. I enjoy learning new domains and building robust solutions that create value.',
+      contact: 'Contact Me',
+      experience: 'See Experience'
+    },
+    section: { about: 'About Me', experience: 'Work Experience', education: 'Education', skills: 'Skills', contact: 'Get in Touch' },
+    about: {
+      p1: 'I live with my wife and children in Bergen, but originally come from Osterøy. In my spare time I enjoy PCs, fishing, and hiking in the mountains and woods.',
+      p2: 'What drives me in software development is the joy of learning new domains and technologies. The amazing thing about this field is the variety and the constant stream of new things to learn.'
+    },
+    job: { developer: 'Developer', fullstack: 'Full-Stack Developer' },
+    job1: { date: 'Jun 2024 – Present', desc: 'Working with modern health technology, including a new platform on Azure Arc and Kubernetes.' },
+    job2: { date: 'Nov 2021 – May 2024', desc: 'Worked on genetikkportalen.no and simple.no.' },
+    job3: { date: 'Aug 2019 – Nov 2021', desc: 'Worked with self-service solutions (Interact) and process flow tools (Interact Flow).' },
+    job4: { date: 'Dec 2012 – Aug 2019', title: 'Security Guard', desc: 'Many different assignments: site manager, mobile guard, area guard, event security.' },
+    edu1: { date: 'Aug 2015 – Jun 2019', title: 'Bachelor in Information Science' },
+    edu2: { date: 'Aug 2011 – Dec 2012', title: 'Teacher Education (Grades 5–10)' },
+    edu3: { date: 'Aug 2009 – Jun 2011', title: 'Bachelor in English' },
+    edu4: { date: 'Aug 2003 – Jun 2007', title: 'Technical and General Subjects (TAF)', desc: 'Higher education entrance qualification and certificate as machinist.' },
+    skills: { languages: 'Languages', tech: 'Technologies' },
+    lang: { norwegian: 'Norwegian (Native)', english: 'English (Proficient)' },
+    contact: { desc: "I'm always up for a chat about technology and opportunities.", emailLabel: 'Email', phoneLabel: 'Phone' }
+  }
+};
+
+var aktivSpråk = 'no';
+
+function oppdaterInnhald() {
+  document.documentElement.lang = aktivSpråk === 'no' ? 'nn' : 'en';
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    var nøkkel = el.getAttribute('data-i18n');
+    var verdi = nøkkel.split('.').reduce(function (o, k) { return o && o[k]; }, omsetjingar[aktivSpråk]);
+    if (verdi) el.textContent = verdi;
+  });
+  var knapp = document.getElementById('lang-knapp');
+  if (knapp) knapp.textContent = aktivSpråk === 'no' ? 'EN' : 'NO';
+}
+
+var langKnapp = document.getElementById('lang-knapp');
+if (langKnapp) {
+  langKnapp.addEventListener('click', function () {
+    aktivSpråk = aktivSpråk === 'no' ? 'en' : 'no';
+    oppdaterInnhald();
+    if (typeof umami !== 'undefined') umami.track('språkbyte', { språk: aktivSpråk });
+  });
+}
+
+oppdaterInnhald();
+
+// ── Antispam ──────────────────────────────────────────────────────
+(function () {
+  var eUser = 'hhl1987', eHost = 'hotmail.com';
+  var pPrefix = '+47', pNum = '917 17 578';
+
+  var epostLenke = document.getElementById('kontakt-epost');
+  if (epostLenke) {
+    var fullEpost = eUser + '@' + eHost;
+    epostLenke.href = 'mailto:' + fullEpost;
+    var span = epostLenke.querySelector('.skjerm-tekst');
+    if (span) span.textContent = fullEpost;
+  }
+
+  var tlfLenke = document.getElementById('kontakt-tlf');
+  if (tlfLenke) {
+    var fullTlf = pPrefix + ' ' + pNum;
+    tlfLenke.href = 'tel:' + pPrefix + pNum.replace(/ /g, '');
+    var tlfSpan = tlfLenke.querySelector('.skjerm-tekst');
+    if (tlfSpan) tlfSpan.textContent = fullTlf;
+  }
+})();
+
+// ── Scroll-animasjonar ────────────────────────────────────────────
+var observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('synleg');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.innfading').forEach(function (el) {
+  observer.observe(el);
+});
+
+// ── Aktiv nav-lenke ved scroll ────────────────────────────────────
+var seksjonar = document.querySelectorAll('section[id]');
+var navLenker = document.querySelectorAll('.nettstad-nav a[href^="#"]');
+
+window.addEventListener('scroll', function () {
+  var scrollY = window.scrollY;
+  var aktivSeksjon = '';
+  seksjonar.forEach(function (s) {
+    if (scrollY >= s.offsetTop - 120) aktivSeksjon = s.id;
+  });
+  navLenker.forEach(function (a) {
+    a.classList.toggle('aktiv', a.getAttribute('href') === '#' + aktivSeksjon);
+  });
+}, { passive: true });
+</script>
