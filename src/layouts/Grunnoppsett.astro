@@ -30,8 +30,8 @@ const fullTittel =
   <meta property="og:description" content={beskriving} />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="nn_NO" />
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png" id="favicon" />
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
-  <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
   <script
     defer
     src="https://cloud.umami.is/script.js"
@@ -43,6 +43,24 @@ const fullTittel =
         var t = localStorage.getItem('theme');
         if (t) document.documentElement.setAttribute('data-theme', t);
       } catch (e) {}
+
+      // Byt favicon basert på fargetema
+      function oppdaterFavicon() {
+        var link = document.getElementById('favicon');
+        if (!link) return;
+        var html = document.documentElement;
+        var theme = html.getAttribute('data-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = theme === 'dark' || (!theme && prefersDark);
+        link.href = isDark
+          ? '/assets/img/favicon-dark.png'
+          : '/assets/img/favicon.png';
+      }
+
+      oppdaterFavicon();
+
+      window.matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', oppdaterFavicon);
     })();
   </script>
 </head>
@@ -111,6 +129,12 @@ const fullTittel =
       var next = current === 'dark' || (!current && prefersDark) ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
+
+      // Oppdater favicon ved manuelt temabyte
+      var link = document.getElementById('favicon');
+      if (link) link.href = next === 'dark'
+        ? '/assets/img/favicon-dark.png'
+        : '/assets/img/favicon.png';
     });
   </script>
 </body>
