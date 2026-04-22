@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useStore } from '@nanostores/react';
+import { spraakStore } from '../../stores/spraakStore';
 
 interface Innlegg {
   tittel: string;
@@ -10,6 +12,7 @@ interface Innlegg {
 const BloggSveip: React.FC = () => {
   const [innlegg, setInnlegg] = useState<Innlegg[]>([]);
   const [loading, setLoading] = useState(true);
+  const aktivSpraak = useStore(spraakStore);
 
   useEffect(() => {
     fetch('https://hawk-on.github.io/Blog/siste-innlegg.json')
@@ -25,11 +28,11 @@ const BloggSveip: React.FC = () => {
 
   return (
     <section id="siste-fra-bloggen" className="innfading synleg">
-      <p className="seksjon-kicker">Siste frå bloggen</p>
+      <p className="seksjon-kicker">{aktivSpraak === 'no' ? 'Siste frå bloggen' : 'Latest from the blog'}</p>
       <div className="blogg-sveip">
         {innlegg.map((post, idx) => (
           <div key={idx} className="blogg-kort">
-            <p className="blogg-kort__dato">{new Date(post.dato).toLocaleDateString('nn-NO', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
+            <p className="blogg-kort__dato">{new Date(post.dato).toLocaleDateString(aktivSpraak === 'no' ? 'nn-NO' : 'en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</p>
             <h3 className="blogg-kort__tittel">
               <a href={post.url}>{post.tittel}</a>
             </h3>
@@ -37,7 +40,9 @@ const BloggSveip: React.FC = () => {
           </div>
         ))}
       </div>
-      <a href="https://hawk-on.github.io/Blog" className="knapp" style={{ marginTop: '2rem' }}>Besøk bloggen →</a>
+      <a href="https://hawk-on.github.io/Blog" className="knapp" style={{ marginTop: '2rem' }}>
+        {aktivSpraak === 'no' ? 'Besøk bloggen →' : 'Visit the blog →'}
+      </a>
     </section>
   );
 };

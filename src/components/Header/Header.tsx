@@ -1,23 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useStore } from '@nanostores/react';
+import { spraakStore, toggleSpraak } from '../../stores/spraakStore';
 
 const Header: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
-  const [lang, setLang] = useState('NO');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const aktivSpraak = useStore(spraakStore);
 
   useEffect(() => {
     // Initial tema-sjekk
     const theme = document.documentElement.getAttribute('data-theme');
     setIsDark(theme === 'dark');
-
-    // Lytt på endringar i språket (viss det skjer andre stader)
-    const handleLangChange = () => {
-      const currentLang = document.documentElement.lang === 'nn' ? 'NO' : 'EN';
-      setLang(currentLang === 'NO' ? 'EN' : 'NO'); // Knappen viser kva me byter TIL
-    };
-    
-    // Ved oppstart, sjekk kva knappen skal visa
-    setLang(document.documentElement.lang === 'nn' ? 'EN' : 'NO');
   }, []);
 
   const toggleTheme = () => {
@@ -35,14 +28,6 @@ const Header: React.FC = () => {
     if (link) {
       link.href = next === 'dark' ? '/assets/img/favicon-dark.png' : '/assets/img/favicon.png';
     }
-  };
-
-  const toggleLang = () => {
-    const nyLang = lang === 'NO' ? 'EN' : 'NO';
-    localStorage.setItem('valgtSpraak', nyLang === 'NO' ? 'no' : 'en');
-    const event = new CustomEvent('språkbyte');
-    window.dispatchEvent(event);
-    setLang(nyLang);
   };
 
   return (
@@ -71,8 +56,8 @@ const Header: React.FC = () => {
               <li><a href="/#kontakt" data-i18n="nav.contact" onClick={() => setIsMenuOpen(false)}>Kontakt</a></li>
               <li><a href="https://hawk-on.github.io/Blog">Blogg</a></li>
               <li>
-                <button type="button" onClick={toggleLang} className="lang-knapp" aria-label="Byt språk">
-                  {lang}
+                <button type="button" onClick={toggleSpraak} className="lang-knapp" aria-label="Byt språk">
+                  {aktivSpraak === 'no' ? 'EN' : 'NO'}
                 </button>
               </li>
               <li>

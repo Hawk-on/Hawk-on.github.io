@@ -5,9 +5,10 @@ Personleg portefølje og CV bygd med [Astro](https://astro.build) og [React](htt
 ## Teknisk Stack
 - **Framework:** Astro 6.x (Static)
 - **UI:** React 19 (Islands-arkitektur)
+- **State:** Nano Stores (delt tilstand mellom React og Vanilla JS)
 - **Styling:** Vanilla CSS med CSS-variablar
 - **SEO:** JSON-LD (Person schema), OpenGraph, Sitemap
-- **Språk:** Nynorsk (kløyvd infinitiv) med i18n-støtte (NN/EN)
+- **Språk:** Nynorsk (kløyvd infinitiv) med sentralisert i18n-støtte (NN/EN)
 
 ## Kome i gang
 
@@ -23,9 +24,11 @@ npm run preview   # førehandsvis produksjonsbygg
 ```
 src/
 ├── assets/          # Optimaliserte bilete (Image-komponent)
-├── components/      # React-komponentar (Header, Footer, Kontakt)
-├── layouts/         # Grunnoppsett (SEO, View Transitions)
-├── pages/           # index.astro (Hovudside med i18n-logikk)
+├── components/      # React-komponentar (Header, Footer, Kontakt, BloggSveip)
+├── layouts/         # Grunnoppsett (SEO, Client Router)
+├── pages/           # index.astro (Hovudside med Nano Store-lyttar)
+├── stores/          # spraakStore.ts (Sentralisert språktilstand)
+├── utils/           # i18n.ts (Omsetjingar og typar)
 └── styles/          # global.css (Design-tokens og styling)
 ```
 

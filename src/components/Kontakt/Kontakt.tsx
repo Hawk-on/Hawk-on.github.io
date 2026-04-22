@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useStore } from '@nanostores/react';
+import { spraakStore } from '../../stores/spraakStore';
+import { omsetjingar } from '../../utils/i18n';
 
 const Kontakt: React.FC = () => {
   const [email, setEmail] = useState('Laster…');
   const [phone, setPhone] = useState('Laster…');
+  const aktivSpraak = useStore(spraakStore);
+  const t = omsetjingar[aktivSpraak].contact;
 
   useEffect(() => {
     // Base64-koda verdiar for å lura enkle botar

@@ -8,7 +8,12 @@
 ## Prosjektspesifikke instruksar
 - **Språk:** Nynorsk med kløyvd infinitiv (følg retningslinjene i `CLAUDE.md`).
 - **Terminologi:** Konsekvent bruk av `kjernefysiske våpen` (ikkje atomvåpen), `merksemd` (ikkje oppmerksomhet), `moglegheit` (ikkje mulighet), `vidaregåande` (ikkje videregående).
-- **Arkitektur:** Astro 6.x, React Islands (src/components/), ingen CSS-framework, editorial estetikk.
+- **Arkitektur:** Astro 6.x, React Islands, Nano Stores (felles i18n-tilstand i `spraakStore.ts`).
+
+## i18n og Tilstand
+- Bruk `src/utils/i18n.ts` som kjelde for alle tekstar.
+- Endre språk via `toggleSpraak()` i `src/stores/spraakStore.ts`.
+- Sørg for at endringar i butikken vert spegla i både React-komponentar og element med `data-i18n`.
 
 ## Verifisering og språkvask
 - Sjekk alltid mot `CLAUDE.md` sine språkvask-reglar før lagring/commit.
@@ -17,5 +22,4 @@
 
 ## Arbeidsflyt
 - **Execution:** Plan → Act → Validate.
-- **Git:** Push via GitHub proxy (`127.0.0.1:62343`) viss nødvendig, eller direkte i PowerShell.
 - **Robot-sperre:** Ta vare på antispam-logikken i `Kontakt.tsx` og AI-sperrene i `robots.txt`.

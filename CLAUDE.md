@@ -6,14 +6,22 @@ Språk: Nynorsk med kløyvd infinitiv.
 
 ## Teknisk stack
 - Astro 6.x
-- React 19 (Islands for Header, Footer, Kontakt)
-- Statisk HTML for hovudinnhald (index.astro)
+- React 19 (Islands for Header, Footer, Kontakt, BloggSveip)
+- Nano Stores (Sentralisert språktilstand i `src/stores/spraakStore.ts`)
+- Statisk HTML for hovudinnhald (index.astro) med `data-i18n` attributtar
 - GitHub Pages via GitHub Actions (Node 22)
 
 ## Stilpreferansar
 - Editorial estetikk — Playfair Display / Source Serif 4
 - CSS-variablar i global.css, ikkje inline styling
 - Komponentnamn på norsk (Grunnoppsett, Header, Kontakt osv.)
+
+## i18n Arkitektur
+- **Kjelde:** `src/utils/i18n.ts` inneheld alle tekststrengar.
+- **Tilstand:** `spraakStore.ts` held på aktivt språk og synkroniserer med `localStorage`.
+- **Bruk:** 
+  - React-komponentar brukar `useStore(spraakStore)`.
+  - Vanilla JS i `index.astro` abonnerer på `spraakStore.subscribe()` for å oppdatera element med `data-i18n`.
 
 ## Språkvask — sjekk alltid for dårlege omsetjingar
 Gå gjennom ferdig tekst og sjekk spesifikt for:
