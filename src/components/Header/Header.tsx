@@ -5,13 +5,18 @@ import { spraakStore, toggleSpraak } from '../../stores/spraakStore';
 const Header: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const aktivSpraak = useStore(spraakStore);
 
   useEffect(() => {
+    setMounted(true);
     // Initial tema-sjekk
     const theme = document.documentElement.getAttribute('data-theme');
     setIsDark(theme === 'dark');
   }, []);
+
+  // Ikkje vis noko som avvik frå server-HTML før me er "mounted" på klienten
+  const visSpraak = mounted ? aktivSpraak : 'no';
 
   const toggleTheme = () => {
     const html = document.documentElement;
@@ -23,7 +28,6 @@ const Header: React.FC = () => {
     localStorage.setItem('theme', next);
     setIsDark(next === 'dark');
 
-    // Oppdater favicon
     const link = document.getElementById('favicon') as HTMLLinkLinkElement;
     if (link) {
       link.href = next === 'dark' ? '/assets/img/favicon-dark.png' : '/assets/img/favicon.png';
@@ -57,7 +61,7 @@ const Header: React.FC = () => {
               <li><a href="https://hawk-on.github.io/Blog">Blogg</a></li>
               <li>
                 <button type="button" onClick={toggleSpraak} className="lang-knapp" aria-label="Byt språk">
-                  {aktivSpraak === 'no' ? 'EN' : 'NO'}
+                  {visSpraak === 'no' ? 'EN' : 'NO'}
                 </button>
               </li>
               <li>

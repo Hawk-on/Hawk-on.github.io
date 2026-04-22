@@ -1,12 +1,19 @@
-import { atom } from 'nanostores';
+import { atom, onMount } from 'nanostores';
 import type { Spraak } from '../utils/i18n';
 
-// Hent initial verdi frå localStorage dersom mogleg (berre i nettlesar)
-const initialSpraak = (typeof localStorage !== 'undefined' && localStorage.getItem('valgtSpraak') as Spraak) || 'no';
+// Alltid start med 'no' for å samsvara med SSR (Server Side Rendering)
+export const spraakStore = atom<Spraak>('no');
 
-export const spraakStore = atom<Spraak>(initialSpraak);
+// Bruk onMount for å henta lagra språk berre på klienten
+onMount(spraakStore, () => {
+  if (typeof localStorage !== 'undefined') {
+    const lagra = localStorage.getItem('valgtSpraak') as Spraak;
+    if (lagra && lagra !== spraakStore.get()) {
+      spraakStore.set(lagra);
+    }
+  }
+});
 
-// Funksjon for å byta språk
 export function toggleSpraak() {
   const nyVerdi = spraakStore.get() === 'no' ? 'en' : 'no';
   spraakStore.set(nyVerdi);
