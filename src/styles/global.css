@@ -578,6 +578,59 @@ section:not(:last-of-type) {
   font-size: 0.95rem;
 }
 
+/* ==============================
+   Blogg-sveip (i portefølje)
+   ============================== */
+.blogg-sveip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.blogg-kort {
+  padding: 1.5rem;
+  background: var(--lys-grå);
+  border-top: 2px solid var(--raud);
+  transition: transform 0.2s ease;
+}
+
+.blogg-kort:hover {
+  transform: translateY(-4px);
+}
+
+.blogg-kort__dato {
+  font-family: var(--skrift-kode);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--grå);
+  margin-bottom: 0.75rem;
+}
+
+.blogg-kort__tittel {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.blogg-kort__tittel a {
+  color: var(--svart);
+  text-decoration: none;
+}
+
+.blogg-kort__tittel a:hover {
+  color: var(--raud);
+}
+
+.blogg-kort__ingress {
+  font-size: 0.9rem;
+  color: var(--tekst-sekundar);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .print-tekst { display: none; }
 
 /* ==============================

@@ -3,6 +3,7 @@ import Grunnoppsett from '../layouts/Grunnoppsett.astro';
 import { Image } from 'astro:assets';
 import profilBilete from '../assets/me.jpg';
 import Kontakt from '../components/Kontakt/Kontakt';
+import BloggSveip from '../components/BloggSveip/BloggSveip';
 ---
 
 <Grunnoppsett tittel="Håkon Hole Lønning">
@@ -167,6 +168,9 @@ import Kontakt from '../components/Kontakt/Kontakt';
 
       </div>
     </section>
+
+    <!-- Siste frå bloggen -->
+    <BloggSveip client:idle />
 
     <!-- Kontakt -->
     <section id="kontakt" class="innfading">
