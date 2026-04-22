@@ -1,44 +1,36 @@
-# CLAUDE.md
+# Prosjektkontekst: Portefølje
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## Om porteføljen
+Personleg portefølje og CV for Håkon Hole Lønning.
+Språk: Nynorsk med kløyvd infinitiv.
 
-## Project
+## Teknisk stack
+- Astro 6.x
+- React 19 (Islands for Header, Footer, Kontakt)
+- Statisk HTML for hovudinnhald (index.astro)
+- GitHub Pages via GitHub Actions (Node 22)
 
-Personal CV/portfolio site for Håkon Hole Lønning. Astro-based static site hosted on GitHub Pages via GitHub Actions. Visually matches the blog at `hawk-on/blog`.
+## Stilpreferansar
+- Editorial estetikk — Playfair Display / Source Serif 4
+- CSS-variablar i global.css, ikkje inline styling
+- Komponentnamn på norsk (Grunnoppsett, Header, Kontakt osv.)
 
-## Architecture
+## Språkvask — sjekk alltid for dårlege omsetjingar
+Gå gjennom ferdig tekst og sjekk spesifikt for:
+- **Bokmålsformer som sniker seg inn:**
+  - Fleirtal: `-ene` på hankjønn (→ `-ane`)
+  - Verb i presens: `trekker` (→ `trekkjer`), `bygger` (→ `byggjer`), `følger` (→ `følgjer`)
+  - Preteritum/perfektum: `falt` (→ `fall`), `blei` (→ `vart`), `blitt` (→ `vorte`), `bekrefta` (→ `stadfesta`), `ankom` (→ `kom`), `brøt` (→ `braut`)
+  - Adjektiv/diverse: `første` (→ `fyrste`), `noen` (→ `nokon`), `mulighet` (→ `moglegheit`), `oppmerksomhet` (→ `merksemd`), `videregående` (→ `vidaregåande`)
+- **Kløyvd infinitiv:**
+  - Korte verb (monosyllabiske/vanlege): -a ending (`vera`, `gjera`, `koma`, `sova`, `gjennomføra`)
+  - Lange verb (polysyllabiske): -e ending (`analysere`, `handtere`, `vurdere`, `invitere`)
 
-- `src/pages/index.astro` — Single-page CV with anchor sections: hero, om, erfaring, utdanning, ferdigheiter, kontakt
-- `src/layouts/Grunnoppsett.astro` — Base layout: sticky header, nav, footer, dark mode toggle. Same structure as the blog.
-- `src/styles/global.css` — Design system: same tokens as the blog (Playfair Display, Source Serif 4, JetBrains Mono, warm cream palette). Includes responsive breakpoints and full print stylesheet.
-- `assets/` — Static assets (profile photo, favicons). Copied to `public/` during CI build.
-- `.github/workflows/deploy.yml` — GitHub Actions: installs deps, copies `assets/` and `robots.txt` to `public/`, runs `astro build`, deploys to GitHub Pages.
+## Antispam og Robot-kontroll
+- **Kontaktinfo:** E-post og telefon er Base64-koda i `Kontakt.tsx` og vert dekoda dynamisk i klienten. Aldri legg ut e-post i klartekst i HTML.
+- **AI-sperre:** `robots.txt` blokkerer aktivt GPTBot, CCBot og andre AI-crawlarar for å verna innhaldet.
 
-## Design system
-
-Matches `hawk-on/blog` exactly. Key tokens in `:root`:
-- `--kvit` / `--svart` — page background / text
-- `--raud: #b8001f` — red accent (dark mode: `#e84058`)
-- `--lys-grå` — borders and card backgrounds
-- `--skrift-brei` — Playfair Display (headings)
-- `--skrift-brød` — Source Serif 4 (body)
-- `--skrift-kode` — JetBrains Mono (nav, labels, dates)
-
-Dark mode: toggled via `data-theme` on `<html>`, persisted in `localStorage`.
-
-## Conventions
-
-- Norwegian nynorsk in UI text, English in code (variable names, comments)
-- Client-side i18n: `data-i18n` attributes on elements, translations object in `<script is:inline>` in `index.astro`
-- Language toggle: `id="lang-knapp"` button in nav, wired in the page script
-- Antispam: email/phone assembled from parts in client JS — never in raw HTML
-- Design tokens as CSS custom properties — never hardcode colors
-- Hover effects: subtle transitions only
-
-## Deployment
-
-**Important:** GitHub Pages must be configured to use GitHub Actions as the source (Settings → Pages → Source: GitHub Actions).
-
-Push to `master` → GitHub Actions builds Astro → deploys `dist/` to GitHub Pages.
-
-Local dev: `npm install && npm run dev`
+## Git og Deploy
+- Deploy skjer via GitHub Actions ved push til `master`.
+- Brukar Node 22 i CI-miljøet.
+- Ved push-feil via proxy (127.0.0.1:62343), sjekk at Claude-appen på mobilen ikkje er i dvale.
