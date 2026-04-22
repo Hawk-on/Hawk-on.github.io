@@ -1,5 +1,8 @@
 ---
 import Grunnoppsett from '../layouts/Grunnoppsett.astro';
+import { Image } from 'astro:assets';
+import profilBilete from '../assets/me.jpg';
+import Kontakt from '../components/Kontakt/Kontakt';
 ---
 
 <Grunnoppsett tittel="Håkon Hole Lønning">
@@ -20,7 +23,7 @@ import Grunnoppsett from '../layouts/Grunnoppsett.astro';
             <a href="#erfaring" class="knapp" data-i18n="hero.experience" data-umami-event="cta-erfaring">Sjå erfaring</a>
           </div>
         </div>
-        <img src="/assets/img/me.jpg" alt="Håkon Hole Lønning" class="cv-hero__foto" />
+        <Image src={profilBilete} alt="Håkon Hole Lønning" class="cv-hero__foto" loading="eager" />
       </div>
     </section>
 
@@ -127,7 +130,7 @@ import Grunnoppsett from '../layouts/Grunnoppsett.astro';
         <div class="utdanning-kort">
           <p class="utdanning-kort__dato" data-i18n="edu4.date">Aug 2003 – Juni 2007</p>
           <h3 class="utdanning-kort__tittel" data-i18n="edu4.title">Tekniske og allmenne fag (TAF)</h3>
-          <p class="utdanning-kort__stad">Knarvik videregående skule</p>
+          <p class="utdanning-kort__stad">Knarvik vidaregåande skule</p>
           <p class="utdanning-kort__merknad" data-i18n="edu4.desc">Studiekompetanse og fagbrev som maskinarbeidar.</p>
         </div>
 
@@ -169,31 +172,8 @@ import Grunnoppsett from '../layouts/Grunnoppsett.astro';
     <section id="kontakt" class="innfading">
       <p class="seksjon-kicker" data-i18n="section.contact">Ta kontakt</p>
       <p class="kontakt-intro" data-i18n="contact.desc">Eg er alltid interessert i ein prat om teknologi og moglegheiter.</p>
-      <div class="kontakt-lenker">
-
-        <a href="#" class="kontakt-item" id="kontakt-epost" data-umami-event="kontakt-epost">
-          <span class="kontakt-item__type" data-i18n="contact.emailLabel">E-post</span>
-          <span class="kontakt-item__verdi skjerm-tekst">Laster…</span>
-          <span class="kontakt-item__verdi print-tekst">hhl1987@hotmail.com</span>
-        </a>
-
-        <a href="#" class="kontakt-item" id="kontakt-tlf" data-umami-event="kontakt-telefon">
-          <span class="kontakt-item__type" data-i18n="contact.phoneLabel">Telefon</span>
-          <span class="kontakt-item__verdi skjerm-tekst">Laster…</span>
-          <span class="kontakt-item__verdi print-tekst">+47 917 17 578</span>
-        </a>
-
-        <a href="https://github.com/Hawk-on" class="kontakt-item" target="_blank" rel="noopener" data-umami-event="kontakt-github">
-          <span class="kontakt-item__type">GitHub</span>
-          <span class="kontakt-item__verdi">github.com/Hawk-on</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/hawkon" class="kontakt-item" target="_blank" rel="noopener" data-umami-event="kontakt-linkedin">
-          <span class="kontakt-item__type">LinkedIn</span>
-          <span class="kontakt-item__verdi">linkedin.com/in/hawkon</span>
-        </a>
-
-      </div>
+      
+      <Kontakt client:load />
     </section>
 
   </div>
@@ -267,42 +247,16 @@ function oppdaterInnhald() {
     var verdi = nøkkel.split('.').reduce(function (o, k) { return o && o[k]; }, omsetjingar[aktivSpråk]);
     if (verdi) el.textContent = verdi;
   });
-  var knapp = document.getElementById('lang-knapp');
-  if (knapp) knapp.textContent = aktivSpråk === 'no' ? 'EN' : 'NO';
 }
 
-var langKnapp = document.getElementById('lang-knapp');
-if (langKnapp) {
-  langKnapp.addEventListener('click', function () {
-    aktivSpråk = aktivSpråk === 'no' ? 'en' : 'no';
-    oppdaterInnhald();
-    if (typeof umami !== 'undefined') umami.track('språkbyte', { språk: aktivSpråk });
-  });
-}
+// Lytt på hending frå React-headeren
+window.addEventListener('språkbyte', function() {
+  aktivSpråk = aktivSpråk === 'no' ? 'en' : 'no';
+  oppdaterInnhald();
+});
 
+// Køyr ved oppstart
 oppdaterInnhald();
-
-// ── Antispam ──────────────────────────────────────────────────────
-(function () {
-  var eUser = 'hhl1987', eHost = 'hotmail.com';
-  var pPrefix = '+47', pNum = '917 17 578';
-
-  var epostLenke = document.getElementById('kontakt-epost');
-  if (epostLenke) {
-    var fullEpost = eUser + '@' + eHost;
-    epostLenke.href = 'mailto:' + fullEpost;
-    var span = epostLenke.querySelector('.skjerm-tekst');
-    if (span) span.textContent = fullEpost;
-  }
-
-  var tlfLenke = document.getElementById('kontakt-tlf');
-  if (tlfLenke) {
-    var fullTlf = pPrefix + ' ' + pNum;
-    tlfLenke.href = 'tel:' + pPrefix + pNum.replace(/ /g, '');
-    var tlfSpan = tlfLenke.querySelector('.skjerm-tekst');
-    if (tlfSpan) tlfSpan.textContent = fullTlf;
-  }
-})();
 
 // ── Scroll-animasjonar ────────────────────────────────────────────
 var observer = new IntersectionObserver(function (entries) {

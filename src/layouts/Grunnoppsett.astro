@@ -1,6 +1,11 @@
 ---
 import '../styles/global.css';
 
+import { Image } from 'astro:assets';
+import { ViewTransitions } from 'astro:transitions';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+
 interface Props {
   tittel: string;
   beskriving?: string;
@@ -16,6 +21,23 @@ const kanoniskUrl = Astro.site
   : Astro.url.pathname;
 const fullTittel =
   tittel === 'Håkon Hole Lønning' ? tittel : `${tittel} — Håkon Hole Lønning`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Håkon Hole Lønning",
+  "jobTitle": "Full-stack Utviklar",
+  "url": "https://hawk-on.github.io",
+  "sameAs": [
+    "https://github.com/Hawk-on",
+    "https://www.linkedin.com/in/hawkon"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bergen",
+    "addressCountry": "NO"
+  }
+};
 ---
 
 <!DOCTYPE html>
@@ -26,10 +48,17 @@ const fullTittel =
   <meta name="description" content={beskriving} />
   <title>{fullTittel}</title>
   <link rel="canonical" href={kanoniskUrl} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <meta property="og:title" content={fullTittel} />
   <meta property="og:description" content={beskriving} />
+  <meta property="og:url" content={kanoniskUrl} />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hawk-on.github.io/assets/img/me.jpg" />
   <meta property="og:locale" content="nn_NO" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTittel} />
+  <meta name="twitter:description" content={beskriving} />
+  <meta name="twitter:image" content="https://hawk-on.github.io/assets/img/me.jpg" />
   <link rel="icon" type="image/png" href="/assets/img/favicon.png" id="favicon" />
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
   <script
@@ -37,14 +66,14 @@ const fullTittel =
     src="https://cloud.umami.is/script.js"
     data-website-id="b3e4a54f-39af-4b9c-94fc-e9d0880ea5c4"
   ></script>
+  <ViewTransitions />
   <script is:inline>
-    (function () {
+    function setTema() {
       try {
         var t = localStorage.getItem('theme');
         if (t) document.documentElement.setAttribute('data-theme', t);
       } catch (e) {}
 
-      // Byt favicon basert på fargetema
       function oppdaterFavicon() {
         var link = document.getElementById('favicon');
         if (!link) return;
@@ -56,86 +85,24 @@ const fullTittel =
           ? '/assets/img/favicon-dark.png'
           : '/assets/img/favicon.png';
       }
-
       oppdaterFavicon();
+    }
 
-      window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener('change', oppdaterFavicon);
-    })();
+    setTema();
+    document.addEventListener('astro:after-swap', setTema);
   </script>
 </head>
 <body>
   <a href="#hovudinnhald" class="hopp-til-innhald">Hopp til innhald</a>
 
-  <header class="nettstad-header">
-    <div class="container--brei">
-      <div class="nettstad-header__indre">
-        <a href="/" class="nettstad-header__logo">HHL</a>
-        <input
-          type="checkbox"
-          id="meny-bryter"
-          class="meny-bryter__input"
-          aria-label="Opne eller lukk meny"
-          aria-controls="hovudnav"
-        />
-        <label for="meny-bryter" class="meny-bryter" aria-hidden="true">
-          <span class="meny-bryter__linje"></span>
-          <span class="meny-bryter__linje"></span>
-          <span class="meny-bryter__linje"></span>
-        </label>
-        <nav id="hovudnav">
-          <ul class="nettstad-nav">
-            <li><a href="#om" data-i18n="nav.about">Om meg</a></li>
-            <li><a href="#erfaring" data-i18n="nav.experience">Erfaring</a></li>
-            <li><a href="#utdanning" data-i18n="nav.education">Utdanning</a></li>
-            <li><a href="#ferdigheiter" data-i18n="nav.skills">Ferdigheiter</a></li>
-            <li><a href="#kontakt" data-i18n="nav.contact">Kontakt</a></li>
-            <li><a href="https://hawk-on.github.io/Blog">Blogg</a></li>
-            <li>
-              <button type="button" id="lang-knapp" class="lang-knapp" aria-label="Byt språk">
-                EN
-              </button>
-            </li>
-            <li>
-              <button type="button" class="tema-bryter" aria-label="Byt fargetema">
-                <span class="tema-bryter__sol">☀</span>
-                <span class="tema-bryter__mane">☽</span>
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <Header client:load />
 
   <main id="hovudinnhald">
     <slot />
   </main>
 
-  <footer class="nettstad-footer">
-    <div class="container--brei">
-      <div class="nettstad-footer__indre">
-        <span>© {new Date().getFullYear()} Håkon Hole Lønning</span>
-        <span>Bygd med <a href="https://astro.build">Astro</a></span>
-      </div>
-    </div>
-  </footer>
+  <Footer />
 
-  <script is:inline>
-    document.querySelector('.tema-bryter').addEventListener('click', function () {
-      var html = document.documentElement;
-      var current = html.getAttribute('data-theme');
-      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var next = current === 'dark' || (!current && prefersDark) ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
-
-      // Oppdater favicon ved manuelt temabyte
-      var link = document.getElementById('favicon');
-      if (link) link.href = next === 'dark'
-        ? '/assets/img/favicon-dark.png'
-        : '/assets/img/favicon.png';
-    });
-  </script>
 </body>
+</html>
 </html>
