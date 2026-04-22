@@ -794,9 +794,6 @@ section:not(:last-of-type) {
   .kontakt-item__type { font-size: 7.5pt; }
   .kontakt-item__verdi { font-size: 9pt; }
 
-  .print-tekst { display: inline !important; }
-  .skjerm-tekst { display: none !important; }
-
   .innfading { opacity: 1 !important; transform: none !important; }
 
   a { color: #000 !important; text-decoration: none !important; }
