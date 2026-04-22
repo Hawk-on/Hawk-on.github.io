@@ -3,6 +3,6 @@ import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 
 export default defineConfig({
-  site: 'https://hawk-on.github.io',
+  site: 'https://hawk-on.github.io/',
   integrations: [react(), sitemap()],
 });
