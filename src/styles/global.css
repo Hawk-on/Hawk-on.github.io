@@ -70,7 +70,7 @@ body {
   background: var(--kvit);
   color: var(--svart);
   font-family: var(--skrift-brød);
-  font-weight: 300;
+  font-weight: 400; /* Strammare typografi for betre lesbarheit */
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
