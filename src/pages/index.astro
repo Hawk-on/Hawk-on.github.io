@@ -187,7 +187,8 @@ import BloggSveip from '../components/BloggSveip/BloggSveip';
   import { spraakStore } from '../stores/spraakStore';
   import { omsetjingar } from '../utils/i18n';
 
-  function oppdaterInnhald(aktivSpraak: 'no' | 'en') {
+  function oppdaterInnhald() {
+    const aktivSpraak = spraakStore.get();
     document.documentElement.lang = aktivSpraak === 'no' ? 'nn' : 'en';
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const nøkkel = el.getAttribute('data-i18n');
@@ -199,39 +200,50 @@ import BloggSveip from '../components/BloggSveip/BloggSveip';
     });
   }
 
-  // Abonner på endringar i butikken (Nano Store)
-  spraakStore.subscribe((verdi) => {
-    oppdaterInnhald(verdi);
+  // Initial oppdatering og lytt på endringar
+  document.addEventListener('astro:page-load', () => {
+    oppdaterInnhald();
+    spraakStore.subscribe(() => {
+      oppdaterInnhald();
+    });
   });
 </script>
 
 <script is:inline>
-// ── Scroll-animasjonar ────────────────────────────────────────────
-var observer = new IntersectionObserver(function (entries) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('synleg');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  function initAnimasjonar() {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('synleg');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.innfading').forEach(function (el) {
-  observer.observe(el);
-});
+    document.querySelectorAll('.innfading').forEach(function (el) {
+      observer.observe(el);
+    });
+  }
 
-// ── Aktiv nav-lenke ved scroll ────────────────────────────────────
-var seksjonar = document.querySelectorAll('section[id]');
-var navLenker = document.querySelectorAll('.nettstad-nav a[href^="#"]');
+  function initNavScroll() {
+    var seksjonar = document.querySelectorAll('section[id]');
+    var navLenker = document.querySelectorAll('.nettstad-nav a[href^="#"]');
 
-window.addEventListener('scroll', function () {
-  var scrollY = window.scrollY;
-  var aktivSeksjon = '';
-  seksjonar.forEach(function (s) {
-    if (scrollY >= s.offsetTop - 120) aktivSeksjon = s.id;
+    window.addEventListener('scroll', function () {
+      var scrollY = window.scrollY;
+      var aktivSeksjon = '';
+      seksjonar.forEach(function (s) {
+        if (scrollY >= s.offsetTop - 120) aktivSeksjon = s.id;
+      });
+      navLenker.forEach(function (a) {
+        a.classList.toggle('aktiv', a.getAttribute('href') === '#' + aktivSeksjon);
+      });
+    }, { passive: true });
+  }
+
+  // Sørg for at alt køyrer ved kvar navigering
+  document.addEventListener('astro:page-load', () => {
+    initAnimasjonar();
+    initNavScroll();
   });
-  navLenker.forEach(function (a) {
-    a.classList.toggle('aktiv', a.getAttribute('href') === '#' + aktivSeksjon);
-  });
-}, { passive: true });
 </script>
