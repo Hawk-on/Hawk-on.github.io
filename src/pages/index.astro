@@ -242,7 +242,7 @@ var omsetjingar = {
   }
 };
 
-var aktivSpråk = 'no';
+var aktivSpråk = localStorage.getItem('valgtSpraak') || 'no';
 
 function oppdaterInnhald() {
   document.documentElement.lang = aktivSpråk === 'no' ? 'nn' : 'en';
@@ -291,3 +291,4 @@ window.addEventListener('scroll', function () {
   });
 }, { passive: true });
 </script>
+

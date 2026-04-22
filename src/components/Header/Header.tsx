@@ -38,10 +38,11 @@ const Header: React.FC = () => {
   };
 
   const toggleLang = () => {
-    // Me sender ein CustomEvent slik at vanilla-scriptet i index.astro kan oppdatera innhaldet
+    const nyLang = lang === 'NO' ? 'EN' : 'NO';
+    localStorage.setItem('valgtSpraak', nyLang === 'NO' ? 'no' : 'en');
     const event = new CustomEvent('språkbyte');
     window.dispatchEvent(event);
-    setLang(lang === 'NO' ? 'EN' : 'NO');
+    setLang(nyLang);
   };
 
   return (
