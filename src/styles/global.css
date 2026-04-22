@@ -289,7 +289,7 @@ html[data-theme="dark"] .tema-bryter__mane { display: inline; }
    CV — seksjonsstruktur
    ============================== */
 section {
-  padding: 4rem 0;
+  padding: 6rem 0; /* Auka frå 4rem for meir luksuriøst preg */
   scroll-margin-top: 80px;
 }
 
