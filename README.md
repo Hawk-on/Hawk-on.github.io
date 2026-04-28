@@ -1,5 +1,5 @@
 # hawk-on — Blogg
-Sist oppdatert: 27. april 2026.
+Sist oppdatert: 28. april 2026.
 
 Analysar av politikk, økonomi og teknologi frå eit strukturalistisk perspektiv.
 
