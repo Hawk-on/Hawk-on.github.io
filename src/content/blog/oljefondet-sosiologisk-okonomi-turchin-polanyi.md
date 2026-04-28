@@ -19,7 +19,7 @@ USA fyller kriteria for kollaps. Elite sular til seg rikdom. Arbeidarklasse miss
 ### Zeitenwende og europeisk opprusting
 Europa vaknar. USA trekkjer seg vekk. Tyskland proklamerer "Zeitenwende". Analysar frå 2026 syner dobling i europeiske forsvarsinvesteringar [[4]](#ref-4). NATO-land siktar mot 3,5 prosent BNP til forsvar. Oppkjøp (M&A) i forsvarsindustri eksploderer. 
 
-SPU manglar strategisk rettleiing. SPU har hindringar for å investere i kjernefysiske våpen og europeisk forsvarskapital. Dette er kortsynt. Noreg treng Europa. Europa treng kapital. Forsvarsindustri byggjer tryggleik. Tryggleik sikrar marknad. SPU må snu straum. Noreg må selje amerikansk risiko. Noreg må kjøpe europeisk forsvar. Noreg må etablere alliansar with kapital.
+SPU manglar strategisk rettleiing. SPU har hindringar for å investere i kjernefysiske våpen og europeisk forsvarskapital. Dette er kortsynt. Noreg treng Europa. Europa treng kapital. Forsvarsindustri byggjer tryggleik. Tryggleik sikrar marknad. SPU snu straum. Noreg må selje amerikansk risiko. Noreg må kjøpe europeisk forsvar. Noreg må etablere alliansar with kapital.
 
 ### Frå kapitalisme til teknofeudalisme
 Verda har endra seg. Yanis Varoufakis argumenterer for at kapitalismen er død, erstatta av teknofeudalisme [[6]](#ref-6). Cloudalists eig ikkje fabrikkar, men digital infrastruktur – cloud capital. Dei krev ikkje profitt, men sky-leige (cloud rent). Stortinget og Norges Bank opererer som om vi framleis er i 1995. Dei forstår ikkje at SPU finansierer dei nye føydalherrane i Silicon Valley.
@@ -38,14 +38,14 @@ Kva no? Noreg må endre mandat. Storting må ta kontroll. SPU skal bygge europei
 
 ***
 
-<span id="ref-1" data-kvalitet="A" data-habilitet="1">A1</span>[1] C. Smith et al., "Economic Sociology", *The Cambridge Handbook of Sociology*, 2015. Polanyi sin teori om "embeddedness" knuser myte om autonome marknadar.
+<span id="ref-1" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [1] C. Smith et al., "Economic Sociology", *The Cambridge Handbook of Sociology*, 2015. Polanyi sin teori om "embeddedness" knuser myte om autonome marknadar.
 
-<span id="ref-2" data-kvalitet="A" data-habilitet="1">A1</span>[2] S. Roll, "Sovereign Wealth Funds and Foreign Policy", *Stiftung Wissenschaft und Politik (SWP)*, 2026. Analyserer korleis statlege fond vert nytta til hard og mjuk makt.
+<span id="ref-2" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [2] S. Roll, "Sovereign Wealth Funds and Foreign Policy", *Stiftung Wissenschaft und Politik (SWP)*, 2026. Analyserer korleis statlege fond vert nytta til hard og mjuk makt.
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="1">B1</span>[3] P. Turchin, *End Times: Elites, Counter-Elites and the Path of Political Disintegration*, 2023. Syner korleis elite-overproduksjon fører til statskollaps. Særleg relevans for USA 2026.
+<span id="ref-3" class="kjelde-badge" data-kvalitet="B">B</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [3] P. Turchin, *End Times: Elites, Counter-Elites and the Path of Political Disintegration*, 2023. Syner korleis elite-overproduksjon fører til statskollaps. Særleg relevans for USA 2026.
 
-<span id="ref-4" data-kvalitet="A" data-habilitet="1">A1</span>[4] EY / DekaBank, "The Path to European Sovereignty: Defense", april 2026. Skildrar massive europeiske investeringsbehov etter "Zeitenwende".
+<span id="ref-4" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [4] EY / DekaBank, "The Path to European Sovereignty: Defense", april 2026. Skildrar massive europeiske investeringsbehov etter "Zeitenwende".
 
-<span id="ref-5" data-kvalitet="A" data-habilitet="1">A1</span>[5] M. Kwet, "Digital colonialism: US empire and the new imperialism in the Global South", *Race & Class*, 2019. Viser korleis amerikansk teknologi dominerer og utnyttar det globale sør.
+<span id="ref-5" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [5] M. Kwet, "Digital colonialism: US empire and the new imperialism in the Global South", *Race & Class*, 2019. Viser korleis amerikansk teknologi dominerer og utnyttar det globale sør.
 
-<span id="ref-6" data-kvalitet="A" data-habilitet="2">A2</span>[6] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*, 2023. Analyserer framveksten av cloud capital og korleis algoritmar erstattar marknader.
+<span id="ref-6" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">2</span> [6] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*, 2023. Analyserer framveksten av cloud capital og korleis algoritmar erstattar marknader.
