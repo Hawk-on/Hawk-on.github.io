@@ -1,11 +1,10 @@
 ---
-title: "Oljefondet: Frå finansiell fiksjon til geopolitisk slegge"
-slug: "oljefondet-sosiologisk-okonomi-turchin-polanyi"
+tittel: "Oljefondet: Frå finansiell fiksjon til geopolitisk slegge"
+ingress: "Økonomi sviver ikkje i vakuum. Marknad kviler på makt. Statens pensjonsfond utland (SPU) poserer som nøytral investor. Sosiologisk økonomi avslører løgna. Kapital speglar politikk. SPU må vakna. Noreg må styre kapital strategisk."
 publisertDato: 2026-04-27
+oppdatertDato: 2026-04-28
 tags: ["geopolitikk", "sosiologisk-økonomi", "SPU", "Zeitenwende", "Turchin"]
 ---
-
-Økonomi sviver ikkje i vakuum. Marknad kviler på makt. Statens pensjonsfond utland (SPU) poserer som nøytral investor. Sosiologisk økonomi avslører løgna. Kapital speglar politikk. SPU må vakna. Noreg må styre kapital strategisk.
 
 ### Marknaden er sosialt bygd
 Klassisk økonomi isolerer marknad. Økonomisk sosiologi knuser illusjonen. Karl Polanyi formulerte omgrepet "innbygging" (embeddedness) [1]. Økonomi er bygd inn i lover, religion og makt. Statlege investeringsfond (SWF) syner dette i praksis. Forskingsinstituttet SWP syner korleis fond vert brukte til hard og mjuk makt [2]. SPU gjer det same. SPU nektar for det. 
