@@ -45,12 +45,12 @@ SPU-debatten i Noreg har lenge vore ein kamp mellom etisk råd og marknadslogikk
 
 ***
 
-<span id="ref-1" data-kvalitet="B" data-habilitet="2">B2</span> [1] D. Tester, "Criminal complaint filed against Norwegian politicians over complicity in Gaza genocide", *Middle East Eye*, 2025. Eksklusiv tilgang til saksdokumenta og tilrådinga frå riksadvokaten.
+<span id="ref-1" data-kvalitet="B" data-habilitet="2">B2</span> [1] D. Tester, ["Criminal complaint filed against Norwegian politicians over complicity in Gaza genocide"](https://www.middleeasteye.net/news/criminal-complaint-filed-against-norweigian-politicians-over-complicity-gaza-genocide), *Middle East Eye*, 2025. Eksklusiv tilgang til saksdokumenta og tilrådinga frå riksadvokaten.
 
-<span id="ref-2" data-kvalitet="A" data-habilitet="2">A2</span> [2] NBIM, "Simplifying the management of our investments in Israel", *Norges Bank Investment Management*, august 2025. Offisiell pressemelding om sal av israelske aksjar.
+<span id="ref-2" data-kvalitet="A" data-habilitet="2">A2</span> [2] NBIM, ["Simplifying the management of our investments in Israel"](https://www.nbim.no/en/news-and-insights/the-press/press-releases/2025/simplifying-the-management-of-our-investments-in-israel/), *Norges Bank Investment Management*, 11. august 2025. Offisiell pressemelding om sal av israelske aksjar.
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="1">B1</span> [3] "Norway wealth fund divests from several Israeli companies due to Gaza war", *Al Jazeera*, 11. august 2025. Rapporterer 11 selskap selde utanfor referanseindeks.
+<span id="ref-3" data-kvalitet="B" data-habilitet="1">B1</span> [3] ["Norway wealth fund divests from several Israeli companies due to Gaza war"](https://www.aljazeera.com/news/2025/8/11/norway-wealth-fund-divests-stakes-in-several-israeli-companies), *Al Jazeera*, 11. august 2025. Rapporterer 11 selskap selde utanfor referanseindeks.
 
-<span id="ref-4" data-kvalitet="B" data-habilitet="1">B1</span> [4] "Norway's sovereign wealth fund sells its shares in 11 Israeli firms", *Euronews*, 12. august 2025. Stadfester nedgangen frå 61 til 38 israelske selskap.
+<span id="ref-4" data-kvalitet="B" data-habilitet="1">B1</span> [4] ["Norway's sovereign wealth fund sells its shares in 11 Israeli firms"](https://www.euronews.com/business/2025/08/12/norways-sovereign-wealth-fund-sells-its-shares-in-11-israeli-firms), *Euronews*, 12. august 2025. Stadfester nedgangen frå 61 til 38 israelske selskap.
 
-<span id="ref-5" data-kvalitet="B" data-habilitet="2">B2</span> [5] "Gaza death toll surpasses 72,000", *Common Dreams / Gaza Ministry of Health*, 2025. Tal frå helsestyresmaktene i Gaza, referert via uavhengig progressiv presse.
+<span id="ref-5" data-kvalitet="B" data-habilitet="1">B1</span> [5] ["Six months into 'ceasefire', Gaza suffers under persistent Israeli attacks"](https://www.aljazeera.com/gallery/2026/4/10/six-months-into-a-us-brokered-ceasefire-gaza-remains-under-israeli-attacks), *Al Jazeera*, 10. april 2026. Oppdatert dødstalstal frå palestinske helsestyresmakter: over 72 000 drepne sidan oktober 2023.
