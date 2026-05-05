@@ -15,7 +15,7 @@ Meldinga gjeld fire namngjeve personar: statsminister Jonas Gahr Støre, finansm
 
 Det rettslege grunnlaget er ikkje berre moralsk. Noreg har innarbeidd folkemordparagrafane frå Romavedtektene i nasjonal strafferett. Grag argumenterer for at SPU-investeringane i israelsk næringsliv og internasjonale våpenkonsern som leverer direkte til Israel Defence Forces, utgjer brot på desse føresegnene [[1]](#ref-1).
 
-Riksadvokaten omgjorde ei tidlegare avvising av meldinga og tilrådde formelt at Kripos — den nasjonale kriminaletterforskingstenesta — tek saka til etterforsking. Det er ei avgjerande prosessuell endring. Eit slikt omgjeringssteg tyder at overordna påtalestyresmakt finn grunnlag for vidare gransking [[1]](#ref-1).
+Riksadvokaten omgjorde ei tidlegare avvising av meldinga og tilrådde formelt at Kripos — den nasjonale kriminaletterforskingstenesta — tek saka til etterforsking. Det er ei avgjerande prosessuell endring: at riksadvokaten omgjer ei avvising tyder at overordna påtalestyresmakt finn grunnlag for vidare gransking [[1]](#ref-1).
 
 ### Fondet: Verdas største enkeltinvestor
 
@@ -27,13 +27,13 @@ Samstundes beheld fondet aksjar i 38 israelske selskap som inngår i finansdepar
 
 ### Våpeneksponering: Milliardane i dødsindustrien
 
-Endå meir omstritt er fondet sin eksponering mot internasjonale våpenkonsern. NBIM-analysar syner at fondet har aksjar verdt over 26 milliardar dollar i 49 av verdas hundre største forsvarskonsern [[1]](#ref-1). Fleirtalet av desse konsernen leverer — direkte eller indirekte — utstyr og system til den israelske militærmakta, som har drepe over 72 000 palestinarar i Gaza sidan oktober 2023 [[5]](#ref-5).
+Endå meir omstritt er fondet sin eksponering mot internasjonale våpenkonsern. NBIM-analysar syner at fondet har aksjar verdt over 26 milliardar dollar i 49 av verdas hundre største forsvarskonsern [[1]](#ref-1). Fleirtalet av desse konserna leverer — direkte eller indirekte — utstyr og system til den israelske militærmakta, som har drepe over 72 000 palestinarar i Gaza sidan oktober 2023 [[5]](#ref-5).
 
 Norsk pensjonsfond finansierer dermed global våpenproduksjon samstundes som Utanriksdepartementet offisielt har hevda at visse israelske militæroperasjonar bryt folkerettsleg standard. Logikken haltar.
 
 ### Politikarar og ansvar
 
-Å anmelde sittande statsrådar er ekstraordinært i Noreg. Slike saker er sjeldan. Det er difor argumentasjonen i meldinga er viktig å lesa nøye: ho krev ikkje at politikarane personleg sende bombefly. Ho krev at dei, med full kunnskap om risikoen, unnlét å handla i tråd med norske lovplikter mot å medverka til folkemord.
+Å anmelde sittande statsrådar er ekstraordinært i Noreg. Slike saker er sjeldne. Det er difor argumentasjonen i meldinga er viktig å lesa nøye: ho krev ikkje at politikarane personleg sende bombefly. Ho krev at dei, med full kunnskap om risikoen, unnlét å handla i tråd med norske lovplikter mot å medverka til folkemord.
 
 Kirsti Maehle, medgründar av Grag, uttrykte det slik: ei eventuell tiltale vil vera «eit etterlengta retningsprinsipp for folkevalde representantar som fullstendig vender ryggen til ofra si liding» [[1]](#ref-1).
 
