@@ -2,7 +2,8 @@
 
 ## Om bloggen
 Personleg blogg for Håkon Hole Lønning. Analyserer geopolitikk og teknologi.
-Språk: Nynorsk med kløyvd infinitiv.
+**Standardspråk:** Nynorsk med kløyvd infinitiv.
+**Tekniske artiklar** (IT, sikkerheit, programvare o.l.) kan skrivast på engelsk. Engelsk er de facto fagspråk innan IT og reduserer risikoen for feil omsetjingar og tvetydigheit i tekniske omgrep.
 
 ## Teknisk stack
 - **Framework:** Astro 6.x (Content Layer API)
