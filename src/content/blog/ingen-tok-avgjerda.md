@@ -68,7 +68,7 @@ Men det er feil forteljing. Maven tok ikkje over noko. Maven gjorde nøyaktig de
 
 Hannah Arendt skreiv om korleis det vonde kan verte banalt, korleis det kan utførast av menneske som berre gjer jobben sin, fyller ut skjema, følgjer prosedyrar, og aldri kjenner seg ansvarlege fordi avgjerda alltid låg ein annan stad. Det byråkratiske maskineriet spreidde ansvaret så tynt utover at det forsvann. AI-styrt måltrefning er denne logikken sett i system og forsterka med teknologi. Avstanden mellom handling og ansvar er ikkje lenger berre byråkratisk. Han er algoritmisk.
 
-Då Futurism spurde Pentagon om AI vart brukt til å velje skulen i Minab som mål, vart dei sende vidare til CENTCOM, som svara at dei ikkje hadde noko å kome med [\[7\]](#ref-7). Trump-administrasjonen gav fyrst Iran skulda, utan å leggje fram bevis. Seinare sa USA at dei granskar saka. Washington Post har rapportert at skulen stod på ei amerikansk målliste. <!-- KJELDE MANGLAR: Washington Post-artikkelen er ikkje med i kjeldelista --> Senatsdemokratane har skrive til forsvarsministeren og bede om klårleik kring eventuell bruk av AI i målutveljinga. <!-- KJELDE MANGLAR: Senatsdemokratane si opning er ikkje med i kjeldelista --> Og svaret, det verkelege svaret, er stille. Ikkje fordi nokon løyner det, men fordi det kanskje ikkje finst eit svar av den typen vi leitar etter. Det finst inga hand på avtrekkjaren. Det finst berre eit system, og eit menneske som klikka, og ei målliste som ingen hadde oppdatert.
+Då Futurism spurde Pentagon om AI vart brukt til å velje skulen i Minab som mål, vart dei sende vidare til CENTCOM, som svara at dei ikkje hadde noko å kome med [\[7\]](#ref-7). Trump-administrasjonen gav fyrst Iran skulda, utan å leggje fram bevis. Seinare sa USA at dei granskar saka. Washington Post har rapportert at skulen stod på ei amerikansk målliste [\[8\]](#ref-8). Senatsdemokratane har skrive til forsvarsministeren og bede om klårleik kring eventuell bruk av AI i målutveljinga. <!-- KJELDE MANGLAR: Senatsdemokratane si opning er ikkje med i kjeldelista --> Og svaret, det verkelege svaret, er stille. Ikkje fordi nokon løyner det, men fordi det kanskje ikkje finst eit svar av den typen vi leitar etter. Det finst inga hand på avtrekkjaren. Det finst berre eit system, og eit menneske som klikka, og ei målliste som ingen hadde oppdatert.
 
 Det er dette som skil denne teksten frå vanleg AI-skepsis. Eg trur ikkje maskina vil reise seg og ta over. Eg trur menneske vil halde fram med å byggje maskiner som tek ansvaret frå dei, fordi det er behageleg å sleppe å svare for det ein gjer. Minab var ikkje ein teknisk svikt. Minab var eit politisk val om korleis krig skal førast, og kven som skal kunne stillast til ansvar når han går gale. Svaret dei valde, var: ingen [\[3\]](#ref-3).
 
@@ -80,16 +80,18 @@ Hundre og åtte born døydde i Minab. Og ingen tok avgjerda.
 
 ## Kjelder
 
-<span id="ref-1" data-kvalitet="B" data-habilitet="1">B1</span> [1] C. Dickstein, "Deadly Iran school strike casts shadow over Pentagon's AI targeting push," *Military Times*, 24. mars 2026. [Online]. Available: https://www.militarytimes.com/news/pentagon-congress/2026/04/09/deadly-iran-school-strike-casts-shadow-over-pentagons-ai-targeting-push/. [Accessed: 25. juni 2026].
+<span id="ref-1" data-kvalitet="B" data-habilitet="1">B1</span> [1] C. Dickstein, ["Deadly Iran school strike casts shadow over Pentagon's AI targeting push,"](https://www.militarytimes.com/news/your-military/2026/03/24/deadly-iran-school-strike-casts-shadow-over-pentagons-ai-targeting-push/) *Military Times*, 24. mars 2026. [Accessed: 25. juni 2026].
 
-<span id="ref-2" data-kvalitet="C" data-habilitet="1">C1</span> [2] Wikipedia, "2026 Minab school attack," *Wikipedia*, 2026. [Online]. Available: https://en.wikipedia.org/wiki/2026_Minab_school_attack. [Accessed: 25. juni 2026]. Samleartikkel om hendingsforløpet, dødstalet og namn på offer.
+<span id="ref-2" data-kvalitet="C" data-habilitet="1">C1</span> [2] Wikipedia, ["2026 Minab school attack,"](https://en.wikipedia.org/wiki/2026_Minab_school_attack) *Wikipedia*, 2026. [Accessed: 25. juni 2026]. Samleartikkel om hendingsforløpet, dødstalet og namn på offer.
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="1">B1</span> [3] W. Bunch, "AI error or not, Iran school bombing is a permanent stain on America's soul," *The Philadelphia Inquirer*, 8. mars 2026. Tilgjengeleg gjennom abonnement.
+<span id="ref-3" data-kvalitet="B" data-habilitet="1">B1</span> [3] W. Bunch, ["AI error or not, Iran school bombing is a permanent stain on America's soul,"](https://www.inquirer.com/opinion/iran-girls-school-bombing-ai-20260308.html) *The Philadelphia Inquirer*, 8. mars 2026.
 
-<span id="ref-4" data-kvalitet="A" data-habilitet="2">A2</span> [4] Chatham House, "The Iran war highlights the creeping use of AI in warfare," *Chatham House*, 27. mars 2026.
+<span id="ref-4" data-kvalitet="A" data-habilitet="2">A2</span> [4] Chatham House, ["The Iran war highlights the creeping use of AI in warfare,"](https://www.chathamhouse.org/2026/03/iran-war-highlights-creeping-use-ai-warfare) *Chatham House*, 27. mars 2026. [Accessed: 25. juni 2026].
 
-<span id="ref-5" data-kvalitet="B" data-habilitet="2">B2</span> [5] "AI Targeting Needs a Human Eye," *Foreign Policy*, 14. april 2026.
+<span id="ref-5" data-kvalitet="B" data-habilitet="2">B2</span> [5] N. Grossman, ["AI Targeting Needs a Human Eye,"](https://foreignpolicy.com/2026/04/14/ai-targeting-iran-school-airstrikes-pentagon-anthropic/) *Foreign Policy*, 14. april 2026.
 
-<span id="ref-6" data-kvalitet="C" data-habilitet="1">C1</span> [6] M. Sukhareva, "Did AI Misidentify the Minab School?," *Substack*, 7. mars 2026. Uavhengig OSINT-analyse av kartdata og skulens eigarstatus.
+<span id="ref-6" data-kvalitet="C" data-habilitet="1">C1</span> [6] M. Sukhareva, ["Did AI Misidentify the Minab School?,"](https://msukhareva.substack.com/p/did-ai-misidentify-the-minab-school) *Substack*, 7. mars 2026. Uavhengig OSINT-analyse av kartdata og skulens eigarstatus; stadfesta av satellittbiletanalyse frå NPR, CBC og CNN.
 
-<span id="ref-7" data-kvalitet="C" data-habilitet="1">C1</span> [7] "Pentagon Refuses to Say If AI Was Used to Select Elementary School as Bombing Target," *Futurism*, 6. mars 2026.
+<span id="ref-7" data-kvalitet="C" data-habilitet="1">C1</span> [7] ["Pentagon Refuses to Say If AI Was Used to Select Elementary School as Bombing Target,"](https://futurism.com/artificial-intelligence/pentagon-ai-claude-bombing-elementary-school) *Futurism*, 6. mars 2026.
+
+<span id="ref-8" data-kvalitet="B" data-habilitet="1">B1</span> [8] ["U.S. target list may have mistaken Iranian elementary school as military site,"](https://www.washingtonpost.com/national-security/2026/03/11/us-strike-iran-elementary-school-ai-target-list/) *The Washington Post*, 11. mars 2026. [Accessed: 25. juni 2026].
