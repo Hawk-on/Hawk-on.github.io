@@ -35,7 +35,7 @@ const GiscusKommentarar: React.FC = () => {
         emitMetadata="0"
         inputPosition="bottom"
         theme={theme}
-        lang="nb"
+        lang="en"
         loading="lazy"
       />
     </section>
