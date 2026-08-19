@@ -46,8 +46,9 @@ main {
   --color-btn-primary-border: #b8001f;
   --color-btn-primary-hover-bg: #96001a;
   --color-btn-primary-hover-border: #96001a;
-  --color-btn-primary-disabled-text: rgba(245, 240, 232, 0.6);
-  --color-btn-primary-disabled-bg: rgba(184, 0, 31, 0.5);
+  --color-btn-primary-disabled-text: rgba(245, 240, 232, 0.75);
+  --color-btn-primary-disabled-bg: rgba(184, 0, 31, 0.45);
+  --color-btn-primary-disabled-border: rgba(184, 0, 31, 0.5);
   --color-btn-primary-shadow: none;
   --color-btn-primary-inset-shadow: none;
 
