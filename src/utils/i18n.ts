@@ -10,11 +10,12 @@ export const omsetjingar = {
     },
     section: { about: 'Om meg', experience: 'Arbeidserfaring', education: 'Utdanning', skills: 'Ferdigheiter', contact: 'Ta kontakt' },
     about: {
-      p1: 'Eg bur med kone og born i Bergen, men kjem opphavleg frå Osterøy. Fritida mi liker eg å bruke på PC, fiske og turar i fjell og skog.',
+      p1: 'Eg bur med kone og born på Vestlandet, og kjem opphavleg frå Osterøy. Fritida mi liker eg å bruke på PC, fiske og turar i fjell og skog.',
       p2: 'Det som driv meg innan programutvikling er gleda av å lære nye domene og teknologiar. Det fantastiske med dette faget er variasjonen og den konstante straumen av nye ting å lære.'
     },
-    job: { developer: 'Utviklar', fullstack: 'Full-Stack Utviklar' },
-    job1: { date: 'Juni 2024 – No', desc: 'Arbeider med moderne helseteknologi, inkludert ny plattform på Azure Arc og Kubernetes.' },
+    job: { developer: 'Utviklar', fullstack: 'Full-Stack Utviklar', senioradvisor: 'Seniorrådgjevar' },
+    job0: { date: 'August 2026 – No', desc: 'Arbeider med utvikling og forvaltning av digitale tenester i offentleg sektor.' },
+    job1: { date: 'Juni 2024 – Juni 2026', desc: 'Jobba med moderne helseteknologi, inkludert ny plattform på Azure Arc og Kubernetes.' },
     job2: { date: 'Nov 2021 – Mai 2024', desc: 'Jobba med genetikkportalen.no og simple.no.' },
     job3: { date: 'Aug 2019 – Nov 2021', desc: 'Jobba med sjølvbeteningsløysing (Interact) og prosessflytverktøy (Interact Flow).' },
     job4: { date: 'Des 2012 – Aug 2019', title: 'Vektar', desc: 'Hadde mange forskjellige oppdrag. Objektleiar, mobilvektar, områdevektar, arrangementsvakthald.' },
@@ -37,11 +38,12 @@ export const omsetjingar = {
     },
     section: { about: 'About Me', experience: 'Work Experience', education: 'Education', skills: 'Skills', contact: 'Get in Touch' },
     about: {
-      p1: 'I live with my wife and children in Bergen, but originally come from Osterøy. In my spare time I enjoy PCs, fishing, and hiking in the mountains and woods.',
+      p1: 'I live with my wife and children on the west coast of Norway, and originally come from Osterøy. In my spare time I enjoy PCs, fishing, and hiking in the mountains and woods.',
       p2: 'What drives me in software development is the joy of learning new domains and technologies. The amazing thing about this field is the variety and the constant stream of new things to learn.'
     },
-    job: { developer: 'Developer', fullstack: 'Full-Stack Developer' },
-    job1: { date: 'Jun 2024 – Present', desc: 'Working with modern health technology, including a new platform on Azure Arc and Kubernetes.' },
+    job: { developer: 'Developer', fullstack: 'Full-Stack Developer', senioradvisor: 'Senior Adviser' },
+    job0: { date: 'August 2026 – Present', desc: 'Working on the development and operation of digital public services.' },
+    job1: { date: 'Jun 2024 – Jun 2026', desc: 'Worked with modern health technology, including a new platform on Azure Arc and Kubernetes.' },
     job2: { date: 'Nov 2021 – May 2024', desc: 'Worked on genetikkportalen.no and simple.no.' },
     job3: { date: 'Aug 2019 – Nov 2021', desc: 'Worked with self-service solutions (Interact) and process flow tools (Interact Flow).' },
     job4: { date: 'Dec 2012 – Aug 2019', title: 'Security Guard', desc: 'Many different assignments: site manager, mobile guard, area guard, event security.' },

@@ -24,11 +24,6 @@ jobs:
           node-version: 22
           cache: 'npm'
       - run: npm install
-      - name: Copy static assets to public
-        run: |
-          mkdir -p public
-          [ -d assets ] && cp -r assets public/ || true
-          [ -f robots.txt ] && cp robots.txt public/ || true
       - run: npm run build
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
