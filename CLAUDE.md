@@ -76,6 +76,10 @@ Sett som `<meta http-equiv>` i `Grunnoppsett.astro`. Tre ting er load-bearing:
 - `frame-src https://giscus.app` — kommentar-iframen
 - `'wasm-unsafe-eval'` — Pagefind er WebAssembly
 - `font-src https://fonts.gstatic.com` — Google Fonts
+- **`connect-src https://gateway.umami.is`** — Umami lastar skriptet frå
+  `cloud.umami.is`, men sender målingane til `gateway.umami.is`. Har du berre
+  `cloud` i `connect-src`, lastar skriptet fint og statistikken forsvinn i
+  stillheit. Denne feilen stod i CV-en frå april til august 2026.
 
 ## Viktig mandat
 **Hugs å oppdatere denne fila (CLAUDE.md), README.md og gemini.md kvar gong det vert gjort endringar i arkitektur, teknisk stack eller viktige funksjonar.**
