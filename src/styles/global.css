@@ -250,6 +250,12 @@ html[data-theme="dark"] .tema-bryter__mane { display: inline; }
 .meny-bryter {
   display: none;
   cursor: pointer;
+  /* Dette er eit <button>. Utan reset gjev nettlesaren han si eiga
+     knappeflate, som blir ei kvit boks i mørk modus. */
+  background: none;
+  border: none;
+  appearance: none;
+  color: inherit;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -266,13 +272,13 @@ html[data-theme="dark"] .tema-bryter__mane { display: inline; }
   transition: transform 0.3s, opacity 0.3s;
 }
 
-.meny-bryter__input:checked ~ .meny-bryter .meny-bryter__linje:nth-child(1) {
+.meny-bryter--open .meny-bryter__linje:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
-.meny-bryter__input:checked ~ .meny-bryter .meny-bryter__linje:nth-child(2) {
+.meny-bryter--open .meny-bryter__linje:nth-child(2) {
   opacity: 0;
 }
-.meny-bryter__input:checked ~ .meny-bryter .meny-bryter__linje:nth-child(3) {
+.meny-bryter--open .meny-bryter__linje:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
@@ -676,7 +682,7 @@ section:not(:last-of-type) {
     padding-top: 1rem;
   }
 
-  .meny-bryter__input:checked ~ nav { display: block; }
+  .nettstad-header__indre nav.nav--open { display: block; }
 
   .nettstad-nav {
     flex-direction: column;
@@ -1325,4 +1331,30 @@ html[data-theme="dark"] .kjelde-modal {
     padding: 2rem 0 1.5rem;
     margin-bottom: 2rem;
   }
+}
+
+/* ==========================================================
+   Mobilfiksar funne ved viewport-testing (320/375/414 px)
+   ========================================================== */
+
+/* Taggane under artikkelkorta vert rendra frå ein .map() utan mellomrom
+   mellom <a>-elementa. Utan mellomrom finst det ingen brytepunkt, og heile
+   rada blir éin uavbrytande inline-sekvens som flyt ut av skjermen.
+   Flex med wrap gjev både brytepunkt og jamn avstand.
+   Låg tidlegare berre i ArtikkelListe.css, så tag-sida — som skriv same
+   markup direkte — fekk han aldri. */
+.artikkel-kort__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Kjeldelistene inneheld lange, ubrytelege URL-ar som GFM autolenkjer.
+   Utan dette skyv dei artikkelen 200-300 px ut av viewporten på mobil. */
+.artikkel-kropp {
+  overflow-wrap: break-word;
+}
+
+.artikkel-kropp a[href^="http"] {
+  overflow-wrap: anywhere;
 }
