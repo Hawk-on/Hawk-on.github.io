@@ -155,8 +155,18 @@ a:hover { color: var(--svart); }
   color: var(--svart);
   text-decoration: none;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 .nettstad-header__logo:hover { color: var(--raud); }
+
+/* Hauk-merket i bloggdelen. Byter variant med temaet. */
+.nettstad-header__ikon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
 
 .nettstad-nav {
   display: flex;

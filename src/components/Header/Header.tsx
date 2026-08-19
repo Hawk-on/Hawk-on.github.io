@@ -47,7 +47,19 @@ const Header: React.FC<HeaderProps> = ({ aktuellSti = '/' }) => {
     <header className="nettstad-header">
       <div className="container--brei">
         <div className="nettstad-header__indre">
-          <a href="/" className="nettstad-header__logo">HHL</a>
+          <a href="/" className="nettstad-header__logo">
+            {erBlogg ? (
+              <>
+                <img
+                  src={`/assets/img/favicon-header${isDark ? '-dark' : ''}.png`}
+                  alt=""
+                  className="nettstad-header__ikon"
+                  aria-hidden="true"
+                />
+                hawk-on
+              </>
+            ) : 'HHL'}
+          </a>
 
           <button
             type="button"
