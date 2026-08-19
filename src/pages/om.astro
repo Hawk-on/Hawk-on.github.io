@@ -1,0 +1,61 @@
+---
+import { BLOGG_BASE } from '../utils/rutar';
+import Grunnoppsett from '../layouts/Grunnoppsett.astro';
+const base = BLOGG_BASE;
+---
+
+<Grunnoppsett tittel="Om" beskriving="Om hawk-on">
+  <div class="container">
+    <div class="om-grid">
+      <div>
+        <div class="om-header">
+          <p class="seksjon-tittel">Om</p>
+          <h1 class="om-header__tittel">
+            hawk-on
+          </h1>
+        </div>
+
+        <p>
+          Eg er seniorrådgjevar med bakgrunn frå helsesektoren, og bur på Vestlandet. Til dagleg arbeider eg med .NET, C# og
+          skybasert infrastruktur.
+        </p>
+
+        <p>
+          På denne bloggen skriv eg om det som opptek meg utanfor koden:
+          politisk økonomi, geopolitikk, norsk arbeidsliv og
+          teknologiens rolle i maktstrukturar. Eg nærmar meg desse temaa
+          med ein strukturalistisk linse — eg er meir interessert i system
+          enn i einskildpersonar.
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Du finn meg på
+          <a href="https://github.com/hawk-on">GitHub</a>.
+        </p>
+      </div>
+
+      <aside>
+        <div class="om-sidebar-boks">
+          <p class="om-sidebar-boks__tittel">Fagleg bakgrunn</p>
+          <ul class="om-sidebar-boks__liste">
+            <li>.NET Core / C#</li>
+            <li>Angular</li>
+            <li>Kubernetes / Docker</li>
+            <li>Azure DevOps</li>
+            <li>HelseID / OIDC</li>
+            <li>GitOps / Flux</li>
+          </ul>
+        </div>
+
+        <div class="om-abonner-boks">
+          <p class="om-sidebar-boks__tittel">Abonner</p>
+          <p class="om-abonner-boks__tekst">
+            Nye innlegg via RSS
+          </p>
+          <a href={`${base}/rss.xml`} class="om-abonner-boks__lenke">RSS-feed →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Grunnoppsett>

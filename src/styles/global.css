@@ -124,6 +124,7 @@ a:hover { color: var(--svart); }
   font-size: 0.8rem;
   text-decoration: none;
   border: 2px solid var(--raud);
+  border-radius: 4px;
 }
 .hopp-til-innhald:focus { top: 1rem; }
 
@@ -851,4 +852,467 @@ section:not(:last-of-type) {
 
   a { color: #000 !important; text-decoration: none !important; }
   a[href]::after { content: none !important; }
+}
+
+
+/* ==========================================================
+   Bloggstilar — flytta hit ved samanslåinga av Blogg og CV.
+   Skal-laget (.container, .nettstad-*, .meny-bryter, .tema-bryter)
+   kjem frå CV-en over og er med vilje ikkje duplisert her.
+   ========================================================== */
+
+/* (duplisert @import for Google Fonts fjerna — ligg øvst i fila) */
+
+:root {
+  --svart: #0f0f0f;
+  --kvit: #f5f0e8;
+  --grå: #6b6560;
+  --lys-grå: #e8e2d8;
+  --raud: #b8001f;
+  --gull: #c4933f;
+  --skrift-brei: 'Playfair Display', Georgia, serif;
+  --skrift-brød: 'Source Serif 4', Georgia, serif;
+  --skrift-kode: 'JetBrains Mono', monospace;
+  --tekst-dempa: #3a3530;
+  --tekst-sekundar: #4a4540;
+  --kode-bakgrunn: #e8e0cc;
+  --header-bakgrunn: rgba(245, 240, 232, 0.95);
+  
+  /* Pagefind UI Standard */
+  --pagefind-ui-primary: var(--raud);
+  --pagefind-ui-text: var(--svart);
+  --pagefind-ui-background: var(--kvit);
+  --pagefind-ui-border: var(--lys-grå);
+  --pagefind-ui-tag: var(--lys-grå);
+  --pagefind-ui-font: var(--skrift-brød);
+}
+
+/* Mørk modus */
+html[data-theme="dark"] {
+  --svart: #e8e2d8;
+  --kvit: #1a1816;
+  --grå: #9a958e;
+  --lys-grå: #2e2a26;
+  --raud: #e84058;
+  --gull: #d4a34f;
+  --tekst-dempa: #c5bfb8;
+  --tekst-sekundar: #b0a99f;
+  --kode-bakgrunn: #2a2520;
+  --header-bakgrunn: rgba(26, 24, 22, 0.95);
+
+  /* Pagefind UI Mørk */
+  --pagefind-ui-text: #e8e2d8;
+  --pagefind-ui-background: #1a1816;
+  --pagefind-ui-border: #2e2a26;
+  --pagefind-ui-tag: #2e2a26;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    --svart: #e8e2d8;
+    --kvit: #1a1816;
+    --grå: #9a958e;
+    --lys-grå: #2e2a26;
+    --raud: #e84058;
+    --gull: #d4a34f;
+    --tekst-dempa: #c5bfb8;
+    --tekst-sekundar: #b0a99f;
+    --kode-bakgrunn: #2a2520;
+    --header-bakgrunn: rgba(26, 24, 22, 0.95);
+
+    --pagefind-ui-text: #e8e2d8;
+    --pagefind-ui-background: #1a1816;
+    --pagefind-ui-border: #2e2a26;
+    --pagefind-ui-tag: #2e2a26;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fokus-indikatorar (tilgjenge) */
+:focus-visible {
+  outline: 2px solid var(--raud);
+  outline-offset: 2px;
+}
+
+/* Skip-to-content */
+
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--kvit);
+  color: var(--svart);
+  font-family: var(--skrift-brød);
+  font-weight: 300; /* Tilbake til 300 for editorial eleganse */
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typografi */
+h1, h2, h3, h4 {
+  font-family: var(--skrift-brei);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--svart);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-top: 2.5rem; margin-bottom: 1rem; }
+h3 { font-size: 1.3rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+
+p { margin-bottom: 1.4rem; }
+
+a {
+  color: var(--raud);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+a:hover { color: var(--svart); }
+
+strong { font-weight: 600; }
+
+em { font-style: italic; }
+
+/* Drop Cap (initial) for første avsnitt i artikkel */
+.artikkel-kropp > p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--skrift-brei);
+  font-size: 5.5rem;
+  line-height: 4.2rem;
+  padding-top: 0.5rem;
+  padding-right: 0.8rem;
+  padding-left: 0.1rem;
+  color: var(--svart);
+  font-weight: 700;
+}
+
+/* Sjekk at drop cap ikkje krasjar med blockquotes */
+.artikkel-kropp > blockquote + p::first-letter {
+  float: none;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+}
+
+blockquote {
+  border-left: 3px solid var(--raud);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--tekst-dempa);
+  font-size: 1.1rem;
+}
+
+code {
+  font-family: var(--skrift-kode);
+  font-size: 0.85em;
+  background: var(--kode-bakgrunn);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background: #0f0f0f;
+  color: #e8e0cc;
+  padding: 1.5rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--lys-grå);
+  margin: 3rem 0;
+}
+
+/* Layout */
+
+
+/* Header */
+
+
+
+
+
+
+.nettstad-nav a:hover,
+
+/* Footer */
+
+
+.tag {
+  font-family: var(--skrift-kode);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grå);
+  border: 1px solid var(--lys-grå);
+  padding: 0.2em 0.6em;
+  border-radius: 2px;
+  text-decoration: none;
+}
+.tag:hover {
+  color: var(--svart);
+  border-color: var(--grå);
+}
+
+/* Artikkel-side */
+.artikkel-header {
+  padding: 4rem 0 3.5rem;
+  border-bottom: 1px solid var(--lys-grå);
+  margin-bottom: 4rem;
+}
+
+.artikkel-header__meta {
+  font-family: var(--skrift-kode);
+  font-size: 0.72rem;
+  color: var(--grå);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.artikkel-header__tittel {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.artikkel-header__ingress {
+  font-size: 1.15rem;
+  color: var(--tekst-dempa);
+  font-style: italic;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.artikkel-kropp {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+
+/* Forsida */
+.forsida-hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--lys-grå);
+  margin-bottom: 4rem;
+}
+
+.forsida-hero__kicker {
+  font-family: var(--skrift-kode);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--raud);
+  margin-bottom: 1.2rem;
+}
+
+.forsida-hero__tittel {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+}
+
+.forsida-hero__beskriving {
+  font-size: 1.1rem;
+  color: var(--tekst-sekundar);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.seksjon-tittel {
+  font-family: var(--skrift-kode);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--grå);
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+/* Pagefind UI Tilpassing */
+.pagefind-container {
+  margin-bottom: 3rem;
+}
+
+.pagefind-ui__search-input {
+  background-color: var(--pagefind-ui-background) !important;
+  color: var(--pagefind-ui-text) !important;
+  border: 1px solid var(--pagefind-ui-border) !important;
+}
+
+.pagefind-ui__drawer {
+  background-color: var(--pagefind-ui-background) !important;
+}
+
+.pagefind-ui__result-link {
+  color: var(--raud) !important;
+}
+
+.pagefind-ui__result-excerpt {
+  color: var(--tekst-dempa) !important;
+}
+
+/* Kjeldekritikk & Badges */
+.kjelde-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  border-radius: 50%;
+  color: white !important;
+  cursor: help;
+  margin-right: 0.2rem;
+  vertical-align: middle;
+  transition: transform 0.2s;
+  font-family: var(--skrift-kode);
+  text-decoration: none !important;
+}
+
+.kjelde-badge:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Fargar basert på kvalitet-attributt */
+.kjelde-badge[data-kvalitet="A"] { background-color: #10b981 !important; }
+.kjelde-badge[data-kvalitet="B"] { background-color: #3b82f6 !important; }
+.kjelde-badge[data-kvalitet="C"] { background-color: #f59e0b !important; }
+.kjelde-badge[data-kvalitet="D"] { background-color: #ef4444 !important; }
+
+.kjelde-badge--habilitet {
+  border-radius: 2px !important;
+  background-color: var(--svart) !important;
+  margin-right: 0.5rem;
+}
+
+html[data-theme="dark"] .kjelde-badge--habilitet {
+  background-color: #444 !important;
+}
+
+.kjelde-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.kjelde-modal {
+  background: var(--kvit);
+  width: 100%;
+  max-width: 550px;
+  max-height: 85vh; /* Sørg for at ho held seg innanfor skjermen */
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  overflow: hidden;
+  border-top: 4px solid var(--raud);
+}
+
+.kjelde-modal__header {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--lys-grå);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.kjelde-modal__header h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.kjelde-modal__lukk {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--grå);
+  line-height: 1;
+}
+
+.kjelde-modal__innhald {
+  padding: 1.5rem 2rem;
+  overflow-y: auto; /* Gjer innhaldet skrollbart */
+  -webkit-overflow-scrolling: touch;
+}
+
+.kjelde-skala {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.2rem 0;
+}
+
+.kjelde-skala__item {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+
+.kjelde-skala__item p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--tekst-dempa);
+}
+
+.kjelde-modal__note {
+  background: var(--lys-grå);
+  padding: 1rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+html[data-theme="dark"] .kjelde-modal {
+  background: #1e1b18;
+}
+
+/* Responsiv */
+@media (max-width: 640px) {
+  .forsida-hero {
+    padding: 2.5rem 0 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .artikkel-header {
+    padding: 2rem 0 1.5rem;
+    margin-bottom: 2rem;
+  }
 }

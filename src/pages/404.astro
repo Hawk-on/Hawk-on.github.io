@@ -1,0 +1,15 @@
+---
+import Grunnoppsett from '../layouts/Grunnoppsett.astro';
+const base = "/";
+---
+
+<Grunnoppsett tittel="Sida finst ikkje" beskriving="404 — sida vart ikkje funnen">
+  <div class="container">
+    <div class="feilside">
+      <p class="feilside__kode">404</p>
+      <h1 class="feilside__tittel">Sida finst ikkje</h1>
+      <p class="feilside__tekst">Beklagar, men sida du leitar etter er ikkje her.</p>
+      <a href={base} class="feilside__lenke">← Tilbake til framsida</a>
+    </div>
+  </div>
+</Grunnoppsett>

@@ -1,0 +1,67 @@
+---
+import { BLOGG_BASE } from '../../utils/rutar';
+import { getCollection } from 'astro:content';
+import Grunnoppsett from '../../layouts/Grunnoppsett.astro';
+import { formaterDato } from '../../utils/dato';
+import { reknaUtLesetid, genererUtdrag } from '../../utils/tekst';
+import ArtikkelListe from '../../components/ArtikkelListe/ArtikkelListe';
+import Sok from '../../components/Sok/Sok';
+
+const base = BLOGG_BASE;
+const innlegg = await getCollection('blog', ({ data }) => {
+  return import.meta.env.DEV || !data.utkast;
+});
+
+const sortertInnleggData = innlegg
+  .sort((a, b) => {
+    const datoA = a.data.oppdatertDato ?? a.data.publisertDato;
+    const datoB = b.data.oppdatertDato ?? b.data.publisertDato;
+    return datoB.valueOf() - datoA.valueOf();
+  })
+  .map(i => ({
+    tittel: i.data.tittel,
+    dato: i.data.publisertDato,
+    oppdatertDato: i.data.oppdatertDato,
+    ingress: i.data.ingress || genererUtdrag(i.body || ''),
+    lesetid: i.data.lesetid || reknaUtLesetid(i.body || ''),
+    tags: i.data.tags ?? [],
+    slug: i.id,
+    datoFormatert: formaterDato(i.data.publisertDato)
+  }));
+
+const tagFrekvens = new Map<string, number>();
+sortertInnleggData.forEach(i =>
+  i.tags.forEach((t: string) =>
+    tagFrekvens.set(t, (tagFrekvens.get(t) ?? 0) + 1)
+  )
+);
+const sorterteTags = [...tagFrekvens.entries()]
+  .sort((a, b) => b[1] - a[1])
+  .map(([t]) => t);
+---
+
+<Grunnoppsett tittel="Analysar av geopolitikk og teknologi" beskriving="Tankar om makt, system og kva som eigentleg skjer. Ein strukturalistikk kikk på verda.">
+  <div class="container">
+
+    <section class="forsida-hero">
+      <div class="forsida-hero__kicker">Analysar · Geopolitikk · Teknologi</div>
+      <h1 class="forsida-hero__tittel">Tankar om makt, system og kva som eigentleg skjer</h1>
+      <p class="forsida-hero__beskriving">
+        Seniorrådgjevar og samfunnsengasjert, busett på Vestlandet.
+        Eg skriv om politisk økonomi, geopolitikk og teknologi.
+      </p>
+    </section>
+
+    <div class="sok-seksjon">
+      <Sok client:idle />
+    </div>
+
+    <ArtikkelListe 
+      client:load 
+      alleInnlegg={sortertInnleggData} 
+      sorterteTags={sorterteTags} 
+      base={base} 
+    />
+
+  </div>
+</Grunnoppsett>

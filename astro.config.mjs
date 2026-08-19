@@ -6,4 +6,10 @@ export default defineConfig({
   site: 'https://hawk-on.github.io',
   trailingSlash: 'always',
   integrations: [react(), sitemap()],
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      wrap: true
+    }
+  }
 });

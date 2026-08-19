@@ -1,0 +1,124 @@
+/* ArtikkelListe spesifikke stilar */
+.tag-strip {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Stilfull scrollbar for tag-strip */
+.tag-strip::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tag-strip::-webkit-scrollbar-track {
+  background: var(--kvit);
+}
+
+.tag-strip::-webkit-scrollbar-thumb {
+  background: var(--lys-grå);
+  border-radius: 2px;
+}
+
+.tag-strip::-webkit-scrollbar-thumb:hover {
+  background: var(--grå);
+}
+
+.tag--filter {
+  background: none;
+  border: 1px solid var(--lys-grå);
+  cursor: pointer;
+}
+
+.tag--filter.aktiv {
+  background: var(--raud);
+  color: white;
+  border-color: var(--raud);
+}
+
+.tag-teljing {
+  font-family: var(--skrift-kode);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grå);
+  margin-bottom: 1rem;
+  min-height: 1.2em;
+}
+
+.artikkel-liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.artikkel-kort {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 2rem;
+  padding: 2.2rem 0.75rem;
+  border-bottom: 1px solid var(--lys-grå);
+  align-items: start;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 -0.75rem;
+  border-radius: 4px;
+}
+
+.artikkel-kort:hover {
+  background-color: var(--lys-grå);
+  transform: translateX(6px);
+}
+
+.artikkel-kort:first-child { border-top: 1px solid var(--lys-grå); }
+
+.artikkel-kort__dato {
+  font-family: var(--skrift-kode);
+  font-size: 0.72rem;
+  color: var(--grå);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-top: 0.35rem;
+  line-height: 1.4;
+}
+
+.artikkel-kort__tittel {
+  font-family: var(--skrift-brei);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.artikkel-kort__tittel a {
+  text-decoration: none;
+  color: var(--svart);
+}
+
+.artikkel-kort__tittel a:hover {
+  color: var(--raud);
+}
+
+.artikkel-kort__ingress {
+  font-size: 0.95rem;
+  color: var(--tekst-sekundar);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.artikkel-kort__tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .artikkel-kort {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

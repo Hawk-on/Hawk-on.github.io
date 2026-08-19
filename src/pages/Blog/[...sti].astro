@@ -1,0 +1,43 @@
+---
+// Redirect-stubbar frå den gamle bloggstien (/Blog/ med stor B) til /blog/.
+//
+// Bloggen låg tidlegare i eit eige repo som eigde stien /Blog/ på GitHub Pages.
+// Etter samanslåinga ligg han under /blog/, og desse sidene held gamle lenkjer,
+// bokmerke og søkjemotortreff i live. GitHub Pages har ingen serverside-redirects,
+// så dette må gjerast med meta-refresh pluss ein canonical-peikar.
+//
+// Stiane er skilde berre av bokstavstorleik, og GitHub Pages skil på det, så
+// /Blog/... og /blog/... kan eksistere side om side.
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const innlegg = await getCollection('blog', ({ data }) => !data.utkast);
+  const tags = [...new Set(innlegg.flatMap(i => i.data.tags ?? []))];
+
+  return [
+    { params: { sti: undefined }, props: { mal: '/blog/' } },
+    ...innlegg.map(i => ({ params: { sti: i.id }, props: { mal: `/blog/${i.id}/` } })),
+    ...tags.map(t => ({ params: { sti: `tag/${t}` }, props: { mal: `/blog/tag/${t}/` } })),
+  ];
+}
+
+const { mal } = Astro.props;
+const absolutt = new URL(mal, Astro.site ?? 'https://hawk-on.github.io').toString();
+---
+
+<!DOCTYPE html>
+<html lang="nn">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content={`0; url=${mal}`} />
+  <link rel="canonical" href={absolutt} />
+  <meta name="robots" content="noindex" />
+  <title>Flytta — Håkon Hole Lønning</title>
+</head>
+<body>
+  <p>Sida har flytta til <a href={mal}>{mal}</a>.</p>
+  <script is:inline define:vars={{ mal }}>
+    window.location.replace(mal);
+  </script>
+</body>
+</html>

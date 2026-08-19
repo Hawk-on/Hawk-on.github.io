@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 
-import { Image } from 'astro:assets';
 import { ClientRouter } from 'astro:transitions';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -9,35 +8,71 @@ import Footer from '../components/Footer/Footer';
 interface Props {
   tittel: string;
   beskriving?: string;
+  erArtikkel?: boolean;
+  bilete?: string;
 }
 
 const {
   tittel,
   beskriving = 'Full-stack-utviklar frå Vestlandet. .NET, Azure og moderne webutvikling.',
+  erArtikkel = false,
+  bilete = '/assets/img/me.jpg',
 } = Astro.props;
 
-const kanoniskUrl = Astro.site
-  ? new URL(Astro.url.pathname, Astro.site).toString()
-  : Astro.url.pathname;
+const aktuellSti = Astro.url.pathname;
+const erBlogg = aktuellSti.startsWith('/blog');
+
+const siteUrl = Astro.site ? Astro.site.toString() : 'https://hawk-on.github.io';
+const kanoniskUrl = new URL(aktuellSti, siteUrl).toString();
+const bileteUrl = new URL(bilete.startsWith('http') ? bilete : bilete, siteUrl).toString();
+
 const fullTittel =
   tittel === 'Håkon Hole Lønning' ? tittel : `${tittel} — Håkon Hole Lønning`;
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Håkon Hole Lønning",
-  "jobTitle": "Full-stack Utviklar",
-  "url": "https://hawk-on.github.io",
-  "sameAs": [
-    "https://github.com/Hawk-on",
-    "https://www.linkedin.com/in/hawkon"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "Vestland",
-    "addressCountry": "NO"
-  }
-};
+// Umami: bloggen og CV-en held kvar sin eigen statistikkstraum
+const umamiId = erBlogg
+  ? 'fd43352d-8e75-4352-8f82-92eb8a269859'
+  : 'b3e4a54f-39af-4b9c-94fc-e9d0880ea5c4';
+
+const jsonLd = erArtikkel
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": tittel,
+      "description": beskriving,
+      "image": bileteUrl,
+      "author": {
+        "@type": "Person",
+        "name": "Håkon Hole Lønning",
+        "url": "https://github.com/hawk-on"
+      },
+      "url": kanoniskUrl,
+      "inLanguage": "nn-NO"
+    }
+  : erBlogg
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "hawk-on",
+      "url": new URL('/blog/', siteUrl).toString(),
+      "inLanguage": "nn-NO"
+    }
+  : {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Håkon Hole Lønning",
+      "jobTitle": "Full-stack Utviklar",
+      "url": siteUrl,
+      "sameAs": [
+        "https://github.com/Hawk-on",
+        "https://www.linkedin.com/in/hawkon"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Vestland",
+        "addressCountry": "NO"
+      }
+    };
 ---
 
 <!DOCTYPE html>
@@ -45,7 +80,7 @@ const jsonLd = {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cloud.umami.is; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://hawk-on.github.io; connect-src 'self' https://cloud.umami.is https://hawk-on.github.io; object-src 'none'; base-uri 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cloud.umami.is; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://hawk-on.github.io; connect-src 'self' https://cloud.umami.is https://giscus.app; frame-src https://giscus.app; object-src 'none'; base-uri 'self'" />
   <meta name="description" content={beskriving} />
   <title>{fullTittel}</title>
   <link rel="canonical" href={kanoniskUrl} />
@@ -53,20 +88,17 @@ const jsonLd = {
   <meta property="og:title" content={fullTittel} />
   <meta property="og:description" content={beskriving} />
   <meta property="og:url" content={kanoniskUrl} />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://hawk-on.github.io/assets/img/me.jpg" />
+  <meta property="og:type" content={erArtikkel ? 'article' : 'website'} />
+  <meta property="og:image" content={bileteUrl} />
   <meta property="og:locale" content="nn_NO" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTittel} />
   <meta name="twitter:description" content={beskriving} />
-  <meta name="twitter:image" content="https://hawk-on.github.io/assets/img/me.jpg" />
+  <meta name="twitter:image" content={bileteUrl} />
   <link rel="icon" type="image/png" href="/assets/img/favicon.png" id="favicon" />
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
-  <script
-    defer
-    src="https://cloud.umami.is/script.js"
-    data-website-id="b3e4a54f-39af-4b9c-94fc-e9d0880ea5c4"
-  ></script>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/rss.xml" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id={umamiId}></script>
   <ClientRouter />
   <script is:inline>
     function setTema() {
@@ -75,18 +107,12 @@ const jsonLd = {
         if (t) document.documentElement.setAttribute('data-theme', t);
       } catch (e) {}
 
-      function oppdaterFavicon() {
-        var link = document.getElementById('favicon');
-        if (!link) return;
-        var html = document.documentElement;
-        var theme = html.getAttribute('data-theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var isDark = theme === 'dark' || (!theme && prefersDark);
-        link.href = isDark
-          ? '/assets/img/favicon-dark.png'
-          : '/assets/img/favicon.png';
-      }
-      oppdaterFavicon();
+      var link = document.getElementById('favicon');
+      if (!link) return;
+      var theme = document.documentElement.getAttribute('data-theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var isDark = theme === 'dark' || (!theme && prefersDark);
+      link.href = isDark ? '/assets/img/favicon-dark.png' : '/assets/img/favicon.png';
     }
 
     setTema();
@@ -96,7 +122,7 @@ const jsonLd = {
 <body>
   <a href="#hovudinnhald" class="hopp-til-innhald">Hopp til innhald</a>
 
-  <Header client:load />
+  <Header client:load aktuellSti={aktuellSti} />
 
   <main id="hovudinnhald">
     <slot />
@@ -105,5 +131,4 @@ const jsonLd = {
   <Footer />
 
 </body>
-</html>
 </html>

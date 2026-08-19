@@ -1,0 +1,63 @@
+/* LeseProgresjon spesifikke stilar */
+.les-framgang {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: var(--farge-hovud);
+  z-index: 1000;
+  transition: width 0.1s ease-out;
+}
+
+.les-tid-igjen {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: var(--farge-bakgrunn);
+  border: 1px solid var(--farge-border);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--farge-tekst-lys);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 90;
+  pointer-events: none;
+}
+
+.les-tid-igjen.synleg {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.til-toppen {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 45px;
+  height: 45px;
+  background-color: var(--farge-bakgrunn);
+  border: 1px solid var(--farge-border);
+  color: var(--farge-tekst);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 90;
+  border-radius: 4px;
+}
+
+.til-toppen.synleg {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.til-toppen:hover {
+  border-color: var(--farge-hovud);
+  color: var(--farge-hovud);
+}

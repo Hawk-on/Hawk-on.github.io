@@ -1,0 +1,240 @@
+---
+import { BLOGG_BASE } from '../utils/rutar';
+import Grunnoppsett from './Grunnoppsett.astro';
+import { formaterDato } from '../utils/dato';
+import GiscusKommentarar from '../components/GiscusKommentarar/GiscusKommentarar';
+import ArtikkelMeta from '../components/ArtikkelMeta/ArtikkelMeta';
+import Innhaldstabell from '../components/Innhaldstabell/Innhaldstabell';
+import LeseProgresjon from '../components/LeseProgresjon/LeseProgresjon';
+import KjeldeInfo from '../components/ArtikkelMeta/KjeldeInfo';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  frontmatter: {
+    slug?: string;
+    tittel: string;
+    publisertDato: string | Date;
+    oppdatertDato?: string | Date;
+    ingress?: string;
+    tags?: string[];
+    lesetid?: number;
+    bilete?: string;
+  }
+}
+
+const { frontmatter } = Astro.props;
+const { tittel, publisertDato, oppdatertDato, ingress, tags = [], lesetid, bilete } = frontmatter;
+const base = BLOGG_BASE;
+const aktuellSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || '';
+
+const datoFormatert = formaterDato(publisertDato, 'lang');
+const oppdatertFormatert = oppdatertDato ? formaterDato(oppdatertDato, 'lang') : undefined;
+
+// Finn relaterte artiklar basert på tags
+const alleInnlegg = await getCollection('blog', ({ data }) => {
+  return (import.meta.env.DEV || !data.utkast) && data.tittel !== tittel;
+});
+
+const relaterteInnlegg = alleInnlegg
+  .map(innlegg => {
+    const fellesTags = innlegg.data.tags.filter(t => tags.includes(t)).length;
+    return { ...innlegg, fellesTags };
+  })
+  .filter(innlegg => innlegg.fellesTags > 0)
+  .sort((a, b) => {
+    const datoA = a.data.oppdatertDato ?? a.data.publisertDato;
+    const datoB = b.data.oppdatertDato ?? b.data.publisertDato;
+    return b.fellesTags - a.fellesTags || datoB.valueOf() - datoA.valueOf();
+  })
+  .slice(0, 3);
+---
+
+<Grunnoppsett tittel={tittel} beskriving={ingress} erArtikkel={true} bilete={bilete}>
+  <div class="container">
+    <header class="artikkel-header">
+      <ArtikkelMeta 
+        client:load 
+        datoFormatert={datoFormatert} 
+        oppdatertFormatert={oppdatertFormatert}
+        lesetid={lesetid} 
+        tags={tags} 
+        base={base} 
+        key={aktuellSlug}
+      />
+      <h1 class="artikkel-header__tittel">{tittel}</h1>
+      {ingress && <p class="artikkel-header__ingress">{ingress}</p>}
+    </header>
+
+    <Innhaldstabell client:idle key={aktuellSlug} />
+
+    <article class="artikkel-kropp" id="artikkel-kropp" data-pagefind-body>
+      <slot />
+    </article>
+
+    {relaterteInnlegg.length > 0 && (
+      <section class="relaterte-artiklar">
+        <h2 class="seksjon-tittel">Les meir om emnet</h2>
+        <ul className="artikkel-liste">
+          {relaterteInnlegg.map(innlegg => (
+            <li key={innlegg.id} className="artikkel-kort artikkel-kort--sm">
+              <div className="artikkel-kort__dato">{formaterDato(innlegg.data.publisertDato)}</div>
+              <div>
+                <h3 className="artikkel-kort__tittel">
+                  <a href={`${base}/${innlegg.id}`}>{innlegg.data.tittel}</a>
+                </h3>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <GiscusKommentarar client:only="react" term={aktuellSlug} key={aktuellSlug} />
+
+    <LeseProgresjon client:idle manueltLesetid={lesetid} key={aktuellSlug} />
+
+    <KjeldeInfo client:load />
+
+    <nav class="artikkel-tilbake-nav">
+      <a href={base} class="artikkel-tilbake-lenke" data-umami-event="artikkel-tilbake">
+        ← Tilbake til alle innlegg
+      </a>
+    </nav>
+  </div>
+</Grunnoppsett>
+
+<script>
+  // Fotnote Preview og Kvalitets-logikk
+  function initKjeldeSystem() {
+    const referansar = document.querySelectorAll('a[href^="#ref-"]');
+    const fargar = { 'A': '#10b981', 'B': '#3b82f6', 'C': '#f59e0b', 'D': '#ef4444' };
+    
+    referansar.forEach(ref => {
+      const targetId = ref.getAttribute('href')?.substring(1);
+      if (!targetId) return;
+      const targetSpan = document.getElementById(targetId);
+      if (!targetSpan) return;
+
+      const kvalitet = targetSpan.getAttribute('data-kvalitet');
+      const habilitet = targetSpan.getAttribute('data-habilitet');
+
+      // Legg til badgar i teksten
+      if (!ref.querySelector('.kjelde-badge')) {
+        if (kvalitet && fargar[kvalitet as keyof typeof fargar]) {
+          const b1 = document.createElement('span');
+          b1.className = 'kjelde-badge';
+          b1.style.backgroundColor = fargar[kvalitet as keyof typeof fargar];
+          b1.textContent = kvalitet;
+          b1.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.dispatchEvent(new CustomEvent('opne-kjeldeinfo'));
+          };
+          ref.appendChild(b1);
+        }
+        if (habilitet) {
+          const b2 = document.createElement('span');
+          b2.className = 'kjelde-badge kjelde-badge--habilitet';
+          b2.textContent = habilitet;
+          b2.onclick = (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.dispatchEvent(new CustomEvent('opne-kjeldeinfo'));
+          };
+          ref.appendChild(b2);
+        }
+      }
+
+      // Hover preview logikk
+      ref.addEventListener('mouseenter', (e) => {
+        const kjeldeTekst = targetSpan.nextSibling?.textContent || targetSpan.parentElement?.textContent?.split(']')[1] || '';
+        if (!kjeldeTekst.trim()) return;
+
+        const preview = document.createElement('div');
+        preview.className = 'fotnote-preview';
+        
+        let headerHtml = '';
+        if (kvalitet || habilitet) {
+          headerHtml = `<div style="display:flex; gap:0.5rem; margin-bottom:0.75rem; border-bottom:1px solid #eee; padding-bottom:0.5rem;">`;
+          if (kvalitet) {
+            headerHtml += `<div><span class="kjelde-badge" style="margin:0; background:${fargar[kvalitet as keyof typeof fargar]}">${kvalitet}</span></div>`;
+          }
+          if (habilitet) {
+            headerHtml += `<div><span class="kjelde-badge kjelde-badge--habilitet" style="margin:0;">${habilitet}</span></div>`;
+          }
+          headerHtml += `</div>`;
+        }
+
+        preview.innerHTML = headerHtml + `<div style="font-style:italic;">${kjeldeTekst.trim()}</div>`;
+        
+        const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+        preview.style.top = `${rect.top + window.scrollY - 10}px`;
+        preview.style.left = `${rect.left + window.scrollX}px`;
+        document.body.appendChild(preview);
+
+        const removePreview = () => {
+          preview.remove();
+          ref.removeEventListener('mouseleave', removePreview);
+        };
+        ref.addEventListener('mouseleave', removePreview);
+      });
+    });
+  }
+
+  // ScrollSpy for Innhaldstabell
+  function initScrollSpy() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          document.querySelectorAll('.innhaldstabell a').forEach(link => {
+            link.classList.toggle('aktiv', link.getAttribute('href') === `#${id}`);
+          });
+        }
+      });
+    }, { rootMargin: '-10% 0px -80% 0px' });
+
+    document.querySelectorAll('.artikkel-kropp h2, .artikkel-kropp h3').forEach(h => observer.observe(h));
+  }
+
+  initKjeldeSystem();
+  initScrollSpy();
+  document.addEventListener('astro:page-load', () => {
+    initKjeldeSystem();
+    initScrollSpy();
+  });
+</script>
+
+<style is:global>
+  .fotnote-preview {
+    position: absolute;
+    transform: translateY(-100%);
+    background: var(--kvit);
+    border: 1px solid var(--lys-grå);
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    max-width: 380px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    z-index: 1000;
+    pointer-events: none;
+    font-family: var(--skrift-brød);
+    border-top: 2px solid var(--raud);
+    border-radius: 2px;
+  }
+
+  html[data-theme="dark"] .fotnote-preview {
+    background: #252220;
+    color: #e8e2d8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-color: #444;
+  }
+
+  .innhaldstabell a.aktiv {
+    color: var(--raud) !important;
+    font-weight: 600;
+    border-left: 2px solid var(--raud);
+    padding-left: 0.5rem;
+    margin-left: -0.6rem;
+  }
+</style>

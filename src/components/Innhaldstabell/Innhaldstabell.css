@@ -1,0 +1,55 @@
+/* Innhaldstabell spesifikke stilar */
+.innhaldstabell {
+  background-color: var(--kvit);
+  border: 1px solid var(--lys-grå);
+  padding: 2rem;
+  margin: 2rem 0 4rem; /* Meir luft under til brødteksten */
+}
+
+.innhaldstabell__tittel {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  font-family: var(--skrift-kode);
+  color: var(--grå);
+}
+
+.innhaldstabell__tittel::-webkit-details-marker {
+  display: none;
+}
+
+.innhaldstabell[open] .innhaldstabell__pil {
+  transform: rotate(180deg);
+}
+
+.innhaldstabell__liste {
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.innhaldstabell__liste a {
+  text-decoration: none;
+  color: var(--tekst-sekundar);
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.innhaldstabell__liste a:hover,
+.innhaldstabell__liste a.aktiv {
+  color: var(--raud) !important;
+}
+
+.innhaldstabell__element--h3 {
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}

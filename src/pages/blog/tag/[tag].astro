@@ -1,0 +1,68 @@
+---
+import { BLOGG_BASE } from '../../../utils/rutar';
+import { getCollection } from 'astro:content';
+import Grunnoppsett from '../../../layouts/Grunnoppsett.astro';
+import { formaterDato } from '../../../utils/dato';
+
+export async function getStaticPaths() {
+  const innlegg = await getCollection('blog', ({ data }) => {
+    return import.meta.env.DEV || !data.utkast;
+  });
+  const alleTaggar = innlegg.flatMap(i => i.data.tags ?? []);
+  const unikeTaggar = [...new Set(alleTaggar)];
+
+  return unikeTaggar.map(tag => ({
+    params: { tag },
+    props: {
+      innlegg: innlegg.filter(i => (i.data.tags ?? []).includes(tag)),
+      tag,
+    },
+  }));
+}
+
+const { innlegg, tag } = Astro.props;
+const base = BLOGG_BASE;
+const sortertInnlegg = innlegg.sort((a, b) => {
+  const datoA = a.data.oppdatertDato ?? a.data.publisertDato;
+  const datoB = b.data.oppdatertDato ?? b.data.publisertDato;
+  return datoB.valueOf() - datoA.valueOf();
+});
+---
+
+<Grunnoppsett tittel={`#${tag}`} beskriving={`Alle innlegg merka med ${tag}`}>
+  <div class="container">
+    <div class="tag-header">
+      <p class="seksjon-tittel"><a href={base} class="tag-header__tilbake">Alle innlegg</a></p>
+      <h1 class="tag-header__tittel">#{tag}</h1>
+      <p class="tag-header__tal">
+        {sortertInnlegg.length} {sortertInnlegg.length === 1 ? 'innlegg' : 'innlegg'}
+      </p>
+    </div>
+
+    <ul class="artikkel-liste">
+      {sortertInnlegg.map(innlegg => {
+        const { tittel, publisertDato, ingress, tags = [] } = innlegg.data;
+        const datoFormatert = formaterDato(publisertDato);
+        const slug = innlegg.id;
+        return (
+          <li class="artikkel-kort">
+            <div class="artikkel-kort__dato">{datoFormatert}</div>
+            <div>
+              <h2 class="artikkel-kort__tittel">
+                <a href={`${base}/${slug}`}>{tittel}</a>
+              </h2>
+              {ingress && <p class="artikkel-kort__ingress">{ingress}</p>}
+              {tags.length > 0 && (
+                <div class="artikkel-kort__tags">
+                  {tags.map((t: string) => (
+                    <a href={`${base}/tag/${t}`} class="tag" data-umami-event="tagg-klikk" data-umami-event-tag={t}>{t}</a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</Grunnoppsett>

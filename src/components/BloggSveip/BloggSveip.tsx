@@ -15,7 +15,7 @@ const BloggSveip: React.FC = () => {
   const aktivSpraak = useStore(spraakStore);
 
   useEffect(() => {
-    fetch('https://hawk-on.github.io/Blog/siste-innlegg.json')
+    fetch('/siste-innlegg.json')
       .then(res => res.json())
       .then(data => {
         setInnlegg(data);
@@ -40,7 +40,7 @@ const BloggSveip: React.FC = () => {
           </div>
         ))}
       </div>
-      <a href="https://hawk-on.github.io/Blog" className="knapp" style={{ marginTop: '2rem' }}>
+      <a href="/blog/" className="knapp" style={{ marginTop: '2rem' }}>
         {aktivSpraak === 'no' ? 'Besøk bloggen →' : 'Visit the blog →'}
       </a>
     </section>
