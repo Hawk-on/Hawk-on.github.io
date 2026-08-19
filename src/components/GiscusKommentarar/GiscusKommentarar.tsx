@@ -6,11 +6,23 @@ interface Props {
   term: string;
 }
 
+/**
+ * Eigne Giscus-tema som speglar designtokena våre.
+ *
+ * Kommentarfeltet er ein iframe frå giscus.app og arvar ingenting frå sida,
+ * så paletten må serverast som CSS. URL-ane må vera absolutte — giscus løyser
+ * dei frå sitt eige opphav, ikkje frå vårt. Filene ligg i public/.
+ */
+const TEMA = {
+  light: 'https://hawk-on.github.io/giscus-lys.css',
+  dark: 'https://hawk-on.github.io/giscus-mork.css',
+} as const;
+
 const GiscusKommentarar: React.FC<Props> = ({ term }) => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState<keyof typeof TEMA>('light');
 
   useEffect(() => {
-    const getTheme = () => {
+    const getTheme = (): keyof typeof TEMA => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       return currentTheme === 'dark' || (!currentTheme && prefersDark) ? 'dark' : 'light';
@@ -40,7 +52,7 @@ const GiscusKommentarar: React.FC<Props> = ({ term }) => {
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="bottom"
-        theme={theme}
+        theme={TEMA[theme]}
         lang="en"
         loading="lazy"
       />
