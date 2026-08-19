@@ -30,13 +30,13 @@ const GiscusKommentarar: React.FC<Props> = ({ term }) => {
     <section className="giscus-container" style={{ marginTop: '4rem', borderTop: '1px solid var(--lys-grå)', paddingTop: '2rem' }}>
       <Giscus
         id="comments"
-        repo="Hawk-on/Blog"
-        repoId="R_kgDOR94FZA"
+        repo="Hawk-on/hawk-on.github.io"
+        repoId="MDEwOlJlcG9zaXRvcnkxNTUzODU2MDk="
         category="Announcements"
-        categoryId="DIC_kwDOR94FZM4C6-7g"
+        categoryId="DIC_kwDOCUL_Cc4DDwbg"
         mapping="specific"
         term={term}
-        strict="0"
+        strict="1"
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="bottom"

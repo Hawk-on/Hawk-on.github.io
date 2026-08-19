@@ -56,7 +56,8 @@ Alle artiklar skal bruka den to-dimensjonale kjelde-matrisa.
 
 ## Giscus
 - `mapping="specific"` med artikkelens slug som `term`. **Ikkje** `pathname` — det ville binde kommentartrådane til URL-en og gjere dei foreldrelause ved kvar stiendring.
-- Discussions bur framleis i `Hawk-on/Blog`. **Det repoet må ikkje arkiverast** — arkivering gjer Discussions skrivebeskytta, og då kan ingen kommentere.
+- Discussions bur i **dette** repoet (kategorien Announcements). Flytta hit i august 2026; det gamle Blog-repoet hadde ingen trådar, så ingenting gjekk tapt.
+- `strict="1"` — slugar som `palantir-frankrike-...` og `palantir-moderniteten-...` deler ord, og GitHub si fuzzy-søking kunne elles blande trådane.
 - Giscus har inga norsk omsetjing; `lang="en"`.
 
 ## Språkvask — sjekk alltid
