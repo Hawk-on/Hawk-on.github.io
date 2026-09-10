@@ -18,9 +18,17 @@ Dette er ikkje ei historie om manglande politisk vilje, og det er verdt å vera 
 
 Grunngjevinga står i innstillinga. Digitaliserings- og forvaltningsminister Karianne O. Tung viste i brev av 6. mars 2026 til at det alt er gjennomført ei konseptvalutgreiing om ei nasjonal skyteneste, at ei lukka, statleg skyteneste vart vurdert som det dyraste av konsepta, og at den eksterne kvalitetssikringa rådde til ikkje å gå vidare med det konseptet [\[2\]](#ref-2).
 
-Den formuleringa skjuler kven som meinte kva. Utgreiinga vart skriven av Nasjonal tryggingsmyndigheit på oppdrag frå Justis- og beredskapsdepartementet, og NSM **tilrådde** ei lukka statleg skyteneste, kombinert med ei lukka kommersiell løysing for data som treng mindre grad av nasjonal kontroll. Det var den eksterne kvalitetssikringa, gjennomført frå februar til august 2023, som rådde til å ikkje gå vidare med det statlege konseptet, med tilvising til uvisse om den samfunnsøkonomiske nytta [\[8\]](#ref-8).
+Kvalitetssikringsrapporten er offentleg i sladda form [\[11\]](#ref-11). Han seier ikkje det.
 
-Motsetnaden ligg altså ikkje inne i det faglege grunnlaget. Ho ligg mellom to institusjonar med kvar sin målestokk. Etaten som har som oppgåve å vurdere kva som truar norsk suverenitet, sa bygg det. Ordninga som har som oppgåve å vurdere om pengane er godt brukte, sa nei. Det var den siste som vann, og det er den avgjerda denne teksten handlar om.
+## Kva rapporten faktisk konkluderte med
+
+Utgreiinga vart skriven av Nasjonal tryggingsmyndigheit på oppdrag frå Justis- og beredskapsdepartementet og datert 26. januar 2023. Kvalitetssikringa vart utført av PROMIS, Atkins Norge og Oslo Economics, og levert 25. august same år [\[11\]](#ref-11).
+
+NSM tilrådde konsept 7, ein kombinasjon av lukka statleg og lukka kommersiell sky. Det oppsiktsvekkjande er at etaten gjorde det med opne auge: rapporten refererer at KVU-en konkluderer med konsept 7 sjølv om konseptet ikkje kan reknast som samfunnsøkonomisk lønsamt mot nullalternativet, og grunngjev valet med at det gjev rom for ein balansegang mellom funksjonalitet og nasjonal kontroll [\[11\]](#ref-11). NSM sette altså suvereniteten framfor rekneskapen, og sa det rett ut.
+
+Kvalitetssikrarane rådde ikkje til å skrinleggje konseptet. Dei skreiv at dei ikkje hadde tilstrekkeleg grunnlag for å konkludere med kva for eit konsept som var mest samfunnsøkonomisk lønsamt av konsepta 1, 4 og 7, og tilrådde å gjennomføre supplerande analysar før endeleg konseptval [\[11\]](#ref-11).
+
+Det er ein annan ting enn eit nei. Ein rapport som seier at grunnlaget ikkje held til å konkludere, og ber om meir arbeid, vart referert i Stortinget som ei tilråding om ikkje å gå vidare. Metoden produserte ikkje ein dom. Han produserte eit fråvær av dom, og fråværet vart lese som eit svar.
 
 ## Ordninga som svarte
 
@@ -28,9 +36,9 @@ Ekstern kvalitetssikring er ikkje ein etat med ei sjølvstendig fagleg meining o
 
 To trekk ved ordninga avgjer kva ho kan sjå. Det fyrste er at ho vert utløyst av eit beløp: frå 2019 gjeld modellen for digitaliseringsprosjekt over 300 millionar kroner. Terskelen er ein kostnadsstorleik, ikkje ein risikostorleik. Eit tiltak kjem inn i ordninga fordi det er dyrt, ikkje fordi det er viktig.
 
-Det andre er at kvalitetssikrarane er private rådgjevarar på rammeavtale med Finansdepartementet [\[9\]](#ref-9). For skyutgreiinga var det Oslo Economics, i samarbeid med PROMIS og Systra, som utførte KS1-en. Rapporten er offentleg i sladda versjon [\[11\]](#ref-11), og Oslo Economics oppsummerte han sjølv under overskrifta «Trolig ikke samfunnsøkonomisk lønnsomt å etablere en omfattende lukket statlig skytjeneste» [\[12\]](#ref-12).
+Det andre er at kvalitetssikrarane er private rådgjevarar på rammeavtale med Finansdepartementet [\[9\]](#ref-9). Oslo Economics oppsummerte arbeidet på eigne nettsider under overskrifta «Trolig ikke samfunnsøkonomisk lønnsomt å etablere en omfattende lukket statlig skytjeneste» [\[12\]](#ref-12). Den overskrifta er meir bastant enn rapporten deira eigen tekst gjev dekning for, og ho er nærare statsråden si framstilling enn ho er deira eiga konklusjon om manglande grunnlag.
 
-Eg har sett på kven desse selskapa er, fordi det ligg nær å mistenkje bindingar til dei leverandørane ei statleg sky ville konkurrert med. Eg fann ingen. Oslo Economics er partnareigd med 57 aksjonærar og ingen eigarar frå teknologisektoren. PROMIS er eit norsk selskap på om lag tretti konsulentar. Systra er fransk og delvis eigd av dei franske statlege transportselskapa SNCF og RATP, altså om noko ein motvekt til amerikansk plattformmakt. Ingen av dei sel skytenester.
+Eg har sett på kven desse selskapa er, fordi det ligg nær å mistenkje bindingar til dei leverandørane ei statleg sky ville konkurrert med. Eg fann ingen. Oslo Economics er partnareigd med 57 aksjonærar og ingen eigarar frå teknologisektoren. PROMIS er eit norsk selskap på om lag tretti konsulentar innan styring av IT-prosjekt. Atkins er eit britisk ingeniørkonsern, sidan 2017 del av det kanadiske AtkinsRéalis, tidlegare SNC-Lavalin. Ingen av dei sel skytenester.
 
 Poenget er difor strukturelt og ikkje personleg, og det er verre enn ei interessekonflikt ville vore. Oslo Economics er eigd av samfunnsøkonomar, og forretninga deira er samfunnsøkonomisk analyse. Når staten spør om utrekninga held, hyrer han folk som har den utrekninga som fag og levebrød. Dei svarar kompetent på det spørsmålet. Ingen av dei har grunn til å spørje om det var det rette spørsmålet, og det krevst ingen som er kjøpt for at utfallet skal bli slik det vart.
 
@@ -42,9 +50,19 @@ Suverenitet har ingen slik post. Kva kostar det å vera utsett for framand juris
 
 Her er det freistande å seie at metoden ikkje har ein stad å skrive slikt inn. Det ville vore feil, og feilen er verdt å rette, for det rette svaret er meir urovekkjande. Finansdepartementets rundskriv R-109/2021 og rettleiaren frå DFØ krev at ein analyse handsamar både prissette og **ikkje-prissette** verknader. Dei ikkje-prissette blir vurderte med ein pluss-minus-metode og skal vegast inn i den samla tilrådinga [\[13\]](#ref-13).
 
-Rubrikken finst altså, og NSM fylte han ut. Etaten skreiv at manglande kontroll over IKT-system i ytste konsekvens kan svekkje Noregs suverenitet, territorielle integritet og demokratiske styreform [\[8\]](#ref-8). Suverenitetsargumentet vart ikkje oversett. Det vart notert.
+Rubrikken finst altså, og han vart fylt ut. Kapittel 9.5 i kvalitetssikringsrapporten verdset dei ikkje-prissette verknadene etter pluss-minus-metoden, med fem kategoriar: fleksibilitet, funksjonalitet og innovasjon, ressursbruk ved migrering, nasjonal autonomi og sikkerheit [\[11\]](#ref-11).
 
-Problemet er at dei to rubrikkane har ulik tyngd. Netto noverdi er eit tal. Ikkje-prissette verknader er ein tabell med plussar og minusar. Berre den eine av dei kan rangere alternativ mot kvarandre, og når dei blir stilte opp side om side, er det talet som avgjer. Det som ikkje kan summerast, kan berre nemnast.
+Og her blir det interessant, for på nasjonal autonomi kjem dei statlege konsepta **best** ut. Konsept 3, lukka statleg sky, og konsept 7, kombinasjonskonseptet, får begge den høgaste skåren i heile tabellen. Grunngjevinga er at dei har høg grad av samordning og heilt eller delvis statleg drift, og at staten difor får meir direkte kontroll over kven som driftar løysinga [\[11\]](#ref-11).
+
+Kvalitetssikrarane skriv òg, rett før dei går inn i kapittelet, at sjølv om det er kostbart å byggje og drifte ei statleg skyløysing, kan investeringa likevel vera lønsam dersom dei ikkje-prissette verknadene er tilstrekkeleg positive [\[11\]](#ref-11). Det er ikkje ei avvising. Det er ei påminning om at rekneskapen ikkje avgjer saka åleine.
+
+Så kjem det mest oppsiktsvekkjande. Sikkerheit står oppført som «I/T» for samtlege fem konsept. Rapporten grunngjev det slik: dei har ikkje tilstrekkeleg informasjonsgrunnlag til å rangere konsepta etter verknaden sikkerheit [\[11\]](#ref-11). Dei skriv vidare at det ikkje er openbert at ei teneste eigd og drifta av staten vil gje betre tryggleik for alle typar data, og at det er uvisst om strengare krav til nasjonal kontroll faktisk aukar sikkerheita.
+
+Sikkerheit var heile grunngjevinga for at utgreiinga vart bestilt. NSM sjølv har formulert kva som står på spel: manglande kontroll over IKT-system kan i ytste konsekvens svekkje Noregs suverenitet, territorielle integritet og demokratiske styreform [\[8\]](#ref-8). I den ferdige vurderinga står feltet tomt.
+
+Problemet er ikkje at nokon oversåg suvereniteten. Det er at dei to rubrikkane har ulik tyngd. Netto noverdi er eit tal. Ikkje-prissette verknader er ein tabell med plussar og minusar, og éin av radene er tom. Berre den eine kolonnen kan rangere alternativ mot kvarandre, og når dei blir stilte opp side om side, er det talet som avgjer. Det som ikkje kan summerast, kan berre nemnast. Det som ikkje eingong kan vurderast, forsvinn heilt.
+
+Ein siste detalj som høyrer til biletet: alle konsepta hadde negativ netto noverdi. Konsept 4, lukka kommersiell sky, hadde den minst negative, og konsept 3, lukka statleg, den mest negative [\[11\]](#ref-11). Ingen av alternativa var altså lønsame. Skilnaden låg i kor mykje dei tapte. Sjølve tala er sladda i den offentlege versjonen, så kor stor skilnaden er, kan ein ikkje lese seg til.
 
 Faget veit dette om seg sjølv. Forskingsprogrammet Concept ved NTNU har eit eige arbeid om å forbetre metoden for å vurdere ikkje-prissette verknader [\[14\]](#ref-14). At eit slikt forbetringsprosjekt finst, er den beste dokumentasjonen på at svakheita er erkjend innanfrå.
 
@@ -146,7 +164,7 @@ Skal dette endrast, må exit-kostnaden bli ein bokført storleik. Han må reknas
 
 <span id="ref-10" data-kvalitet="A" data-habilitet="1">A1</span>\[10\] «Regjeringen Støre», *Store norske leksikon*. [Online]. Available: https://snl.no/Regjeringen_St%C3%B8re. [Accessed: 9. september 2026]. Grunnlag for at Arbeidarpartiet har styrt åleine som mindretalsregjering sidan februar 2025.
 
-<span id="ref-11" data-kvalitet="A" data-habilitet="1">A1</span>\[11\] Oslo Economics, PROMIS og Systra, «KS1 Nasjonal skytjeneste», sladda versjon, 2023. [Online]. Available: https://www.ntnu.no/documents/1261860271/1261975586/KS1+Nasjonal+skytjeneste_sladdet+versjon.pdf. [Accessed: 9. september 2026]. Sjølve kvalitetssikringsrapporten, publisert av forskingsprogrammet Concept ved NTNU.
+<span id="ref-11" data-kvalitet="A" data-habilitet="2">A2</span>\[11\] PROMIS, Atkins Norge og Oslo Economics, «Ekstern kvalitetssikring KS1 av KVU Nasjonal skytjeneste», sladda versjon, datert 25. august 2023. [Online]. Available: https://www.ntnu.no/documents/1261860271/1261975586/KS1+Nasjonal+skytjeneste_sladdet+versjon.pdf. [Accessed: 10. september 2026]. Primærdokumentet. Publisert av forskingsprogrammet Concept ved NTNU som 86 sider skanna bilete utan tekstlag, truleg for å gjere sladdinga uomgjengeleg. Kostnadstala er svarta ut. Habilitet 2 fordi forfattarane er kontraktspart i den ordninga teksten drøftar, ikkje fordi dei har interesse i utfallet.
 
 <span id="ref-12" data-kvalitet="B" data-habilitet="2">B2</span>\[12\] Oslo Economics, «Trolig ikke samfunnsøkonomisk lønnsomt å etablere en omfattende lukket statlig skytjeneste». [Online]. Available: https://osloeconomics.no/trolig-ikke-samfunnsokonomisk-lonnsomt-a-etablere-en-omfattende-lukket-statlig-skytjeneste/. [Accessed: 9. september 2026]. Kvalitetssikraren si eiga framstilling av eige arbeid.
 
