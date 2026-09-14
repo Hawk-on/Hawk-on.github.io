@@ -153,19 +153,39 @@ const relaterteInnlegg = alleInnlegg
         const preview = document.createElement('div');
         preview.className = 'fotnote-preview';
         
-        let headerHtml = '';
+        // Bygd med DOM-nodar, ikkje innerHTML. kjeldeTekst kjem frå textContent i
+        // artikkelen, og ein kjeldetekst som inneheld HTML-escapa markup vil då
+        // koma attende med ekte vinkelparentesar. Sett inn via innerHTML ville
+        // nettlesaren tolka han som markup på nytt.
         if (kvalitet || habilitet) {
-          headerHtml = `<div style="display:flex; gap:0.5rem; margin-bottom:0.75rem; border-bottom:1px solid #eee; padding-bottom:0.5rem;">`;
+          const header = document.createElement('div');
+          header.style.cssText = 'display:flex; gap:0.5rem; margin-bottom:0.75rem; border-bottom:1px solid #eee; padding-bottom:0.5rem;';
           if (kvalitet) {
-            headerHtml += `<div><span class="kjelde-badge" style="margin:0; background:${fargar[kvalitet as keyof typeof fargar]}">${kvalitet}</span></div>`;
+            const boks = document.createElement('div');
+            const merke = document.createElement('span');
+            merke.className = 'kjelde-badge';
+            merke.style.margin = '0';
+            merke.style.background = fargar[kvalitet as keyof typeof fargar] ?? '';
+            merke.textContent = kvalitet;
+            boks.appendChild(merke);
+            header.appendChild(boks);
           }
           if (habilitet) {
-            headerHtml += `<div><span class="kjelde-badge kjelde-badge--habilitet" style="margin:0;">${habilitet}</span></div>`;
+            const boks = document.createElement('div');
+            const merke = document.createElement('span');
+            merke.className = 'kjelde-badge kjelde-badge--habilitet';
+            merke.style.margin = '0';
+            merke.textContent = habilitet;
+            boks.appendChild(merke);
+            header.appendChild(boks);
           }
-          headerHtml += `</div>`;
+          preview.appendChild(header);
         }
 
-        preview.innerHTML = headerHtml + `<div style="font-style:italic;">${kjeldeTekst.trim()}</div>`;
+        const kropp = document.createElement('div');
+        kropp.style.fontStyle = 'italic';
+        kropp.textContent = kjeldeTekst.trim();
+        preview.appendChild(kropp);
         
         const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
         preview.style.top = `${rect.top + window.scrollY - 10}px`;

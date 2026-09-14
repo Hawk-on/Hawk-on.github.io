@@ -84,7 +84,7 @@ const jsonLd = erArtikkel
   <meta name="description" content={beskriving} />
   <title>{fullTittel}</title>
   <link rel="canonical" href={kanoniskUrl} />
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")} />
   <meta property="og:title" content={fullTittel} />
   <meta property="og:description" content={beskriving} />
   <meta property="og:url" content={kanoniskUrl} />

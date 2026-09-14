@@ -117,6 +117,24 @@ i staden, alt etter kva leddet gjer.
 Ei masseerstatting ville gjeve store diffar utan innhaldsverdi, og risikere å bryte
 setningar der streken ber meining.
 
+## Tryggleik
+Gjennomgang 14. september 2026. Retta same dag: Astro til 7.3.2 (kritisk RCE i
+AVIF-optimalisering), fotnote-førehandsvisinga i `Artikkel.astro` bygd med DOM-nodar
+i staden for `innerHTML`, og JSON-LD-en escapar no `<`.
+
+**Framleis ope, medvite:**
+- **`script-src 'unsafe-inline'`** opphevar det meste av XSS-vernet i CSP-en. GitHub
+  Pages kan ikkje setje HTTP-headarar, så nonce er umogleg, men hashar er farbare.
+- **`frame-ancestors` verkar ikkje i `<meta>`-CSP.** Spesifikasjonen ignorerer
+  direktivet der, så nettstaden kan rammast inn. Lèt seg ikkje fikse utan headarar.
+- **Actions er ikkje SHA-pinna,** og workflowen brukar `npm install` framfor `npm ci`,
+  så CI kan løyse andre versjonar enn låsefila.
+- **Umami-skriptet lastar utan `integrity`.** Det er den største tredjepartsflata på
+  nettstaden.
+
+**Ikkje tryggleik, og skal ikkje forvekslast med det:** Base64-kodinga av kontaktinfo
+lurer naive skraparar og ingenting anna. `robots.txt` er ei oppmoding, ikkje ei sperre.
+
 ## Antispam og robot-kontroll
 - **Kontaktinfo:** E-post og telefon er Base64-koda i `Kontakt.tsx`. Aldri legg ut i klartekst.
 - **AI-sperre:** `public/robots.txt` blokkerer GPTBot, CCBot m.fl.
