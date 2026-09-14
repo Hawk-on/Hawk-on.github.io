@@ -138,10 +138,23 @@ Sett som `<meta http-equiv>` i `Grunnoppsett.astro`. Tre ting er load-bearing:
 `npm run sjekk` (`scripts/sjekk-artiklar.mjs`) kontrollerer artiklane mot husreglane.
 Steget køyrer fyrst i `npm run build`, og som eige steg i deploy-workflowen.
 
-Kontrollerte reglar: kjeldespan utan `data-kvalitet`/`data-habilitet`, span utan
+Kontrollerte reglar, kjelder: span utan `data-kvalitet`/`data-habilitet`, span utan
 synleg kode, synleg kode som ikkje svarar til attributta, kjelder som peikar på
-landingssider utan sti, foreldrelause referansar i begge retningar, tankestrek og
-filnamn over 55 teikn.
+landingssider utan sti, og foreldrelause referansar i begge retningar.
+
+Kontrollerte reglar, frontmatter og form: tittel over 80 teikn (blir kutta i fane og
+søkjeresultat), ingress utanfor 120-400 teikn, færre enn 3 eller fleire enn 8 taggar,
+`bilete` utan `bileteAlt`, tankestrek og filnamn over 55 teikn.
+
+Kontrollerte reglar, datoar: `oppdatertDato` før `publisertDato`, datoar fram i tid,
+endringslogg utan `oppdatertDato`, og `oppdatertDato` utan endringslogg.
+
+**`oppdatertDato` vert ikkje utleidd frå git, og skal ikkje bli det.** Datoen er eit
+redaksjonelt signal om at innhaldet er endra, ikkje eit filtidsstempel. Commiten som
+fjerna `lesetid` frå frontmatter rørte 23 artikkelfiler utan å endre eit ord; med
+git-utleiing ville alle 23 fortalt lesaren at dei var oppdaterte den dagen. Set datoen
+for hand når du faktisk endrar innhaldet, og skriv ein `### Endringslogg`-seksjon som
+seier kva som er endra. Kontrollen krev at dei to fylgjest åt.
 
 **Skriptet er ein skralle, ikkje ein mur.** Avvika som alt fanst, ligg i
 `scripts/kjende-avvik.json` og slepp gjennom. Eit *nytt* avvik feilar bygget. Rettar

@@ -18,6 +18,9 @@ import { join, basename } from 'node:path';
 const ARTIKLAR = 'src/content/blog';
 const GRUNNLINJE = 'scripts/kjende-avvik.json';
 const MAKS_FILNAMN = 55;
+const MAKS_TITTEL = 80;
+const INGRESS = { min: 120, maks: 400 };
+const TAGGAR = { min: 3, maks: 8 };
 
 const REGLAR = {
   'span-utan-kode': 'kjeldespan manglar data-kvalitet eller data-habilitet',
@@ -28,7 +31,26 @@ const REGLAR = {
   'foreldrelaus-span': 'span utan inline-referanse',
   tankestrek: 'tankestrek i artikkelteksten',
   'filnamn-for-langt': `filnamnet er over ${MAKS_FILNAMN} teikn`,
+  'tittel-for-lang': `tittelen er over ${MAKS_TITTEL} teikn og blir kutta i fane og søkjeresultat`,
+  'ingress-lengd': `ingressen er utanfor ${INGRESS.min}-${INGRESS.maks} teikn`,
+  'tal-taggar': `talet på taggar er utanfor ${TAGGAR.min}-${TAGGAR.maks}`,
+  'bilete-utan-alt': 'bilete er sett utan bileteAlt',
+  'dato-bakover': 'oppdatertDato er før publisertDato',
+  'dato-i-framtida': 'dato ligg fram i tid',
+  'endringslogg-utan-dato': 'artikkelen har endringslogg, men ingen oppdatertDato',
+  'dato-utan-endringslogg': 'artikkelen har oppdatertDato, men ingen endringslogg',
 };
+
+/** Frontmatter er enkel nok til at dette held; ingen nøstede strukturar i bruk. */
+function lesFrontmatter(tekst) {
+  const blokk = tekst.split(/^---\s*$/m)[1] ?? '';
+  const felt = {};
+  for (const linje of blokk.split('\n')) {
+    const m = linje.match(/^([a-zA-ZæøåÆØÅ]+):\s*(.*)$/);
+    if (m) felt[m[1]] = m[2].trim().replace(/^"(.*)"$/, '$1');
+  }
+  return felt;
+}
 
 function sjekk(fil, tekst) {
   const funn = [];
@@ -37,6 +59,34 @@ function sjekk(fil, tekst) {
   if (basename(fil).length > MAKS_FILNAMN) {
     legg('filnamn-for-langt', `${basename(fil).length} teikn`);
   }
+
+  const fm = lesFrontmatter(tekst);
+  const idag = new Date().toISOString().slice(0, 10);
+
+  if ((fm.tittel ?? '').length > MAKS_TITTEL) {
+    legg('tittel-for-lang', `${fm.tittel.length} teikn`);
+  }
+  const ingress = (fm.ingress ?? '').length;
+  if (ingress < INGRESS.min || ingress > INGRESS.maks) {
+    legg('ingress-lengd', `${ingress} teikn`);
+  }
+  const talTaggar = [...(fm.tags ?? '').matchAll(/"([^"]+)"/g)].length;
+  if (talTaggar < TAGGAR.min || talTaggar > TAGGAR.maks) {
+    legg('tal-taggar', `${talTaggar} taggar`);
+  }
+  if (fm.bilete && !fm.bileteAlt) legg('bilete-utan-alt', fm.bilete);
+
+  const publisert = (fm.publisertDato ?? '').slice(0, 10);
+  const oppdatert = (fm.oppdatertDato ?? '').slice(0, 10);
+  if (publisert > idag) legg('dato-i-framtida', `publisertDato ${publisert}`);
+  if (oppdatert) {
+    if (oppdatert > idag) legg('dato-i-framtida', `oppdatertDato ${oppdatert}`);
+    if (oppdatert < publisert) legg('dato-bakover', `${oppdatert} < ${publisert}`);
+  }
+
+  const harLogg = /^#{2,3}\s+Endringslogg\s*$/m.test(tekst);
+  if (harLogg && !oppdatert) legg('endringslogg-utan-dato', 'mangler oppdatertDato');
+  if (oppdatert && !harLogg) legg('dato-utan-endringslogg', `oppdatertDato ${oppdatert}`);
 
   const brodtekst = tekst.split(/^## Kjelder\s*$/m)[0];
   for (const _ of brodtekst.matchAll(/—/g)) legg('tankestrek', '—');
