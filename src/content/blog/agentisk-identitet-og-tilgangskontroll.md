@@ -3,7 +3,6 @@ tittel: "Kven er agenten? Identitet, tilgang og tillit i agentar sin tidsalder"
 publisertDato: "2026-04-21"
 ingress: "Når ein AI-agent skriv kode, lastar ned avhengnadar og opnar ei fil i Azure Key Vault, gjer han det ikkje som deg — han gjer det som seg sjølv, med ein identitet tildelt av Entra ID og tilgangsrettar du har konfigurert. Dette er ikkje eit teknisk detalj: det er eit spørsmål om makt, ansvar og kontroll i ein infrastruktur der agenten gradvis overtek oppgåver som tidlegare kravde eit menneske."
 tags: ["teknologi", "sikkerheit", "AI", "azure", "identitet", "microsoft"]
-lesetid: 18
 ---
 
 Tenk deg dette scenarioet: Du opnar GitHub Copilot Workspace, skriv ein setning om at autentiseringsmodulen treng å handtere token-rotasjon, og trykkjer «Generate». I løpet av dei neste ni minuttane opnar ein agent ein ny branch, les gjennom eksisterande kode i repo-et, hentar koblingsstrengane frå Azure Key Vault, skriv implementasjonen, køyrer testane i ein GitHub Actions-pipeline, og opnar ein Pull Request med ein skildring av kva han har gjort og kvifor. Ingen knapp er trykt. Ingen terminal er opna. Du har drukke kaffi.

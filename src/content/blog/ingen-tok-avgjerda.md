@@ -3,7 +3,6 @@ tittel: "Ingen tok avgjerda"
 publisertDato: 2026-06-25
 ingress: "Ein skule i Sør-Iran vart råka tre gonger. Hundre og åtte born døydde. Det er ikkje sjølve feilen som er det mest urovekkjande, men at systemet er bygd slik at ingen treng å svare for han."
 tags: ["ai", "krigforing", "maven", "iran", "humanitaer-rett", "ansvar", "kjernefysiske-vapen"]
-lesetid: 11
 ---
 
 Den 28. februar 2026, ein vanleg laurdag som er fyrste arbeidsdag i den iranske veka, sende Hossein dottera si Zahra på skulen. Shajareh Tayyebeh-skulen i Minab ligg i Hormozgan-provinsen, ikkje langt frå Persiabukta. Klokka var rundt ti om morgonen. Då dei fyrste amerikansk-israelske angrepa byrja, ringde skulen for å seie at Zahra hadde overlevd det fyrste treffet. Hossein sette seg i bilen. Han rakk det ikkje. Medan han køyrde, vart skulen råka på nytt, og dottera døydde [\[2\]](#ref-2).

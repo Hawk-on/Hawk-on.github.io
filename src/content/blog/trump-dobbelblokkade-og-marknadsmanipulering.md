@@ -3,7 +3,6 @@ tittel: "Ingen gode val: Trump sin dobbelblokkade og marknadsmanipuleringas logi
 publisertDato: "2026-04-12"
 ingress: "Sidan siste analyse har handelskonflikten teke ei farleg ny vending. Trump truar no med ei dobbelblokkade — samstundes mot Kina og globale oljeruter. Mønsteret liknar meir og meir på koordinert marknadsmanipulering. Og kva veg Trump snur, er vala hans dårlege."
 tags: ["geopolitikk", "økonomi", "usa", "handelskrig", "kina"]
-lesetid: 11
 ---
 
 Då vi sist analyserte handelskonflikten, var biletet allereie alvorleg: eit regime av straffetollar, stigande spenning i Stillehavet og eit globalt handelssystem under press. I løpet av dei siste vekene har utviklinga akselerert på eit vis som gjer tidlegare scenario-analysar til underdrivingar.

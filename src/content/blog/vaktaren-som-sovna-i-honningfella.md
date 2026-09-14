@@ -3,7 +3,6 @@ tittel: "Når vaktaren sovnar i honningfella: Andrew Hugg og den kjernefysiske s
 publisertDato: "2026-04-22"
 ingress: "Då Andrew Hugg, sjefen for US Army si avdeling for kjernefysisk og kjemisk tryggleik, lét seg forføra av ein «undercover»-journalist, avslørte han meir enn berre statsløyndomar. Han blottla den strukturelle erosjonen i det amerikanske tryggingsapparatet."
 tags: ["geopolitikk", "usa", "kjernefysiske-vapen", "iran", "kjemiske-vapen", "pentagon"]
-lesetid: 10
 ---
 
 > **Redaksjonell merknad om kjelder og integritet:**

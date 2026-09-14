@@ -3,7 +3,6 @@ tittel: "Ryktet som bar dei ut i vatnet"
 publisertDato: "2026-08-14"
 ingress: "Ein reell høgsterettsdom og ei reell regularisering vart vridde til eit løfte som aldri fanst. Opp mot 86 menneske døydde i vatnet utanfor Ceuta. Så byrja den andre runden med desinformasjon — den som handla om dei døde."
 tags: ["geopolitikk", "migrasjon", "desinformasjon", "spania", "marokko", "russland", "eu", "osint"]
-lesetid: 15
 ---
 
 Ein reell høgsterettsdom og ei reell regularisering vart vridde til eit løfte som aldri fanst. Opp mot 86 menneske døydde i vatnet utanfor Ceuta. Så byrja den andre runden med desinformasjon — den som handla om dei døde.

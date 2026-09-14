@@ -3,7 +3,6 @@ tittel: "Den skjøre Iran-USA-våpenkvila: Og kva som kan kollapse ho"
 publisertDato: "2026-04-14"
 ingress: "To-vekers-pausen mellom USA og Iran er allereie broten av begge sider. Pakistan fekk dei to partane til bordet i Islamabad — men 21 timar med forhandlingar gav ingen avtale. Kva krevst for at kvila held, og kva er det som mest truleg vil riva ho sund?"
 tags: ["geopolitikk", "iran", "usa", "diplomati", "midtausten"]
-lesetid: 11
 ---
 
 To-vekers-pausen mellom USA og Iran var knapt to dagar gamal då han byrja rakna.

@@ -3,7 +3,6 @@ tittel: "Modellen staten laga og ikkje driftar"
 publisertDato: 2026-09-14
 ingress: "Noreg har bygd ein nasjonal språkmodell, ei superdatamaskin å trene han på og ein KI-fabrikk å køyre han i. Modellen vart likevel levert som ei nedlasting på ei amerikansk plattform, og knapt to veker seinare kjøpte Nvidia plattforma. Gapet mellom å byggje og å drifte er ikkje teknisk. Det er eit oppdrag ingen har fått."
 tags: ["digital-suverenitet", "kunstig-intelligens", "offentleg-sektor", "sprakmodellar", "teknofoydalisme", "noreg"]
-lesetid: 13
 ---
 
 ## Landet har maskina

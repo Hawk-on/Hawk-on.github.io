@@ -3,7 +3,6 @@ tittel: "Hydrologisk krigføring: Vatn som det ultimate gisselet i eit uttørka 
 publisertDato: "2026-04-23"
 ingress: "I 2026 er ikkje vatn lenger berre ein ressurs under press; det er ein strategisk arkitektur brukt til å tvinga fram suverenitet, straffa motstandarar og sementera avhengnad."
 tags: ["geopolitikk", "midtausten", "ressurskrig", "israel", "iran", "tyrkia"]
-lesetid: 10
 ---
 
 I 2026 er ikkje vatn lenger berre ein ressurs under press; det er ein strategisk arkitektur brukt til å tvinga fram suverenitet, straffa motstandarar og sementera avhengnad. Frå kranane i Gaza til dei uttørka myrområda i Sør-Irak, vert vasstraumen styrt av ein maktlogikk som er like kald som han er kynisk. For å skjøna dagens konfliktlinjer, må ein slutta å sjå på kartet over grenser, og byrja å sjå på kartet over vassdrag og demningar.

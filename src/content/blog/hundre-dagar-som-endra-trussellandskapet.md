@@ -3,7 +3,6 @@ tittel: "Hundre dagar som endra trussellandskapet"
 publisertDato: "2026-04-17"
 ingress: "Eit kvartal med supply chain-åtak, statsaktørar og eit hastemøte mellom finansdepartementet og Wall Street. Ein gjennomgang av kva som eigentleg har skjedd, og kvifor det angår alle som byggjer programvare."
 tags: ["cybersikkerheit", "supply-chain", "infosec", "osint", "ai", "geopolitikk"]
-lesetid: 15
 ---
 
 Fyrste kvartal av 2026 har produsert ein serie av cyberhendingar som kvar for seg ville dominert nyhendebiletet i ei veke om dei hadde landa i 2017. Samla sett utgjer dei eit mønster som få har skrive om i samanheng. Eg har brukt den siste tida til å lese meg gjennom primærkjelder — forensic-rapportar frå Google Threat Intelligence Group, Microsoft, Wiz og Snyk, kongressbrev referert av Bloomberg, skipsdata frå Lloyd's List, satellittbilete frå Vantor, og vidare — for å sjå om det finst ein raud tråd. Det gjer det, og han er meir uroande enn sensasjonell.

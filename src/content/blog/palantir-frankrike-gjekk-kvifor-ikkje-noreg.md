@@ -3,7 +3,6 @@ tittel: "Frankrike gjekk. Kvifor ikkje Noreg? Palantir og prisen for digital suv
 publisertDato: 2026-06-21
 ingress: "Den 16. juni 2026 braut fransk etterretning med Palantir — strategisk avhengnad av amerikansk teknologi var ein tryggleiksrisiko dei ikkje lenger ville bera. Sveits gjorde det same i februar. Noreg går motsett veg: Tolletaten har forlengt avtalen til 2030, Forsvaret får demoar, og Oljefondet er den største direkte europeiske eigaren i selskapet. Kvifor?"
 tags: ["palantir", "noreg", "digital-suverenitet", "overvaking", "geopolitikk", "frankrike", "oljefondet", "cloud-act"]
-lesetid: 14
 ---
 
 Den 16. juni 2026 kunngjorde den franske statsministeren Sébastien Lecornu at landets

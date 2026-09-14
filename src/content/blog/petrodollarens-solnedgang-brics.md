@@ -3,7 +3,6 @@ tittel: "Petrodollarens solnedgang: BRICS+ og framveksten av den multipolare fin
 publisertDato: "2026-04-24"
 ingress: "Det økonomiske fundamentet for det amerikanske hegemoniet står i 2026 overfor sin største strukturelle krise. Gjennom digitale betalingssystem og rekordhøge gullkjøp er BRICS+ i ferd med å demontera dollaren sitt monopol."
 tags: ["geopolitikk", "brics", "økonomi", "gull", "usa", "kina"]
-lesetid: 12
 ---
 
 Det økonomiske fundamentet for det amerikanske hegemoniet — petrodollarsystemet frå 1974 — står i 2026 overfor sin største strukturelle krise. Gjennom ein kombinasjon av digitale betalingssystem, råvarebaserte korger og nasjonale valutaer, er BRICS+-blokka i ferd med å demontera dollaren sitt monopol på global energihandel. Dette er ikkje eit marknadskrakk, men ei institusjonell ombygging av verda.

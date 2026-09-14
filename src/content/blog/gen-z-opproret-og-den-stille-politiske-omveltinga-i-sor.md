@@ -3,7 +3,6 @@ tittel: "Gen Z-opprøret og den stille politiske omveltinga i Sør"
 publisertDato: "2026-04-14"
 ingress: "Frå Bangladesh til Bulgaria har unge menneske med mobiltelefon og Discord-kanalar toppa regjeringar og rystt institusjonar. Det er ikkje tilfeldig, og det er ikkje over. Det er ein strukturell bølgje — og han er berre i starten."
 tags: ["geopolitikk", "demokrati", "ungdom", "globalt-sor", "bangladesh"]
-lesetid: 10
 ---
 
 I 2024 toppa ein 30-årig statsminister i Bangladesh. I 2025 fall ein sittande regjering i Nepal etter fem dagars protestar. I Marokko, Indonesia, Madagaskar, Kenya og fleire andre land freister unge menneske med smarttelefonar og desentraliserte nettverkar å omforme politiske system som lenge har ignorert dei.

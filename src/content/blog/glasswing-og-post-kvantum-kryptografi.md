@@ -3,7 +3,6 @@ tittel: "Det digitale grunnfjellet sprekk: AI, kvantedata og slutten på kryptog
 publisertDato: "2026-04-15"
 ingress: "Project Glasswing og Google sitt kvantestudie er ikkje berre to nyhendesaker frå april 2026. Dei er symptom på to parallelle strukturelle skifte som saman utfordrar heile infrastrukturen digital tryggleik er bygd på."
 tags: ["teknologi", "kryptografi", "AI", "sikkerheit", "kvantedata"]
-lesetid: 10
 ---
 
 Det er noko påfallande over at to av dei mest omtala teknologinyheitene i april 2026 handlar om det same — men frå kvar sin kant.

@@ -23,7 +23,7 @@ const sortertInnleggData = innlegg
     dato: i.data.publisertDato,
     oppdatertDato: i.data.oppdatertDato,
     ingress: i.data.ingress || genererUtdrag(i.body || ''),
-    lesetid: i.data.lesetid || reknaUtLesetid(i.body || ''),
+    lesetid: reknaUtLesetid(i.body ?? ''),
     tags: i.data.tags ?? [],
     slug: i.id,
     datoFormatert: formaterDato(i.data.publisertDato)

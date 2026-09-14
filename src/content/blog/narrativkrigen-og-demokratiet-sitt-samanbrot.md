@@ -3,7 +3,6 @@ tittel: "Narrativkrigen og demokratiet sitt samanbrot: Frå falske moské-angrep
 publisertDato: "2026-05-10"
 ingress: "Ei TikTok-video om eit antisemittisk brannåtak i London som vert omgjort til ei islamofobi-sak. Ein iransk-linka terrorkampanje som forsvinn i støyen frå handelskrig og atomtrugsmål. Og i bakgrunnen: eit demokrati som misser evna til å skilje fakta frå narrativ. Dette er ikkje eit medieproblem. Det er eit maktproblem."
 tags: ["geopolitikk", "desinformasjon", "demokrati", "usa", "fascisme", "media"]
-lesetid: 14
 ---
 
 Den 5. mai 2026 vart eit tomt, nedlagt synagogebygg i Whitechapel i Aust-London påtend. Kontraterrorpolitiet rykka ut. Saka vart kopla til ein serie antisemittiske angrep i London sidan mars — fire jødiske ambulansar stukke i brann, ei synagoge molotovkokta, to jødiske menn knivstukne i det politiet kallar terrorisme. Ei iransk-linka gruppe ved namn HAYI har hevda ansvar for fleire av åtaka [\[1\]](#ref-1).

@@ -3,7 +3,6 @@ tittel: "Den dyraste løysinga"
 publisertDato: 2026-09-09
 ingress: "Då Stortinget handsama framlegget om ei offentleg eigd skyteneste, var motargumentet ikkje at avhengnaden er ufarleg. Motargumentet var at motmiddelet kostar for mykje. Det seier meir om rekneskapsmodellen enn om suvereniteten."
 tags: ["digital-suverenitet", "skytenester", "offentleg-sektor", "teknofoydalisme", "forvaltning", "noreg"]
-lesetid: 10
 ---
 
 ## Kva NSM faktisk tilrådde

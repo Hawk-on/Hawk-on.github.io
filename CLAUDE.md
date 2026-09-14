@@ -89,6 +89,7 @@ Serie om offentleg infrastruktur og teknoføydalisme.
 - **Kløyvd infinitiv:** Korte verb endar på -a (`vera`, `gjera`), lange på -e (`analysere`).
 - **Bokmålssnik:** Unngå `første` (→ `fyrste`), `blei` (→ `vart`), `noen` (→ `nokon`).
 - **Schema:** Bruk `publisertDato` og `oppdatertDato` (valfri) i frontmatter.
+- **Lesetid skal ikkje setjast for hand.** `reknaUtLesetid` i `src/utils/tekst.ts` reknar henne ut ved bygging, og feltet finst ikkje lenger i schemaet. Kjeldelista vert halden utanfor rekninga.
 - **Filnamn:** små bokstavar, bindestrek, `ø→o`, `å→a`, `æ→e`. Under ~55 teikn.
 
 ## Tankestrek
@@ -122,9 +123,6 @@ Kjende avvik, førte opp utan å vere retta. Tala er kontrollerte mot repoet 9. 
 **Kjeldekodar som manglar**
 - `agentisk-identitet-og-tilgangskontroll.md`: to spanar (`ref-1`, `ref-2`) manglar `data-kvalitet` og `data-habilitet` heilt.
 - `hydrologisk-krigforing-midtausten.md`: éin span manglar dei same kodane.
-
-**Metadata**
-- `lesetid` manglar i fire artiklar: `copy-fail-cve-2026-31431-linux-saarbarheit`, `oljefondet-sosiologisk-okonomi-turchin-polanyi`, `renteauk-feil-medisin-og-behovet-for-prisstyring`, `spu-folkemord-klage-kripos-norske-politikarar`. Feltet korrelerer heller ikkje med ordtalet i resten, og bør reknast ut i byggjesteget i staden for å setjast for hand.
 
 **Taggar**
 - Case-duplikat som gjev kvar si tag-side: `AI`/`ai`, `Gaza`/`gaza`, `Noreg`/`noreg`.

@@ -3,7 +3,6 @@ tittel: "Libanon og Israel-krigen som ingen snakkar om"
 publisertDato: "2026-04-14"
 ingress: "Medan verda fylgjer Iran-USA-forhandlingane i Islamabad, held Israel fram med å bomba Libanon. 357 daude på éin dag. Spørsmålet som splitter: var Libanon inkludert i våpenkvila — og kven bestemde at det ikkje var det?"
 tags: ["geopolitikk", "libanon", "israel", "iran", "midtausten"]
-lesetid: 12
 ---
 
 Onsdag 8. april 2026 kunngjorde USA og Iran ein to-vekers pause i krigstilstandane. Same dag gjennomførte Israel det som libanesiske styresmakter kallar «Svart onsdag» — hundre israelske luftangrep og artilleribombing som drap 357 menneske, dei fleste i tettbygde område i Sør-Libanon og Beirut [\[1\]](#ref-1)[\[2\]](#ref-2).

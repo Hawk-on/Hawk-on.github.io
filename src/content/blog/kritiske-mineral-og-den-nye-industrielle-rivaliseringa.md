@@ -3,7 +3,6 @@ tittel: "Kritiske mineral og den nye industrielle rivaliseringa"
 publisertDato: "2026-04-14"
 ingress: "Kina kontrollerer over 90 prosent av verdas prosesseringskapasitet for sjeldne jordmetall. Eksportkontrollar er vorte eit geopolitisk våpen. Og staten er tilbake som aktiv industriell aktør — ikkje av ideologisk overtyding, men av strategisk tvang."
 tags: ["geopolitikk", "økonomi", "kina", "usa", "teknologi", "mineral"]
-lesetid: 12
 ---
 
 I 2010 let Kina ein territorial tvist med Japan føre til at dei stansa eksporten av sjeldne jordmetall i fleire veker. Verda tok merknad. Kina tok merknad av at verda tok merknad.

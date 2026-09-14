@@ -3,7 +3,6 @@ tittel: "Telenor og Myanmar: Reell sak, svekt parlamentarisk prosess"
 publisertDato: "2026-04-14"
 ingress: "Stortinget granskar kva staten visste om Telenors datadeling med myanmarske styresmakter. Saka er reelt alvorleg — men granskingsprosessen ber preg av partipolitiske motiv som svekkjer det parlamentariske truverdet."
 tags: ["myanmar", "telenor", "stortinget", "menneskerettar", "næringspolitikk"]
-lesetid: 6
 ---
 
 Etter at militæret tok makta i Myanmar i februar 2021, etterkom Telenors dotterselskap over 200 førespurnader om brukardata frå juntakontrollerte styresmakter [\[1\]](#ref-1). Informasjonen som vart utlevert, inkluderte namn, adresser, samtaleloggar og posisjonsdata — i stor grad for personar myndigheita mistenkte for å motsetja seg regimet [\[2\]](#ref-2). Ei rettssak på vegne av over 1 200 personar hevdar at datadelinga utsette politiske motstandarar for forfølging [\[3\]](#ref-3), mellom dei lovgivaren Phyo Zayar Thaw, som vart avretta i 2022.

@@ -4,7 +4,6 @@ publisertDato: 2026-04-21
 oppdatertDato: 2026-04-24
 ingress: "Då Palantir den 19. april 2026 publiserte eit 22-punkts manifest som hylla «hard power», avviste kulturell pluralisme og beklaga etterkrigstidas «kastrering» av Nazi-Tyskland, møtte det avgrensa offentleg reaksjon. Det er ikkje nok å avfeie dette som ein provokasjon. Teksten er samanhengande, har ein indre logikk — og vert omsett til praksis i Gaza, Iran, Libanon og langs USAs sørlege grense."
 tags: ["palantir", "teknologi", "krig", "ai", "kolonialisme", "geopolitikk", "gaza", "fascisme"]
-lesetid: 18
 ---
 
 Den 19. april 2026 publiserte Palantir eit 22-punkts manifest på X. Teksten hylla «hard power», avviste kulturell pluralisme og beklaga etterkrigstidas «kastrering» av Nazi-Tyskland [\[1\]](#ref-1). Reaksjonen var fyrst avgrensa — nokon akademikarar og aktivistar, lite anna. Men berre dagar etterpå slo det britiske parlamentet alarm. Parlamentarikerar frå fleire parti skildra manifestet som «ramlingane til ein superskurk» og uttrykte djup frykt for kva deira ideologi betyr for dei massive kontraktane selskapet har med det britiske helsevesenet (NHS) og forsvaret [\[11\]](#ref-11).

@@ -17,7 +17,7 @@ const { Content } = await render(entry);
 
 const frontmatter = {
   ...entry.data,
-  lesetid: entry.data.lesetid || reknaUtLesetid(entry.body || '')
+  lesetid: reknaUtLesetid(entry.body ?? '')
 };
 ---
 
