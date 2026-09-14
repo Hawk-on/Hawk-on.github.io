@@ -169,16 +169,17 @@ Kjende avvik, førte opp utan å vere retta. Tala er kontrollerte mot repoet 9. 
 Tala under er frå `scripts/kjende-avvik.json`, som er fasiten. Køyr `npm run sjekk`
 for gjeldande stoda.
 
-- **Gammalt eindimensjonalt format i fire artiklar.** `palantir-frankrike` (12),
-  `palantir-moderniteten` (11), `oljefondet-sosiologisk-okonomi` (6) og `renteauk`
-  (6) har `data-kvalitet` utan `data-habilitet`, frå tida før matrisa vart
-  todimensjonal. Inline-merket viser difor berre halve koden.
-- **Heilt utan kodar:** `agentisk-identitet-og-tilgangskontroll` (2) og
-  `hydrologisk-krigforing-midtausten` (1).
-- **Tomme spanar:** 59 spanar i 9 artiklar har attributta, men ingen synleg kode i
-  kjeldelista. Inline-merket fungerer; det er lista som manglar koden.
-- **`narrativkrigen-og-demokratiet-sitt-samanbrot` ref-2 er sjølvmotseiande:**
-  kroppen seier `B2`, attributta seier `B1`. Inline og liste viser ulik kode.
+- **Heilt utan kodar:** `agentisk-identitet-og-tilgangskontroll` (2).
+
+Retta 14. september 2026: 51 tomme spanar er fylte ut, 35 spanar i fire artiklar er
+falda frå det gamle toespan-formatet, og ein motstridande kode i `narrativkrigen` er
+retta.
+
+**Om toespan-formatet,** sidan eg fyrst skildra det feil. Fire artiklar brukte
+`<span data-kvalitet="B">B</span><span class="kjelde-badge--habilitet">2</span>`.
+Habiliteten mangla ikkje; han låg i ein søskenspan. Men skriptet i `Artikkel.astro`
+les berre `data-` frå spanen med `id`, så inline-merket viste halve koden medan
+kjeldelista viste heile. Formatet finst ikkje lenger i repoet.
 
 **Filnamn over 55 teikn**
 - `den-skjore-iran-usa-vapenkvilaog-kva-som-kan-kollapse-ho.md` (59). Har òg skrivefeil i slug-en: manglande bindestrek i `vapenkvilaog`.

@@ -127,24 +127,24 @@ Det Bauman, Arendt og Fanon saman syner oss er at dette ikkje er historisk unikt
 
 ## Kjelder
 
-<span id="ref-1" class="kjelde-badge" data-kvalitet="C">C</span><span class="kjelde-badge kjelde-badge--habilitet">2</span> [1] Palantir Technologies, «22-punkts manifest,» *X (Twitter)*, 19. apr. 2026. [Primærkjelde — lenkje ikkje stadfesta.]
+<span id="ref-1" data-kvalitet="C" data-habilitet="2">C2</span> [1] Palantir Technologies, «22-punkts manifest,» *X (Twitter)*, 19. apr. 2026. [Primærkjelde — lenkje ikkje stadfesta.]
 
-<span id="ref-2" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [2] Z. Bauman, *Modernity and the Holocaust*. Cambridge: Polity Press, 1989.
+<span id="ref-2" data-kvalitet="A" data-habilitet="1">A1</span> [2] Z. Bauman, *Modernity and the Holocaust*. Cambridge: Polity Press, 1989.
 
-<span id="ref-3" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [3] H. Arendt, *Eichmann in Jerusalem: A Report on the Banality of Evil*. New York: Viking Press, 1963.
+<span id="ref-3" data-kvalitet="A" data-habilitet="1">A1</span> [3] H. Arendt, *Eichmann in Jerusalem: A Report on the Banality of Evil*. New York: Viking Press, 1963.
 
-<span id="ref-4" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">3</span> [4] A. Karp og N. Zamiska, *The Technological Republic: Hard Power, Soft Belief, and the Future of the West*. New York: Crown Currency (Penguin Random House), Feb. 2025.
+<span id="ref-4" data-kvalitet="A" data-habilitet="3">A3</span> [4] A. Karp og N. Zamiska, *The Technological Republic: Hard Power, Soft Belief, and the Future of the West*. New York: Crown Currency (Penguin Random House), Feb. 2025.
 
-<span id="ref-5" class="kjelde-badge" data-kvalitet="C">C</span><span class="kjelde-badge kjelde-badge--habilitet">2</span> [5] Y. Kubovich og A. Hager, «A mass assassination factory: How Israel is using AI to generate targets in Gaza,» *+972 Magazine / Local Call*, 30. nov. 2023. [Online]. Available: https://www.972mag.com/mass-assassination-factory-israel-calculated-bombing-gaza/. [Accessed: 21. apr. 2026].
+<span id="ref-5" data-kvalitet="C" data-habilitet="2">C2</span> [5] Y. Kubovich og A. Hager, «A mass assassination factory: How Israel is using AI to generate targets in Gaza,» *+972 Magazine / Local Call*, 30. nov. 2023. [Online]. Available: https://www.972mag.com/mass-assassination-factory-israel-calculated-bombing-gaza/. [Accessed: 21. apr. 2026].
 
-<span id="ref-6" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [6] F. Fanon, *Les Damnés de la Terre*. Paris: Maspero, 1961. Engelsk omsetjing: *The Wretched of the Earth*, omsett av C. Farrington. New York: Grove Press, 1963.
+<span id="ref-6" data-kvalitet="A" data-habilitet="1">A1</span> [6] F. Fanon, *Les Damnés de la Terre*. Paris: Maspero, 1961. Engelsk omsetjing: *The Wretched of the Earth*, omsett av C. Farrington. New York: Grove Press, 1963.
 
-<span id="ref-7" class="kjelde-badge" data-kvalitet="B">B</span><span class="kjelde-badge kjelde-badge--habilitet">2</span> [7] C. Dickstein, «Deadly Iran school strike casts shadow over Pentagon's AI targeting push,» *Military Times*, Apr. 2026. [Online]. Available: https://www.militarytimes.com/news/pentagon-congress/2026/04/09/deadly-iran-school-strike-casts-shadow-over-pentagons-ai-targeting-push/.
+<span id="ref-7" data-kvalitet="B" data-habilitet="2">B2</span> [7] C. Dickstein, «Deadly Iran school strike casts shadow over Pentagon's AI targeting push,» *Military Times*, Apr. 2026. [Online]. Available: https://www.militarytimes.com/news/pentagon-congress/2026/04/09/deadly-iran-school-strike-casts-shadow-over-pentagons-ai-targeting-push/.
 
-<span id="ref-8" class="kjelde-badge" data-kvalitet="C">C</span><span class="kjelde-badge kjelde-badge--habilitet">2</span> [8] «Lebanon man took Israeli call minutes before fatal drone strike,» *The New Arab*, Apr. 8, 2026. [Online]. Available: https://www.newarab.com/news/lebanon-man-took-israeli-call-minutes-fatal-drone-strike.
+<span id="ref-8" data-kvalitet="C" data-habilitet="2">C2</span> [8] «Lebanon man took Israeli call minutes before fatal drone strike,» *The New Arab*, Apr. 8, 2026. [Online]. Available: https://www.newarab.com/news/lebanon-man-took-israeli-call-minutes-fatal-drone-strike.
 
-<span id="ref-9" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [9] F. Albanese, «Anatomy of a Genocide: Report of the Special Rapporteur on the situation of human rights in the Palestinian Territory occupied since 1967,» *FN Generalforsamlinga*, A/HRC/55/73, mars 2024. [Online]. Available: https://www.ohchr.org/en/documents/country-reports/ahrc5573-anatomy-genocide-report-special-rapporteur-situation-human. [Accessed: 21. apr. 2026].
+<span id="ref-9" data-kvalitet="A" data-habilitet="1">A1</span> [9] F. Albanese, «Anatomy of a Genocide: Report of the Special Rapporteur on the situation of human rights in the Palestinian Territory occupied since 1967,» *FN Generalforsamlinga*, A/HRC/55/73, mars 2024. [Online]. Available: https://www.ohchr.org/en/documents/country-reports/ahrc5573-anatomy-genocide-report-special-rapporteur-situation-human. [Accessed: 21. apr. 2026].
 
-<span id="ref-10" class="kjelde-badge" data-kvalitet="C">C</span><span class="kjelde-badge kjelde-badge--habilitet">2</span> [10] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*. London: Bodley Head, 2023.
+<span id="ref-10" data-kvalitet="C" data-habilitet="2">C2</span> [10] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*. London: Bodley Head, 2023.
 
-<span id="ref-11" class="kjelde-badge" data-kvalitet="B">B</span><span class="kjelde-badge kjelde-badge--habilitet">2</span> [11] A. Down og R. Booth, «Palantir manifesto described as ‘ramblings of a supervillain’ amid UK contract fears,» *The Guardian*, 21. apr. 2026. [Online]. Available: https://www.theguardian.com/technology/2026/apr/21/palantir-manifesto-uk-contract-fears-mps. [Accessed: 24. apr. 2026].
+<span id="ref-11" data-kvalitet="B" data-habilitet="2">B2</span> [11] A. Down og R. Booth, «Palantir manifesto described as ‘ramblings of a supervillain’ amid UK contract fears,» *The Guardian*, 21. apr. 2026. [Online]. Available: https://www.theguardian.com/technology/2026/apr/21/palantir-manifesto-uk-contract-fears-mps. [Accessed: 24. apr. 2026].

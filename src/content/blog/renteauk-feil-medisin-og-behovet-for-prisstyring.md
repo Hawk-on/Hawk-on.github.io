@@ -40,14 +40,14 @@ Me må tora å gjera som generasjonen før oss: Ta i bruk heile den politiske ve
 
 ## Kjelder
 
-<span id="ref-1" class="kjelde-badge" data-kvalitet="B">B</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [1] T. J. Ulriksen, «Renteøkning er feil medisin», *NRK Ytring*, 24. apr. 2026. [Online]. Available: https://www.nrk.no/ytring/renteokning-er-feil-medisin-1.17857955
+<span id="ref-1" data-kvalitet="B" data-habilitet="1">B1</span> [1] T. J. Ulriksen, «Renteøkning er feil medisin», *NRK Ytring*, 24. apr. 2026. [Online]. Available: https://www.nrk.no/ytring/renteokning-er-feil-medisin-1.17857955
 
-<span id="ref-2" class="kjelde-badge" data-kvalitet="B">B</span><span class="kjelde-badge kjelde-badge--habilitet">2</span> [2] R. Bjørnstad, «En så stor renteøkning er feil medisin nå», *LO.no*, sep. 2022. [Online]. Available: https://www.lo.no/nyhetsbrev/en-sa-stor-renteokning-er-feil-medisin-na/
+<span id="ref-2" data-kvalitet="B" data-habilitet="2">B2</span> [2] R. Bjørnstad, «En så stor renteøkning er feil medisin nå», *LO.no*, sep. 2022. [Online]. Available: https://www.lo.no/nyhetsbrev/en-sa-stor-renteokning-er-feil-medisin-na/
 
-<span id="ref-3" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [3] Statistisk sentralbyrå, «Konsumprisindeksen og underliggende inflasjon», *ssb.no*, apr. 2026. [Online]. Available: https://www.ssb.no/priser-og-prisindekser/konsumpriser/statistikk/konsumprisindeksen
+<span id="ref-3" data-kvalitet="A" data-habilitet="1">A1</span> [3] Statistisk sentralbyrå, «Konsumprisindeksen og underliggende inflasjon», *ssb.no*, apr. 2026. [Online]. Available: https://www.ssb.no/priser-og-prisindekser/konsumpriser/statistikk/konsumprisindeksen
 
-<span id="ref-4" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [4] K. Polanyi, *The Great Transformation: The Political and Economic Origins of Our Time*. Boston: Beacon Press, 1944.
+<span id="ref-4" data-kvalitet="A" data-habilitet="1">A1</span> [4] K. Polanyi, *The Great Transformation: The Political and Economic Origins of Our Time*. Boston: Beacon Press, 1944.
 
-<span id="ref-5" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [5] E. P. Thompson, «The Moral Economy of the English Crowd in the Eighteenth Century», *Past & Present*, nr. 50, s. 76-136, 1971.
+<span id="ref-5" data-kvalitet="A" data-habilitet="1">A1</span> [5] E. P. Thompson, «The Moral Economy of the English Crowd in the Eighteenth Century», *Past & Present*, nr. 50, s. 76-136, 1971.
 
-<span id="ref-6" class="kjelde-badge" data-kvalitet="A">A</span><span class="kjelde-badge kjelde-badge--habilitet">1</span> [6] N. Christie, «Prisdirektoratets historie 1917-1950», *regjeringen.no*, 2021. [Online]. Available: https://www.regjeringen.no/no/dokumentarkiv/Regjeringen-Solberg/andre-dokumenter/nfd/2021/prisdirektoratets-historie-1917-1950/id2867894/
+<span id="ref-6" data-kvalitet="A" data-habilitet="1">A1</span> [6] N. Christie, «Prisdirektoratets historie 1917-1950», *regjeringen.no*, 2021. [Online]. Available: https://www.regjeringen.no/no/dokumentarkiv/Regjeringen-Solberg/andre-dokumenter/nfd/2021/prisdirektoratets-historie-1917-1950/id2867894/
