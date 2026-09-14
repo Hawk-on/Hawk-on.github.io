@@ -1,0 +1,30 @@
+# Byggjestega, definerte éin stad.
+#
+# deploy.yml og kontroll.yml treng nøyaktig same bygg, men kan ikkje vere same
+# workflow: deploy endar med å publisere til Pages og har pages: write, medan
+# kontroll køyrer på pull_request og skal ikkje ha meir enn contents: read.
+#
+# Ein composite action passar betre enn ein gjenbrukbar workflow her, fordi det
+# som er felles er stega, ikkje jobbstrukturen.
+#
+# Krev at actions/checkout alt har køyrt; lokale actions blir henta frå
+# arbeidskatalogen.
+name: Bygg nettstaden
+description: Installerer avhengnader frå låsefila og byggjer, med artikkelkontroll og CSP-hashar.
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+      with:
+        node-version: 22
+        cache: npm
+
+    - run: npm ci
+      shell: bash
+
+    # `npm run build` køyrer sjølv `npm run sjekk` fyrst, og deretter
+    # astro build, csp-hashar.mjs og pagefind. Eitt steg, éi kjede, same
+    # åtferd lokalt som i CI.
+    - run: npm run build
+      shell: bash

@@ -134,10 +134,17 @@ bruk; majoroppgradering er ei eiga avgjerd.
 vekentleg, gruppert til få pull requests. Han oppdaterer SHA-pinningane og
 versjonskommentarane automatisk.
 
-**To workflowar, med vilje.** `deploy.yml` køyrer på push til `master` og endar med å
-publisere til Pages. `kontroll.yml` køyrer same stega på `pull_request`, utan
-publiseringa, og har berre `contents: read`. Utan den andre ville Dependabot-PR-ar
-kome heilt utan sjekkar. Endrar du byggjestega, må begge filene oppdaterast.
+**To workflowar, éin definisjon av bygget.** `deploy.yml` køyrer på push til `master`
+og endar med å publisere til Pages. `kontroll.yml` køyrer på `pull_request` og
+publiserer ikkje. Utan den andre ville Dependabot-PR-ar kome heilt utan sjekkar.
+
+Byggjestega ligg i **`.github/actions/bygg`**, ein composite action begge kallar.
+Endrar du bygget, endrar du éi fil. Ein composite action passar betre enn ein
+gjenbrukbar workflow her, fordi det som er felles er stega, ikkje jobbstrukturen.
+
+**Løyve er per jobb, ikkje per workflow.** Byggjejobben køyrer `npm ci`, altså
+tredjeparts installasjonsskript, og får berre `contents: read`. Berre deploy-jobben
+har `pages: write` og `id-token: write`. Flytt dei ikkje attende til workflow-nivå.
 
 **CSP-hashar.** `scripts/csp-hashar.mjs` køyrer etter `astro build` og byter ut
 `'unsafe-inline'` i `script-src` med SHA-256-hashar av dei faktiske inline-skripta.
