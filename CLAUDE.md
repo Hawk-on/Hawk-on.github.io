@@ -139,9 +139,26 @@ publisere til Pages. `kontroll.yml` køyrer same stega på `pull_request`, utan
 publiseringa, og har berre `contents: read`. Utan den andre ville Dependabot-PR-ar
 kome heilt utan sjekkar. Endrar du byggjestega, må begge filene oppdaterast.
 
+**CSP-hashar.** `scripts/csp-hashar.mjs` køyrer etter `astro build` og byter ut
+`'unsafe-inline'` i `script-src` med SHA-256-hashar av dei faktiske inline-skripta.
+Sju hashar dekkjer heile nettstaden.
+
+- **Alle sider får same settet, ikkje sine eigne.** ClientRouter køyrer skripta frå
+  målsida under CSP-en til sida du kom frå, så per-side-hashar ville brote navigering.
+- **`style-src` held på `'unsafe-inline'` med vilje.** Shiki fargar kode med inline
+  stilar. Det er ein akseptabel rest: injisert CSS er langt mindre farleg enn injisert
+  skript.
+- **JSON-LD blir ikkje hasha.** `type="application/ld+json"` er ein datablokk som
+  HTML-algoritmen merkjer som ikkje-køyrbar før CSP blir spurd.
+- **Kjelda i `Grunnoppsett.astro` har framleis `'unsafe-inline'`.** Det gjeld berre
+  dev; byggjesteget fjernar han. Skriptet kontrollerer seg sjølv og stoppar bygget om
+  eit inline-skript ikkje er dekt, om `style-src` mistar `'unsafe-inline'`, eller om
+  `'wasm-unsafe-eval'` forsvinn.
+
+Astro sin eigen `security.csp` er ikkje i bruk: han støttar korkje ClientRouter eller
+Shiki, og begge er i drift her.
+
 **Framleis ope, medvite:**
-- **`script-src 'unsafe-inline'`** opphevar det meste av XSS-vernet i CSP-en. GitHub
-  Pages kan ikkje setje HTTP-headarar, så nonce er umogleg, men hashar er farbare.
 - **`frame-ancestors` verkar ikkje i `<meta>`-CSP.** Spesifikasjonen ignorerer
   direktivet der, så nettstaden kan rammast inn. Lèt seg ikkje fikse utan headarar.
 - **Umami-skriptet lastar utan `integrity`.** Det er den største tredjepartsflata på

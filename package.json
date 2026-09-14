@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run sjekk && astro build && pagefind --site dist",
+    "build": "npm run sjekk && astro build && node scripts/csp-hashar.mjs && pagefind --site dist",
     "preview": "astro preview",
     "sjekk": "node scripts/sjekk-artiklar.mjs"
   },
