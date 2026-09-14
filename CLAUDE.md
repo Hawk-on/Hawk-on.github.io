@@ -67,7 +67,7 @@ Serie om offentleg infrastruktur og teknoføydalisme.
 |---|---|---|
 | 1 | **Den dyraste løysinga.** Konseptvalutgreiinga som konkluderte med at statleg sky er for dyrt, og kvifor nyttekostnadsmetoden avgjorde saka før politikken kom til orde. | Publisert 9. sept. 2026 |
 | 2 | **Modellen staten laga og ikkje driftar.** Noreg lagar språkmodellar gjennom Nasjonalbiblioteket, men ingen har fått i oppdrag å drifte dei som teneste. | Publisert 14. sept. 2026 |
-| 3 | **Forbrukaren som avvikla kundekategori.** Minneprodusentane prioriterer datasenter, og forbrukarmarknaden vert ikkje utkonkurrert på pris, men vald bort. | Planlagt |
+| 3 | **Forbrukaren som vart vald bort.** Minneprodusentane prioriterer datasenter, og forbrukarmarknaden vert ikkje utkonkurrert på pris, men vald bort. | Publisert 14. sept. 2026 |
 | 4 | **Kva ein offentleg leverandør faktisk kan løyse.** Tilgang, kvalitet og eigarskap til avkastninga er tre ulike klasseskilje, og ein offentleg leverandør løyser berre eitt. | Planlagt |
 | 5 | **Modellen ingen røysta over.** Var tenkt som generalisering av nr. 1, men nr. 1 tok opp i seg Goodhart, enshittification og heile argumentet om nyttekostnadsanalysen som avgjerdsmekanisme. Treng ny vinkel, til dømes fleire KS1-saker der same mekanismen slo ut, elles bør han strykast. | Må omarbeidast |
 
