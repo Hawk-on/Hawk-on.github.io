@@ -130,6 +130,14 @@ Merk at nyare majorversjonar finst (checkout v7, setup-node v7, configure-pages 
 upload-pages-artifact v5, deploy-pages v5). Pinninga låser med vilje det som alt var i
 bruk; majoroppgradering er ei eiga avgjerd.
 
+**Dependabot** (`.github/dependabot.yml`) held actions og npm-avhengnader oppdaterte,
+vekentleg, gruppert til få pull requests. Han oppdaterer SHA-pinningane og
+versjonskommentarane automatisk.
+
+**Merk at PR-ar ikkje blir kontrollerte.** `deploy.yml` køyrer berre på push til
+`master`, så ein Dependabot-PR viser ingen sjekkar. Vil du ha `npm ci`, `npm run sjekk`
+og `npm run build` køyrt på PR-ar, må det ein eigen workflow til uten deploy-steget.
+
 **Framleis ope, medvite:**
 - **`script-src 'unsafe-inline'`** opphevar det meste av XSS-vernet i CSP-en. GitHub
   Pages kan ikkje setje HTTP-headarar, så nonce er umogleg, men hashar er farbare.

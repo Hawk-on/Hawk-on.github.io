@@ -1,0 +1,47 @@
+# Dependabot held avhengnadene oppdaterte.
+#
+# SHA-pinninga av actions flytta ei byrde hit. Ein flyttbar tagg som @v4 henta
+# tryggleiksfiksar av seg sjølv; ein SHA gjer ikkje det. Dependabot gjev deg
+# oppdateringa som ein pull request du kan lesa, i staden for som ei stille endring.
+version: 2
+
+updates:
+  # Actions er SHA-pinna. Dependabot oppdaterer både SHA-en og versjonskommentaren.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "07:00"
+      timezone: Europe/Oslo
+    commit-message:
+      prefix: build(ci)
+    groups:
+      actions:
+        patterns:
+          - "*"
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "07:00"
+      timezone: Europe/Oslo
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: build(deps)
+      prefix-development: build(deps-dev)
+    groups:
+      # Astro og adaptrane skal fylgjast åt, elles bryt dei kvarandre.
+      astro:
+        patterns:
+          - astro
+          - "@astrojs/*"
+      # Resten samla, så det blir éin PR i veka og ikkje fem.
+      smaa-oppdateringar:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
