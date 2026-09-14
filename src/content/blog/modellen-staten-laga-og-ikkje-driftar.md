@@ -81,7 +81,7 @@ Tenk på kva som skal til for at eit sjukehus skal bruke ein språkmodell på pa
 
 Ei nedlasting er ingen av desse tinga. `ollama run` er ikkje ei sjukehusinnføring. Avstanden mellom vekter på ei nettside og ei teneste ein saksbehandlar kan bruke, er heile den avstanden, og ho vert ikkje mindre av at vektene er gratis.
 
-Her er det viktig å vera presis, for ein del av leddet finst. Sigma2 sin KI-fabrikk tilbyr ei KI-inferensteneste retta mot offentleg sektor med krav til personvernforordninga og norsk datalagring, og ei dedikert inferensteneste der Sigma2 set opp og driftar ein eigen instans med valfri modell og garantert kapasitet. Den siste er merkt som pilotfase [\[17\]](#ref-17). Telenor opna si KI-fabrikk i november 2024, den fyrste i Noreg, med Nvidia-maskinvare i norske datasenter og over 190 modellar klare for utrulling [\[18\]](#ref-18)[\[19\]](#ref-19). Telenor er 53,97 prosent eigd av staten ved Nærings- og fiskeridepartementet [\[20\]](#ref-20).
+Her er det viktig å vera presis, for ein del av leddet finst. Sigma2 sin KI-fabrikk tilbyr ei KI-inferensteneste retta mot offentleg sektor med krav til personvernforordninga og norsk datalagring, og ei dedikert inferensteneste der Sigma2 set opp og driftar ein eigen instans med valfri modell og garantert kapasitet. Den siste er merkt som pilotfase [\[17\]](#ref-17). Telenor opna si KI-fabrikk i november 2024, den fyrste i Noreg, med Nvidia-maskinvare i norske datasenter og GPU-kapasitet, opne verktøy og modelltilgang som teneste [\[18\]](#ref-18)[\[19\]](#ref-19). Telenor er 53,97 prosent eigd av staten ved Nærings- og fiskeridepartementet [\[20\]](#ref-20).
 
 Kapasiteten manglar altså ikkje, og institusjonane finst. Det som manglar, er at nokon har fått i oppdrag å drifte nett denne modellen som ei teneste nokon kan nå. Oppdraget til Nasjonalbiblioteket var å utvikle modellar og gjera dei tilgjengelege [\[4\]](#ref-4). «Tilgjengeleg» vart tolka som publisert.
 
@@ -169,7 +169,7 @@ Berre den eine av dei er vår, og det er ikkje den som svarer når nokon spør.
 
 <span id="ref-17" data-kvalitet="A" data-habilitet="2">A2</span>\[17\] Sigma2, «KI-fabrikken: Norges nasjonale knutepunkt for KI». [Online]. Available: https://www.sigma2.no/nb/ki-fabrikken. [Accessed: 14. september 2026]. Kjelde til at inferenstenesta finst og at den dedikerte varianten er merkt pilotfase.
 
-<span id="ref-18" data-kvalitet="A" data-habilitet="2">A2</span>\[18\] Telenor, «Telenor AI Factory». [Online]. Available: https://www.telenoraifactory.no/. [Accessed: 14. september 2026]. Leverandøren si eiga marknadsføring; nytta til talet på tilgjengelege modellar.
+<span id="ref-18" data-kvalitet="A" data-habilitet="2">A2</span>\[18\] Telenor, «Telenor AI Factory: Services». [Online]. Available: https://www.telenoraifactory.no/our-offering/services/. [Accessed: 14. september 2026]. Leverandøren si eiga marknadsføring; nytta til kva tenesta omfattar. Talet på tilgjengelege modellar står berre på framsida av same nettstaden, og er difor halde ute.
 
 <span id="ref-19" data-kvalitet="B" data-habilitet="1">B1</span>\[19\] Data Center Knowledge, «MWC 2026: Red Hat, Telenor Team Up for Sovereign Norway AI Factory», 3. mars 2026. [Online]. Available: https://www.datacenterknowledge.com/business/mwc-2026-red-hat-telenor-team-up-for-sovereign-norway-ai-factory. [Accessed: 14. september 2026]. Uavhengig omtale av maskinvare og datasenterplassering.
 
