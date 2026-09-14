@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import Grunnoppsett from '../../layouts/Grunnoppsett.astro';
 import { formaterDato } from '../../utils/dato';
 import { reknaUtLesetid, genererUtdrag } from '../../utils/tekst';
+import { kanoniskeTaggar } from '../../utils/taggar';
 import ArtikkelListe from '../../components/ArtikkelListe/ArtikkelListe';
 import Sok from '../../components/Sok/Sok';
 
@@ -24,7 +25,7 @@ const sortertInnleggData = innlegg
     oppdatertDato: i.data.oppdatertDato,
     ingress: i.data.ingress || genererUtdrag(i.body || ''),
     lesetid: reknaUtLesetid(i.body ?? ''),
-    tags: i.data.tags ?? [],
+    tags: kanoniskeTaggar(i.data.tags),
     slug: i.id,
     datoFormatert: formaterDato(i.data.publisertDato)
   }));

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useArtikkelListe } from './useArtikkelListe';
 import './ArtikkelListe.css';
+import { visTag } from '../../utils/taggar';
 
 interface Innlegg {
   tittel: string;
@@ -65,7 +66,7 @@ const ArtikkelListe: React.FC<ArtikkelListeProps> = ({ alleInnlegg, sorterteTags
                         data-umami-event="tagg-klikk" 
                         data-umami-event-tag={tag}
                       >
-                        {tag}
+                        {visTag(tag)}
                       </a>
                     ))}
                   </div>

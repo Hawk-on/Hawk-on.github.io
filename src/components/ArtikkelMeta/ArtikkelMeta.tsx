@@ -1,4 +1,5 @@
 import React from 'react';
+import { visTag } from '../../utils/taggar';
 
 interface ArtikkelMetaProps {
   datoFormatert: string;
@@ -27,7 +28,7 @@ const ArtikkelMeta: React.FC<ArtikkelMetaProps> = ({ datoFormatert, oppdatertFor
             data-umami-event="tagg-klikk" 
             data-umami-event-tag={tag}
           >
-            {tag}
+            {visTag(tag)}
           </a>
         ))}
       </div>

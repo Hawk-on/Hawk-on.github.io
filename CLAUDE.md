@@ -78,6 +78,23 @@ Serie om offentleg infrastruktur og teknoføydalisme.
 - **Hovudargumentet skal kvile på A-kjelder,** helst primærdokument lesaren kan opne sjølv. Bruk B og C der ingen primærkjelde finst, og sei det i teksten når det er slik. D skal grunngjevast i brødteksten, ikkje berre kodast.
 - **Ei kjelde skal berre bere det ho faktisk seier.** Ikkje bruk éin referanse som dekning for eit heilt avsnitt der berre fyrste setning står i dokumentet. Manglar det belegg for eit ledd, skal det skrivast at det manglar, eller leddet strykast.
 
+## Taggar
+Taggar vert normaliserte i `src/utils/taggar.ts`, ikkje i frontmatter. Skriv taggen
+slik du vil i artikkelen; ruta gjer resten.
+
+- **`tagSlug`** gjev URL-forma: små bokstavar, `æ→e`, `ø→o`, `å→a`, berre `[a-z0-9-]`.
+- **`SAMANSLÅING`** peikar taggar som tyder det same til éin kanonisk slug
+  (`technology→teknologi`, `infosec→sikkerheit`, `kunstig-intelligens→ai`).
+- **`VISING`** gjev namnet lesaren ser, for akronym (`ai→AI`), eigennamn
+  (`linux→Linux`) og ord der æøå vart folda bort (`okonomi→økonomi`).
+- **Gamle adresser held fram med å svare.** `gamleTagStiar` genererer meta-refresh
+  frå kvar rå-tagg som ikkje lenger eig si eiga adresse. `/blog/tag/AI/` og
+  `/blog/tag/økonomi/` peikar vidare i staden for å gje 404.
+
+Legg du til ein `VISING`-nøkkel, må han vere den **kanoniske slugen**, ikkje rå-taggen.
+`næringspolitikk` blir `neringspolitikk`, ikkje `naringspolitikk`; det tok meg ein
+runde å oppdage, sidan ein nøkkel som ikkje matchar berre gjer ingenting.
+
 ## Giscus
 - `mapping="specific"` med artikkelens slug som `term`. **Ikkje** `pathname` — det ville binde kommentartrådane til URL-en og gjere dei foreldrelause ved kvar stiendring.
 - Discussions bur i **dette** repoet (kategorien Announcements). Flytta hit i august 2026; det gamle Blog-repoet hadde ingen trådar, så ingenting gjekk tapt.
@@ -123,11 +140,6 @@ Kjende avvik, førte opp utan å vere retta. Tala er kontrollerte mot repoet 9. 
 **Kjeldekodar som manglar**
 - `agentisk-identitet-og-tilgangskontroll.md`: to spanar (`ref-1`, `ref-2`) manglar `data-kvalitet` og `data-habilitet` heilt.
 - `hydrologisk-krigforing-midtausten.md`: éin span manglar dei same kodane.
-
-**Taggar**
-- Case-duplikat som gjev kvar si tag-side: `AI`/`ai`, `Gaza`/`gaza`, `Noreg`/`noreg`.
-- Blanda språk: `technology`/`teknologi`, `security`/`sikkerheit`.
-- Normaliser i tag-ruta, ikkje i kvar einskild artikkel.
 
 **Filnamn over 55 teikn**
 - `den-skjore-iran-usa-vapenkvilaog-kva-som-kan-kollapse-ho.md` (59). Har òg skrivefeil i slug-en: manglande bindestrek i `vapenkvilaog`.

@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Artikkel from '../../layouts/Artikkel.astro';
 import { reknaUtLesetid } from '../../utils/tekst';
+import { kanoniskeTaggar } from '../../utils/taggar';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog', ({ data }) => {
@@ -17,6 +18,7 @@ const { Content } = await render(entry);
 
 const frontmatter = {
   ...entry.data,
+  tags: kanoniskeTaggar(entry.data.tags),
   lesetid: reknaUtLesetid(entry.body ?? '')
 };
 ---

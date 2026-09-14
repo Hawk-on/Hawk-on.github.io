@@ -9,10 +9,11 @@
 // Stiane er skilde berre av bokstavstorleik, og GitHub Pages skil på det, så
 // /Blog/... og /blog/... kan eksistere side om side.
 import { getCollection } from 'astro:content';
+import { kanoniskeTaggar } from '../../utils/taggar';
 
 export async function getStaticPaths() {
   const innlegg = await getCollection('blog', ({ data }) => !data.utkast);
-  const tags = [...new Set(innlegg.flatMap(i => i.data.tags ?? []))];
+  const tags = [...new Set(innlegg.flatMap(i => kanoniskeTaggar(i.data.tags)))];
 
   return [
     { params: { sti: undefined }, props: { mal: '/blog/' } },
