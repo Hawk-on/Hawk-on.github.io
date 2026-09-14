@@ -120,15 +120,21 @@ setningar der streken ber meining.
 ## Tryggleik
 Gjennomgang 14. september 2026. Retta same dag: Astro til 7.3.2 (kritisk RCE i
 AVIF-optimalisering), fotnote-førehandsvisinga i `Artikkel.astro` bygd med DOM-nodar
-i staden for `innerHTML`, og JSON-LD-en escapar no `<`.
+i staden for `innerHTML`, JSON-LD-en escapar no `<`, alle GitHub Actions er pinna til
+commit-SHA med versjonen i kommentar, og workflowen brukar `npm ci`.
+
+**Om SHA-pinninga.** Flyttbare taggar som `@v4` kan peike på ny kode utan at noko i
+repoet endrar seg. SHA-ane er dei `@v4`/`@v3` løyste til 14. september 2026.
+Oppgradering krev no ei medviten endring: hent ny SHA, og oppdater kommentaren.
+Merk at nyare majorversjonar finst (checkout v7, setup-node v7, configure-pages v6,
+upload-pages-artifact v5, deploy-pages v5). Pinninga låser med vilje det som alt var i
+bruk; majoroppgradering er ei eiga avgjerd.
 
 **Framleis ope, medvite:**
 - **`script-src 'unsafe-inline'`** opphevar det meste av XSS-vernet i CSP-en. GitHub
   Pages kan ikkje setje HTTP-headarar, så nonce er umogleg, men hashar er farbare.
 - **`frame-ancestors` verkar ikkje i `<meta>`-CSP.** Spesifikasjonen ignorerer
   direktivet der, så nettstaden kan rammast inn. Lèt seg ikkje fikse utan headarar.
-- **Actions er ikkje SHA-pinna,** og workflowen brukar `npm install` framfor `npm ci`,
-  så CI kan løyse andre versjonar enn låsefila.
 - **Umami-skriptet lastar utan `integrity`.** Det er den største tredjepartsflata på
   nettstaden.
 
