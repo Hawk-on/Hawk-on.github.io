@@ -3,96 +3,19 @@
 /* ==============================
    Design-tokens — same as blog
    ============================== */
-:root {
-  --svart: #0f0f0f;
-  --kvit: #f5f0e8;
-  --grå: #6b6560;
-  --lys-grå: #e8e2d8;
-  --raud: #b8001f;
-  --gull: #c4933f;
-  --skrift-brei: 'Playfair Display', Georgia, serif;
-  --skrift-brød: 'Source Serif 4', Georgia, serif;
-  --skrift-kode: 'JetBrains Mono', monospace;
-  --tekst-dempa: #3a3530;
-  --tekst-sekundar: #4a4540;
-  --kode-bakgrunn: #e8e0cc;
-  --header-bakgrunn: rgba(245, 240, 232, 0.95);
-}
 
-html[data-theme="dark"] {
-  --svart: #e8e2d8;
-  --kvit: #1a1816;
-  --grå: #9a958e;
-  --lys-grå: #2e2a26;
-  --raud: #e84058;
-  --gull: #d4a34f;
-  --tekst-dempa: #c5bfb8;
-  --tekst-sekundar: #b0a99f;
-  --kode-bakgrunn: #2a2520;
-  --header-bakgrunn: rgba(26, 24, 22, 0.95);
-}
 
-@media (prefers-color-scheme: dark) {
-  html:not([data-theme="light"]) {
-    --svart: #e8e2d8;
-    --kvit: #1a1816;
-    --grå: #9a958e;
-    --lys-grå: #2e2a26;
-    --raud: #e84058;
-    --gull: #d4a34f;
-    --tekst-dempa: #c5bfb8;
-    --tekst-sekundar: #b0a99f;
-    --kode-bakgrunn: #2a2520;
-    --header-bakgrunn: rgba(26, 24, 22, 0.95);
-  }
-}
 
 /* ==============================
    Reset & base
    ============================== */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-:focus-visible {
-  outline: 2px solid var(--raud);
-  outline-offset: 2px;
-}
 
-html {
-  font-size: 18px;
-  scroll-behavior: smooth;
-}
 
-body {
-  background: var(--kvit);
-  color: var(--svart);
-  font-family: var(--skrift-brød);
-  font-weight: 400; /* Strammare typografi for betre lesbarheit */
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
 
-h1, h2, h3, h4 {
-  font-family: var(--skrift-brei);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
 
-p { margin-bottom: 1.4rem; }
 p:last-child { margin-bottom: 0; }
 
-a {
-  color: var(--raud);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  transition: color 0.2s;
-}
-a:hover { color: var(--svart); }
 
 /* ==============================
    Layout
@@ -967,8 +890,10 @@ body {
   background: var(--kvit);
   color: var(--svart);
   font-family: var(--skrift-brød);
-  font-weight: 300; /* Tilbake til 300 for editorial eleganse */
-  line-height: 1.62;
+  font-weight: 400; /* Strammare typografi for betre lesbarheit. Var 300;
+                       endra 14. september 2026 fordi 300 er tynt på serif
+                       brødtekst, særleg lyst på mørk botn. */
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -1122,10 +1047,6 @@ hr {
   max-width: 600px;
 }
 
-.artikkel-kropp {
-  padding-top: 1rem;
-  padding-bottom: 4rem;
-}
 
 /* Forsida */
 .forsida-hero {
@@ -1352,6 +1273,8 @@ html[data-theme="dark"] .kjelde-modal {
    Utan dette skyv dei artikkelen 200-300 px ut av viewporten på mobil. */
 .artikkel-kropp {
   overflow-wrap: break-word;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
 }
 
 .artikkel-kropp a[href^="http"] {

@@ -174,6 +174,25 @@ Shiki, og begge er i drift her.
 **Ikkje tryggleik, og skal ikkje forvekslast med det:** Base64-kodinga av kontaktinfo
 lurer naive skraparar og ingenting anna. `robots.txt` er ei oppmoding, ikkje ei sperre.
 
+## Styling
+Éi fil, `src/styles/global.css`. Designtoken, skal, CV-stilar og bloggstilar.
+
+**Paletten står éin stad, nedst i fila.** `:root` for lys, `html[data-theme="dark"]`
+for eksplisitt val, og `@media (prefers-color-scheme: dark)` med
+`html:not([data-theme="light"])` for systemval. Endrar du ein farge, må han endrast i
+dei to siste; CSS kan ikkje aliase selektorar.
+
+**Rydda 14. september 2026.** Ved samanslåinga av CV og blogg vart heile baselaget
+skøytt saman utan å bli forsona: palett, reset, `html`, `body`, overskrifter, `p`, `a`
+og `a:hover` stod to gonger. Sidan den seinare kopien vinn i kaskaden, var den fyrste
+heilt daud. Elleve blokker, 80 linjer, fjerna.
+
+Det farlege var ikkje storleiken, men at ein redigering i den fyrste kopien såg rett ut
+og ikkje gjorde noko. `body` hadde to motstridande typografival, begge kommenterte:
+`font-weight: 400` med `line-height: 1.7` «for betre lesbarheit», og seinare
+`font-weight: 300` med `1.62` «for editorial eleganse». Den siste vann. Valet er no
+teke: 400 og 1.7.
+
 ## Antispam og robot-kontroll
 - **Kontaktinfo:** E-post og telefon er Base64-koda i `Kontakt.tsx`. Aldri legg ut i klartekst.
 - **AI-sperre:** `public/robots.txt` blokkerer GPTBot, CCBot m.fl.
