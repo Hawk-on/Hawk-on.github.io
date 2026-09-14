@@ -65,11 +65,11 @@ Serie om offentleg infrastruktur og teknoføydalisme.
 
 | # | Artikkel | Status |
 |---|---|---|
-| 1 | **Den dyraste løysinga.** Konseptvalutgreiinga som konkluderte med at statleg sky er for dyrt, og kvifor nyttekostnadsmetoden avgjorde saka før politikken kom til orde. | Planlagt |
-| 2 | **Offentleg produsent, privat leverandør.** Noreg lagar språkmodellar gjennom Nasjonalbiblioteket, men driftar dei ikkje som teneste. | Planlagt |
+| 1 | **Den dyraste løysinga.** Konseptvalutgreiinga som konkluderte med at statleg sky er for dyrt, og kvifor nyttekostnadsmetoden avgjorde saka før politikken kom til orde. | Publisert 9. sept. 2026 |
+| 2 | **Modellen staten laga og ikkje driftar.** Noreg lagar språkmodellar gjennom Nasjonalbiblioteket, men ingen har fått i oppdrag å drifte dei som teneste. | Publisert 14. sept. 2026 |
 | 3 | **Forbrukaren som avvikla kundekategori.** Minneprodusentane prioriterer datasenter, og forbrukarmarknaden vert ikkje utkonkurrert på pris, men vald bort. | Planlagt |
 | 4 | **Kva ein offentleg leverandør faktisk kan løyse.** Tilgang, kvalitet og eigarskap til avkastninga er tre ulike klasseskilje, og ein offentleg leverandør løyser berre eitt. | Planlagt |
-| 5 | **Modellen ingen røysta over.** Generalisering av nr. 1: nyttekostnadsanalysen som politisk avgjerdsmekanisme. Føreset at nr. 1 er skriven. | Planlagt |
+| 5 | **Modellen ingen røysta over.** Var tenkt som generalisering av nr. 1, men nr. 1 tok opp i seg Goodhart, enshittification og heile argumentet om nyttekostnadsanalysen som avgjerdsmekanisme. Treng ny vinkel, til dømes fleire KS1-saker der same mekanismen slo ut, elles bør han strykast. | Må omarbeidast |
 
 ## Kjeldebruk og referansar
 - **Verifisering:** Ved kvar endring eller nytt innlegg skal alle nye kjelder verifiserast med nettsøk. Peik alltid til spesifikke ressursar, aldri berre landingssider.
