@@ -113,9 +113,21 @@ Den kraftigaste innvendinga mot sykelargumentet kjem likevel frå sykelen sin ei
 
 **Oligopolet er i ferd med å slå sprekker.** Dette er òg sant, og det er den innvendinga som kan gjera meg mest feil. Kinesiske CXMT gjekk frå 4 prosent av DRAM-marknaden i andre kvartal 2025 til 10 prosent i same kvartal i 2026 [\[8\]](#ref-8). Ein fjerde aktør som spesialiserer seg på nettopp det dei tre andre har nedprioritert, er den mest truverdige vegen ut av dette. Eg veit ikkje om han kjem raskt nok, og eg skriv det i staden for å gjette.
 
-**KI-etterspurnaden er ei boble, og ho sprekk.** Dette er den innvendinga eg har minst grunnlag for å avvise. Skulle investeringane i KI-infrastruktur falle brått, ville kapasiteten koma attende til forbrukarmarknaden, og prisane falle like fort som dei steig.
+**KI-etterspurnaden er ei boble, og ho sprekk.** Dette er den sterkaste innvendinga, og ho er betre dokumentert enn eg fyrst gav henne kreditt for.
+
+Bloomberg fører eit løpande kart over det dei kallar sirkelavtalane som ber KI-oppsvinget, og skildringa deira er at eit nett av samanvevde investeringar aukar risikoen for kaskadetap dersom teknologien ikkje innfrir [\[17\]](#ref-17). Nvidia lova opptil 100 milliardar dollar til OpenAI, som skulle fylle datasentera med Nvidia-brikker. OpenAI forplikta seg til å kjøpe skytenester for 250 milliardar frå Microsoft, som alt hadde investert 13 milliardar i OpenAI. I CoreWeave-avtalen har Nvidia tilgang til ubrukt GPU-kapasitet, som i praksis garanterer utnyttinga sjølv om etterspurnaden fell.
+
+Ein del av etterspurnaden som pressar forbrukarminnet ut av marknaden, kviler altså på kapital som går i ring. Skulle investeringane falle brått, ville kapasiteten koma attende, og prisane falle like fort som dei steig.
 
 To ting taler likevel mot at det løyser saka. Ei HBM-linje er ikkje ein brytar ein vippar attende; ombygging tek kvartal, ikkje veker, og eit fall i KI-etterspurnaden ville truleg koma saman med eit investeringsstopp som gjer ombygginga dyrare å finansiere. Og viktigare: kundekategorien kjem ikkje attende av seg sjølv. Dei mindre Android-produsentane som går ut av inngangssegmentet no, byggjer ikkje opp att distribusjon i Lagos og Dhaka på eit kvartal fordi minnet vart billegare. Ei boble som sprekk, gjev billegare komponentar til dei som framleis er i marknaden. Ho gjev ikkje attende dei som alt er ute.
+
+**Det er krigen, ikkje prioriteringa.** Denne fortener eit ærleg svar, og han mangla heilt i fyrste utkastet.
+
+Krigen mellom USA, Israel og Iran frå 28. februar 2026 råka halvleiarindustrien direkte, ikkje berre gjennom energiprisen. Ein tredjedel av verdas helium kjem frå Qatar, og helium er kritisk i brikkeproduksjon. To tredjedelar av bromet kjem frå Israel og Jordan. Gulfen er dessutan omlastingsknutepunkt for halvleiarar [\[18\]](#ref-18). IEA kalla stenginga av Hormuz den største forsyningsforstyrringa i historia til oljemarknaden [\[19\]](#ref-19).
+
+Svaret ligg i datoane. Spotprisen på DDR5 steig frå 6,84 til 27,20 dollar mellom september og desember 2025 [\[2\]](#ref-2). TrendForce oppjusterte varselet for fyrste kvartal til 90 til 95 prosent den 2. februar 2026 [\[4\]](#ref-4). Krigen byrja 28. februar.
+
+Omfordelinga var altså etablert, varsla og prisa inn før fyrste bombe fall. Krigen gjer det verre, og han gjer det dyrare å byggje seg ut av det. Men han forklarar ikkje kvifor kapasiteten gjekk dit han gjekk.
 
 **Forbrukarane har ikkje krav på billig minne.** Nei. Og HBM til KI-trening er ikkje eit frivolt føremål; det er infrastruktur, med reell verdi. Innvendinga mi gjeld ikkje at prioriteringa vart gjord. Ho gjeld at ho vart gjord av tre selskaps kapasitetsplanlegging, utan at nokon offentleg instans nokon gong vurderte om den fyrste kategorien som skulle ryke, burde vera inngangstelefonen i låginntektsland.
 
@@ -170,3 +182,9 @@ Marknaden gjorde ikkje noko gale. Han gjorde nøyaktig det han skal: allokerte k
 <span id="ref-15" data-kvalitet="B" data-habilitet="1">B1</span>\[15\] Data Center Knowledge, «MWC 2026: Red Hat, Telenor Team Up for Sovereign Norway AI Factory», 3. mars 2026. [Online]. Available: https://www.datacenterknowledge.com/business/mwc-2026-red-hat-telenor-team-up-for-sovereign-norway-ai-factory. [Accessed: 14. september 2026].
 
 <span id="ref-16" data-kvalitet="B" data-habilitet="1">B1</span>\[16\] Bloomberg, «SK Hynix CEO Expects Memory Crunch to Last Beyond 2030», 10. juli 2026. [Online]. Available: https://www.bloomberg.com/news/articles/2026-07-10/sk-hynix-chief-expects-memory-shortage-to-last-into-next-decade. [Accessed: 14. september 2026]. Utsegn frå administrerande direktør Kwak Noh-Jung. Han er part med interesse i høg pris, og seier likevel at knappleiken varer.
+
+<span id="ref-17" data-kvalitet="B" data-habilitet="1">B1</span>\[17\] Bloomberg, «A Guide to the Circular Deals Underpinning the AI Boom», publisert 22. januar 2026, oppdatert 19. august 2026. [Online]. Available: https://www.bloomberg.com/graphics/2026-ai-circular-deals/. [Accessed: 14. september 2026]. Løpande kartlegging av kapitalstraumane mellom KI-selskapa.
+
+<span id="ref-18" data-kvalitet="B" data-habilitet="2">B2</span>\[18\] Center for American Progress, «The War in Iran Will Raise Fuel Prices and Costs Throughout the Economy», mars 2026. [Online]. Available: https://www.americanprogress.org/article/the-war-in-iran-will-raise-fuel-prices-and-costs-throughout-the-economy/. [Accessed: 14. september 2026]. Tankesmie med uttalt politisk ståstad, og krigen er ein del av deira eige ordskifte. Nytta til dei samanstilte tala for helium, brom og omlasting, som er oppgjevne med eigne kjelder.
+
+<span id="ref-19" data-kvalitet="A" data-habilitet="1">A1</span>\[19\] Det internasjonale energibyrået, «Oil Market Report», mars 2026. [Online]. Available: https://www.iea.org/reports/oil-market-report-march-2026. [Accessed: 14. september 2026]. Kjelde til karakteristikken av Hormuz-stenginga som den største forsyningsforstyrringa i oljemarknadens historie.
