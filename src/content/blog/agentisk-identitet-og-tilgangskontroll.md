@@ -54,7 +54,7 @@ For meir fleksible scenarium — der agenten treng å handle på tvers av system
 
 Ein Service Principal er enkelt sagt ein "tenestekonto" for ein applikasjon i Entra ID. Han har ei unik ID, kan få roller og tillatingar på tvers av Azure-ressursar, og autentiserer seg tradisjonelt med anten ei hemmelegheit (client secret) eller eit sertifikat. Service Principal er meir fleksibel enn Managed Identity, men krev at nokon handterer rotering av hemmelegheiter eller sertifikat — noko som er ein vedlikehaldsbelastning og ein potensiell risiko.
 
-*Workload Identity Federation* er det som endrar spelet. Det er ein mekanisme der ein ekstern identitetsleverandør — GitHub Actions, Azure Kubernetes Service, Google Cloud, eller ein annan OIDC-kompatibel leverandør — kan bevise ein identitet til Entra ID utan å distribuere noka hemmelegheit. I staden utvekslar dei eit kortvarig OIDC-token.
+*Workload Identity Federation* er det som endrar spelet. Det er ein mekanisme der ein ekstern identitetsleverandør — GitHub Actions, Azure Kubernetes Service, Google Cloud, eller ein annan OIDC-kompatibel leverandør — kan bevise ein identitet til Entra ID utan å distribuere noka hemmelegheit. I staden utvekslar dei eit kortvarig OIDC-token. [¹](#ref-1)
 
 Slik ser det ut for ein GitHub Actions-pipeline som autentiserer mot Azure:
 
@@ -101,7 +101,7 @@ Workload Identity Federation er grunnlaget for agentidentitet i CI/CD-pipelines.
 
 Det finst to hovudmodellar for korleis ein kodagent autentiserer seg mot Azure-ressursar:
 
-**Modell A — GitHub-native:** Agenten opererer som ein GitHub Actions-workflow. Autentiseringa skjer via OIDC Workload Identity Federation mellom GitHub og Entra ID. Agenten får eit kortvarig token med dei rollane som er konfigurert for dette repo-et og dette miljøet.
+**Modell A — GitHub-native:** Agenten opererer som ein GitHub Actions-workflow. Autentiseringa skjer via OIDC Workload Identity Federation mellom GitHub og Entra ID. [¹⁴](#ref-14) Agenten får eit kortvarig token med dei rollane som er konfigurert for dette repo-et og dette miljøet.
 
 **Modell B — Azure DevOps-native:** Agenten opererer i Azure DevOps Pipelines med ein Service Connection. Microsoft har frå 2023 tilrådd å bruke Workload Identity Federation for Service Connections i staden for lagra hemmelegheiter. Ein sjølvhosta agent som køyrer på ein Azure VM eller Container Instance kan dessutan bruke Managed Identity direkte.
 
@@ -126,7 +126,7 @@ I steg 5 og 6 er agenten ein Entra ID-identitet med konkrete tilgangsrettar. I s
 
 Azure DevOps-agentar som køyrer på Azure-infrastruktur kan bruke Managed Identity direkte. Eit sjølvhosta pipeline-agentmiljø på ein Azure VM med ein tilknytt system-assigned Managed Identity kan autentisere mot Key Vault, Azure Container Registry, og andre Azure-ressursar utan noka hemmelegheit i pipeline-konfigurasjonen.
 
-Det er verdt å merkje at mange organisasjonar framleis brukar den eldre modellen med hemmelegheiter lagra i Azure DevOps Service Connections — klient-ID og klient-hemmelegheit frå ein Service Principal, lagra som krypterte variablar i DevOps. Dette er ein potensiell angrepsvektor: om DevOps-miljøet sjølv vert kompromittert, er hemmelegheitene eksponerte. Microsoft sin tilråding frå 2023 er å gå over til Workload Identity Federation for alle nye Service Connections, og å migrere eksisterande. Det er eit konkret tiltak som mange organisasjonar enno ikkje har gjennomført.
+Det er verdt å merkje at mange organisasjonar framleis brukar den eldre modellen med hemmelegheiter lagra i Azure DevOps Service Connections — klient-ID og klient-hemmelegheit frå ein Service Principal, lagra som krypterte variablar i DevOps. Dette er ein potensiell angrepsvektor: om DevOps-miljøet sjølv vert kompromittert, er hemmelegheitene eksponerte. Microsoft sin tilråding frå 2023 er å gå over til Workload Identity Federation for alle nye Service Connections, og å migrere eksisterande. [¹⁰](#ref-10) Det er eit konkret tiltak som mange organisasjonar enno ikkje har gjennomført.
 
 ### Minste privilegium i repo-kontekst
 
@@ -160,7 +160,7 @@ Det finst tre hovudmønster for korleis ein AI-agent kan autentisere seg mot ein
 
 **Løysing A — Entra ID-token direkte:** Agenten er ein Managed Identity eller Service Principal i Entra ID. MCP-tenaren er registrert som ein Entra ID-applikasjon med ein eller fleire OAuth 2.0 scopes. Agenten hentar eit Bearer-token via Client Credentials-flyten og presenterer det i Authorization-header mot MCP-tenarens HTTP-endepunkt.
 
-**Løysing B — Azure API Management (APIM) som MCP-gateway:** Dette er Microsoft sin tilrådde arkitektur for å eksponere MCP-tenarar i bedriftskontekst. APIM sit framfor MCP-tenaren og handterer autentisering med Entra ID. Agenten treng berre nå APIM-endepunktet; APIM validerer tokenet, sjekkar autorisasjonsreglar, og vidaresender til rett intern MCP-tenar. APIM gjev dessutan sentral logging, rate limiting, og tilgangsstyring som er vanskeleg å implementere konsistent på kvar einskild MCP-tenar.
+**Løysing B — Azure API Management (APIM) som MCP-gateway:** Dette er Microsoft sin tilrådde arkitektur for å eksponere MCP-tenarar i bedriftskontekst. [²](#ref-2) APIM sit framfor MCP-tenaren og handterer autentisering med Entra ID. Agenten treng berre nå APIM-endepunktet; APIM validerer tokenet, sjekkar autorisasjonsreglar, og vidaresender til rett intern MCP-tenar. APIM gjev dessutan sentral logging, rate limiting, og tilgangsstyring som er vanskeleg å implementere konsistent på kvar einskild MCP-tenar.
 
 ```
 AI-agent
@@ -325,7 +325,7 @@ Dette er ikkje hypotetisk. Supply chain-angrep via kompromitterte CI/CD-pipeline
 
 ### Identitetsspredning i agentlandskapet
 
-Kvar kodagent, kvar pipeline, kvar MCP-integrasjon, kvar Azure AI Foundry-app er ein ny identitet. Med eit veksande tal agentrammeverk — Microsoft AutoGen, Semantic Kernel, GitHub Copilot Workspace, Azure AI Foundry, og eit hundretals open source-alternativ — veks antalet agentidentitetar i ein organisasjon raskt og usynleg.
+Kvar kodagent, kvar pipeline, kvar MCP-integrasjon, kvar Azure AI Foundry-app er ein ny identitet. Med eit veksande tal agentrammeverk — Microsoft AutoGen, Semantic Kernel, GitHub Copilot Workspace, Azure AI Foundry, og eit hundretals open source-alternativ — veks antalet agentidentitetar i ein organisasjon raskt og usynleg. [⁶](#ref-6)
 
 Dette er eit kjent mønster frå pre-cloud-æraen. Organisasjonar bygde seg opp hundrevis av tenestekontoar — ein for kvar applikasjon, ein for kvar integrasjon, ein for kvar pipeline — utan oversikt over kva tilgang kvar einskild hadde, kven som eigde dei, eller om dei framleis var i bruk. Revisjonsrapportar frå den tida avslørte tenestekontoar med seniortilgang som hadde stått ubrukte i seks år.
 
@@ -425,13 +425,13 @@ Me er tidleg i ein epoke der ikkje-menneskelege aktørar gradvis overtek oppgåv
 
 **Workload Identity Federation** — Ein mekanisme som lèt ein ekstern identitetsleverandør (t.d. GitHub) bekrefte ein identitet til Entra ID utan å distribuere hemmelegheiter. Grunnlaget for OIDC-basert autentisering i CI/CD.
 
-**Zero trust** — Eit tryggleiksparadigme der ingen identitet — ikkje eingong innanfor nettverket — vert stolt på automatisk. Alle aksessar vert verifiserte eksplisitt, uavhengig av nettverkslokasjon.
+**Zero trust** [¹³](#ref-13) — Eit tryggleiksparadigme der ingen identitet — ikkje eingong innanfor nettverket — vert stolt på automatisk. Alle aksessar vert verifiserte eksplisitt, uavhengig av nettverkslokasjon.
 
 ## Kjelder
 
-<span id="ref-1">[1]</span> Microsoft, "Workload identity federation," *Microsoft Learn*, 2024. [Online]. Available: https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation. [Accessed: Apr. 21, 2026].
+<span id="ref-1" data-kvalitet="A" data-habilitet="2">A2</span>\[1\] Microsoft, "Workload identity federation," *Microsoft Learn*, 2024. [Online]. Available: https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation. [Accessed: Apr. 21, 2026].
 
-<span id="ref-2">[2]</span> Microsoft, "Use Azure API Management as a Model Context Protocol (MCP) server gateway," *Microsoft Learn*, 2025. [Online]. Available: https://learn.microsoft.com/en-us/azure/api-management/export-api-model-context-protocol. [Accessed: Apr. 21, 2026].
+<span id="ref-2" data-kvalitet="A" data-habilitet="2">A2</span>\[2\] Microsoft, "Use Azure API Management as a Model Context Protocol (MCP) server gateway," *Microsoft Learn*, 2025. [Online]. Available: https://learn.microsoft.com/en-us/azure/api-management/export-api-model-context-protocol. [Accessed: Apr. 21, 2026].
 
 <span id="ref-3" data-kvalitet="A" data-habilitet="1">A1</span>[3] Anthropic, "MCP Authorization," *Model Context Protocol Specification*, Mar. 2025. [Online]. Available: https://modelcontextprotocol.io/specification/2025-03-26/basic/authorization. [Accessed: Apr. 21, 2026].
 
