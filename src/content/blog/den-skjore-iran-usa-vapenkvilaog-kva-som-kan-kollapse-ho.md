@@ -63,15 +63,15 @@ Det er lite som tyder på at Trump-administrasjonen fullt ut forstår kor asymme
 
 ## Kjelder
 
-<span id="ref-1" data-kvalitet="B" data-habilitet="1"></span>[1] Encyclopaedia Britannica, "2026 Iran war," *Britannica*, 2026. [Online]. Available: https://www.britannica.com/event/2026-Iran-war. [Accessed: Apr. 14, 2026].
+<span id="ref-1" data-kvalitet="B" data-habilitet="1">B1</span>[1] Encyclopaedia Britannica, "2026 Iran war," *Britannica*, 2026. [Online]. Available: https://www.britannica.com/event/2026-Iran-war. [Accessed: Apr. 14, 2026].
 
-<span id="ref-2" data-kvalitet="B" data-habilitet="1"></span>[2] Wikipedia, "2026 Iran war ceasefire," *Wikipedia*, Apr. 2026. [Online]. Available: https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire. [Accessed: Apr. 14, 2026].
+<span id="ref-2" data-kvalitet="B" data-habilitet="1">B1</span>[2] Wikipedia, "2026 Iran war ceasefire," *Wikipedia*, Apr. 2026. [Online]. Available: https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire. [Accessed: Apr. 14, 2026].
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="3"></span>[3] Al Jazeera, "How Pakistan managed to get the US and Iran to a ceasefire," *Al Jazeera*, Apr. 8, 2026. [Online]. Available: https://www.aljazeera.com/features/2026/4/8/how-pakistan-managed-to-get-the-us-and-iran-to-a-ceasefire. [Accessed: Apr. 14, 2026].
+<span id="ref-3" data-kvalitet="B" data-habilitet="3">B3</span>[3] Al Jazeera, "How Pakistan managed to get the US and Iran to a ceasefire," *Al Jazeera*, Apr. 8, 2026. [Online]. Available: https://www.aljazeera.com/features/2026/4/8/how-pakistan-managed-to-get-the-us-and-iran-to-a-ceasefire. [Accessed: Apr. 14, 2026].
 
-<span id="ref-4" data-kvalitet="B" data-habilitet="3"></span>[4] Al Jazeera, "How the US-Iran talks in Islamabad unfolded," *Al Jazeera*, Apr. 13, 2026. [Online]. Available: https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded. [Accessed: Apr. 14, 2026].
+<span id="ref-4" data-kvalitet="B" data-habilitet="3">B3</span>[4] Al Jazeera, "How the US-Iran talks in Islamabad unfolded," *Al Jazeera*, Apr. 13, 2026. [Online]. Available: https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded. [Accessed: Apr. 14, 2026].
 
-<span id="ref-5" data-kvalitet="B" data-habilitet="2"></span>[5] Time, "Why the Iran-U.S. Peace Talks Failed," *Time*, Apr. 13, 2026. [Online]. Available: https://time.com/article/2026/04/13/iran-US-peace-talks-islamabad-war-nuclear/. [Accessed: Apr. 14, 2026].
+<span id="ref-5" data-kvalitet="B" data-habilitet="2">B2</span>[5] Time, "Why the Iran-U.S. Peace Talks Failed," *Time*, Apr. 13, 2026. [Online]. Available: https://time.com/article/2026/04/13/iran-US-peace-talks-islamabad-war-nuclear/. [Accessed: Apr. 14, 2026].
 
-<span id="ref-6" data-kvalitet="B" data-habilitet="1"></span>[6] Wikipedia, "8 April 2026 Lebanon attacks," *Wikipedia*, Apr. 2026. [Online]. Available: https://en.wikipedia.org/wiki/8_April_2026_Lebanon_attacks. [Accessed: Apr. 14, 2026].
+<span id="ref-6" data-kvalitet="B" data-habilitet="1">B1</span>[6] Wikipedia, "8 April 2026 Lebanon attacks," *Wikipedia*, Apr. 2026. [Online]. Available: https://en.wikipedia.org/wiki/8_April_2026_Lebanon_attacks. [Accessed: Apr. 14, 2026].
 

@@ -61,15 +61,15 @@ Kva veg vi er på, er det no ingen avtale som avgrensar — og ingen forhandling
 
 ## Kjelder
 
-<span id="ref-1" data-kvalitet="B" data-habilitet="1"></span>[1] Wikipedia, "New START," *Wikipedia*, 2026. [Online]. Available: https://en.wikipedia.org/wiki/New_START. [Accessed: Apr. 14, 2026].
+<span id="ref-1" data-kvalitet="B" data-habilitet="1">B1</span>[1] Wikipedia, "New START," *Wikipedia*, 2026. [Online]. Available: https://en.wikipedia.org/wiki/New_START. [Accessed: Apr. 14, 2026].
 
-<span id="ref-2" data-kvalitet="B" data-habilitet="2"></span>[2] International Campaign to Abolish Nuclear Weapons, "The expiration of New START: what it means and what's next," *ICAN*, 2026. [Online]. Available: https://www.icanw.org/new_start_expiration. [Accessed: Apr. 14, 2026].
+<span id="ref-2" data-kvalitet="B" data-habilitet="2">B2</span>[2] International Campaign to Abolish Nuclear Weapons, "The expiration of New START: what it means and what's next," *ICAN*, 2026. [Online]. Available: https://www.icanw.org/new_start_expiration. [Accessed: Apr. 14, 2026].
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="2"></span>[3] Chatham House, "The US and Russia's nuclear weapons treaty is set to expire. Here's what's at stake," *Chatham House*, Jan. 2026. [Online]. Available: https://www.chathamhouse.org/2026/01/us-and-russias-nuclear-weapons-treaty-set-expire-heres-whats-stake. [Accessed: Apr. 14, 2026].
+<span id="ref-3" data-kvalitet="B" data-habilitet="2">B2</span>[3] Chatham House, "The US and Russia's nuclear weapons treaty is set to expire. Here's what's at stake," *Chatham House*, Jan. 2026. [Online]. Available: https://www.chathamhouse.org/2026/01/us-and-russias-nuclear-weapons-treaty-set-expire-heres-whats-stake. [Accessed: Apr. 14, 2026].
 
-<span id="ref-4" data-kvalitet="B" data-habilitet="2"></span>[4] Council on Foreign Relations, "Nukes Without Limits? A New Era After the End of New START," *CFR*, 2026. [Online]. Available: https://www.cfr.org/articles/nukes-without-limits-a-new-era-after-the-end-of-new-start. [Accessed: Apr. 14, 2026].
+<span id="ref-4" data-kvalitet="B" data-habilitet="2">B2</span>[4] Council on Foreign Relations, "Nukes Without Limits? A New Era After the End of New START," *CFR*, 2026. [Online]. Available: https://www.cfr.org/articles/nukes-without-limits-a-new-era-after-the-end-of-new-start. [Accessed: Apr. 14, 2026].
 
-<span id="ref-5" data-kvalitet="B" data-habilitet="2"></span>[5] Modern Diplomacy, "The Expiry of New START and the Signs of a Renewed Arms Race," *Modern Diplomacy*, Apr. 11, 2026. [Online]. Available: https://moderndiplomacy.eu/2026/04/11/the-expiry-of-new-start-and-the-signs-of-a-renewed-arms-race/. [Accessed: Apr. 14, 2026].
+<span id="ref-5" data-kvalitet="B" data-habilitet="2">B2</span>[5] Modern Diplomacy, "The Expiry of New START and the Signs of a Renewed Arms Race," *Modern Diplomacy*, Apr. 11, 2026. [Online]. Available: https://moderndiplomacy.eu/2026/04/11/the-expiry-of-new-start-and-the-signs-of-a-renewed-arms-race/. [Accessed: Apr. 14, 2026].
 
-<span id="ref-6" data-kvalitet="B" data-habilitet="2"></span>[6] Washington Post, "U.S. and Russia's nuclear arms treaty has expired. What is New START?," *Washington Post*, Feb. 2026. [Online]. Available: https://www.washingtonpost.com/national-security/2026/02/04/us-russia-nuclear-arms-treaty-new-start/. [Accessed: Apr. 14, 2026].
+<span id="ref-6" data-kvalitet="B" data-habilitet="2">B2</span>[6] Washington Post, "U.S. and Russia's nuclear arms treaty has expired. What is New START?," *Washington Post*, Feb. 2026. [Online]. Available: https://www.washingtonpost.com/national-security/2026/02/04/us-russia-nuclear-arms-treaty-new-start/. [Accessed: Apr. 14, 2026].
 y-new-start/. [Accessed: Apr. 14, 2026].

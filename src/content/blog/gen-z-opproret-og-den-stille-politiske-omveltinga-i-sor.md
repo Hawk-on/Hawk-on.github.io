@@ -69,10 +69,10 @@ Det er tidleg. Det er uferdig. Men mønsteret er reelt — og demografien forste
 
 ## Kjelder
 
-<span id="ref-1" data-kvalitet="A" data-habilitet="1"></span>[1] International Labour Organization, *Global Employment Trends for Youth 2024: Middle East and North Africa*, Geneva: ILO, 2024. [Online]. Available: https://www.ilo.org/media/583631/download. [Accessed: Apr. 14, 2026].
+<span id="ref-1" data-kvalitet="A" data-habilitet="1">A1</span>[1] International Labour Organization, *Global Employment Trends for Youth 2024: Middle East and North Africa*, Geneva: ILO, 2024. [Online]. Available: https://www.ilo.org/media/583631/download. [Accessed: Apr. 14, 2026].
 
-<span id="ref-2" data-kvalitet="B" data-habilitet="2"></span>[2] Council on Foreign Relations, "How Global Gen Z Protests Have Shocked and Transformed Governments," *CFR*, 2026. [Online]. Available: https://www.cfr.org/articles/how-global-gen-z-protests-have-shocked-and-transformed-governments. [Accessed: Apr. 14, 2026].
+<span id="ref-2" data-kvalitet="B" data-habilitet="2">B2</span>[2] Council on Foreign Relations, "How Global Gen Z Protests Have Shocked and Transformed Governments," *CFR*, 2026. [Online]. Available: https://www.cfr.org/articles/how-global-gen-z-protests-have-shocked-and-transformed-governments. [Accessed: Apr. 14, 2026].
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="2"></span>[3] France 24, "Nepal, Bangladesh, Morocco, Madagascar: What have the Gen Z protests achieved?," *France 24*, Apr. 5, 2026. [Online]. Available: https://www.france24.com/en/asia-pacific/20260405-nepal-bangladesh-morocco-madagascar-what-have-the-gen-z-protests-achieved. [Accessed: Apr. 14, 2026].
+<span id="ref-3" data-kvalitet="B" data-habilitet="2">B2</span>[3] France 24, "Nepal, Bangladesh, Morocco, Madagascar: What have the Gen Z protests achieved?," *France 24*, Apr. 5, 2026. [Online]. Available: https://www.france24.com/en/asia-pacific/20260405-nepal-bangladesh-morocco-madagascar-what-have-the-gen-z-protests-achieved. [Accessed: Apr. 14, 2026].
 
-<span id="ref-4" data-kvalitet="B" data-habilitet="2"></span>[4] Atlantic Council, "Gen Z protests have spread to seven countries. What do they all have in common?," *Atlantic Council*, 2025. [Online]. Available: https://www.atlanticcouncil.org/blogs/new-atlanticist/gen-z-protests-have-spread-to-seven-countries-what-do-they-all-have-in-common/. [Accessed: Apr. 14, 2026].
+<span id="ref-4" data-kvalitet="B" data-habilitet="2">B2</span>[4] Atlantic Council, "Gen Z protests have spread to seven countries. What do they all have in common?," *Atlantic Council*, 2025. [Online]. Available: https://www.atlanticcouncil.org/blogs/new-atlanticist/gen-z-protests-have-spread-to-seven-countries-what-do-they-all-have-in-common/. [Accessed: Apr. 14, 2026].

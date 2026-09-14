@@ -97,7 +97,7 @@ Demokratiet er ikkje naturgitt. Det er eit system av institusjonar, normer og pr
 
 <span id="ref-1" data-kvalitet="B" data-habilitet="1">B1</span> [1] ITV News London, "Counter-terror police investigate arson attack at former synagogue in Whitechapel," *ITV News*, 5. mai 2026. [Online]. Available: https://www.itv.com/news/london/2026-05-05/suspected-arson-attack-at-former-synagogue-in-east-london. [Accessed: 10. mai 2026].
 
-<span id="ref-2" data-kvalitet="B" data-habilitet="1">B2</span> [2] The New Arab, "Was former synagogue targeted in London arson attack a mosque?," *The New Arab*, 8. mai 2026. [Online]. Available: https://www.newarab.com/news/was-former-synagogue-targeted-london-arson-attack-mosque. [Accessed: 10. mai 2026].
+<span id="ref-2" data-kvalitet="B" data-habilitet="2">B2</span> [2] The New Arab, "Was former synagogue targeted in London arson attack a mosque?," *The New Arab*, 8. mai 2026. [Online]. Available: https://www.newarab.com/news/was-former-synagogue-targeted-london-arson-attack-mosque. [Accessed: 10. mai 2026].
 
 <span id="ref-3" data-kvalitet="B" data-habilitet="1">B1</span> [3] The Hill, "Counterterror police probe arson attack at a former London synagogue amid antisemitic attacks," *The Hill*, 5. mai 2026. [Online]. Available: https://thehill.com/homenews/ap/ap-international/ap-counterterror-police-probe-arson-attack-at-a-former-london-synagogue-amid-antisemitic-attacks/. [Accessed: 10. mai 2026].
 

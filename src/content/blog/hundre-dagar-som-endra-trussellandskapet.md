@@ -87,6 +87,6 @@ Vi kan framleis endre ho. Men det krev at vi ser ho først.
 
 ## Kjelder
 
-<span id="ref-1" data-kvalitet="C" data-habilitet="2"></span>[1] Wiz Research, "Axios Compromised: How UNC1069 and Sapphire Sleet Infiltrated the JS Ecosystem," Wiz Research Blog, Mar. 2026. [Online]. Available: https://www.wiz.io/blog/axios-compromised-plain-crypto-js.
-<span id="ref-2" data-kvalitet="B" data-habilitet="2"></span>[2] Bloomberg, "FBI Wiretap Network Compromised in Major Security Incident," Bloomberg Technology, Apr. 2026. [Online]. Available: https://www.bloomberg.com/news/articles/2026-04-07/fbi-wiretap-network-breached.
-<span id="ref-3" data-kvalitet="C" data-habilitet="2"></span>[3] BleepingComputer, "Scattered LAPSUS$ Hunters: Coalition of Cybercrime Giants Steals 1.5 Billion Records," BleepingComputer, Aug. 2025. [Online]. Available: https://www.bleepingcomputer.com/news/security/scattered-lapsus-hunters-cybercrime-coalition-breaches-salesforce/.
+<span id="ref-1" data-kvalitet="C" data-habilitet="2">C2</span>[1] Wiz Research, "Axios Compromised: How UNC1069 and Sapphire Sleet Infiltrated the JS Ecosystem," Wiz Research Blog, Mar. 2026. [Online]. Available: https://www.wiz.io/blog/axios-compromised-plain-crypto-js.
+<span id="ref-2" data-kvalitet="B" data-habilitet="2">B2</span>[2] Bloomberg, "FBI Wiretap Network Compromised in Major Security Incident," Bloomberg Technology, Apr. 2026. [Online]. Available: https://www.bloomberg.com/news/articles/2026-04-07/fbi-wiretap-network-breached.
+<span id="ref-3" data-kvalitet="C" data-habilitet="2">C2</span>[3] BleepingComputer, "Scattered LAPSUS$ Hunters: Coalition of Cybercrime Giants Steals 1.5 Billion Records," BleepingComputer, Aug. 2025. [Online]. Available: https://www.bleepingcomputer.com/news/security/scattered-lapsus-hunters-cybercrime-coalition-breaches-salesforce/.

@@ -32,15 +32,15 @@ I 2026 ser me konturane av ein ny global arkitektur. Det er ikkje lenger éin ko
 
 ## Kjelder
 
-<span id="ref-1" data-kvalitet="A" data-habilitet="2"></span>[1] K. Siddiqui, "United States Strategy in an Era of Petrodollar Decline and Multipolarity," *World Financial Review / ResearchGate*, 2024/2026. [Online]. Available: https://www.researchgate.net/publication/378413158_United_States_Strategy_in_an_Era_of_Petrodollar_Decline_and_Multipolarity. [Accessed: 24. april 2026].
+<span id="ref-1" data-kvalitet="A" data-habilitet="2">A2</span>[1] K. Siddiqui, "United States Strategy in an Era of Petrodollar Decline and Multipolarity," *World Financial Review / ResearchGate*, 2024/2026. [Online]. Available: https://www.researchgate.net/publication/378413158_United_States_Strategy_in_an_Era_of_Petrodollar_Decline_and_Multipolarity. [Accessed: 24. april 2026].
 
-<span id="ref-2" data-kvalitet="C" data-habilitet="2"></span>[2] Watcher Guru, "BRICS Pay: Official Launch and the End of SWIFT Dominance," *Watcher Guru*, Feb. 2026. [Online]. Available: https://watcher.guru/news/brics-pay-official-launch-date-announced. [Accessed: 24. april 2026].
+<span id="ref-2" data-kvalitet="C" data-habilitet="2">C2</span>[2] Watcher Guru, "BRICS Pay: Official Launch and the End of SWIFT Dominance," *Watcher Guru*, Feb. 2026. [Online]. Available: https://watcher.guru/news/brics-pay-official-launch-date-announced. [Accessed: 24. april 2026].
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="2"></span>[3] S&P Global, "Saudi Arabia-China energy ties: The rise of Oil-Yuan," *S&P Global Commodity Insights*, Aug. 2024/2026. [Online]. Available: https://www.spglobal.com/commodityinsights/en/market-insights/latest-news/oil/081524-saudi-arabia-china-energy-ties-oil-yuan. [Accessed: 24. april 2026].
+<span id="ref-3" data-kvalitet="B" data-habilitet="2">B2</span>[3] S&P Global, "Saudi Arabia-China energy ties: The rise of Oil-Yuan," *S&P Global Commodity Insights*, Aug. 2024/2026. [Online]. Available: https://www.spglobal.com/commodityinsights/en/market-insights/latest-news/oil/081524-saudi-arabia-china-energy-ties-oil-yuan. [Accessed: 24. april 2026].
 
-<span id="ref-4" data-kvalitet="B" data-habilitet="2"></span>[4] The Hindu, "India and Eurasian Economic Union sign Terms of Reference for FTA," *The Hindu*, Aug. 2025/2026. [Online]. Available: https://www.thehindu.com/news/national/india-den-eurasian-economic-union-sign-terms-of-reference-to-begin-talks-for-fta/article68547285.ece. [Accessed: 24. april 2026].
+<span id="ref-4" data-kvalitet="B" data-habilitet="2">B2</span>[4] The Hindu, "India and Eurasian Economic Union sign Terms of Reference for FTA," *The Hindu*, Aug. 2025/2026. [Online]. Available: https://www.thehindu.com/news/national/india-den-eurasian-economic-union-sign-terms-of-reference-to-begin-talks-for-fta/article68547285.ece. [Accessed: 24. april 2026].
 
-<span id="ref-5" data-kvalitet="B" data-habilitet="2"></span>[5] European Policy Centre (EPC), "A green and fair CBAM: Is the EU on track?," *EPC Publications*, Feb. 2026. [Online]. Available: https://www.epc.eu/en/publications/A-green-and-fair-CBAM-Is-the-EU-on-track~3c524f. [Accessed: 24. april 2026].
+<span id="ref-5" data-kvalitet="B" data-habilitet="2">B2</span>[5] European Policy Centre (EPC), "A green and fair CBAM: Is the EU on track?," *EPC Publications*, Feb. 2026. [Online]. Available: https://www.epc.eu/en/publications/A-green-and-fair-CBAM-Is-the-EU-on-track~3c524f. [Accessed: 24. april 2026].
 
-<span id="ref-6" data-kvalitet="C" data-habilitet="2"></span>[6] Watcher Guru, "BRICS Gold Reserves Surpass US Dollar Foreign Reserves," *Watcher Guru*, Apr. 2026. [Online]. Available: https://watcher.guru/news/brics-gold-reserves-surpass-us-dollar-foreign-reserves. [Accessed: 24. april 2026].
+<span id="ref-6" data-kvalitet="C" data-habilitet="2">C2</span>[6] Watcher Guru, "BRICS Gold Reserves Surpass US Dollar Foreign Reserves," *Watcher Guru*, Apr. 2026. [Online]. Available: https://watcher.guru/news/brics-gold-reserves-surpass-us-dollar-foreign-reserves. [Accessed: 24. april 2026].
 

@@ -63,12 +63,12 @@ Spørsmålet er ikkje lenger om statar skal driva aktivt industripolitikk, men o
 
 ## Kjelder
 
-<span id="ref-1" data-kvalitet="B" data-habilitet="2"></span>\[1\] Center for Strategic and International Studies, "China's New Rare Earth and Magnet Restrictions Threaten U.S. Defense Supply Chains," *CSIS*, 2025. [Online]. Available: https://www.csis.org/analysis/chinas-new-rare-earth-and-magnet-restrictions-threaten-us-defense-supply-chains. [Accessed: Apr. 14, 2026].
+<span id="ref-1" data-kvalitet="B" data-habilitet="2">B2</span>\[1\] Center for Strategic and International Studies, "China's New Rare Earth and Magnet Restrictions Threaten U.S. Defense Supply Chains," *CSIS*, 2025. [Online]. Available: https://www.csis.org/analysis/chinas-new-rare-earth-and-magnet-restrictions-threaten-us-defense-supply-chains. [Accessed: Apr. 14, 2026].
 
-<span id="ref-2" data-kvalitet="B" data-habilitet="2"></span>\[2\] Chatham House, "China's new restrictions on rare earth exports send a stark warning to the West," *Chatham House*, Oct. 2025. [Online]. Available: https://www.chathamhouse.org/2025/10/chinas-new-restrictions-rare-earth-exports-send-stark-warning-west. [Accessed: Apr. 14, 2026].
+<span id="ref-2" data-kvalitet="B" data-habilitet="2">B2</span>\[2\] Chatham House, "China's new restrictions on rare earth exports send a stark warning to the West," *Chatham House*, Oct. 2025. [Online]. Available: https://www.chathamhouse.org/2025/10/chinas-new-restrictions-rare-earth-exports-send-stark-warning-west. [Accessed: Apr. 14, 2026].
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="2"></span>\[3\] Center for Strategic and International Studies, "The Consequences of China's New Rare Earths Export Restrictions," *CSIS*, 2025. [Online]. Available: https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions. [Accessed: Apr. 14, 2026].
+<span id="ref-3" data-kvalitet="B" data-habilitet="2">B2</span>\[3\] Center for Strategic and International Studies, "The Consequences of China's New Rare Earths Export Restrictions," *CSIS*, 2025. [Online]. Available: https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions. [Accessed: Apr. 14, 2026].
 
-<span id="ref-4" data-kvalitet="B" data-habilitet="2"></span>\[4\] Clark Hill, "China Hits 'Pause' on Rare-Earth Export Controls and What it Means for Supply Chains," *Clark Hill*, 2025. [Online]. Available: https://www.clarkhill.com/news-events/news/china-hits-pause-on-rare-earth-export-controls-and-what-it-means-for-supply-chains/. [Accessed: Apr. 14, 2026].
+<span id="ref-4" data-kvalitet="B" data-habilitet="2">B2</span>\[4\] Clark Hill, "China Hits 'Pause' on Rare-Earth Export Controls and What it Means for Supply Chains," *Clark Hill*, 2025. [Online]. Available: https://www.clarkhill.com/news-events/news/china-hits-pause-on-rare-earth-export-controls-and-what-it-means-for-supply-chains/. [Accessed: Apr. 14, 2026].
 
-<span id="ref-5" data-kvalitet="B" data-habilitet="2"></span>\[5\] Bain & Company, "Sovereign Tech, Fragmented World," *Bain Technology Report 2025*, 2025. [Online]. Available: https://www.bain.com/insights/sovereign-tech-fragmented-world-technology-report-2025/. [Accessed: Apr. 14, 2026].
+<span id="ref-5" data-kvalitet="B" data-habilitet="2">B2</span>\[5\] Bain & Company, "Sovereign Tech, Fragmented World," *Bain Technology Report 2025*, 2025. [Online]. Available: https://www.bain.com/insights/sovereign-tech-fragmented-world-technology-report-2025/. [Accessed: Apr. 14, 2026].
