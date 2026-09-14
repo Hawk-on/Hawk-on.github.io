@@ -134,12 +134,38 @@ Sett som `<meta http-equiv>` i `Grunnoppsett.astro`. Tre ting er load-bearing:
 ## Viktig mandat
 **Hugs å oppdatere denne fila (CLAUDE.md), README.md og gemini.md kvar gong det vert gjort endringar i arkitektur, teknisk stack eller viktige funksjonar.**
 
+## Artikkelkontroll i bygget
+`npm run sjekk` (`scripts/sjekk-artiklar.mjs`) kontrollerer artiklane mot husreglane.
+Steget køyrer fyrst i `npm run build`, og som eige steg i deploy-workflowen.
+
+Kontrollerte reglar: kjeldespan utan `data-kvalitet`/`data-habilitet`, span utan
+synleg kode, synleg kode som ikkje svarar til attributta, kjelder som peikar på
+landingssider utan sti, foreldrelause referansar i begge retningar, tankestrek og
+filnamn over 55 teikn.
+
+**Skriptet er ein skralle, ikkje ein mur.** Avvika som alt fanst, ligg i
+`scripts/kjende-avvik.json` og slepp gjennom. Eit *nytt* avvik feilar bygget. Rettar
+du eit gammalt, seier skriptet frå at grunnlinja kan strammast:
+`npm run sjekk -- --skriv`. Skriv aldri grunnlinja på nytt for å gjere eit nytt
+avvik stille; då mistar kontrollen heile funksjonen sin.
+
 ## Kjend gjeld
 Kjende avvik, førte opp utan å vere retta. Tala er kontrollerte mot repoet 9. september 2026.
 
-**Kjeldekodar som manglar**
-- `agentisk-identitet-og-tilgangskontroll.md`: to spanar (`ref-1`, `ref-2`) manglar `data-kvalitet` og `data-habilitet` heilt.
-- `hydrologisk-krigforing-midtausten.md`: éin span manglar dei same kodane.
+**Kjeldekodar**
+Tala under er frå `scripts/kjende-avvik.json`, som er fasiten. Køyr `npm run sjekk`
+for gjeldande stoda.
+
+- **Gammalt eindimensjonalt format i fire artiklar.** `palantir-frankrike` (12),
+  `palantir-moderniteten` (11), `oljefondet-sosiologisk-okonomi` (6) og `renteauk`
+  (6) har `data-kvalitet` utan `data-habilitet`, frå tida før matrisa vart
+  todimensjonal. Inline-merket viser difor berre halve koden.
+- **Heilt utan kodar:** `agentisk-identitet-og-tilgangskontroll` (2) og
+  `hydrologisk-krigforing-midtausten` (1).
+- **Tomme spanar:** 59 spanar i 9 artiklar har attributta, men ingen synleg kode i
+  kjeldelista. Inline-merket fungerer; det er lista som manglar koden.
+- **`narrativkrigen-og-demokratiet-sitt-samanbrot` ref-2 er sjølvmotseiande:**
+  kroppen seier `B2`, attributta seier `B1`. Inline og liste viser ulik kode.
 
 **Filnamn over 55 teikn**
 - `den-skjore-iran-usa-vapenkvilaog-kva-som-kan-kollapse-ho.md` (59). Har òg skrivefeil i slug-en: manglande bindestrek i `vapenkvilaog`.

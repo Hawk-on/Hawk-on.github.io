@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && pagefind --site dist",
-    "preview": "astro preview"
+    "build": "npm run sjekk && astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "sjekk": "node scripts/sjekk-artiklar.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.4",
