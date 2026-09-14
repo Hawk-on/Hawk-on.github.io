@@ -50,7 +50,7 @@ Når vaktarane av dei mest øydeleggjande våpena i menneskesoga er så lettlurt
 
 <span id="ref-1" data-kvalitet="B" data-habilitet="1">B1</span>\[1\] BNO News, "Army puts senior nuclear official on leave after leaking sensitive information in undercover video," *BNO News*, 21. april 2026. [Online]. Available: https://bnonews.com/index.php/2026/04/army-puts-senior-nuclear-official-on-leave-after-leaking-sensitive-information-in-undercover-video/. [Accessed: 22. april 2026].
 
-<span id="ref-2" data-kvalitet="D" data-habilitet="3">D3</span>\[2\] O'Keefe Media Group (OMG), "Undercover in the Pentagon: The Andrew Hugg Tapes," *OMG*, 21. april 2026. [Online]. Available: https://okeefemediagroup.com. [Accessed: 22. april 2026].
+<span id="ref-2" data-kvalitet="D" data-habilitet="3">D3</span>\[2\] O'Keefe Media Group (OMG), "Undercover in the Pentagon: The Andrew Hugg Tapes," *OMG*, 21. april 2026. [Online]. Available: https://okeefemediagroup.com/pentagon-nuclear-chief-leak/. [Accessed: 14. september 2026]. Skjult opptak frå ein aktør med dokumentert historie for redigering med agenda, difor D3. Sjølve hendinga er uavhengig stadfesta av kjelde 1, 4, 5 og 6.
 
 <span id="ref-3" data-kvalitet="D" data-habilitet="3">D3</span>\[3\] Global Village Space, "US nuclear official leaks sensitive info to undercover journalist (VIDEO)," *Global Village Space* (støttar seg på rapportering frå *RT*), 20. april 2026. [Online]. Available: https://www.globalvillagespace.com/us-nuclear-official-leaks-sensitive-info-to-undercover-journalist-video/. [Accessed: 22. april 2026].
 
