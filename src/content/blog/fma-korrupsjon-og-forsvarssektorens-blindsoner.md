@@ -1,5 +1,5 @@
 ---
-tittel: "Blindsoner i Forsvarsmateriell: Korrupsjonsrisiko i ein tid med massiv opprusting"
+tittel: "Blindsoner i Forsvarsmateriell: korrupsjonsrisiko under massiv opprusting"
 publisertDato: "2026-04-23"
 ingress: "Økokrim si pågriping av tre leiarar i Forsvarsmateriell (FMA) avslører korleis mangelfull internkontroll og tette band til konsulentbransjen kan truga integriteten til det norske forsvaret midt i ein historisk opprustingsfase."
 tags: ["forsvaret", "korrupsjon", "okrim", "noreg", "forsvarsmateriell"]

@@ -1,5 +1,5 @@
 ---
-tittel: "Narrativkrigen og demokratiet sitt samanbrot: Frå falske moské-angrep til AI-mål og fascismetrekka"
+tittel: "Narrativkrigen og demokratiet sitt samanbrot"
 publisertDato: "2026-05-10"
 ingress: "Ei TikTok-video om eit antisemittisk brannåtak i London som vert omgjort til ei islamofobi-sak. Ein iransk-linka terrorkampanje som forsvinn i støyen frå handelskrig og atomtrugsmål. Og i bakgrunnen: eit demokrati som misser evna til å skilje fakta frå narrativ. Dette er ikkje eit medieproblem. Det er eit maktproblem."
 tags: ["geopolitikk", "desinformasjon", "demokrati", "usa", "fascisme", "media"]

@@ -1,5 +1,5 @@
 ---
-tittel: "Moderniteten sitt skjulte andlet: Palantir, AI-krig og den lange linja frå kolonialisme til techno-fascisme"
+tittel: "Moderniteten sitt skjulte andlet: Palantir og linja frå kolonialisme"
 publisertDato: 2026-04-21
 oppdatertDato: 2026-04-24
 ingress: "Då Palantir den 19. april 2026 publiserte eit 22-punkts manifest som hylla «hard power», avviste kulturell pluralisme og beklaga etterkrigstidas «kastrering» av Nazi-Tyskland, møtte det avgrensa offentleg reaksjon. Det er ikkje nok å avfeie dette som ein provokasjon. Teksten er samanhengande, har ein indre logikk — og vert omsett til praksis i Gaza, Iran, Libanon og langs USAs sørlege grense."
