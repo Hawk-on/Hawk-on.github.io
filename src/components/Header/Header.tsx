@@ -5,9 +5,13 @@ import { spraakStore, toggleSpraak } from '../../stores/spraakStore';
 interface HeaderProps {
   /** Astro.url.pathname — avgjer kva navigasjon som vert vist. */
   aktuellSti?: string;
+  /** Adressa til same artikkelen på det andre språket. Berre sett når makkeren finst. */
+  spraakUrl?: string;
+  /** Språket på sida ein står på no. */
+  sprak?: 'nn' | 'en';
 }
 
-const Header: React.FC<HeaderProps> = ({ aktuellSti = '/' }) => {
+const Header: React.FC<HeaderProps> = ({ aktuellSti = '/', spraakUrl, sprak = 'nn' }) => {
   const [isDark, setIsDark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -80,6 +84,22 @@ const Header: React.FC<HeaderProps> = ({ aktuellSti = '/' }) => {
                   <li><a href="/om/" className={aktuellSti === '/om/' ? 'aktiv' : ''} onClick={lukk}>Om</a></li>
                   <li><a href="/" onClick={lukk}>CV</a></li>
                   <li><a href="/blog/rss.xml" data-umami-event="nav-rss" onClick={lukk}>RSS</a></li>
+                  {spraakUrl && (
+                    <li>
+                      {/* Her navigerer knappen i staden for å byte store: artikkelen
+                          finst som to tekstar, ikkje som ei ordliste. */}
+                      <a
+                        href={spraakUrl}
+                        className="lang-knapp"
+                        hrefLang={sprak === 'nn' ? 'en' : 'nn'}
+                        data-umami-event="artikkel-spraakbyte"
+                        aria-label={sprak === 'nn' ? 'Read this article in English' : 'Les denne artikkelen på nynorsk'}
+                        onClick={lukk}
+                      >
+                        {sprak === 'nn' ? 'EN' : 'NO'}
+                      </a>
+                    </li>
+                  )}
                 </>
               ) : (
                 <>

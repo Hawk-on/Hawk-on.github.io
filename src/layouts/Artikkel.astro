@@ -10,6 +10,7 @@ import KjeldeInfo from '../components/ArtikkelMeta/KjeldeInfo';
 import { getCollection } from 'astro:content';
 
 interface Props {
+  spraakUrl?: string;
   frontmatter: {
     slug?: string;
     tittel: string;
@@ -22,7 +23,7 @@ interface Props {
   }
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter, spraakUrl } = Astro.props;
 const { tittel, publisertDato, oppdatertDato, ingress, tags = [], lesetid, bilete } = frontmatter;
 const base = BLOGG_BASE;
 const aktuellSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || '';
@@ -49,7 +50,7 @@ const relaterteInnlegg = alleInnlegg
   .slice(0, 3);
 ---
 
-<Grunnoppsett tittel={tittel} beskriving={ingress} erArtikkel={true} bilete={bilete}>
+<Grunnoppsett tittel={tittel} beskriving={ingress} erArtikkel={true} bilete={bilete} spraakUrl={spraakUrl} sprak={frontmatter.sprak}>
   <div class="container">
     <header class="artikkel-header">
       <ArtikkelMeta 

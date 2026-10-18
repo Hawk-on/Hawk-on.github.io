@@ -10,6 +10,9 @@ interface Props {
   beskriving?: string;
   erArtikkel?: boolean;
   bilete?: string;
+  /** Adressa til same artikkelen på det andre språket, om han finst. */
+  spraakUrl?: string;
+  sprak?: 'nn' | 'en';
 }
 
 const {
@@ -17,6 +20,8 @@ const {
   beskriving = 'Full-stack-utviklar frå Vestlandet. .NET, Azure og moderne webutvikling.',
   erArtikkel = false,
   bilete = '/assets/img/me.jpg',
+  spraakUrl,
+  sprak = 'nn',
 } = Astro.props;
 
 const aktuellSti = Astro.url.pathname;
@@ -76,7 +81,7 @@ const jsonLd = erArtikkel
 ---
 
 <!DOCTYPE html>
-<html lang="nn">
+<html lang={sprak === 'en' ? "en" : "nn"}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,6 +95,15 @@ const jsonLd = erArtikkel
   <meta name="description" content={beskriving} />
   <title>{fullTittel}</title>
   <link rel="canonical" href={kanoniskUrl} />
+  {/* Fortel søkjemotorane at dei to versjonane er same teksten på ulikt språk.
+      Utan desse blir dei rekna som to urelaterte sider, eller som duplikat. */}
+  {spraakUrl && (
+    <>
+      <link rel="alternate" hreflang={sprak === 'nn' ? 'nn' : 'en'} href={kanoniskUrl} />
+      <link rel="alternate" hreflang={sprak === 'nn' ? 'en' : 'nn'} href={new URL(spraakUrl, siteUrl).toString()} />
+      <link rel="alternate" hreflang="x-default" href={sprak === 'nn' ? kanoniskUrl : new URL(spraakUrl, siteUrl).toString()} />
+    </>
+  )}
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")} />
   <meta property="og:title" content={fullTittel} />
   <meta property="og:description" content={beskriving} />
@@ -128,7 +142,7 @@ const jsonLd = erArtikkel
 <body>
   <a href="#hovudinnhald" class="hopp-til-innhald">Hopp til innhald</a>
 
-  <Header client:load aktuellSti={aktuellSti} />
+  <Header client:load aktuellSti={aktuellSti} spraakUrl={spraakUrl} sprak={sprak} />
 
   <main id="hovudinnhald">
     <slot />

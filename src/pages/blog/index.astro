@@ -10,7 +10,7 @@ import Sok from '../../components/Sok/Sok';
 
 const base = BLOGG_BASE;
 const innlegg = await getCollection('blog', ({ data }) => {
-  return import.meta.env.DEV || !data.utkast;
+  return (import.meta.env.DEV || !data.utkast) && data.sprak !== 'en';
 });
 
 const sortertInnleggData = innlegg
