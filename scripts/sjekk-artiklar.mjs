@@ -13,7 +13,7 @@
  *   npm run sjekk -- --skriv oppdater grunnlinja etter ei rydding
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
-import { join, basename } from 'node:path';
+import { join, basename, relative, sep } from 'node:path';
 
 const ARTIKLAR = 'src/content/blog';
 const GRUNNLINJE = 'scripts/kjende-avvik.json';
@@ -39,7 +39,50 @@ const REGLAR = {
   'dato-i-framtida': 'dato ligg fram i tid',
   'endringslogg-utan-dato': 'artikkelen har endringslogg, men ingen oppdatertDato',
   'dato-utan-endringslogg': 'artikkelen har oppdatertDato, men ingen endringslogg',
+  'sprak-mot-mappe': 'sprak i frontmatter svarar ikkje til mappa fila ligg i',
+  'omsetjing-utan-makker': 'omsetjing peikar på ei fil som ikkje finst',
 };
+
+/**
+ * Alle .md under ARTIKLAR, som stiar relative til ARTIKLAR og med skråstrek.
+ *
+ * Gjekk ei stund flatt over mappa. Då vart `en/` ikkje kontrollert i det heile,
+ * og det synte seg ikkje som ein feil: skriptet sa «ingen nye avvik» og talde
+ * berre ikkje omsetjingane med.
+ */
+function finnArtiklar(mappe = ARTIKLAR) {
+  const ut = [];
+  for (const oppf of readdirSync(mappe, { withFileTypes: true })) {
+    const sti = join(mappe, oppf.name);
+    if (oppf.isDirectory()) ut.push(...finnArtiklar(sti));
+    else if (oppf.name.endsWith('.md')) ut.push(relative(ARTIKLAR, sti).split(sep).join('/'));
+  }
+  return ut.sort();
+}
+
+/**
+ * Kryssjekk av omsetjingspar. Må skje etter at alle filene er lesne, sidan han
+ * spør om ei anna fil enn den som blir kontrollert.
+ *
+ * `omsetjing` held nynorskslugen i begge filene; ruta set sjølv på `en/`-
+ * prefikset. Difor peikar dei to på kvarandre med same verdien.
+ */
+function sjekkPar(fil, fm, alleFiler) {
+  const funn = [];
+  const iEnMappe = fil.startsWith('en/');
+  const sprak = fm.sprak ?? 'nn';
+  if (iEnMappe !== (sprak === 'en')) {
+    funn.push({
+      kode: 'sprak-mot-mappe',
+      detalj: iEnMappe ? `ligg i en/, men sprak er ${sprak}` : `sprak er en, men ligg ikkje i en/`,
+    });
+  }
+  if (fm.omsetjing) {
+    const makker = sprak === 'en' ? `${fm.omsetjing}.md` : `en/${fm.omsetjing}.md`;
+    if (!alleFiler.has(makker)) funn.push({ kode: 'omsetjing-utan-makker', detalj: makker });
+  }
+  return funn;
+}
 
 /** Frontmatter er enkel nok til at dette held; ingen nøstede strukturar i bruk. */
 function lesFrontmatter(tekst) {
@@ -52,7 +95,7 @@ function lesFrontmatter(tekst) {
   return felt;
 }
 
-function sjekk(fil, tekst) {
+function sjekk(fil, tekst, fm) {
   const funn = [];
   const legg = (kode, detalj) => funn.push({ kode, detalj });
 
@@ -60,7 +103,6 @@ function sjekk(fil, tekst) {
     legg('filnamn-for-langt', `${basename(fil).length} teikn`);
   }
 
-  const fm = lesFrontmatter(tekst);
   const idag = new Date().toISOString().slice(0, 10);
 
   if ((fm.tittel ?? '').length > MAKS_TITTEL) {
@@ -88,8 +130,13 @@ function sjekk(fil, tekst) {
   if (harLogg && !oppdatert) legg('endringslogg-utan-dato', 'mangler oppdatertDato');
   if (oppdatert && !harLogg) legg('dato-utan-endringslogg', `oppdatertDato ${oppdatert}`);
 
-  const brodtekst = tekst.split(/^## Kjelder\s*$/m)[0];
-  for (const _ of brodtekst.matchAll(/—/g)) legg('tankestrek', '—');
+  // Språkreglane under gjeld nynorsk. Engelske omsetjingar har eiga form,
+  // og ein tankestrek er ikkje eit avvik der.
+  const erNynorsk = (fm.sprak ?? 'nn') !== 'en';
+  const brodtekst = tekst.split(/^## (?:Kjelder|Sources)\s*$/m)[0];
+  if (erNynorsk) {
+    for (const _ of brodtekst.matchAll(/—/g)) legg('tankestrek', '—');
+  }
 
   const spanar = new Map();
   for (const m of tekst.matchAll(/<span id="ref-(\d+)"([^>]*)>(.*?)<\/span>/g)) {
@@ -118,11 +165,15 @@ function sjekk(fil, tekst) {
   return funn;
 }
 
-const filer = readdirSync(ARTIKLAR).filter(f => f.endsWith('.md')).sort();
+const filer = finnArtiklar();
+const alleFiler = new Set(filer);
 const faktisk = {};
 const detaljar = [];
 for (const f of filer) {
-  for (const { kode, detalj } of sjekk(f, readFileSync(join(ARTIKLAR, f), 'utf8'))) {
+  const tekst = readFileSync(join(ARTIKLAR, f), 'utf8');
+  const fm = lesFrontmatter(tekst);
+  const funn = [...sjekk(f, tekst, fm), ...sjekkPar(f, fm, alleFiler)];
+  for (const { kode, detalj } of funn) {
     const nykel = `${f}::${kode}`;
     faktisk[nykel] = (faktisk[nykel] ?? 0) + 1;
     detaljar.push({ nykel, detalj });
@@ -174,4 +225,9 @@ if (nye.length) {
 }
 
 const sum = Object.values(faktisk).reduce((a, b) => a + b, 0);
-console.log(`Artikkelkontroll: ${filer.length} artiklar, ingen nye avvik (${sum} kjende).`);
+const omsette = filer.filter(f => f.startsWith('en/')).length;
+const nynorske = filer.length - omsette;
+console.log(
+  `Artikkelkontroll: ${nynorske} artiklar og ${omsette} ` +
+  `${omsette === 1 ? 'omsetjing' : 'omsetjingar'}, ingen nye avvik (${sum} kjende).`
+);
