@@ -147,6 +147,19 @@ RSS-feeden og `/Blog/`-stubbane filtrerer på `data.sprak !== 'en'`. Elles ville
 artikkel stått to gonger i lista og i feeden. Sitemap har ikkje det filteret, og skal
 ikkje ha det: begge språkversjonane skal indekserast.
 
+**Grensesnittet fylgjer artikkelspråket.** `src/utils/i18n-blogg.ts` held
+tekstane for menyen, artikkelmetaen, innhaldstabellen, lesebjelken,
+kjeldekritikk-dialogen og botnteksten. `formaterDato` tek språket som tredje
+argument, så datoen ikkje står på nynorsk under `lang="en"`.
+
+Dette er **ikkje** same mekanismen som `i18n.ts`. CV-ordlista blir styrt av ein
+nanostores-atom, fordi lesaren byter språk med ein knapp og teksten skal skifte i
+same dokumentet. Her er språket ein eigenskap ved sida: ein engelsk artikkel er ei
+anna fil på ei anna adresse, og språket kan ikkje endre seg medan du står der.
+Difor går det som prop. Blandar du dei to, får du ein store som overstyrer ei side
+han ikkje veit noko om, og det var nettopp den feilen CV-skriptet gjorde mot
+`<html lang>`.
+
 **Navigasjonen.** `Header.tsx` viser ein `EN`/`NO`-knapp i bloggmenyen når
 `spraakUrl` finst. Han har ingenting med Nano Stores-språkbrytaren på CV-en å gjere;
 den byter tekst i same dokumentet, denne går til eit anna dokument.
@@ -159,6 +172,9 @@ utan omsetjing er framleis heilt i orden; det er den halvferdige koplinga som er
 
 **Taggane i dei engelske filene gjer ingenting,** sidan tag-sidene filtrerer dei bort.
 Dei står der for å halde dei to filene like, ikkje fordi dei har ein verknad.
+
+**Giscus står på engelsk i begge versjonane.** Det finst inga norsk omsetjing, så
+`lang="en"` er ein kompromiss på nynorsksidene og tilfeldigvis rett på dei engelske.
 
 ## Giscus
 - `mapping="specific"` med artikkelens slug som `term`. **Ikkje** `pathname` — det ville binde kommentartrådane til URL-en og gjere dei foreldrelause ved kvar stiendring.

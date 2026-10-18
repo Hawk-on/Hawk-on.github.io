@@ -117,9 +117,9 @@ Article 7(4) concerns when consent has been freely given. One question is to wei
 
 The recitals of an EU law are the introduction that explains how the rules are to be understood. Recital 43 is blunter still. Consent does not hold as a legal basis where there is a clear imbalance between the person the data concerns and the party deciding what it is used for.
 
-And consent is to be treated as unfree in two situations. One is when you cannot say yes to one thing and no to another. The other is when you have to say yes to something the service does not need, in order to use it [\[11\]](#ref-11).
+And consent is to be treated as unfree in two situations. One is when you cannot give separate consent to different processing operations on the data, where separating them would have been appropriate. The other is when you have to say yes to something the service does not need, in order to use it [\[11\]](#ref-11).
 
-"Accept or uninstall" is the definition of an absent separate consent. The alarm function and the model training sit behind the same button.
+"Accept or uninstall" looks like the definition of an absent separate consent. But this is where my evidence stops, and I should say so plainly. That data sharing for artificial intelligence, arbitration and the class action waiver were all changed in the same document is something I have from the trade press [\[1\]](#ref-1). The terms for Norwegian users do not mention artificial intelligence at all, and I have not seen the consent flow in the app itself. Whether the alarm and the model training really do sit behind the same button is therefore not confirmed from a primary source. If they do, recital 43 is squarely on point. If they do not, this step falls, and what remains is a question of contract law instead.
 
 Here I have to be precise, because this is a distinction many people skip. Terms of use are a contract you enter. Consent under data protection law is something else, and a company does not always need consent to use data. It can instead point to the use being necessary to perform the contract, or to what is called a legitimate interest, meaning a reason that outweighs the disadvantage to the person concerned. If Dexcom relies on one of those rather than consent, Article 7(4) does not bite directly.
 
@@ -131,7 +131,11 @@ I have found no trace of any Norwegian authority looking at this. Datatilsynet h
 
 **Terms have to be changeable.** Of course. A company that cannot update its agreement cannot correct errors in it either. My objection is not that the terms were changed, but that the change was placed as a barrier in front of a medical function. The distinction is practical and easy to hold: blood sugar alerts could have continued while the user made up their mind.
 
-**The AI features are optional.** Probably, in the sense that nobody forces you to use a coach. But the terms are one document with one button, and that is exactly what recital 43 points at. If the user could have accepted the data sharing and rejected the arbitration, or the other way round, the objection would hold. They cannot.
+**The AI features are optional.** Probably, in the sense that nobody forces you to use a coach. But here I have to separate two objections that are easily run together, and I ran them together myself in the first draft.
+
+That arbitration and the class action waiver sit behind the same button as everything else is a problem of contract law. It is not a data protection problem, because recital 43 concerns separate consent to different processing operations on personal data, and an arbitration clause is not such an operation. Setting up "data sharing or arbitration" as an example of absent separate consent is therefore the wrong use of the provision.
+
+The question the recital actually raises is narrower: can the user refuse to have their data used to train models and still get the alarm? If they cannot, recital 43 bites. If they can, it does not. I have not managed to document which of the two is the case, and until I have, I cannot use the recital as evidence here.
 
 **Arbitration is faster and cheaper for the consumer.** This is the best counterargument, and it is not empty. An individual taking on a listed company faces costs and delays that in practice close the courthouse door. But the argument does not explain the class action waiver, which is the opposite of making things cheaper for the individual. The point of a class action is that small claims which cannot carry a lawsuit alone can carry one together. Remove it and the disputes do not disappear. They simply are not brought.
 

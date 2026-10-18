@@ -107,13 +107,21 @@ function sjekkPar(fil, fm, frontmatterar) {
   return funn;
 }
 
-/** Frontmatter er enkel nok til at dette held; ingen nøstede strukturar i bruk. */
+/**
+ * Frontmatter er enkel nok til at dette held; ingen nøstede strukturar i bruk.
+ *
+ * YAML tillèt både doble og enkle hermeteikn rundt ein streng. Parsaren tok
+ * berre dei doble, og då vart `omsetjing: 'a'` lese som strengen med hermeteikna
+ * med. Makkersjekken leita etter `en/'a'.md`, og `sprak: 'en'` svara ikkje til
+ * mappa. Eit gyldig par stoppa altså bygget på grunn av hermeteikna, ikkje på
+ * grunn av innhaldet.
+ */
 function lesFrontmatter(tekst) {
   const blokk = tekst.split(/^---\s*$/m)[1] ?? '';
   const felt = {};
   for (const linje of blokk.split('\n')) {
     const m = linje.match(/^([a-zA-ZæøåÆØÅ]+):\s*(.*)$/);
-    if (m) felt[m[1]] = m[2].trim().replace(/^"(.*)"$/, '$1');
+    if (m) felt[m[1]] = m[2].trim().replace(/^"(.*)"$|^'(.*)'$/, '$1$2');
   }
   return felt;
 }

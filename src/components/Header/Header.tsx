@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useStore } from '@nanostores/react';
 import { spraakStore, toggleSpraak } from '../../stores/spraakStore';
+import { bloggTekst } from '../../utils/i18n-blogg';
 
 interface HeaderProps {
   /** Astro.url.pathname — avgjer kva navigasjon som vert vist. */
@@ -12,6 +13,9 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ aktuellSti = '/', spraakUrl, sprak = 'nn' }) => {
+  // Bloggreina fylgjer artikkelspråket. CV-reina held fram med data-i18n og
+  // nanostores, sidan språket der blir bytt med ein knapp i same dokumentet.
+  const t = bloggTekst(sprak);
   const [isDark, setIsDark] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -69,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({ aktuellSti = '/', spraakUrl, sprak = 'n
             type="button"
             className={`meny-bryter ${isMenuOpen ? 'meny-bryter--open' : ''}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Opne eller lukk meny"
+            aria-label={t.meny}
           >
             <span className="meny-bryter__linje"></span>
             <span className="meny-bryter__linje"></span>
@@ -80,9 +84,9 @@ const Header: React.FC<HeaderProps> = ({ aktuellSti = '/', spraakUrl, sprak = 'n
             <ul className="nettstad-nav">
               {erBlogg ? (
                 <>
-                  <li><a href="/blog/" className={aktuellSti === '/blog/' ? 'aktiv' : ''} onClick={lukk}>Blogg</a></li>
-                  <li><a href="/om/" className={aktuellSti === '/om/' ? 'aktiv' : ''} onClick={lukk}>Om</a></li>
-                  <li><a href="/" onClick={lukk}>CV</a></li>
+                  <li><a href="/blog/" className={aktuellSti === '/blog/' ? 'aktiv' : ''} onClick={lukk}>{t.menyBlogg}</a></li>
+                  <li><a href="/om/" className={aktuellSti === '/om/' ? 'aktiv' : ''} onClick={lukk}>{t.menyOm}</a></li>
+                  <li><a href="/" onClick={lukk}>{t.menyCv}</a></li>
                   <li><a href="/blog/rss.xml" data-umami-event="nav-rss" onClick={lukk}>RSS</a></li>
                   {spraakUrl && (
                     <li>
@@ -117,7 +121,7 @@ const Header: React.FC<HeaderProps> = ({ aktuellSti = '/', spraakUrl, sprak = 'n
                 </>
               )}
               <li>
-                <button type="button" onClick={toggleTheme} className="tema-bryter" aria-label="Byt fargetema">
+                <button type="button" onClick={toggleTheme} className="tema-bryter" aria-label={t.byteTema}>
                   <span className="tema-bryter__sol" style={{ display: isDark ? 'none' : 'inline' }}>☀</span>
                   <span className="tema-bryter__mane" style={{ display: isDark ? 'inline' : 'none' }}>☽</span>
                 </button>
