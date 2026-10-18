@@ -3,7 +3,7 @@ const ORD_PER_MINUTT = 200;
 /**
  * Reknar ut estimert lesetid frå råmarkdown.
  *
- * Kjeldelista er halden utanfor. Ho er oppslagsverk, ikkje lauptekst, og
+ * Kjeldelista er halden utanfor, på begge språk. Ho er oppslagsverk, ikkje lauptekst, og
  * på ein artikkel med tjue-tretti IEEE-referansar utgjer ho fort ein
  * tredjedel av teikna. Å telje henne med gav minuttal ingen kjende seg att i.
  *
@@ -11,7 +11,7 @@ const ORD_PER_MINUTT = 200;
  * frontmatter; då driv dei to frå kvarandre, slik dei gjorde før.
  */
 export function reknaUtLesetid(tekst: string): number {
-  const brodtekst = tekst.split(/^##\s+Kjelder\s*$/m)[0];
+  const brodtekst = tekst.split(/^##\s+(?:Kjelder|Sources)\s*$/m)[0];
 
   const reinTekst = brodtekst
     .replace(/```[\s\S]*?```/g, ' ')          // kodeblokker

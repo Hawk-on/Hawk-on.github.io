@@ -20,20 +20,28 @@ interface Props {
     tags?: string[];
     lesetid?: number;
     bilete?: string;
+    sprak?: 'nn' | 'en';
   }
 }
 
 const { frontmatter, spraakUrl } = Astro.props;
 const { tittel, publisertDato, oppdatertDato, ingress, tags = [], lesetid, bilete } = frontmatter;
+const sprak = frontmatter.sprak ?? 'nn';
 const base = BLOGG_BASE;
 const aktuellSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || '';
 
 const datoFormatert = formaterDato(publisertDato, 'lang');
 const oppdatertFormatert = oppdatertDato ? formaterDato(oppdatertDato, 'lang') : undefined;
 
-// Finn relaterte artiklar basert på tags
+// Finn relaterte artiklar basert på tags.
+//
+// Språkfilteret er ikkje pynt. Dei to versjonane av same artikkel deler alle
+// taggane, så utan det ville ein artikkel tilrådd si eiga omsetjing som
+// næraste slektning, og nynorske lesarar fått engelske treff i lista.
 const alleInnlegg = await getCollection('blog', ({ data }) => {
-  return (import.meta.env.DEV || !data.utkast) && data.tittel !== tittel;
+  return (import.meta.env.DEV || !data.utkast)
+    && data.tittel !== tittel
+    && (data.sprak ?? 'nn') === sprak;
 });
 
 const relaterteInnlegg = alleInnlegg
@@ -50,7 +58,7 @@ const relaterteInnlegg = alleInnlegg
   .slice(0, 3);
 ---
 
-<Grunnoppsett tittel={tittel} beskriving={ingress} erArtikkel={true} bilete={bilete} spraakUrl={spraakUrl} sprak={frontmatter.sprak}>
+<Grunnoppsett tittel={tittel} beskriving={ingress} erArtikkel={true} bilete={bilete} spraakUrl={spraakUrl} sprak={sprak}>
   <div class="container">
     <header class="artikkel-header">
       <ArtikkelMeta 

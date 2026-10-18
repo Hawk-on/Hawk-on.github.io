@@ -41,6 +41,7 @@ const REGLAR = {
   'dato-utan-endringslogg': 'artikkelen har oppdatertDato, men ingen endringslogg',
   'sprak-mot-mappe': 'sprak i frontmatter svarar ikkje til mappa fila ligg i',
   'omsetjing-utan-makker': 'omsetjing peikar på ei fil som ikkje finst',
+  'omsetjing-ikkje-gjensidig': 'makkeren peikar ein annan stad attende',
 };
 
 /**
@@ -60,26 +61,48 @@ function finnArtiklar(mappe = ARTIKLAR) {
   return ut.sort();
 }
 
+/** Fila `omsetjing` peikar på, eller undefined om feltet er tomt. */
+function makkerTil(fm) {
+  if (!fm.omsetjing) return undefined;
+  return (fm.sprak ?? 'nn') === 'en' ? `${fm.omsetjing}.md` : `en/${fm.omsetjing}.md`;
+}
+
 /**
  * Kryssjekk av omsetjingspar. Må skje etter at alle filene er lesne, sidan han
- * spør om ei anna fil enn den som blir kontrollert.
+ * spør om andre filer enn den som blir kontrollert.
  *
  * `omsetjing` held nynorskslugen i begge filene; ruta set sjølv på `en/`-
- * prefikset. Difor peikar dei to på kvarandre med same verdien.
+ * prefikset. At målfila finst er ikkje nok: koplinga må gå båe vegar. Peikar A
+ * på B medan B peikar på C, slepp begge gjennom ein rein eksistenssjekk, og
+ * språkknappen fører lesaren til feil artikkel utan veg attende.
  */
-function sjekkPar(fil, fm, alleFiler) {
+function sjekkPar(fil, fm, frontmatterar) {
   const funn = [];
   const iEnMappe = fil.startsWith('en/');
   const sprak = fm.sprak ?? 'nn';
   if (iEnMappe !== (sprak === 'en')) {
     funn.push({
       kode: 'sprak-mot-mappe',
-      detalj: iEnMappe ? `ligg i en/, men sprak er ${sprak}` : `sprak er en, men ligg ikkje i en/`,
+      detalj: iEnMappe ? `ligg i en/, men sprak er ${sprak}` : 'sprak er en, men ligg ikkje i en/',
     });
+    return funn;
   }
-  if (fm.omsetjing) {
-    const makker = sprak === 'en' ? `${fm.omsetjing}.md` : `en/${fm.omsetjing}.md`;
-    if (!alleFiler.has(makker)) funn.push({ kode: 'omsetjing-utan-makker', detalj: makker });
+
+  const makker = makkerTil(fm);
+  if (!makker) return funn;
+
+  const fmMakker = frontmatterar.get(makker);
+  if (!fmMakker) {
+    funn.push({ kode: 'omsetjing-utan-makker', detalj: makker });
+    return funn;
+  }
+
+  const attende = makkerTil(fmMakker);
+  if (attende !== fil) {
+    funn.push({
+      kode: 'omsetjing-ikkje-gjensidig',
+      detalj: `${fil} -> ${makker} -> ${attende ?? 'ingen stad'}`,
+    });
   }
   return funn;
 }
@@ -166,13 +189,18 @@ function sjekk(fil, tekst, fm) {
 }
 
 const filer = finnArtiklar();
-const alleFiler = new Set(filer);
+
+// To rundar. Kryssjekken av omsetjingspar spør om frontmatteren til ei anna
+// fil, og kan difor ikkje køyre før alle er lesne.
+const innhald = new Map(filer.map(f => [f, readFileSync(join(ARTIKLAR, f), 'utf8')]));
+const frontmatterar = new Map([...innhald].map(([f, tekst]) => [f, lesFrontmatter(tekst)]));
+
 const faktisk = {};
 const detaljar = [];
 for (const f of filer) {
-  const tekst = readFileSync(join(ARTIKLAR, f), 'utf8');
-  const fm = lesFrontmatter(tekst);
-  const funn = [...sjekk(f, tekst, fm), ...sjekkPar(f, fm, alleFiler)];
+  const tekst = innhald.get(f);
+  const fm = frontmatterar.get(f);
+  const funn = [...sjekk(f, tekst, fm), ...sjekkPar(f, fm, frontmatterar)];
   for (const { kode, detalj } of funn) {
     const nykel = `${f}::${kode}`;
     faktisk[nykel] = (faktisk[nykel] ?? 0) + 1;
