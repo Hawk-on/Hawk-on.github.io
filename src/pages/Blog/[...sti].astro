@@ -9,16 +9,29 @@
 // Stiane er skilde berre av bokstavstorleik, og GitHub Pages skil på det, så
 // /Blog/... og /blog/... kan eksistere side om side.
 import { getCollection } from 'astro:content';
-import { kanoniskeTaggar } from '../../utils/taggar';
+import { kanoniskTag } from '../../utils/taggar';
 
 export async function getStaticPaths() {
-  const innlegg = await getCollection('blog', ({ data }) => !data.utkast);
-  const tags = [...new Set(innlegg.flatMap(i => kanoniskeTaggar(i.data.tags)))];
+  const innlegg = await getCollection('blog', ({ data }) => !data.utkast && data.sprak !== 'en');
+
+  // Både den kanoniske slugen og rå-taggen skal svare. Dei gamle adressene under
+  // /Blog/ vart laga frå frontmatter slik han stod, altså /Blog/tag/AI/ og ikkje
+  // /Blog/tag/ai/. Normaliserer me før me lagar stubbane, daudar nett dei lenkjene
+  // normaliseringa skulle berge. Begge peikar på same kanoniske målet.
+  const stubbar = new Map<string, string>();
+  for (const rå of innlegg.flatMap(i => i.data.tags ?? [])) {
+    const kanonisk = kanoniskTag(rå);
+    stubbar.set(kanonisk, kanonisk);
+    stubbar.set(rå, kanonisk);
+  }
 
   return [
     { params: { sti: undefined }, props: { mal: '/blog/' } },
     ...innlegg.map(i => ({ params: { sti: i.id }, props: { mal: `/blog/${i.id}/` } })),
-    ...tags.map(t => ({ params: { sti: `tag/${t}` }, props: { mal: `/blog/tag/${t}/` } })),
+    ...[...stubbar].map(([frå, til]) => ({
+      params: { sti: `tag/${frå}` },
+      props: { mal: `/blog/tag/${til}/` },
+    })),
   ];
 }
 
