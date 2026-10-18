@@ -157,7 +157,10 @@ function sjekk(fil, tekst, fm) {
     if (oppdatert < publisert) legg('dato-bakover', `${oppdatert} < ${publisert}`);
   }
 
-  const harLogg = /^#{2,3}\s+Endringslogg\s*$/m.test(tekst);
+  // Begge overskriftene, av same grunn som Kjelder/Sources: ei omsett artikkel
+  // skal kunne halde heile teksten på eitt språk. Utan «Changelog» ville ei
+  // oppdatert omsetjing fått dato-utan-endringslogg og stoppa bygget.
+  const harLogg = /^#{2,3}\s+(?:Endringslogg|Changelog)\s*$/m.test(tekst);
   if (harLogg && !oppdatert) legg('endringslogg-utan-dato', 'mangler oppdatertDato');
   if (oppdatert && !harLogg) legg('dato-utan-endringslogg', `oppdatertDato ${oppdatert}`);
 
