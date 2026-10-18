@@ -21,7 +21,11 @@ Three changes, then, and all three are worth putting in plain words.
 
 **A class action waiver** means you cannot join forces with others in the same position. Everyone has to run their own case alone.
 
-It is worth pausing on what kind of product this is. A continuous glucose monitor is not an app you happen to have on your phone. It is a medical device that warns you when your blood sugar falls while you sleep. For someone with type 1 diabetes, the alternative to the app is not a different app. It is finger pricks, and nobody waking you.
+It is worth pausing on what kind of product this is. A continuous glucose monitor is not an app you happen to have on your phone. It is a medical device that warns you when your blood sugar falls while you sleep.
+
+Here I should be precise, because an alternative to the app does exist. Dexcom sells a handheld receiver that displays glucose and gives alarms without a phone. The company calls it optional itself [\[2\]](#ref-2), and in Norway you cannot get one on your own initiative; Dexcom's answer is that you should contact a healthcare professional [\[3\]](#ref-3). When the company recalled that very receiver in 2025, because the speaker could fail and the alarm fall silent, it stated that the app is the display device for a majority of its users globally [\[4\]](#ref-4). That statement was made while the company was limiting the scope of a recall, so it leans the same way as the claim it is being used to support. No exact figure is public.
+
+For those who only have the app, and that is the majority, the alternative is not a different app. It is finger pricks, and nobody waking you.
 
 ## What a consent is worth when the alternative is hospital
 
@@ -29,7 +33,7 @@ Contract law rests on one assumption: that either party could have walked away.
 
 That assumption does not hold here, and this is not a rhetorical point. Severe hypoglycaemia, a dangerous fall in blood sugar, can cause seizures, loss of consciousness and in the worst case death. The night alarm is the whole reason the device exists. A user facing a dialog box with two buttons, one of which removes that alarm, is not choosing between sets of terms. They are choosing between signing and taking a risk they cannot assess on the spot.
 
-Dexcom has put this more plainly than I could. The Norwegian terms state that if you do not consent to the new terms, you have the right to stop using the services and the apps [\[2\]](#ref-2).
+Dexcom has put this more plainly than I could. The Norwegian terms state that if you do not consent to the new terms, you have the right to stop using the services and the apps [\[5\]](#ref-5).
 
 That is your right. You can stop using it.
 
@@ -37,9 +41,9 @@ That is your right. You can stop using it.
 
 The timing is the most revealing part of the whole affair, and here I move into interpretation. I am flagging it, so the reader can weigh it independently.
 
-In May 2024 Dexcom lost a round in the California Court of Appeal about exactly this. Four patients were seriously injured and one died after a Dexcom G6 failed to alert them to dangerous blood sugar levels. Five product liability cases followed, meaning claims that the manufacturer should answer for harm the device caused, and one case over the death. The company sought to force every one of them into arbitration, on the grounds that the users had ticked a box reading "I agree to the Terms of Use" when they set up the app [\[3\]](#ref-3).
+In May 2024 Dexcom lost a round in the California Court of Appeal about exactly this. Four patients were seriously injured and one died after a Dexcom G6 failed to alert them to dangerous blood sugar levels. Five product liability cases followed, meaning claims that the manufacturer should answer for harm the device caused, and one case over the death. The company sought to force every one of them into arbitration, on the grounds that the users had ticked a box reading "I agree to the Terms of Use" when they set up the app [\[6\]](#ref-6).
 
-The court said no, two votes to one. Justice Truc T. Do wrote the opinion, and the reasoning is narrow and precise. The screen was about personal information and privacy. A reasonably prudent user would not have understood that ticking the box also bound them to arbitration. The company could not show that the clicks were an **unambiguous** acceptance of the terms, including the arbitration clause, and so no arbitration agreement had been formed with any of the plaintiffs [\[3\]](#ref-3).
+The court said no, two votes to one. Justice Truc T. Do wrote the opinion, and the reasoning is narrow and precise. The screen was about personal information and privacy. A reasonably prudent user would not have understood that ticking the box also bound them to arbitration. The company could not show that the clicks were an **unambiguous** acceptance of the terms, including the arbitration clause, and so no arbitration agreement had been formed with any of the plaintiffs [\[6\]](#ref-6).
 
 Read that again, and then think about a dialog box that covers the whole screen, stops the readings, and demands a tap before the app continues.
 
@@ -47,9 +51,9 @@ The evidentiary standard the court set was that consent must be unambiguous. A b
 
 Meanwhile the company is fighting on two fronts at once.
 
-One is a securities lawsuit brought by investors. It has been consolidated into a lead case in federal court, with a consolidated complaint filed in January 2025 and an expanded version in April 2026. The claim is that the company made design changes to the G6 and G7 that were not authorised, and did not tell its shareholders [\[4\]](#ref-4).
+One is a securities lawsuit brought by investors. It has been consolidated into a lead case in federal court, with a consolidated complaint filed in January 2025 and an expanded version in April 2026. The claim is that the company made design changes to the G6 and G7 that were not authorised, and did not tell its shareholders [\[7\]](#ref-7).
 
-The other is consumer litigation. At least two class actions have been filed on behalf of users, alleging that the sensors were sold with defects [\[5\]](#ref-5), and further individual injury claims followed through 2026.
+The other is consumer litigation. At least two class actions have been filed on behalf of users, alleging that the sensors were sold with defects [\[8\]](#ref-8), and further individual injury claims followed through 2026.
 
 Here I owe the reader a note. I have seen it stated that the company's second quarter 2026 filing mentions six class actions concerning the G6 and G7. I have not been able to confirm that number against the filing itself, so I do not use it. What I can confirm is that the company is simultaneously facing a consolidated investor suit and at least two from users. That is enough for the point, which is that the arbitration question is not theoretical for Dexcom right now.
 
@@ -61,9 +65,9 @@ But the question is not speculative, and it is worth saying why.
 
 In July 2025 Dexcom issued an urgent medical device correction notice for the G7 and ONE+ apps. A design error meant the app did not warn the user when the transmitter failed. The app ended the sensor session, stopped reporting glucose values and displayed "Start Sensor" or "no active sensor", without saying anything.
 
-The US Food and Drug Administration set out what that can lead to. The user does not know they have gone for long periods without glucose data, notifications and alarms. Treatment therefore comes too late in prolonged episodes of severe hypoglycaemia or hyperglycaemia. The agency states plainly that use of the affected product may cause serious adverse health consequences, including death [\[6\]](#ref-6).
+The US Food and Drug Administration set out what that can lead to. The user does not know they have gone for long periods without glucose data, notifications and alarms. Treatment therefore comes too late in prolonged episodes of severe hypoglycaemia or hyperglycaemia. The agency states plainly that use of the affected product may cause serious adverse health consequences, including death [\[9\]](#ref-9).
 
-The agency classified the correction as the most serious type of recall. The upgrade was mandatory, and the app stopped working on 20 August 2025 for anyone who had not updated [\[6\]](#ref-6).
+The agency classified the correction as the most serious type of recall. The upgrade was mandatory, and the app stopped working on 20 August 2025 for anyone who had not updated [\[9\]](#ref-9).
 
 So it is already established that "the app silently stops working" is a documented and life threatening failure mode in this exact product. That does not answer the question about the dialog box. It makes it a question somebody ought to answer.
 
@@ -71,9 +75,9 @@ So it is already established that "the app silently stops working" is a document
 
 One of the three changes concerns artificial intelligence, and the company's direction there is well documented by the company itself.
 
-At the American Diabetes Association conference in June 2026, Dexcom announced two things at once. The Stelo app, which is sold without prescription and aimed at people not using insulin, had been rewritten and cleared by the FDA in May 2026, with early access for selected users from 5 June. And the company had agreed to buy Nutrisense, a service that connects dietitian advice to glucose readings [\[7\]](#ref-7).
+At the American Diabetes Association conference in June 2026, Dexcom announced two things at once. The Stelo app, which is sold without prescription and aimed at people not using insulin, had been rewritten and cleared by the FDA in May 2026, with early access for selected users from 5 June. And the company had agreed to buy Nutrisense, a service that connects dietitian advice to glucose readings [\[10\]](#ref-10).
 
-Chief executive Jake Leach called it a more accessible and connected ecosystem. The aim was to help as many people as possible understand their glucose health, through real time insight, personalised support and coaching [\[7\]](#ref-7).
+Chief executive Jake Leach called it a more accessible and connected ecosystem. The aim was to help as many people as possible understand their glucose health, through real time insight, personalised support and coaching [\[10\]](#ref-10).
 
 There is nothing wrong with that ambition. But personalised coaching based on patterns in glucose data is a model, and a model is trained on data.
 
@@ -87,13 +91,13 @@ This is where the story becomes Norwegian, and it does so in two ways I did not 
 
 Some context for readers outside Europe. Norway is not a member of the European Union, but it is part of the European Economic Area, which means the General Data Protection Regulation applies in full. Norwegian consumers have the same data protection rights as consumers in Germany or France. The supervisory authority is Datatilsynet, the Norwegian Data Protection Authority, and medical devices are regulated by Direktoratet for medisinske produkter, the Norwegian Medical Products Agency.
 
-The first finding is in the Norwegian terms, clause 2.1. Dexcom may change the agreement and notify you by reasonable means, for instance by posting a notice on its website. And then comes the clause: continued use of Dexcom services or apps for seven days without objecting on your part constitutes acceptance of those changes [\[2\]](#ref-2).
+The first finding is in the Norwegian terms, clause 2.1. Dexcom may change the agreement and notify you by reasonable means, for instance by posting a notice on its website. And then comes the clause: continued use of Dexcom services or apps for seven days without objecting on your part constitutes acceptance of those changes [\[5\]](#ref-5).
 
 So you do not have to tap anything. If you keep using the device that keeps you alive, you have accepted. Seven days of use is a consent.
 
 The second is something I went looking for and did not find. The agreement has country specific sections for Japan, South Korea, Austria, Switzerland, Germany and Singapore, where each country has negotiated its own consumer protections into the text.
 
-German users got two things. Changes to the service must have a valid reason, and they cannot put the user in a materially worse position. And the company cannot disclaim liability for gross negligence, for intent, or for injury to life or health. Austrian and Swiss users got a clause saying that new additional terms only apply if they are presented in advance [\[2\]](#ref-2).
+German users got two things. Changes to the service must have a valid reason, and they cannot put the user in a materially worse position. And the company cannot disclaim liability for gross negligence, for intent, or for injury to life or health. Austrian and Swiss users got a clause saying that new additional terms only apply if they are presented in advance [\[5\]](#ref-5).
 
 Sentences like that do not appear by themselves. They are there because a regulator, a consumer body or a court demanded them, and because the company wanted to keep selling in that country.
 
@@ -103,17 +107,17 @@ A Norwegian user therefore gets a Norwegian translation of the American terms. D
 
 I also found no right to opt out anywhere in the Norwegian text, neither a deadline nor a procedure for staying outside arbitration.
 
-The only protection mentioned is the general statement that consumers resident in the EU also have whatever protection follows from the law of their home country [\[2\]](#ref-2). That is true, and it is why the arbitration clause probably does not hold against a Norwegian consumer. But it sits as a footnote to a text otherwise written as though it applies.
+The only protection mentioned is the general statement that consumers resident in the EU also have whatever protection follows from the law of their home country [\[5\]](#ref-5). That is true, and it is why the arbitration clause probably does not hold against a Norwegian consumer. But it sits as a footnote to a text otherwise written as though it applies.
 
 ## Consent that is not free
 
 The General Data Protection Regulation has a provision written for precisely this situation.
 
-Article 7(4) concerns when consent has been freely given. One question is to weigh heaviest: do you have to say yes to uses of your data that the service does not need, in order to get the service at all? If the answer is yes, the consent is unlikely to be free [\[8\]](#ref-8).
+Article 7(4) concerns when consent has been freely given. One question is to weigh heaviest: do you have to say yes to uses of your data that the service does not need, in order to get the service at all? If the answer is yes, the consent is unlikely to be free [\[11\]](#ref-11).
 
 The recitals of an EU law are the introduction that explains how the rules are to be understood. Recital 43 is blunter still. Consent does not hold as a legal basis where there is a clear imbalance between the person the data concerns and the party deciding what it is used for.
 
-And consent is to be treated as unfree in two situations. One is when you cannot say yes to one thing and no to another. The other is when you have to say yes to something the service does not need, in order to use it [\[8\]](#ref-8).
+And consent is to be treated as unfree in two situations. One is when you cannot say yes to one thing and no to another. The other is when you have to say yes to something the service does not need, in order to use it [\[11\]](#ref-11).
 
 "Accept or uninstall" is the definition of an absent separate consent. The alarm function and the model training sit behind the same button.
 
@@ -135,7 +139,7 @@ I have found no trace of any Norwegian authority looking at this. Datatilsynet h
 
 ## The platform under your skin
 
-Yanis Varoufakis calls it technofeudalism. The market is gradually replaced by something older, where the owner of the platform sets the terms because they own the ground everything happens on, and where the income is not profit from a sale but rent from access [\[9\]](#ref-9).
+Yanis Varoufakis calls it technofeudalism. The market is gradually replaced by something older, where the owner of the platform sets the terms because they own the ground everything happens on, and where the income is not profit from a sale but rent from access [\[12\]](#ref-12).
 
 This series has followed the same pattern through three earlier pieces. An accounting method settled a question of sovereignty before politics got a word in. A language model was built by the state, and nobody was given the job of running it. Three companies reallocated the world's memory capacity, and a customer category of hundreds of millions of people fell away without anyone deciding it should.
 
@@ -151,18 +155,24 @@ The sum is that a person with a chronic illness opens their phone at three in th
 
 <span id="ref-1" data-kvalitet="B" data-habilitet="1">B1</span>\[1\] C. Smith, "Dexcom Attempts To Address Social Media Fallout On New Mandatory Terms And Conditions," *InsideHealthPolicy*, 16 October 2026. [Online]. Available: https://insidehealthpolicy.com/inside-telehealth-daily-news/dexcom-attempts-address-social-media-fallout-new-mandatory-terms-and. [Accessed: 18 October 2026]. Trade press under editorial responsibility. The body text is behind a paywall; the freely available opening carries the three changes in terms and the characterisation of the volume of litigation.
 
-<span id="ref-2" data-kvalitet="A" data-habilitet="2">A2</span>\[2\] Dexcom, "Vilkår for bruk" (Norwegian terms of use, nb-NO). [Online]. Available: https://www.dexcom.com/nb-NO/legal/terms-of-use. [Accessed: 18 October 2026]. The primary document for Norwegian users. Habilitet 2 because the publisher is a party to the agreement, while also being the only authority on its own wording. Source for the seven day clause in 2.1, for the right to discontinue use, for the country specific sections covering Japan, South Korea, Austria, Switzerland, Germany and Singapore, and for the absence of any mention of Norway.
+<span id="ref-2" data-kvalitet="B" data-habilitet="2">B2</span>\[2\] Dexcom, "Dexcom G7 system overview: the most accurate CGM system," updated 17 Dec. 2025. [Online]. Available: https://www.dexcom.com/en-us/all-access/dexcom-cgm-explained/g7-overview. [Accessed: 18 October 2026]. The manufacturer on its own product, hence habilitet 2. Used only for what it says about the receiver being optional.
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="1">B1</span>\[3\] M. Rubin, "Misleading Text on Medical Device Website Kept Users From Avoiding Arbitration," *Law Commentary*, 3 June 2024. [Online]. Available: https://www.lawcommentary.com/articles/misleading-text-on-medical-device-website-kept-users-from-avoiding-arbitration. [Accessed: 18 October 2026]. An account of the decision of the California Court of Appeal, Fourth District, Division One, 16 May 2024, written by Justice Truc T. Do with Justice Julie C. Kelety concurring and Justice Joan K. Irion dissenting. The author is a lawyer and professor emerita of journalism.
+<span id="ref-3" data-kvalitet="B" data-habilitet="2">B2</span>\[3\] Dexcom, "Hvordan får jeg en Dexcom-mottaker?" (Norwegian support page, nb-NO). [Online]. Available: https://www.dexcom.com/nb-no/faqs/how-do-i-get-dexcom-receiver. [Accessed: 18 October 2026]. The entire answer reads "Vennligst kontakt helsepersonell" (please contact a healthcare professional).
 
-<span id="ref-4" data-kvalitet="A" data-habilitet="1">A1</span>\[4\] Stanford Law School, Securities Class Action Clearinghouse, case page for DexCom, Inc. [Online]. Available: https://securities.stanford.edu/filings-case.html?id=108428. [Accessed: 18 October 2026]. An academic register of securities litigation with no interest in the outcome. Source for the consolidation under lead case 24-CV-01485 and for the dates of the complaints.
+<span id="ref-4" data-kvalitet="B" data-habilitet="2">B2</span>\[4\] S. Whooley, "Dexcom has a Class I CGM receiver recall," *Drug Delivery Business News*, 17 June 2025, updated 24 June 2025. [Online]. Available: https://www.drugdeliverybusiness.com/dexcom-class-i-cgm-receiver-recall/. [Accessed: 18 October 2026]. The statement about the majority comes from a Dexcom spokesperson, quoted in the trade press. Habilitet 2 because the company was speaking in order to limit the scope of the recall, and the statement leans the same way as the claim it carries. No public percentage exists.
 
-<span id="ref-5" data-kvalitet="C" data-habilitet="2">C2</span>\[5\] Gibbs Mura, "Dexcom G7 Sensor Failure Lawsuit." [Online]. Available: https://www.classlawgroup.com/dexcom-g7-sensor-failure-lawsuit. [Accessed: 18 October 2026]. The law firm that filed the two class actions, and therefore a party with a financial interest in the litigation. Used only to confirm that the suits exist and what they concern, not for any assessment of their merits.
+<span id="ref-5" data-kvalitet="A" data-habilitet="2">A2</span>\[5\] Dexcom, "Vilkår for bruk" (Norwegian terms of use, nb-NO). [Online]. Available: https://www.dexcom.com/nb-NO/legal/terms-of-use. [Accessed: 18 October 2026]. The primary document for Norwegian users. Habilitet 2 because the publisher is a party to the agreement, while also being the only authority on its own wording. Source for the seven day clause in 2.1, for the right to discontinue use, for the country specific sections covering Japan, South Korea, Austria, Switzerland, Germany and Singapore, and for the absence of any mention of Norway.
 
-<span id="ref-6" data-kvalitet="A" data-habilitet="1">A1</span>\[6\] U.S. Food and Drug Administration, "Dexcom, Inc. Issues Correction for G7 Apps and ONE+ Apps due to a Software Design Error That Does Not Alert Users of Unexpected Sensor Failure." [Online]. Available: https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/continuous-glucose-monitor-apps-correction-dexcom-inc-issues-correction-g7-apps-and-one-apps-due. [Accessed: 18 October 2026]. A regulator with no interest in the outcome. The urgent notice was sent to customers on 24 July 2025, and the agency classified the correction as the most serious type of recall.
+<span id="ref-6" data-kvalitet="B" data-habilitet="1">B1</span>\[6\] M. Rubin, "Misleading Text on Medical Device Website Kept Users From Avoiding Arbitration," *Law Commentary*, 3 June 2024. [Online]. Available: https://www.lawcommentary.com/articles/misleading-text-on-medical-device-website-kept-users-from-avoiding-arbitration. [Accessed: 18 October 2026]. An account of the decision of the California Court of Appeal, Fourth District, Division One, 16 May 2024, written by Justice Truc T. Do with Justice Julie C. Kelety concurring and Justice Joan K. Irion dissenting. The author is a lawyer and professor emerita of journalism.
 
-<span id="ref-7" data-kvalitet="A" data-habilitet="2">A2</span>\[7\] Dexcom, "Dexcom Reaffirms CGM Benefits for All People With Diabetes and Continues Momentum Toward Earlier Stage Intervention and Preventative Care at ADA 2026," investor relations. [Online]. Available: https://investors.dexcom.com/news/news-details/2026/Dexcom-Reaffirms-CGM-Benefits-for-All-People-With-Diabetes-and-Continues-Momentum-Toward-Earlier-Stage-Intervention-and-Preventative-Care-at-ADA-2026/default.aspx. [Accessed: 18 October 2026]. The company's own announcement of the Stelo app and the Nutrisense acquisition, including the quotation from chief executive Jake Leach.
+<span id="ref-7" data-kvalitet="A" data-habilitet="1">A1</span>\[7\] Stanford Law School, Securities Class Action Clearinghouse, case page for DexCom, Inc. [Online]. Available: https://securities.stanford.edu/filings-case.html?id=108428. [Accessed: 18 October 2026]. An academic register of securities litigation with no interest in the outcome. Source for the consolidation under lead case 24-CV-01485 and for the dates of the complaints.
 
-<span id="ref-8" data-kvalitet="A" data-habilitet="1">A1</span>\[8\] European Parliament and Council, Regulation (EU) 2016/679 (General Data Protection Regulation), Article 7(4) and recital 43. [Online]. Available: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679. [Accessed: 18 October 2026]. The consolidated legal text.
+<span id="ref-8" data-kvalitet="C" data-habilitet="2">C2</span>\[8\] Gibbs Mura, "Dexcom G7 Sensor Failure Lawsuit." [Online]. Available: https://www.classlawgroup.com/dexcom-g7-sensor-failure-lawsuit. [Accessed: 18 October 2026]. The law firm that filed the two class actions, and therefore a party with a financial interest in the litigation. Used only to confirm that the suits exist and what they concern, not for any assessment of their merits.
 
-<span id="ref-9" data-kvalitet="C" data-habilitet="2">C2</span>\[9\] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*, London: The Bodley Head, 2023. The author is a former finance minister of Greece with a declared political position. Used for the concept and the analysis, not for factual claims about this case.
+<span id="ref-9" data-kvalitet="A" data-habilitet="1">A1</span>\[9\] U.S. Food and Drug Administration, "Dexcom, Inc. Issues Correction for G7 Apps and ONE+ Apps due to a Software Design Error That Does Not Alert Users of Unexpected Sensor Failure." [Online]. Available: https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/continuous-glucose-monitor-apps-correction-dexcom-inc-issues-correction-g7-apps-and-one-apps-due. [Accessed: 18 October 2026]. A regulator with no interest in the outcome. The urgent notice was sent to customers on 24 July 2025, and the agency classified the correction as the most serious type of recall.
+
+<span id="ref-10" data-kvalitet="A" data-habilitet="2">A2</span>\[10\] Dexcom, "Dexcom Reaffirms CGM Benefits for All People With Diabetes and Continues Momentum Toward Earlier Stage Intervention and Preventative Care at ADA 2026," investor relations. [Online]. Available: https://investors.dexcom.com/news/news-details/2026/Dexcom-Reaffirms-CGM-Benefits-for-All-People-With-Diabetes-and-Continues-Momentum-Toward-Earlier-Stage-Intervention-and-Preventative-Care-at-ADA-2026/default.aspx. [Accessed: 18 October 2026]. The company's own announcement of the Stelo app and the Nutrisense acquisition, including the quotation from chief executive Jake Leach.
+
+<span id="ref-11" data-kvalitet="A" data-habilitet="1">A1</span>\[11\] European Parliament and Council, Regulation (EU) 2016/679 (General Data Protection Regulation), Article 7(4) and recital 43. [Online]. Available: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679. [Accessed: 18 October 2026]. The consolidated legal text.
+
+<span id="ref-12" data-kvalitet="C" data-habilitet="2">C2</span>\[12\] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*, London: The Bodley Head, 2023. The author is a former finance minister of Greece with a declared political position. Used for the concept and the analysis, not for factual claims about this case.

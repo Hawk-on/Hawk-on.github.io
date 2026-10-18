@@ -21,7 +21,11 @@ Tre endringar, altså, og alle tre er verdt å omsetja til vanleg språk.
 
 **Fråskriving av gruppesøksmål** tyder at du ikkje kan gå saman med andre i same situasjon. Kvar må køyra si eiga sak åleine.
 
-Det er verdt å stogge ved kva slags produkt dette er. Ein kontinuerleg glukosemålar er ikkje ein applikasjon ein har på telefonen. Han er eit medisinsk utstyr som varslar deg når blodsukkeret fell medan du søv. For ein med type 1-diabetes er alternativet til appen ikkje ein annan app. Alternativet er fingerstikk, og at ingen vekkjer deg.
+Det er verdt å stogge ved kva slags produkt dette er. Ein kontinuerleg glukosemålar er ikkje ein applikasjon ein har på telefonen. Han er eit medisinsk utstyr som varslar deg når blodsukkeret fell medan du søv.
+
+Her skal eg vera presis, for det finst eit alternativ til appen. Dexcom sel ein eigen mottakar som viser glukose og varslar utan telefon. Selskapet kallar han sjølv tilleggsutstyr [\[2\]](#ref-2), og i Noreg får du han ikkje på eige initiativ; svaret frå Dexcom er at du skal kontakta helsepersonell [\[3\]](#ref-3). Då selskapet i 2025 kalla tilbake nettopp den mottakaren, fordi høgtalaren kunne svikte og alarmen difor teia, opplyste det at appen er visingseininga for fleirtalet av brukarane globalt [\[4\]](#ref-4). Den utsegna kom medan selskapet ville avgrense omfanget av ei tilbakekalling, så ho dreg i same retning som påstanden ho skal bere. Noko eksakt tal finst ikkje offentleg.
+
+For dei som berre har appen, og det er fleirtalet, er alternativet ikkje ein annan app. Alternativet er fingerstikk, og at ingen vekkjer deg.
 
 ## Kva eit samtykke er verdt når alternativet er innlegging
 
@@ -29,7 +33,7 @@ Avtalerett byggjer på ein føresetnad: at begge partar kunne ha late vera.
 
 Den føresetnaden held ikkje her, og det er ikkje eit retorisk poeng. Alvorleg føling, altså blodsukkerfall, kan gje kramper, medvitsløyse og i verste tilfelle død. Varslinga om natta er heile grunnen til at utstyret finst. Ein brukar som står framfor ein dialog med to knappar, der den eine fjernar varslinga, vel ikkje mellom vilkår. Han vel mellom å signere og å ta ein risiko han ikkje kan vurdera på ståande fot.
 
-Dexcom har formulert dette tydelegare enn eg kunne gjort sjølv. I dei norske vilkåra står det at dersom du ikkje samtykkjer til dei nye vilkåra, har du rett til å avslutta bruken av tenestene og applikasjonane [\[2\]](#ref-2).
+Dexcom har formulert dette tydelegare enn eg kunne gjort sjølv. I dei norske vilkåra står det at dersom du ikkje samtykkjer til dei nye vilkåra, har du rett til å avslutta bruken av tenestene og applikasjonane [\[5\]](#ref-5).
 
 Det er retten din. Du kan slutta å bruka det.
 
@@ -37,9 +41,9 @@ Det er retten din. Du kan slutta å bruka det.
 
 Tidspunktet er det mest opplysande i heile saka, og her går eg over i tolking. Eg merkjer det, og lesaren kan vega det sjølv.
 
-I mai 2024 tapte Dexcom ein runde i ankedomstolen i California som handla om nøyaktig dette. Fire pasientar var alvorleg skadde og éin var død etter at Dexcom G6 ikkje varsla om farlege blodsukkernivå. Det kom fem saker om produktansvar, altså krav om at produsenten skal svara for skade utstyret har valda, og ei sak etter dødsfallet. Selskapet kravde voldgift i kvar einaste av dei, og grunngav kravet med at brukarane hadde kryssa av for «I agree to the Terms of Use» då dei sette opp appen [\[3\]](#ref-3).
+I mai 2024 tapte Dexcom ein runde i ankedomstolen i California som handla om nøyaktig dette. Fire pasientar var alvorleg skadde og éin var død etter at Dexcom G6 ikkje varsla om farlege blodsukkernivå. Det kom fem saker om produktansvar, altså krav om at produsenten skal svara for skade utstyret har valda, og ei sak etter dødsfallet. Selskapet kravde voldgift i kvar einaste av dei, og grunngav kravet med at brukarane hadde kryssa av for «I agree to the Terms of Use» då dei sette opp appen [\[6\]](#ref-6).
 
-Domstolen sa nei, to mot éin. Avgjerda er skriven av dommar Truc T. Do, og grunngjevinga er smal og presis: skjermbiletet handla om personopplysningar og personvern, og ein normalt aktsam brukar ville ikkje skjøna at avkryssinga òg batt han til voldgift. Selskapet kunne ikkje godtgjera at klikka var ei **eintydig** godtaking av vilkåra, medrekna voldgiftsklausulen, og difor var det ikkje inngått nokon voldgiftsavtale med nokon av saksøkjarane [\[3\]](#ref-3).
+Domstolen sa nei, to mot éin. Avgjerda er skriven av dommar Truc T. Do, og grunngjevinga er smal og presis: skjermbiletet handla om personopplysningar og personvern, og ein normalt aktsam brukar ville ikkje skjøna at avkryssinga òg batt han til voldgift. Selskapet kunne ikkje godtgjera at klikka var ei **eintydig** godtaking av vilkåra, medrekna voldgiftsklausulen, og difor var det ikkje inngått nokon voldgiftsavtale med nokon av saksøkjarane [\[6\]](#ref-6).
 
 Les den setninga ein gong til, og tenk så på ein dialog som dekkjer heile skjermen, stansar avlesinga og krev eit trykk før appen held fram.
 
@@ -47,9 +51,9 @@ Beviskravet domstolen stilte, var at samtykket måtte vera eintydig. Ein blokker
 
 Samstundes står selskapet i fleire saker på éin gong, og dei går i to ulike retningar.
 
-Den eine er eit verdipapirsøksmål frå investorar. Det er konsolidert i ei leiande sak i føderal domstol, med ei samanstilt stemning levert i januar 2025 og ei utvida versjon i april 2026. Påstanden der er at selskapet gjorde endringar i utforminga av G6 og G7 utan godkjenning, og at aksjonærane ikkje fekk vita det [\[4\]](#ref-4).
+Den eine er eit verdipapirsøksmål frå investorar. Det er konsolidert i ei leiande sak i føderal domstol, med ei samanstilt stemning levert i januar 2025 og ei utvida versjon i april 2026. Påstanden der er at selskapet gjorde endringar i utforminga av G6 og G7 utan godkjenning, og at aksjonærane ikkje fekk vita det [\[7\]](#ref-7).
 
-Den andre er forbrukarsaker. Minst to gruppesøksmål er reiste på vegner av brukarar, med påstand om at sensorane vart selde med feil [\[5\]](#ref-5), og det kom fleire einskildsaker om skade gjennom 2026.
+Den andre er forbrukarsaker. Minst to gruppesøksmål er reiste på vegner av brukarar, med påstand om at sensorane vart selde med feil [\[8\]](#ref-8), og det kom fleire einskildsaker om skade gjennom 2026.
 
 Her skuldar eg lesaren ein merknad. Eg har sett oppgjeve at kvartalsrapporten for andre kvartal 2026 nemner seks gruppesøksmål om G6 og G7. Det talet har eg ikkje klart å stadfeste mot sjølve rapporten, og eg bruker det difor ikkje. Det eg kan stadfeste, er at selskapet samstundes står i eit konsolidert søksmål frå investorar og i minst to frå brukarar. Det er nok til poenget, som er at voldgiftsspørsmålet ikkje er teoretisk for Dexcom akkurat no.
 
@@ -59,9 +63,9 @@ Det opne spørsmålet i denne saka er om låg-alarmane var stansa medan dialogen
 
 Men spørsmålet er ikkje spekulativt, og det er verdt å seia kvifor.
 
-I juli 2025 sende Dexcom ut ei hastevarsling om korrigering av G7- og ONE+-appane. Ein designfeil gjorde at appen ikkje varsla brukaren når sendaren svikta. Appen avslutta sensorøkta, slutta å rapportera glukoseverdiar og viste «Start Sensor» eller «ingen aktiv sensor», utan å seia frå. Det amerikanske legemiddeltilsynet skriv kva det kan føra til. Brukaren veit ikkje at han har vore utan glukosedata, varslingar og alarmar i lange periodar. Behandlinga kjem difor for seint ved langvarig føling eller høgt blodsukker. Tilsynet skriv rett ut at bruk av produktet kan gje alvorlege helsefylgjer, medrekna død [\[6\]](#ref-6).
+I juli 2025 sende Dexcom ut ei hastevarsling om korrigering av G7- og ONE+-appane. Ein designfeil gjorde at appen ikkje varsla brukaren når sendaren svikta. Appen avslutta sensorøkta, slutta å rapportera glukoseverdiar og viste «Start Sensor» eller «ingen aktiv sensor», utan å seia frå. Det amerikanske legemiddeltilsynet skriv kva det kan føra til. Brukaren veit ikkje at han har vore utan glukosedata, varslingar og alarmar i lange periodar. Behandlinga kjem difor for seint ved langvarig føling eller høgt blodsukker. Tilsynet skriv rett ut at bruk av produktet kan gje alvorlege helsefylgjer, medrekna død [\[9\]](#ref-9).
 
-Tilsynet klassifiserte korrigeringa som den mest alvorlege typen. Oppgraderinga var obligatorisk, og appen slutta å verka 20. august 2025 for dei som ikkje oppdaterte [\[6\]](#ref-6).
+Tilsynet klassifiserte korrigeringa som den mest alvorlege typen. Oppgraderinga var obligatorisk, og appen slutta å verka 20. august 2025 for dei som ikkje oppdaterte [\[9\]](#ref-9).
 
 Det er altså alt slått fast at «appen sluttar stille å verka» er ein dokumentert og livstrugande feilmodus i akkurat dette produktet. Det gjer ikkje spørsmålet om dialogen til eit svar. Det gjer det til eit spørsmål nokon burde svara på.
 
@@ -69,9 +73,9 @@ Det er altså alt slått fast at «appen sluttar stille å verka» er ein dokume
 
 Den eine av dei tre vilkårsendringane handlar om kunstig intelligens, og der er retninga til selskapet godt dokumentert av selskapet sjølv.
 
-På diabeteskongressen ADA 2026 kunngjorde Dexcom to ting samstundes. Stelo-appen, som er reseptfri og retta mot folk som ikkje brukar insulin, var skriven heilt om og fekk godkjenning frå legemiddeltilsynet i mai 2026, med tidleg tilgang for utvalde brukarar frå 5. juni. Og selskapet hadde inngått avtale om å kjøpa Nutrisense, ei teneste som koplar kostråd frå ernæringsfysiologar til glukosemålingar [\[7\]](#ref-7).
+På diabeteskongressen ADA 2026 kunngjorde Dexcom to ting samstundes. Stelo-appen, som er reseptfri og retta mot folk som ikkje brukar insulin, var skriven heilt om og fekk godkjenning frå legemiddeltilsynet i mai 2026, med tidleg tilgang for utvalde brukarar frå 5. juni. Og selskapet hadde inngått avtale om å kjøpa Nutrisense, ei teneste som koplar kostråd frå ernæringsfysiologar til glukosemålingar [\[10\]](#ref-10).
 
-Administrerande direktør Jake Leach kalla det eit meir tilgjengeleg og samankopla økosystem. Målet var å hjelpa så mange som råd med å forstå glukosehelsa si, gjennom innsikt i sanntid, personleg støtte og rettleiing [\[7\]](#ref-7).
+Administrerande direktør Jake Leach kalla det eit meir tilgjengeleg og samankopla økosystem. Målet var å hjelpa så mange som råd med å forstå glukosehelsa si, gjennom innsikt i sanntid, personleg støtte og rettleiing [\[10\]](#ref-10).
 
 Det er ikkje noko gale i den ambisjonen. Men personleg rettleiing basert på mønster i glukosedata er ein modell, og ein modell er trena på data. Før selde selskapet utstyr til folk med ein diagnose. No vil det selja abonnement på rettleiing til folk utan. Til det trengst store mengder glukosedata, og dei finst berre hjå dei som alt brukar utstyret.
 
@@ -81,11 +85,11 @@ Dei som alt brukar utstyret, er pasientane. Det er deira data vilkårsendringa h
 
 Her blir saka norsk, og ho blir det på to måtar eg ikkje venta.
 
-Den fyrste står i dei norske vilkåra, punkt 2.1. Dexcom kan endra avtalen og varsla deg på rimeleg vis, til dømes ved å leggja ut ei melding på nettstaden. Og så kjem klausulen: «din fortsatte bruk av DexCom-tjenester eller Applikasjoner i syv (7) dager uten at du motsetter deg endringene, tilsvare en aksept av sådan endringer» [\[2\]](#ref-2).
+Den fyrste står i dei norske vilkåra, punkt 2.1. Dexcom kan endra avtalen og varsla deg på rimeleg vis, til dømes ved å leggja ut ei melding på nettstaden. Og så kjem klausulen: «din fortsatte bruk av DexCom-tjenester eller Applikasjoner i syv (7) dager uten at du motsetter deg endringene, tilsvare en aksept av sådan endringer» [\[5\]](#ref-5).
 
 Du treng altså ikkje trykkja på noko. Held du fram med å bruka utstyret som held deg i live, har du godteke. Sju dagar med bruk er eit samtykke.
 
-Den andre er noko eg leita etter og ikkje fann. Avtalen har eigne landsavsnitt for Japan, Sør-Korea, Austerrike, Sveits, Tyskland og Singapore, der kvart land har forhandla inn eigne forbrukarvern. Tyske brukarar har fått inn to ting. Endringar i tenesta må ha ein gyldig grunn, og dei kan ikkje setja brukaren i ein klart dårlegare posisjon. Og selskapet kan ikkje fråskriva seg ansvar for grov aktløyse, for forsett eller for skade på liv og helse. Austerrikske og sveitsiske brukarar har fått inn at nye tilleggsvilkår berre gjeld om dei er lagde fram på førehand [\[2\]](#ref-2).
+Den andre er noko eg leita etter og ikkje fann. Avtalen har eigne landsavsnitt for Japan, Sør-Korea, Austerrike, Sveits, Tyskland og Singapore, der kvart land har forhandla inn eigne forbrukarvern. Tyske brukarar har fått inn to ting. Endringar i tenesta må ha ein gyldig grunn, og dei kan ikkje setja brukaren i ein klart dårlegare posisjon. Og selskapet kan ikkje fråskriva seg ansvar for grov aktløyse, for forsett eller for skade på liv og helse. Austerrikske og sveitsiske brukarar har fått inn at nye tilleggsvilkår berre gjeld om dei er lagde fram på førehand [\[5\]](#ref-5).
 
 Slike setningar kjem ikkje av seg sjølv. Dei står der fordi eit tilsyn, ein forbrukarorganisasjon eller ein domstol har kravd det, og fordi selskapet ville halda fram med å selja i landet.
 
@@ -93,15 +97,15 @@ Ordet «Norge» finst ikkje i dokumentet. Ikkje éin stad i 66 819 teikn.
 
 Ein norsk brukar får difor ei omsetjing til bokmål av dei amerikanske vilkåra. Tvistar skal avgjerast av ein amerikansk voldgiftsinstitusjon etter amerikanske reglar. Fråskrivinga av gruppesøksmål står uendra. Og tilpassingane nabolanda våre har fått, er ikkje med. Eg fann heller ingen reservasjonsrett i den norske teksten, korkje ein frist eller ein framgangsmåte for å stå utanfor voldgifta.
 
-Det einaste vernet som er nemnt, er den generelle formuleringa om at forbrukarar busette i EU òg har det vernet som fylgjer av lovgjevinga i bustadlandet [\[2\]](#ref-2). Det er sant, og det er grunnen til at voldgiftsklausulen truleg ikkje held mot ein norsk forbrukar. Men det står som ei fotnote til ein tekst som elles er skriven som om han gjeld.
+Det einaste vernet som er nemnt, er den generelle formuleringa om at forbrukarar busette i EU òg har det vernet som fylgjer av lovgjevinga i bustadlandet [\[5\]](#ref-5). Det er sant, og det er grunnen til at voldgiftsklausulen truleg ikkje held mot ein norsk forbrukar. Men det står som ei fotnote til ein tekst som elles er skriven som om han gjeld.
 
 ## Samtykke som ikkje er fritt
 
 Personvernforordninga, som me kjenner som GDPR, har eit punkt som er skrive for nettopp denne situasjonen.
 
-Artikkel 7 nr. 4 handlar om når eit samtykke er gjeve frivillig. Her skal eitt spørsmål vega tyngst: må du seia ja til bruk av opplysningar som tenesta ikkje treng, for å få tenesta i det heile? Er svaret ja, er samtykket neppe fritt [\[8\]](#ref-8).
+Artikkel 7 nr. 4 handlar om når eit samtykke er gjeve frivillig. Her skal eitt spørsmål vega tyngst: må du seia ja til bruk av opplysningar som tenesta ikkje treng, for å få tenesta i det heile? Er svaret ja, er samtykket neppe fritt [\[11\]](#ref-11).
 
-Fortalen til ei EU-lov er innleiinga som forklarar korleis reglane skal forståast. Punkt 43 er endå tydelegare. Eit samtykke held ikkje som rettsleg grunnlag der det er ein klar ubalanse mellom den som opplysningane gjeld, og den som bestemmer kva dei skal brukast til. Og eit samtykke skal reknast som ufritt i to tilfelle. Det eine er når du ikkje får seia ja til éin ting og nei til ein annan. Det andre er når du må seia ja til noko tenesta ikkje treng, for å få bruka henne [\[8\]](#ref-8).
+Fortalen til ei EU-lov er innleiinga som forklarar korleis reglane skal forståast. Punkt 43 er endå tydelegare. Eit samtykke held ikkje som rettsleg grunnlag der det er ein klar ubalanse mellom den som opplysningane gjeld, og den som bestemmer kva dei skal brukast til. Og eit samtykke skal reknast som ufritt i to tilfelle. Det eine er når du ikkje får seia ja til éin ting og nei til ein annan. Det andre er når du må seia ja til noko tenesta ikkje treng, for å få bruka henne [\[11\]](#ref-11).
 
 «Godta eller avinstaller» er definisjonen på manglande separat samtykke. Alarmfunksjonen og modelltreninga ligg i same knappen.
 
@@ -121,7 +125,7 @@ Eg har ikkje funne noko spor av at norske styresmakter har sett på dette. Datat
 
 ## Plattforma under huda
 
-Yanis Varoufakis kallar det teknoføydalisme: at marknaden gradvis blir bytt ut med noko eldre, der eigaren av plattforma set vilkåra fordi han eig grunnen alt føregår på, og der inntekta ikkje er profitt frå eit sal, men leige frå tilgang [\[9\]](#ref-9).
+Yanis Varoufakis kallar det teknoføydalisme: at marknaden gradvis blir bytt ut med noko eldre, der eigaren av plattforma set vilkåra fordi han eig grunnen alt føregår på, og der inntekta ikkje er profitt frå eit sal, men leige frå tilgang [\[12\]](#ref-12).
 
 Denne serien har fylgt det same mønsteret gjennom tre tidlegare tekstar. Ei rekneskapsmetode avgjorde eit suverenitetsspørsmål før politikken kom til orde. Ein språkmodell vart laga av staten, og ingen fekk i oppdrag å drifta han. Tre selskap omfordelte minnekapasiteten i verda, og ein kundekategori på hundrevis av millionar menneske fall ut utan at nokon tok ei avgjerd om det.
 
@@ -137,18 +141,24 @@ Summen er at eit menneske med ein kronisk sjukdom opnar telefonen klokka tre om 
 
 <span id="ref-1" data-kvalitet="B" data-habilitet="1">B1</span>\[1\] C. Smith, «Dexcom Attempts To Address Social Media Fallout On New Mandatory Terms And Conditions», *InsideHealthPolicy*, 16. oktober 2026. [Online]. Available: https://insidehealthpolicy.com/inside-telehealth-daily-news/dexcom-attempts-address-social-media-fallout-new-mandatory-terms-and. [Accessed: 18. oktober 2026]. Fagpresse med redaktøransvar. Brødteksten ligg bak betalingsmur; ingressen, som er fritt tilgjengeleg, ber dei tre vilkårsendringane og formuleringa om omfanget av rettssakene.
 
-<span id="ref-2" data-kvalitet="A" data-habilitet="2">A2</span>\[2\] Dexcom, «Vilkår for bruk» (nb-NO). [Online]. Available: https://www.dexcom.com/nb-NO/legal/terms-of-use. [Accessed: 18. oktober 2026]. Primærdokumentet for norske brukarar. Habilitet 2 fordi utgjevaren er part i avtalen, men teksten er samstundes den einaste autoriteten på sin eigen ordlyd. Kjelde til sjudagarsklausulen i punkt 2.1, til retten til å avslutta bruken, til at landsavsnitta dekkjer Japan, Sør-Korea, Austerrike, Sveits, Tyskland og Singapore, og til at Noreg ikkje er nemnt.
+<span id="ref-2" data-kvalitet="B" data-habilitet="2">B2</span>\[2\] Dexcom, «Dexcom G7 system overview: the most accurate CGM system», oppdatert 17. des. 2025. [Online]. Available: https://www.dexcom.com/en-us/all-access/dexcom-cgm-explained/g7-overview. [Accessed: 18. oktober 2026]. Produsenten om eige produkt, difor habilitet 2. Nytta berre for det som står der om at mottakaren er valfri.
 
-<span id="ref-3" data-kvalitet="B" data-habilitet="1">B1</span>\[3\] M. Rubin, «Misleading Text on Medical Device Website Kept Users From Avoiding Arbitration», *Law Commentary*, 3. juni 2024. [Online]. Available: https://www.lawcommentary.com/articles/misleading-text-on-medical-device-website-kept-users-from-avoiding-arbitration. [Accessed: 18. oktober 2026]. Attgjeving av avgjerda i ankedomstolen for fjerde distrikt i California, avdeling éin, 16. mai 2024, skriven av dommar Truc T. Do med tilslutnad frå dommar Julie C. Kelety og dissens frå dommar Joan K. Irion. Forfattaren er jurist og emeritaprofessor i journalistikk.
+<span id="ref-3" data-kvalitet="B" data-habilitet="2">B2</span>\[3\] Dexcom, «Hvordan får jeg en Dexcom-mottaker?» (nb-NO). [Online]. Available: https://www.dexcom.com/nb-no/faqs/how-do-i-get-dexcom-receiver. [Accessed: 18. oktober 2026]. Heile svaret er «Vennligst kontakt helsepersonell».
 
-<span id="ref-4" data-kvalitet="A" data-habilitet="1">A1</span>\[4\] Stanford Law School, Securities Class Action Clearinghouse, sakssida for DexCom, Inc. [Online]. Available: https://securities.stanford.edu/filings-case.html?id=108428. [Accessed: 18. oktober 2026]. Akademisk register over verdipapirsøksmål, utan interesse i utfallet. Kjelde til at saka er konsolidert under leiande sak 24-CV-01485 og til tidspunkta for stemningane.
+<span id="ref-4" data-kvalitet="B" data-habilitet="2">B2</span>\[4\] S. Whooley, «Dexcom has a Class I CGM receiver recall», *Drug Delivery Business News*, 17. juni 2025, oppdatert 24. juni 2025. [Online]. Available: https://www.drugdeliverybusiness.com/dexcom-class-i-cgm-receiver-recall/. [Accessed: 18. oktober 2026]. Utsegna om fleirtalet kjem frå ein talsperson i Dexcom, attgjeven i fagpressa. Habilitet 2 fordi selskapet uttalte seg for å avgrense omfanget av tilbakekallinga, og utsegna dreg same veg som påstanden ho ber. Noko offentleg prosenttal finst ikkje.
 
-<span id="ref-5" data-kvalitet="C" data-habilitet="2">C2</span>\[5\] Gibbs Mura, «Dexcom G7 Sensor Failure Lawsuit». [Online]. Available: https://www.classlawgroup.com/dexcom-g7-sensor-failure-lawsuit. [Accessed: 18. oktober 2026]. Advokatfirmaet som sjølv har reist dei to gruppesøksmåla, og dermed part med økonomisk interesse i saka. Nytta berre til å stadfesta at søksmåla er reiste og kva dei gjeld, ikkje til vurderingar av styrken i dei.
+<span id="ref-5" data-kvalitet="A" data-habilitet="2">A2</span>\[5\] Dexcom, «Vilkår for bruk» (nb-NO). [Online]. Available: https://www.dexcom.com/nb-NO/legal/terms-of-use. [Accessed: 18. oktober 2026]. Primærdokumentet for norske brukarar. Habilitet 2 fordi utgjevaren er part i avtalen, men teksten er samstundes den einaste autoriteten på sin eigen ordlyd. Kjelde til sjudagarsklausulen i punkt 2.1, til retten til å avslutta bruken, til at landsavsnitta dekkjer Japan, Sør-Korea, Austerrike, Sveits, Tyskland og Singapore, og til at Noreg ikkje er nemnt.
 
-<span id="ref-6" data-kvalitet="A" data-habilitet="1">A1</span>\[6\] U.S. Food and Drug Administration, «Dexcom, Inc. Issues Correction for G7 Apps and ONE+ Apps due to a Software Design Error That Does Not Alert Users of Unexpected Sensor Failure». [Online]. Available: https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/continuous-glucose-monitor-apps-correction-dexcom-inc-issues-correction-g7-apps-and-one-apps-due. [Accessed: 18. oktober 2026]. Tilsynsstyresmakt utan interesse i utfallet. Hastevarslinga vart send til kundar 24. juli 2025, og tilsynet klassifiserte korrigeringa som den mest alvorlege typen.
+<span id="ref-6" data-kvalitet="B" data-habilitet="1">B1</span>\[6\] M. Rubin, «Misleading Text on Medical Device Website Kept Users From Avoiding Arbitration», *Law Commentary*, 3. juni 2024. [Online]. Available: https://www.lawcommentary.com/articles/misleading-text-on-medical-device-website-kept-users-from-avoiding-arbitration. [Accessed: 18. oktober 2026]. Attgjeving av avgjerda i ankedomstolen for fjerde distrikt i California, avdeling éin, 16. mai 2024, skriven av dommar Truc T. Do med tilslutnad frå dommar Julie C. Kelety og dissens frå dommar Joan K. Irion. Forfattaren er jurist og emeritaprofessor i journalistikk.
 
-<span id="ref-7" data-kvalitet="A" data-habilitet="2">A2</span>\[7\] Dexcom, «Dexcom Reaffirms CGM Benefits for All People With Diabetes and Continues Momentum Toward Earlier Stage Intervention and Preventative Care at ADA 2026», investorsider. [Online]. Available: https://investors.dexcom.com/news/news-details/2026/Dexcom-Reaffirms-CGM-Benefits-for-All-People-With-Diabetes-and-Continues-Momentum-Toward-Earlier-Stage-Intervention-and-Preventative-Care-at-ADA-2026/default.aspx. [Accessed: 18. oktober 2026]. Selskapet si eiga kunngjering av Stelo-appen og Nutrisense-oppkjøpet, med sitatet frå administrerande direktør Jake Leach.
+<span id="ref-7" data-kvalitet="A" data-habilitet="1">A1</span>\[7\] Stanford Law School, Securities Class Action Clearinghouse, sakssida for DexCom, Inc. [Online]. Available: https://securities.stanford.edu/filings-case.html?id=108428. [Accessed: 18. oktober 2026]. Akademisk register over verdipapirsøksmål, utan interesse i utfallet. Kjelde til at saka er konsolidert under leiande sak 24-CV-01485 og til tidspunkta for stemningane.
 
-<span id="ref-8" data-kvalitet="A" data-habilitet="1">A1</span>\[8\] Europaparlamentet og Rådet, forordning (EU) 2016/679 (personvernforordninga), artikkel 7 nr. 4 og fortale 43. [Online]. Available: https://eur-lex.europa.eu/legal-content/NO/TXT/?uri=CELEX%3A32016R0679. [Accessed: 18. oktober 2026]. Lovteksten i konsolidert form.
+<span id="ref-8" data-kvalitet="C" data-habilitet="2">C2</span>\[8\] Gibbs Mura, «Dexcom G7 Sensor Failure Lawsuit». [Online]. Available: https://www.classlawgroup.com/dexcom-g7-sensor-failure-lawsuit. [Accessed: 18. oktober 2026]. Advokatfirmaet som sjølv har reist dei to gruppesøksmåla, og dermed part med økonomisk interesse i saka. Nytta berre til å stadfesta at søksmåla er reiste og kva dei gjeld, ikkje til vurderingar av styrken i dei.
 
-<span id="ref-9" data-kvalitet="C" data-habilitet="2">C2</span>\[9\] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*, London: The Bodley Head, 2023. Forfattaren er tidlegare finansminister i Hellas og har ein uttalt politisk posisjon. Nytta til omgrepet og analysen, ikkje til faktiske opplysningar om saka.
+<span id="ref-9" data-kvalitet="A" data-habilitet="1">A1</span>\[9\] U.S. Food and Drug Administration, «Dexcom, Inc. Issues Correction for G7 Apps and ONE+ Apps due to a Software Design Error That Does Not Alert Users of Unexpected Sensor Failure». [Online]. Available: https://www.fda.gov/medical-devices/medical-device-recalls-and-early-alerts/continuous-glucose-monitor-apps-correction-dexcom-inc-issues-correction-g7-apps-and-one-apps-due. [Accessed: 18. oktober 2026]. Tilsynsstyresmakt utan interesse i utfallet. Hastevarslinga vart send til kundar 24. juli 2025, og tilsynet klassifiserte korrigeringa som den mest alvorlege typen.
+
+<span id="ref-10" data-kvalitet="A" data-habilitet="2">A2</span>\[10\] Dexcom, «Dexcom Reaffirms CGM Benefits for All People With Diabetes and Continues Momentum Toward Earlier Stage Intervention and Preventative Care at ADA 2026», investorsider. [Online]. Available: https://investors.dexcom.com/news/news-details/2026/Dexcom-Reaffirms-CGM-Benefits-for-All-People-With-Diabetes-and-Continues-Momentum-Toward-Earlier-Stage-Intervention-and-Preventative-Care-at-ADA-2026/default.aspx. [Accessed: 18. oktober 2026]. Selskapet si eiga kunngjering av Stelo-appen og Nutrisense-oppkjøpet, med sitatet frå administrerande direktør Jake Leach.
+
+<span id="ref-11" data-kvalitet="A" data-habilitet="1">A1</span>\[11\] Europaparlamentet og Rådet, forordning (EU) 2016/679 (personvernforordninga), artikkel 7 nr. 4 og fortale 43. [Online]. Available: https://eur-lex.europa.eu/legal-content/NO/TXT/?uri=CELEX%3A32016R0679. [Accessed: 18. oktober 2026]. Lovteksten i konsolidert form.
+
+<span id="ref-12" data-kvalitet="C" data-habilitet="2">C2</span>\[12\] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*, London: The Bodley Head, 2023. Forfattaren er tidlegare finansminister i Hellas og har ein uttalt politisk posisjon. Nytta til omgrepet og analysen, ikkje til faktiske opplysningar om saka.
