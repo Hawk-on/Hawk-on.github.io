@@ -8,8 +8,10 @@ import Innhaldstabell from '../components/Innhaldstabell/Innhaldstabell';
 import LeseProgresjon from '../components/LeseProgresjon/LeseProgresjon';
 import KjeldeInfo from '../components/ArtikkelMeta/KjeldeInfo';
 import { getCollection } from 'astro:content';
+import { bloggTekst } from '../utils/i18n-blogg';
 
 interface Props {
+  spraakUrl?: string;
   frontmatter: {
     slug?: string;
     tittel: string;
@@ -19,20 +21,29 @@ interface Props {
     tags?: string[];
     lesetid?: number;
     bilete?: string;
+    sprak?: 'nn' | 'en';
   }
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter, spraakUrl } = Astro.props;
 const { tittel, publisertDato, oppdatertDato, ingress, tags = [], lesetid, bilete } = frontmatter;
+const sprak = frontmatter.sprak ?? 'nn';
+const t = bloggTekst(sprak);
 const base = BLOGG_BASE;
 const aktuellSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || '';
 
-const datoFormatert = formaterDato(publisertDato, 'lang');
-const oppdatertFormatert = oppdatertDato ? formaterDato(oppdatertDato, 'lang') : undefined;
+const datoFormatert = formaterDato(publisertDato, 'lang', sprak);
+const oppdatertFormatert = oppdatertDato ? formaterDato(oppdatertDato, 'lang', sprak) : undefined;
 
-// Finn relaterte artiklar basert på tags
+// Finn relaterte artiklar basert på tags.
+//
+// Språkfilteret er ikkje pynt. Dei to versjonane av same artikkel deler alle
+// taggane, så utan det ville ein artikkel tilrådd si eiga omsetjing som
+// næraste slektning, og nynorske lesarar fått engelske treff i lista.
 const alleInnlegg = await getCollection('blog', ({ data }) => {
-  return (import.meta.env.DEV || !data.utkast) && data.tittel !== tittel;
+  return (import.meta.env.DEV || !data.utkast)
+    && data.tittel !== tittel
+    && (data.sprak ?? 'nn') === sprak;
 });
 
 const relaterteInnlegg = alleInnlegg
@@ -49,7 +60,7 @@ const relaterteInnlegg = alleInnlegg
   .slice(0, 3);
 ---
 
-<Grunnoppsett tittel={tittel} beskriving={ingress} erArtikkel={true} bilete={bilete}>
+<Grunnoppsett tittel={tittel} beskriving={ingress} erArtikkel={true} bilete={bilete} spraakUrl={spraakUrl} sprak={sprak}>
   <div class="container">
     <header class="artikkel-header">
       <ArtikkelMeta 
@@ -59,13 +70,14 @@ const relaterteInnlegg = alleInnlegg
         lesetid={lesetid} 
         tags={tags} 
         base={base} 
+        sprak={sprak}
         key={aktuellSlug}
       />
       <h1 class="artikkel-header__tittel">{tittel}</h1>
       {ingress && <p class="artikkel-header__ingress">{ingress}</p>}
     </header>
 
-    <Innhaldstabell client:idle key={aktuellSlug} />
+    <Innhaldstabell client:idle sprak={sprak} key={aktuellSlug} />
 
     <article class="artikkel-kropp" id="artikkel-kropp" data-pagefind-body>
       <slot />
@@ -73,11 +85,11 @@ const relaterteInnlegg = alleInnlegg
 
     {relaterteInnlegg.length > 0 && (
       <section class="relaterte-artiklar">
-        <h2 class="seksjon-tittel">Les meir om emnet</h2>
+        <h2 class="seksjon-tittel">{t.lesMeir}</h2>
         <ul className="artikkel-liste">
           {relaterteInnlegg.map(innlegg => (
             <li key={innlegg.id} className="artikkel-kort artikkel-kort--sm">
-              <div className="artikkel-kort__dato">{formaterDato(innlegg.data.publisertDato)}</div>
+              <div className="artikkel-kort__dato">{formaterDato(innlegg.data.publisertDato, 'kort', sprak)}</div>
               <div>
                 <h3 className="artikkel-kort__tittel">
                   <a href={`${base}/${innlegg.id}`}>{innlegg.data.tittel}</a>
@@ -91,13 +103,13 @@ const relaterteInnlegg = alleInnlegg
 
     <GiscusKommentarar client:only="react" term={aktuellSlug} key={aktuellSlug} />
 
-    <LeseProgresjon client:idle manueltLesetid={lesetid} key={aktuellSlug} />
+    <LeseProgresjon client:idle manueltLesetid={lesetid} sprak={sprak} key={aktuellSlug} />
 
-    <KjeldeInfo client:load />
+    <KjeldeInfo client:load sprak={sprak} />
 
     <nav class="artikkel-tilbake-nav">
       <a href={base} class="artikkel-tilbake-lenke" data-umami-event="artikkel-tilbake">
-        ← Tilbake til alle innlegg
+        {t.tilbake}
       </a>
     </nav>
   </div>

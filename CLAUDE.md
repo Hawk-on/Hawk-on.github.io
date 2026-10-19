@@ -5,13 +5,20 @@ Personleg nettstad for Håkon Hole Lønning, med CV på rota og blogg under `/bl
 Dei to låg tidlegare i kvart sitt repo (`Hawk-on/hawk-on.github.io` og `Hawk-on/Blog`)
 og vart slåtte saman i august 2026 for å dele designsystem, layout og byggjesteg.
 
-**Standardspråk:** Nynorsk med kløyvd infinitiv.
-**Tekniske artiklar** (IT, sikkerheit, programvare o.l.) kan skrivast på engelsk. Engelsk er de facto fagspråk innan IT og reduserer risikoen for feil omsetjingar og tvetydigheit i tekniske omgrep.
+**Standardspråk:** Nynorsk med kløyvd infinitiv. Alle artiklar i repoet er skrivne på
+nynorsk fyrst.
+
+**Engelsk kjem som omsetjing, ikkje som eige innlegg.** Ein artikkel som skal nå ut
+vidare, får ein engelsk tvilling under `src/content/blog/en/`. Sjå «Tospråklege
+artiklar». Fagomgrep innan IT skal stå på engelsk i den nynorske teksten der ei
+omsetjing ville vere meir tvitydig enn originalen; det er noko anna enn å skrive heile
+artikkelen på engelsk.
 
 ## Teknisk stack
 - **Framework:** Astro 7.x (Content Layer API)
 - **UI:** Statisk HTML + React 19 Islands
-- **i18n:** Nano Stores — gjeld berre CV-delen
+- **i18n:** Nano Stores — gjeld berre CV-delen. Artiklar brukar ikkje Nano Stores;
+  dei ligg som to filer. Sjå «Tospråklege artiklar».
 - **Søk:** Pagefind (statisk indeksering, køyrer over heile `dist`)
 - **Kommentarar:** Giscus (React Island med dynamisk tema)
 - **Deploy:** GitHub Pages via GitHub Actions (Node 22), push til `master`
@@ -20,26 +27,44 @@ og vart slåtte saman i august 2026 for å dele designsystem, layout og byggjest
 
 ```
 src/
-├── content/blog/*.md      Blogginnlegg
-├── content.config.ts      Schema for innhaldssamlinga
+├── content/blog/*.md          Blogginnlegg på nynorsk
+├── content/blog/en/*.md       Engelske omsetjingar av dei same artiklane
+├── content.config.ts          Schema for innhaldssamlinga
 ├── layouts/
-│   ├── Grunnoppsett.astro Delt skal for heile nettstaden
-│   └── Artikkel.astro     Artikkellayout
+│   ├── Grunnoppsett.astro     Delt skal for heile nettstaden
+│   └── Artikkel.astro         Artikkellayout
 ├── pages/
-│   ├── index.astro        CV
-│   ├── om.astro           Om-side
-│   ├── blog/              Bloggen
-│   └── Blog/              Redirect-stubbar frå den gamle stien
-├── components/            Delte + seksjonsspesifikke islands
-├── utils/rutar.ts         BLOGG_BASE — bruk denne, ikkje BASE_URL
-└── styles/global.css      Éi fil: designtoken, skal, CV-stilar, bloggstilar
+│   ├── index.astro            CV
+│   ├── om.astro               Om-side
+│   ├── 404.astro              Feilside
+│   ├── siste-innlegg.json.ts  JSON-endepunkt CV-en hentar siste innlegg frå
+│   ├── blog/
+│   │   ├── index.astro        Innleggslista
+│   │   ├── [...slug].astro    Artikkelruta. Rest-parameter, så `en/<slug>` fungerer
+│   │   ├── tag/[tag].astro    Tag-sider og redirect-stubbar for gamle rå-taggar
+│   │   └── rss.xml.ts         Feeden. Nynorsk; engelske artiklar er haldne utanfor
+│   └── Blog/                  Redirect-stubbar frå den gamle stien (stor B)
+├── components/                Delte + seksjonsspesifikke islands
+├── utils/
+│   ├── rutar.ts               BLOGG_BASE — bruk denne, ikkje BASE_URL
+│   ├── taggar.ts              Normalisering av taggar
+│   ├── tekst.ts               reknaUtLesetid
+│   └── dato.ts                formaterDato
+└── styles/global.css          Éi fil: designtoken, skal, CV-stilar, bloggstilar
+
+scripts/
+├── sjekk-artiklar.mjs         Artikkelkontroll (npm run sjekk)
+├── kjende-avvik.json          Grunnlinja for skrallen
+└── csp-hashar.mjs             Byter 'unsafe-inline' mot hashar etter bygget
+
+.claude/skills/kjeldeartikkel/ Metoden for research og skriving
 ```
 
 ## Fallgruver etter samanslåinga
 
 - **`import.meta.env.BASE_URL` er tom streng.** Bloggen hadde `base: '/Blog'` før; no finst ingen base. Bruk `BLOGG_BASE` frå `src/utils/rutar.ts`.
 - **Skal-laget** (`.container`, `.nettstad-*`, `.meny-bryter`, `.tema-bryter`) kjem frå CV-delen og er med vilje ikkje duplisert i bloggseksjonen av `global.css`.
-- **Header er rutemedviten.** `aktuellSti` avgjer om CV-ankera eller bloggnavigasjonen vert viste. Språkknappen er berre synleg på CV-delen, og logoen er hauk-merket + «hawk-on» under `/blog/`, «HHL» på CV-en.
+- **Header er rutemedviten.** `aktuellSti` avgjer om CV-ankera eller bloggnavigasjonen vert viste. CV-delen har Nano Stores-språkknappen, bloggen ein `EN`/`NO`-knapp som går til den andre språkversjonen av artikkelen; dei to har ingenting med kvarandre å gjere. Logoen er hauk-merket + «hawk-on» under `/blog/`, «HHL» på CV-en.
 - **Umami har to ID-ar.** CV og blogg held kvar sin statistikkstraum; `Grunnoppsett.astro` vel ID etter rute.
 - **Komponent-CSS finst ved sida av `global.css`.** `ArtikkelListe`, `Innhaldstabell` og `LeseProgresjon` har kvar si `.css`-fil som komponenten importerer. Skriv du same markup direkte i ein `.astro`-fil, får du ikkje den stilen — det var slik tag-sida mista tagg-wrappen. Stil som gjeld på tvers høyrer heime i `global.css`.
 - **`/Blog/` (stor B) er redirect-stubbar,** ikkje ekte sider. `src/pages/Blog/[...sti].astro` genererer meta-refresh for alle innlegg og taggar; `Blog/rss.xml.ts` serverer feeden på nytt som gyldig XML, ikkje som redirect.
@@ -87,13 +112,69 @@ slik du vil i artikkelen; ruta gjer resten.
   (`technology→teknologi`, `infosec→sikkerheit`, `kunstig-intelligens→ai`).
 - **`VISING`** gjev namnet lesaren ser, for akronym (`ai→AI`), eigennamn
   (`linux→Linux`) og ord der æøå vart folda bort (`okonomi→økonomi`).
-- **Gamle adresser held fram med å svare.** `gamleTagStiar` genererer meta-refresh
-  frå kvar rå-tagg som ikkje lenger eig si eiga adresse. `/blog/tag/AI/` og
-  `/blog/tag/økonomi/` peikar vidare i staden for å gje 404.
+- **Gamle adresser under `/blog/tag/` held fram med å svare.** `gamleTagStiar`
+  genererer meta-refresh frå kvar rå-tagg som ikkje lenger eig si eiga adresse.
+  `/blog/tag/AI/` og `/blog/tag/økonomi/` peikar vidare i staden for å gje 404.
+- **Det same gjeld `/Blog/tag/` (stor B).** `Blog/[...sti].astro` lagar ein stubb
+  både for den kanoniske slugen og for rå-taggen. Ei stund gjorde han berre det
+  fyrste, og då daua `/Blog/tag/AI/` og `/Blog/tag/Noreg/` i stillheit, medan
+  `/Blog/tag/okonomi/` levde vidare fordi den slugen tilfeldigvis er kanonisk.
+  Normaliser aldri taggen før du lagar ein stubb av han; stubben finst nettopp for
+  adressa som ikkje er normalisert. Retta 18. oktober 2026.
 
 Legg du til ein `VISING`-nøkkel, må han vere den **kanoniske slugen**, ikkje rå-taggen.
 `næringspolitikk` blir `neringspolitikk`, ikkje `naringspolitikk`; det tok meg ein
 runde å oppdage, sidan ein nøkkel som ikkje matchar berre gjer ingenting.
+
+## Tospråklege artiklar
+Ein artikkel som finst på begge språk, ligg som **to filer**, ikkje som ei ordliste.
+Nynorskversjonen i `src/content/blog/<slug>.md`, engelsk i
+`src/content/blog/en/<slug>.md`. Adressene blir `/blog/<slug>/` og
+`/blog/en/<slug>/`.
+
+**Koplinga ligg i frontmatter.** `sprak` er `nn` eller `en` (`nn` er standard), og
+`omsetjing` held **nynorskslugen** i begge filene. Den engelske fila peikar altså
+ikkje på den nynorske med full sti; `[...slug].astro` set sjølv på `en/`-prefikset
+når han leitar etter makkeren. Begge filene skriv difor same verdi, og det er med
+vilje: då treng ein ikkje hugse kva retning peikaren går.
+
+**Ruta er ein rest-parameter.** `src/pages/blog/[...slug].astro`, ikkje `[slug]`.
+Ein vanleg `[slug]` matchar ikkje skråstreken i `en/<slug>`, og dei engelske
+artiklane ville berre forsvunne utan feilmelding.
+
+**Engelsk er halden utanfor dei norske flatene.** Innleggslista, tag-sidene,
+RSS-feeden og `/Blog/`-stubbane filtrerer på `data.sprak !== 'en'`. Elles ville kvar
+artikkel stått to gonger i lista og i feeden. Sitemap har ikkje det filteret, og skal
+ikkje ha det: begge språkversjonane skal indekserast.
+
+**Grensesnittet fylgjer artikkelspråket.** `src/utils/i18n-blogg.ts` held
+tekstane for menyen, artikkelmetaen, innhaldstabellen, lesebjelken,
+kjeldekritikk-dialogen og botnteksten. `formaterDato` tek språket som tredje
+argument, så datoen ikkje står på nynorsk under `lang="en"`.
+
+Dette er **ikkje** same mekanismen som `i18n.ts`. CV-ordlista blir styrt av ein
+nanostores-atom, fordi lesaren byter språk med ein knapp og teksten skal skifte i
+same dokumentet. Her er språket ein eigenskap ved sida: ein engelsk artikkel er ei
+anna fil på ei anna adresse, og språket kan ikkje endre seg medan du står der.
+Difor går det som prop. Blandar du dei to, får du ein store som overstyrer ei side
+han ikkje veit noko om, og det var nettopp den feilen CV-skriptet gjorde mot
+`<html lang>`.
+
+**Navigasjonen.** `Header.tsx` viser ein `EN`/`NO`-knapp i bloggmenyen når
+`spraakUrl` finst. Han har ingenting med Nano Stores-språkbrytaren på CV-en å gjere;
+den byter tekst i same dokumentet, denne går til eit anna dokument.
+`Grunnoppsett.astro` set `<html lang>` etter `sprak` og legg ut gjensidige
+`hreflang`-lenkjer pluss `x-default` på nynorskversjonen.
+
+**`omsetjing` er framleis valfri,** men peikar han feil, feilar bygget. `npm run
+sjekk` kontrollerer at makkeren finst, og at `sprak` svarar til mappa. Ein artikkel
+utan omsetjing er framleis heilt i orden; det er den halvferdige koplinga som er feil.
+
+**Taggane i dei engelske filene gjer ingenting,** sidan tag-sidene filtrerer dei bort.
+Dei står der for å halde dei to filene like, ikkje fordi dei har ein verknad.
+
+**Giscus står på engelsk i begge versjonane.** Det finst inga norsk omsetjing, så
+`lang="en"` er ein kompromiss på nynorsksidene og tilfeldigvis rett på dei engelske.
 
 ## Giscus
 - `mapping="specific"` med artikkelens slug som `term`. **Ikkje** `pathname` — det ville binde kommentartrådane til URL-en og gjere dei foreldrelause ved kvar stiendring.
@@ -105,7 +186,8 @@ runde å oppdage, sidan ein nøkkel som ikkje matchar berre gjer ingenting.
 - **Terminologi:** 'atomvåpen' → 'kjernefysiske våpen', 'oppmerksomhet' → 'merksemd'.
 - **Kløyvd infinitiv:** Korte verb endar på -a (`vera`, `gjera`), lange på -e (`analysere`).
 - **Bokmålssnik:** Unngå `første` (→ `fyrste`), `blei` (→ `vart`), `noen` (→ `nokon`).
-- **Schema:** Bruk `publisertDato` og `oppdatertDato` (valfri) i frontmatter.
+- **Schema:** Bruk `publisertDato` og `oppdatertDato` (valfri) i frontmatter. For
+  omsetjingar kjem `sprak` og `omsetjing` i tillegg; sjå «Tospråklege artiklar».
 - **Lesetid skal ikkje setjast for hand.** `reknaUtLesetid` i `src/utils/tekst.ts` reknar henne ut ved bygging, og feltet finst ikkje lenger i schemaet. Kjeldelista vert halden utanfor rekninga.
 - **Filnamn:** små bokstavar, bindestrek, `ø→o`, `å→a`, `æ→e`. Under ~55 teikn.
 
@@ -177,7 +259,8 @@ lurer naive skraparar og ingenting anna. `robots.txt` er ei oppmoding, ikkje ei 
 ## Styling
 Éi fil, `src/styles/global.css`. Designtoken, skal, CV-stilar og bloggstilar.
 
-**Paletten står éin stad, nedst i fila.** `:root` for lys, `html[data-theme="dark"]`
+**Paletten står éin stad,** rett under overskrifta «Bloggstilar» omlag to tredelar
+nede i fila, ikkje nedst. `:root` for lys, `html[data-theme="dark"]`
 for eksplisitt val, og `@media (prefers-color-scheme: dark)` med
 `html:not([data-theme="light"])` for systemval. Endrar du ein farge, må han endrast i
 dei to siste; CSS kan ikkje aliase selektorar.
@@ -198,7 +281,7 @@ teke: 400 og 1.7.
 - **AI-sperre:** `public/robots.txt` blokkerer GPTBot, CCBot m.fl.
 
 ## Content Security Policy
-Sett som `<meta http-equiv>` i `Grunnoppsett.astro`. Tre ting er load-bearing:
+Sett som `<meta http-equiv>` i `Grunnoppsett.astro`. Fire ting er load-bearing:
 - `frame-src https://giscus.app` — kommentar-iframen
 - `'wasm-unsafe-eval'` — Pagefind er WebAssembly
 - `font-src https://fonts.gstatic.com` — Google Fonts
@@ -209,6 +292,15 @@ Sett som `<meta http-equiv>` i `Grunnoppsett.astro`. Tre ting er load-bearing:
 
 ## Viktig mandat
 **Hugs å oppdatere denne fila (CLAUDE.md), README.md og gemini.md kvar gong det vert gjort endringar i arkitektur, teknisk stack eller viktige funksjonar.**
+
+## Skills
+`.claude/skills/kjeldeartikkel/` har metoden for å researche og skrive ein
+kjeldebasert artikkel: verifisering, negative funn, kronologi før årsak,
+habilitetskoding, klarspråksrunde og den tospråklege strukturen.
+
+Skillen gjentek med vilje ikkje formatreglane i denne fila. Held du dei to i synk
+for hand, driv dei frå kvarandre, og den seinare vinn i stillheit. Det har skjedd
+tre gonger i dette repoet alt.
 
 ## Artikkelkontroll i bygget
 `npm run sjekk` (`scripts/sjekk-artiklar.mjs`) kontrollerer artiklane mot husreglane.
@@ -225,12 +317,25 @@ søkjeresultat), ingress utanfor 120-400 teikn, færre enn 3 eller fleire enn 8 
 Kontrollerte reglar, datoar: `oppdatertDato` før `publisertDato`, datoar fram i tid,
 endringslogg utan `oppdatertDato`, og `oppdatertDato` utan endringslogg.
 
+Kontrollerte reglar, omsetjingar: `sprak` som ikkje svarar til mappa fila ligg i, og
+`omsetjing` som peikar på ei fil som ikkje finst. Den siste må køyre etter at alle
+filene er lesne, sidan han spør om ei anna fil enn den som blir kontrollert.
+Tankestrekregelen gjeld berre nynorsk; ein tankestrek er vanleg typografi på engelsk.
+
 **`oppdatertDato` vert ikkje utleidd frå git, og skal ikkje bli det.** Datoen er eit
 redaksjonelt signal om at innhaldet er endra, ikkje eit filtidsstempel. Commiten som
 fjerna `lesetid` frå frontmatter rørte 23 artikkelfiler utan å endre eit ord; med
 git-utleiing ville alle 23 fortalt lesaren at dei var oppdaterte den dagen. Set datoen
 for hand når du faktisk endrar innhaldet, og skriv ein `### Endringslogg`-seksjon som
 seier kva som er endra. Kontrollen krev at dei to fylgjest åt.
+
+**Skriptet les undermapper.** Nøkkelen i grunnlinja er stien relativt til
+`src/content/blog/`, så ein omsetjing står som `en/<slug>.md::<kode>` medan
+nynorskartiklane står med berre filnamnet. Ei stund las skriptet mappa flatt, og då
+vart `en/` ikkje kontrollert i det heile. Det synte seg ikkje som ein feil; skriptet
+sa «ingen nye avvik» og talde berre ikkje omsetjingane med. Sluttlinja skil difor no
+mellom artiklar og omsetjingar, slik at talet kan samanliknast med det som ligg på
+disk.
 
 **Skriptet er ein skralle, ikkje ein mur.** Avvika som alt fanst, ligg i
 `scripts/kjende-avvik.json` og slepp gjennom. Eit *nytt* avvik feilar bygget. Rettar
@@ -239,7 +344,16 @@ du eit gammalt, seier skriptet frå at grunnlinja kan strammast:
 avvik stille; då mistar kontrollen heile funksjonen sin.
 
 ## Kjend gjeld
-Kjende avvik, førte opp utan å vere retta. Tala er kontrollerte mot repoet 9. september 2026.
+Kjende avvik, førte opp utan å vere retta. Gjennomgang av denne fila mot koden
+18. oktober 2026; tala under er kontrollerte same dag.
+
+**Frå gjennomgangen 18. oktober 2026.** To ting var retta same dag:
+`/Blog/tag/AI/` og `/Blog/tag/Noreg/` gav 404 fordi stubbruta normaliserte taggen
+fyrst, og `gaza` mangla i `VISING`, så taggen stod som `#gaza` medan alle andre
+eigennamn stod med stor bokstav.
+
+Dei to som gjaldt omsetjingsarbeidet er retta same dag: skriptet les no undermapper,
+og eit omsetjingspar som ikkje heng saman feilar bygget.
 
 **Kjeldekodar**
 Tala under er frå `scripts/kjende-avvik.json`, som er fasiten. Køyr `npm run sjekk`

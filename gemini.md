@@ -12,6 +12,8 @@
 - **Hydration:** Bruk `mounted` state i React-komponentar for å unngå hydration error (#418).
 - **Navigering:** Bruk `astro:page-load` for å re-initialisere animasjonar og i18n.
 - **Artiklar:** feature-format, 2500–4000 ord, obligatorisk kjeldekritikk-matrise. Ingen tankestrek i nye tekstar.
+- **Omsetjingar:** nynorsk fyrst. Engelsk versjon er ei eiga fil i `src/content/blog/en/` med same slug, `sprak: en` og `omsetjing: <nynorskslug>` i begge filene.
+- **Kontroll:** `npm run sjekk` køyrer fyrst i `npm run build` og feilar på nye avvik.
 
 ## Verifisering
 - Sjekk mot `CLAUDE.md` sine språkvask-reglar.

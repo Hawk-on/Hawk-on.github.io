@@ -1,26 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { bloggTekst, type Sprak } from '../../utils/i18n-blogg';
 
-interface KjeldeKategori {
-  id: string;
-  tittel: string;
-  farge: string;
-  beskriving: string;
-}
-
-const kvalitetKategoriar: Record<string, KjeldeKategori> = {
-  'A': { id: 'A', tittel: 'Høg etterrettelegheit', farge: '#10b981', beskriving: 'Offisielle dokument, internasjonale organisasjonar eller fagfellevurdert forsking.' },
-  'B': { id: 'B', tittel: 'God kvalitet', farge: '#3b82f6', beskriving: 'Anerkjend journalistikk eller leiande tenketankar med redaksjonell kontroll.' },
-  'C': { id: 'C', tittel: 'Fagleg OSINT', farge: '#f59e0b', beskriving: 'Tekniske analysar eller domenespesifikke kjelder. Krev ofte teknisk verifisering.' },
-  'D': { id: 'D', tittel: 'Ustadfesta / Partisisk', farge: '#ef4444', beskriving: 'Lekkasjar eller medium med tydeleg politisk slagside. Krev store atterhald.' }
+/** Fargane høyrer til skalaen, ikkje til språket, og ligg difor att her. */
+const KVALITET_FARGE: Record<string, string> = {
+  A: '#10b981',
+  B: '#3b82f6',
+  C: '#f59e0b',
+  D: '#ef4444',
 };
 
-const habilitetKategoriar: Record<string, KjeldeKategori> = {
-  '1': { id: '1', tittel: 'Uavhengig', farge: '#6b7280', beskriving: 'Ingen kjende økonomiske eller politiske bindingar som påverkar nøytraliteten.' },
-  '2': { id: '2', tittel: 'Strategisk bias', farge: '#6b7280', beskriving: 'Finansiert av interesseorganisasjonar eller statar. Fagleg god, men med ein tydeleg agenda.' },
-  '3': { id: '3', tittel: 'Partisisk aktør', farge: '#6b7280', beskriving: 'Kjelda er ein direkte part i soga eller er statskontrollert propaganda/PR.' }
-};
-
-const KjeldeInfo: React.FC = () => {
+const KjeldeInfo: React.FC<{ sprak?: Sprak }> = ({ sprak = 'nn' }) => {
+  const t = bloggTekst(sprak);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -35,16 +25,16 @@ const KjeldeInfo: React.FC = () => {
     <div className="kjelde-modal-overlay" onClick={() => setIsOpen(false)}>
       <div className="kjelde-modal" onClick={e => e.stopPropagation()}>
         <header className="kjelde-modal__header">
-          <h2>Metode for kjeldekritikk</h2>
+          <h2>{t.kjeldeTittel}</h2>
           <button className="kjelde-modal__lukk" onClick={() => setIsOpen(false)}>×</button>
         </header>
         
         <div className="kjelde-modal__innhald">
-          <h3>Kvalitet (Etterrettelegheit)</h3>
+          <h3>{t.kjeldeKvalitet}</h3>
           <div className="kjelde-skala">
-            {Object.values(kvalitetKategoriar).map(kat => (
-              <div key={kat.id} className="kjelde-skala__item">
-                <span className="kjelde-badge" style={{ backgroundColor: kat.farge }}>{kat.id}</span>
+            {Object.entries(t.kvalitet).map(([id, kat]) => (
+              <div key={id} className="kjelde-skala__item">
+                <span className="kjelde-badge" style={{ backgroundColor: KVALITET_FARGE[id] }}>{id}</span>
                 <div>
                   <strong>{kat.tittel}</strong>
                   <p>{kat.beskriving}</p>
@@ -53,11 +43,11 @@ const KjeldeInfo: React.FC = () => {
             ))}
           </div>
 
-          <h3 style={{ marginTop: '2rem' }}>Habilitet (Bias & Agenda)</h3>
+          <h3 style={{ marginTop: '2rem' }}>{t.kjeldeHabilitet}</h3>
           <div className="kjelde-skala">
-            {Object.values(habilitetKategoriar).map(kat => (
-              <div key={kat.id} className="kjelde-skala__item">
-                <span className="kjelde-badge kjelde-badge--habilitet">{kat.id}</span>
+            {Object.entries(t.habilitet).map(([id, kat]) => (
+              <div key={id} className="kjelde-skala__item">
+                <span className="kjelde-badge kjelde-badge--habilitet">{id}</span>
                 <div>
                   <strong>{kat.tittel}</strong>
                   <p>{kat.beskriving}</p>
@@ -67,7 +57,7 @@ const KjeldeInfo: React.FC = () => {
           </div>
 
           <div className="kjelde-modal__note" style={{ marginTop: '2rem' }}>
-            <p><em>Kjeldekritikk er ikkje binært. Ei kjelde kan ha topp teknisk kvalitet (A), men vera ein direkte part i soga (3). Me deklarerer begge dimensjonar for å gje eit ærleg bilete.</em></p>
+            <p><em>{t.kjeldeNote}</em></p>
           </div>
         </div>
       </div>

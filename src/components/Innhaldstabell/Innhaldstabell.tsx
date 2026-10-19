@@ -1,16 +1,18 @@
 import React from 'react';
 import { useInnhaldstabell } from './useInnhaldstabell';
 import './Innhaldstabell.css';
+import { bloggTekst, type Sprak } from '../../utils/i18n-blogg';
 
-const Innhaldstabell: React.FC = () => {
+const Innhaldstabell: React.FC<{ sprak?: Sprak }> = ({ sprak = 'nn' }) => {
   const { headings, activeId, isOpen, setIsOpen, scrollToSection } = useInnhaldstabell();
+  const t = bloggTekst(sprak);
 
   if (headings.length < 2) return null;
 
   return (
     <details className="innhaldstabell" open={isOpen} onToggle={(e) => setIsOpen((e.target as HTMLDetailsElement).open)}>
       <summary className="innhaldstabell__tittel">
-        <span>Innhald</span>
+        <span>{t.innhald}</span>
         <span className="innhaldstabell__pil" aria-hidden="true">▾</span>
       </summary>
       <ol className="innhaldstabell__liste">

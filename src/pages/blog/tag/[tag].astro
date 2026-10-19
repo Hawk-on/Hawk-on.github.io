@@ -7,7 +7,7 @@ import { kanoniskTag, kanoniskeTaggar, visTag, gamleTagStiar } from '../../../ut
 
 export async function getStaticPaths() {
   const innlegg = await getCollection('blog', ({ data }) => {
-    return import.meta.env.DEV || !data.utkast;
+    return (import.meta.env.DEV || !data.utkast) && data.sprak !== 'en';
   });
   const alleRå = innlegg.flatMap(i => i.data.tags ?? []);
   const unikeTaggar = [...new Set(alleRå.map(kanoniskTag))];

@@ -1,8 +1,10 @@
 import { getCollection } from 'astro:content';
 
 export async function GET() {
+  // Endepunktet matar «Siste frå bloggen» på CV-en, som er nynorsk. Utan
+  // språkfilteret ville ein omsett artikkel teke to av dei tre plassane.
   const innlegg = await getCollection('blog', ({ data }) => {
-    return !data.utkast;
+    return !data.utkast && data.sprak !== 'en';
   });
 
   const sorterteInnlegg = innlegg

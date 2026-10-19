@@ -10,7 +10,8 @@ designsystem, layout og byggjesteg.
 - **State:** Nano Stores (sentral i18n, berre CV-delen)
 - **Søk:** Pagefind (statisk indeksering over heile `dist`)
 - **Kommentarar:** Giscus mot GitHub Discussions i dette repoet
-- **Språk:** Nynorsk (kløyvd infinitiv)
+- **Språk:** Nynorsk (kløyvd infinitiv). Artiklar kan ha ei engelsk omsetjing under
+  `src/content/blog/en/`, som eiga fil og eiga adresse.
 
 ## Viktig mandat
 Dokumentasjonen (README.md, CLAUDE.md, gemini.md) skal alltid oppdaterast ved tekniske eller arkitektoniske endringar.
@@ -18,13 +19,15 @@ Dokumentasjonen (README.md, CLAUDE.md, gemini.md) skal alltid oppdaterast ved te
 ## Kome i gang
 ```bash
 npm install
-npm run build    # astro build && pagefind --site dist
+npm run build    # sjekk artiklane, astro build, CSP-hashar, pagefind
+npm run sjekk    # berre artikkelkontrollen
 ```
 
 Statiske filer ligg i `public/`. Lokale bygg skal vere identiske med CI.
 
 ## Struktur
-- `src/content/blog/`: Blogginnlegga, med schema i `src/content.config.ts`.
+- `src/content/blog/`: Blogginnlegga på nynorsk, med schema i `src/content.config.ts`.
+- `src/content/blog/en/`: Engelske omsetjingar. Same slug, `sprak: en` i frontmatter.
 - `src/layouts/Grunnoppsett.astro`: Delt skal for heile nettstaden. Vel Umami-ID og JSON-LD etter rute.
 - `src/pages/blog/`: Bloggen. `src/pages/Blog/` er redirect-stubbar frå den gamle stien.
 - `src/utils/rutar.ts`: `BLOGG_BASE`. Bruk denne, ikkje `BASE_URL`, som er tom streng etter samanslåinga.
