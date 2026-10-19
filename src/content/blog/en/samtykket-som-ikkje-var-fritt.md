@@ -97,13 +97,15 @@ So you do not have to tap anything. If you keep using the device that keeps you 
 
 The second is something I went looking for and did not find. The agreement has country specific sections for Japan, South Korea, Austria, Switzerland, Germany and Singapore, where each country has negotiated its own consumer protections into the text.
 
-German users got two things. Changes to the service must have a valid reason, and they cannot put the user in a materially worse position. And the company cannot disclaim liability for gross negligence, for intent, or for injury to life or health. Austrian and Swiss users got a clause saying that new additional terms only apply if they are presented in advance [\[5\]](#ref-5).
+German users got two things. Changes to the service must have a valid reason, and they cannot put the user in a materially worse position. And the company cannot disclaim liability for gross negligence, for intent, or for injury to life or health. Austrian and Swiss users got a clause saying that new additional terms only apply if they are presented in advance. And they have twice as long to object to a change: fourteen days, against the seven that apply to everyone else [\[5\]](#ref-5).
 
 Sentences like that do not appear by themselves. They are there because a regulator, a consumer body or a court demanded them, and because the company wanted to keep selling in that country.
 
-The word "Norge" does not appear in the document. Not once in 66,819 characters.
+The word "Norge" does not appear in the document. Nor does "norsk". Not once.
 
-A Norwegian user therefore gets a Norwegian translation of the American terms. Disputes are to be settled by an American arbitration body under American rules. The class action waiver is unchanged. And the adaptations our neighbours received are missing.
+The document is also old. The Norwegian terms Dexcom publishes today are effective from 25 February 2021 [\[5\]](#ref-5). The American text on the same website is effective from 26 January 2023 [\[11\]](#ref-11). The October terms, the ones that triggered the dialog box, are not published at either address; both predate the story, and neither mentions artificial intelligence.
+
+A Norwegian user therefore gets a Norwegian translation of the American terms, in a version two years older than the one Americans get to read. Disputes are to be settled by an American arbitration body under American rules. The class action waiver is unchanged. And the adaptations our neighbours received are missing.
 
 I also found no right to opt out anywhere in the Norwegian text, neither a deadline nor a procedure for staying outside arbitration.
 
@@ -113,11 +115,11 @@ The only protection mentioned is the general statement that consumers resident i
 
 The General Data Protection Regulation has a provision written for precisely this situation.
 
-Article 7(4) concerns when consent has been freely given. One question is to weigh heaviest: do you have to say yes to uses of your data that the service does not need, in order to get the service at all? If the answer is yes, the consent is unlikely to be free [\[11\]](#ref-11).
+Article 7(4) concerns when consent has been freely given. One question is to weigh heaviest: do you have to say yes to uses of your data that the service does not need, in order to get the service at all? If the answer is yes, the consent is unlikely to be free [\[12\]](#ref-12).
 
 The recitals of an EU law are the introduction that explains how the rules are to be understood. Recital 43 is blunter still. Consent does not hold as a legal basis where there is a clear imbalance between the person the data concerns and the party deciding what it is used for.
 
-And consent is to be treated as unfree in two situations. One is when you cannot give separate consent to different processing operations on the data, where separating them would have been appropriate. The other is when you have to say yes to something the service does not need, in order to use it [\[11\]](#ref-11).
+And consent is to be treated as unfree in two situations. One is when you cannot give separate consent to different processing operations on the data, where separating them would have been appropriate. The other is when you have to say yes to something the service does not need, in order to use it [\[12\]](#ref-12).
 
 "Accept or uninstall" looks like the definition of an absent separate consent. But this is where my evidence stops, and I should say so plainly. That data sharing for artificial intelligence, arbitration and the class action waiver were all changed in the same document is something I have from the trade press [\[1\]](#ref-1). The terms for Norwegian users do not mention artificial intelligence at all, and I have not seen the consent flow in the app itself. Whether the alarm and the model training really do sit behind the same button is therefore not confirmed from a primary source. If they do, recital 43 is squarely on point. If they do not, this step falls, and what remains is a question of contract law instead.
 
@@ -143,7 +145,7 @@ The question the recital actually raises is narrower: can the user refuse to hav
 
 ## The platform under your skin
 
-Yanis Varoufakis calls it technofeudalism. The market is gradually replaced by something older, where the owner of the platform sets the terms because they own the ground everything happens on, and where the income is not profit from a sale but rent from access [\[12\]](#ref-12).
+Yanis Varoufakis calls it technofeudalism. The market is gradually replaced by something older, where the owner of the platform sets the terms because they own the ground everything happens on, and where the income is not profit from a sale but rent from access [\[13\]](#ref-13).
 
 This series has followed the same pattern through three earlier pieces. An accounting method settled a question of sovereignty before politics got a word in. A language model was built by the state, and nobody was given the job of running it. Three companies reallocated the world's memory capacity, and a customer category of hundreds of millions of people fell away without anyone deciding it should.
 
@@ -165,7 +167,7 @@ The sum is that a person with a chronic illness opens their phone at three in th
 
 <span id="ref-4" data-kvalitet="B" data-habilitet="2">B2</span>\[4\] S. Whooley, "Dexcom has a Class I CGM receiver recall," *Drug Delivery Business News*, 17 June 2025, updated 24 June 2025. [Online]. Available: https://www.drugdeliverybusiness.com/dexcom-class-i-cgm-receiver-recall/. [Accessed: 18 October 2026]. The statement about the majority comes from a Dexcom spokesperson, quoted in the trade press. Habilitet 2 because the company was speaking in order to limit the scope of the recall, and the statement leans the same way as the claim it carries. No public percentage exists.
 
-<span id="ref-5" data-kvalitet="A" data-habilitet="2">A2</span>\[5\] Dexcom, "Vilkår for bruk" (Norwegian terms of use, nb-NO). [Online]. Available: https://www.dexcom.com/nb-NO/legal/terms-of-use. [Accessed: 18 October 2026]. The primary document for Norwegian users. Habilitet 2 because the publisher is a party to the agreement, while also being the only authority on its own wording. Source for the seven day clause in 2.1, for the right to discontinue use, for the country specific sections covering Japan, South Korea, Austria, Switzerland, Germany and Singapore, and for the absence of any mention of Norway.
+<span id="ref-5" data-kvalitet="A" data-habilitet="2">A2</span>\[5\] Dexcom, "Vilkår for bruk" (Norwegian terms of use, nb-NO). [Online]. Available: https://www.dexcom.com/nb-NO/legal/terms-of-use. [Accessed: 19 October 2026]. The primary document for Norwegian users, in the version effective from 25 February 2021. Retrieved through a Norwegian exit node, so the content is not geo-selected for another country. Habilitet 2 because the publisher is a party to the agreement, while also being the only authority on its own wording. Source for the seven day clause in 2.1, for the right to discontinue use, for the country specific sections covering Japan, South Korea, Austria, Switzerland, Germany and Singapore, and for the absence of any mention of Norway.
 
 <span id="ref-6" data-kvalitet="B" data-habilitet="1">B1</span>\[6\] M. Rubin, "Misleading Text on Medical Device Website Kept Users From Avoiding Arbitration," *Law Commentary*, 3 June 2024. [Online]. Available: https://www.lawcommentary.com/articles/misleading-text-on-medical-device-website-kept-users-from-avoiding-arbitration. [Accessed: 18 October 2026]. An account of the decision of the California Court of Appeal, Fourth District, Division One, 16 May 2024, written by Justice Truc T. Do with Justice Julie C. Kelety concurring and Justice Joan K. Irion dissenting. The author is a lawyer and professor emerita of journalism.
 
@@ -177,6 +179,8 @@ The sum is that a person with a chronic illness opens their phone at three in th
 
 <span id="ref-10" data-kvalitet="A" data-habilitet="2">A2</span>\[10\] Dexcom, "Dexcom Reaffirms CGM Benefits for All People With Diabetes and Continues Momentum Toward Earlier Stage Intervention and Preventative Care at ADA 2026," investor relations. [Online]. Available: https://investors.dexcom.com/news/news-details/2026/Dexcom-Reaffirms-CGM-Benefits-for-All-People-With-Diabetes-and-Continues-Momentum-Toward-Earlier-Stage-Intervention-and-Preventative-Care-at-ADA-2026/default.aspx. [Accessed: 18 October 2026]. The company's own announcement of the Stelo app and the Nutrisense acquisition, including the quotation from chief executive Jake Leach.
 
-<span id="ref-11" data-kvalitet="A" data-habilitet="1">A1</span>\[11\] European Parliament and Council, Regulation (EU) 2016/679 (General Data Protection Regulation), Article 7(4) and recital 43. [Online]. Available: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679. [Accessed: 18 October 2026]. The consolidated legal text.
+<span id="ref-11" data-kvalitet="A" data-habilitet="2">A2</span>\[11\] Dexcom, "Dexcom Terms of Use" (en-US), effective 26 January 2023. [Online]. Available: https://www.dexcom.com/en-us/legal/terms-of-use. [Accessed: 19 October 2026]. Used only for the comparison of version dates. The text mentions neither artificial intelligence nor any right to opt out of arbitration.
 
-<span id="ref-12" data-kvalitet="C" data-habilitet="2">C2</span>\[12\] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*, London: The Bodley Head, 2023. The author is a former finance minister of Greece with a declared political position. Used for the concept and the analysis, not for factual claims about this case.
+<span id="ref-12" data-kvalitet="A" data-habilitet="1">A1</span>\[12\] European Parliament and Council, Regulation (EU) 2016/679 (General Data Protection Regulation), Article 7(4) and recital 43. [Online]. Available: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679. [Accessed: 18 October 2026]. The consolidated legal text.
+
+<span id="ref-13" data-kvalitet="C" data-habilitet="2">C2</span>\[13\] Y. Varoufakis, *Technofeudalism: What Killed Capitalism*, London: The Bodley Head, 2023. The author is a former finance minister of Greece with a declared political position. Used for the concept and the analysis, not for factual claims about this case.
