@@ -34,6 +34,7 @@ export interface BloggTekst {
   tilbake: string;
   tidIgjen: (minutt: number) => string;
   tilToppen: string;
+  personvern: string;
   bygdMed: string;
 }
 
@@ -66,6 +67,7 @@ const nn: BloggTekst = {
   tilbake: '← Tilbake til alle innlegg',
   tidIgjen: m => `${m} min igjen`,
   tilToppen: 'Til toppen',
+  personvern: 'Personvern',
   bygdMed: 'Bygd med',
 };
 
@@ -98,6 +100,7 @@ const en: BloggTekst = {
   tilbake: '← Back to all posts',
   tidIgjen: m => `${m} min left`,
   tilToppen: 'Back to top',
+  personvern: 'Privacy',
   bygdMed: 'Built with',
 };
 

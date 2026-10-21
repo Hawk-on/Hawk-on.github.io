@@ -8,6 +8,7 @@ const Footer: React.FC<{ sprak?: Sprak }> = ({ sprak = 'nn' }) => {
       <div className="container--brei">
         <div className="nettstad-footer__indre">
           <span>© {new Date().getFullYear()} Håkon Hole Lønning</span>
+          <span><a href="/personvern/">{t.personvern}</a></span>
           <span>{t.bygdMed} <a href="https://astro.build">Astro</a></span>
         </div>
       </div>
