@@ -5,7 +5,7 @@ const base = BLOGG_BASE;
 ---
 
 <Grunnoppsett tittel="Om" beskriving="Om hawk-on">
-  <div class="container">
+  <div class="container--brei">
     <div class="om-grid">
       <div>
         <div class="om-header">
@@ -59,3 +59,83 @@ const base = BLOGG_BASE;
     </div>
   </div>
 </Grunnoppsett>
+
+<style>
+  /* Klassane under vart brukte i markupen utan å vera definerte nokon stad.
+     Sida fall difor attende på nettlesarens standardstilar: ingen grid, så
+     sidestolpen låg under teksten, og boksane var umerkte.
+
+     Stilen ligg her og ikkje i global.css fordi han gjeld denne eine sida.
+     Fargar og skrifter kjem frå designtokena, så mørk modus fylgjer med. */
+
+  .om-grid {
+    display: grid;
+    gap: 3rem;
+    align-items: start;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 60rem) {
+    .om-grid {
+      grid-template-columns: minmax(0, 1fr) 15rem;
+      gap: 4rem;
+    }
+  }
+
+  .om-header {
+    margin-bottom: 2rem;
+  }
+
+  .om-header__tittel {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 0;
+  }
+
+  .om-sidebar-boks,
+  .om-abonner-boks {
+    border-left: 2px solid var(--lys-grå);
+    padding-left: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .om-sidebar-boks__tittel {
+    font-family: var(--skrift-kode);
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--grå);
+    margin-bottom: 0.9rem;
+  }
+
+  .om-sidebar-boks__liste {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--tekst-sekundar);
+  }
+
+  .om-sidebar-boks__liste li {
+    padding-bottom: 0.45rem;
+  }
+
+  .om-abonner-boks__tekst {
+    font-size: 0.95rem;
+    color: var(--tekst-sekundar);
+    margin-bottom: 0.6rem;
+  }
+
+  .om-abonner-boks__lenke {
+    font-family: var(--skrift-kode);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--raud);
+    text-decoration: none;
+  }
+
+  .om-abonner-boks__lenke:hover,
+  .om-abonner-boks__lenke:focus-visible {
+    text-decoration: underline;
+  }
+</style>
