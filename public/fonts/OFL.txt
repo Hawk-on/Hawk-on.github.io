@@ -1,0 +1,23 @@
+Skrifttypane i denne mappa blir serverte lokalt i staden for frå Google Fonts,
+slik at lesarane ikkje må be ein tredjepart om filene.
+
+Alle tre familiane er lisensierte under SIL Open Font License, versjon 1.1,
+som tillèt vidareformidling og bruk på nettstader.
+
+  Playfair Display   Claus Eggers Sørensen
+                     https://fonts.google.com/specimen/Playfair+Display
+                     https://github.com/clauseggers/Playfair-Display
+
+  Source Serif 4     Frank Grießhammer, Adobe
+                     https://fonts.google.com/specimen/Source+Serif+4
+                     https://github.com/adobe-fonts/source-serif
+
+  JetBrains Mono     JetBrains
+                     https://fonts.google.com/specimen/JetBrains+Mono
+                     https://github.com/JetBrains/JetBrainsMono
+
+Filene er dei same woff2-filene Google Fonts serverer, henta 21. oktober 2026,
+avgrensa til delmengdene latin og latin-ext. Lisenstekstane fylgjer prosjekta
+over.
+
+Lisenstekst: https://openfontlicense.org/open-font-license-official-text/

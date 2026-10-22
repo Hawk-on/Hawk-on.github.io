@@ -12,7 +12,7 @@ const Kontakt: React.FC = () => {
   useEffect(() => {
     setMounted(true);
     // Base64-koda verdiar for å lura enkle botar
-    const eEnc = 'aGhsMTk4N0Bob3RtYWlsLmNvbQ==';
+    const eEnc = 'aGFrb25AaG9sZWxvbm5pbmcubm8=';
     const pEnc = 'KzQ3IDkxNyAxNyA1Nzg=';
 
     const decode = (str: string) => {

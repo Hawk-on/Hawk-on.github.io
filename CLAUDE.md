@@ -281,14 +281,20 @@ teke: 400 og 1.7.
 - **AI-sperre:** `public/robots.txt` blokkerer GPTBot, CCBot m.fl.
 
 ## Content Security Policy
-Sett som `<meta http-equiv>` i `Grunnoppsett.astro`. Fire ting er load-bearing:
+Sett som `<meta http-equiv>` i `Grunnoppsett.astro`. Tre ting er load-bearing:
 - `frame-src https://giscus.app` — kommentar-iframen
 - `'wasm-unsafe-eval'` — Pagefind er WebAssembly
-- `font-src https://fonts.gstatic.com` — Google Fonts
 - **`connect-src https://gateway.umami.is`** — Umami lastar skriptet frå
   `cloud.umami.is`, men sender målingane til `gateway.umami.is`. Har du berre
   `cloud` i `connect-src`, lastar skriptet fint og statistikken forsvinn i
   stillheit. Denne feilen stod i CV-en frå april til august 2026.
+
+**`font-src` og `style-src` peikar ikkje lenger ut av nettstaden.** Skrifttypane
+låg som `@import` frå `fonts.googleapis.com`, så kvar lesar bad Google om filene
+og Google såg IP-adressa. Filene ligg no i `public/fonts/`, og
+`fonts.googleapis.com` og `fonts.gstatic.com` er tekne ut av policyen. Legg du
+inn ein tredjeparts skrifttype att, må du opne policyen, og då er du tilbake til
+same personvernproblemet.
 
 ## Viktig mandat
 **Hugs å oppdatere denne fila (CLAUDE.md), README.md og gemini.md kvar gong det vert gjort endringar i arkitektur, teknisk stack eller viktige funksjonar.**
