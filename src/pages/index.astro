@@ -202,7 +202,16 @@ import BloggSveip from '../components/BloggSveip/BloggSveip';
   import { spraakStore } from '../stores/spraakStore';
   import { omsetjingar } from '../utils/i18n';
 
+  // Berre CV-en. Lyttaren og abonnementet lever vidare gjennom ClientRouter,
+  // så utan denne vakta ville eit sidebyte til ein engelsk artikkel late
+  // CV-språket overskrive <html lang> og gjeve skjermlesaren nynorsk på
+  // engelsk tekst.
+  function erCv() {
+    return window.location.pathname === '/';
+  }
+
   function oppdaterInnhald() {
+    if (!erCv()) return;
     const aktivSpraak = spraakStore.get();
     document.documentElement.lang = aktivSpraak === 'no' ? 'nn' : 'en';
     document.querySelectorAll('[data-i18n]').forEach((el) => {
@@ -215,13 +224,10 @@ import BloggSveip from '../components/BloggSveip/BloggSveip';
     });
   }
 
-  // Initial oppdatering og lytt på endringar
-  document.addEventListener('astro:page-load', () => {
-    oppdaterInnhald();
-    spraakStore.subscribe(() => {
-      oppdaterInnhald();
-    });
-  });
+  // Abonnementet er sett opp éin gong, på modulnivå. Låg det inne i
+  // page-load-lyttaren, ville det stable seg opp eitt lag for kvar navigering.
+  document.addEventListener('astro:page-load', oppdaterInnhald);
+  spraakStore.subscribe(oppdaterInnhald);
 </script>
 
 <script is:inline>

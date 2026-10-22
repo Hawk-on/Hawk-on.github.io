@@ -8,8 +8,10 @@ const parser = new MarkdownIt();
 
 export async function GET(context: APIContext) {
   const base = BLOGG_BASE;
+  // Feeden er den nynorske. Engelske versjonar er omsetjingar av same tekst,
+  // og ville berre dubla kvar oppføring for abonnenten.
   const innlegg = await getCollection('blog', ({ data }) => {
-    return import.meta.env.DEV || !data.utkast;
+    return (import.meta.env.DEV || !data.utkast) && data.sprak !== 'en';
   });
   
   const sorterteInnlegg = innlegg

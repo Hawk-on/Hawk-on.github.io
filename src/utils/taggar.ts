@@ -59,6 +59,7 @@ const VISING: Record<string, string> = {
   kubernetes: 'Kubernetes',
   kripos: 'Kripos',
   palestina: 'Palestina',
+  gaza: 'Gaza',
   turchin: 'Turchin',
   zeitenwende: 'Zeitenwende',
   maven: 'Maven',

@@ -10,6 +10,9 @@ interface Props {
   beskriving?: string;
   erArtikkel?: boolean;
   bilete?: string;
+  /** Adressa til same artikkelen på det andre språket, om han finst. */
+  spraakUrl?: string;
+  sprak?: 'nn' | 'en';
 }
 
 const {
@@ -17,6 +20,8 @@ const {
   beskriving = 'Full-stack-utviklar frå Vestlandet. .NET, Azure og moderne webutvikling.',
   erArtikkel = false,
   bilete = '/assets/img/me.jpg',
+  spraakUrl,
+  sprak = 'nn',
 } = Astro.props;
 
 const aktuellSti = Astro.url.pathname;
@@ -34,6 +39,13 @@ const umamiId = erBlogg
   ? 'fd43352d-8e75-4352-8f82-92eb8a269859'
   : 'b3e4a54f-39af-4b9c-94fc-e9d0880ea5c4';
 
+// Språkkodar for metadata. <html lang> aleine held ikkje: Schema.org og Open
+// Graph har kvar sin kode, og begge stod hardkoda til nynorsk. Den engelske
+// omsetjinga ville då opplyst feil språk om seg sjølv til alle som les
+// metadataa i staden for teksten.
+const inLanguage = sprak === 'en' ? 'en-GB' : 'nn-NO';
+const ogLocale = sprak === 'en' ? 'en_GB' : 'nn_NO';
+
 const jsonLd = erArtikkel
   ? {
       "@context": "https://schema.org",
@@ -47,7 +59,7 @@ const jsonLd = erArtikkel
         "url": "https://github.com/hawk-on"
       },
       "url": kanoniskUrl,
-      "inLanguage": "nn-NO"
+      "inLanguage": inLanguage
     }
   : erBlogg
   ? {
@@ -55,7 +67,7 @@ const jsonLd = erArtikkel
       "@type": "Blog",
       "name": "hawk-on",
       "url": new URL('/blog/', siteUrl).toString(),
-      "inLanguage": "nn-NO"
+      "inLanguage": inLanguage
     }
   : {
       "@context": "https://schema.org",
@@ -76,7 +88,7 @@ const jsonLd = erArtikkel
 ---
 
 <!DOCTYPE html>
-<html lang="nn">
+<html lang={sprak === 'en' ? "en" : "nn"}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,13 +102,22 @@ const jsonLd = erArtikkel
   <meta name="description" content={beskriving} />
   <title>{fullTittel}</title>
   <link rel="canonical" href={kanoniskUrl} />
+  {/* Fortel søkjemotorane at dei to versjonane er same teksten på ulikt språk.
+      Utan desse blir dei rekna som to urelaterte sider, eller som duplikat. */}
+  {spraakUrl && (
+    <>
+      <link rel="alternate" hreflang={sprak === 'nn' ? 'nn' : 'en'} href={kanoniskUrl} />
+      <link rel="alternate" hreflang={sprak === 'nn' ? 'en' : 'nn'} href={new URL(spraakUrl, siteUrl).toString()} />
+      <link rel="alternate" hreflang="x-default" href={sprak === 'nn' ? kanoniskUrl : new URL(spraakUrl, siteUrl).toString()} />
+    </>
+  )}
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, "\\u003c")} />
   <meta property="og:title" content={fullTittel} />
   <meta property="og:description" content={beskriving} />
   <meta property="og:url" content={kanoniskUrl} />
   <meta property="og:type" content={erArtikkel ? 'article' : 'website'} />
   <meta property="og:image" content={bileteUrl} />
-  <meta property="og:locale" content="nn_NO" />
+  <meta property="og:locale" content={ogLocale} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTittel} />
   <meta name="twitter:description" content={beskriving} />
@@ -128,13 +149,13 @@ const jsonLd = erArtikkel
 <body>
   <a href="#hovudinnhald" class="hopp-til-innhald">Hopp til innhald</a>
 
-  <Header client:load aktuellSti={aktuellSti} />
+  <Header client:load aktuellSti={aktuellSti} spraakUrl={spraakUrl} sprak={sprak} />
 
   <main id="hovudinnhald">
     <slot />
   </main>
 
-  <Footer />
+  <Footer sprak={sprak} />
 
 </body>
 </html>
