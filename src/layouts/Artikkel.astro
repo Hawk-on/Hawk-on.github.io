@@ -64,14 +64,12 @@ const relaterteInnlegg = alleInnlegg
   <div class="container">
     <header class="artikkel-header">
       <ArtikkelMeta 
-        client:load 
         datoFormatert={datoFormatert} 
         oppdatertFormatert={oppdatertFormatert}
         lesetid={lesetid} 
         tags={tags} 
         base={base} 
         sprak={sprak}
-        key={aktuellSlug}
       />
       <h1 class="artikkel-header__tittel">{tittel}</h1>
       {ingress && <p class="artikkel-header__ingress">{ingress}</p>}
@@ -86,13 +84,13 @@ const relaterteInnlegg = alleInnlegg
     {relaterteInnlegg.length > 0 && (
       <section class="relaterte-artiklar">
         <h2 class="seksjon-tittel">{t.lesMeir}</h2>
-        <ul className="artikkel-liste">
+        <ul class="artikkel-liste">
           {relaterteInnlegg.map(innlegg => (
-            <li key={innlegg.id} className="artikkel-kort artikkel-kort--sm">
-              <div className="artikkel-kort__dato">{formaterDato(innlegg.data.publisertDato, 'kort', sprak)}</div>
+            <li class="artikkel-kort artikkel-kort--sm">
+              <div class="artikkel-kort__dato">{formaterDato(innlegg.data.publisertDato, 'kort', sprak)}</div>
               <div>
-                <h3 className="artikkel-kort__tittel">
-                  <a href={`${base}/${innlegg.id}`}>{innlegg.data.tittel}</a>
+                <h3 class="artikkel-kort__tittel">
+                  <a href={`${base}/${innlegg.id}/`}>{innlegg.data.tittel}</a>
                 </h3>
               </div>
             </li>
@@ -108,7 +106,7 @@ const relaterteInnlegg = alleInnlegg
     <KjeldeInfo client:load sprak={sprak} />
 
     <nav class="artikkel-tilbake-nav">
-      <a href={base} class="artikkel-tilbake-lenke" data-umami-event="artikkel-tilbake">
+      <a href={`${base}/`} class="artikkel-tilbake-lenke" data-umami-event="artikkel-tilbake">
         {t.tilbake}
       </a>
     </nav>
@@ -118,10 +116,13 @@ const relaterteInnlegg = alleInnlegg
 <script>
   // Fotnote Preview og Kvalitets-logikk
   function initKjeldeSystem() {
-    const referansar = document.querySelectorAll('a[href^="#ref-"]');
+    const referansar = document.querySelectorAll<HTMLAnchorElement>('a[href^="#ref-"]');
     const fargar = { 'A': '#10b981', 'B': '#3b82f6', 'C': '#f59e0b', 'D': '#ef4444' };
     
     referansar.forEach(ref => {
+      if (ref.dataset.kjeldeInit === 'true') return;
+      ref.dataset.kjeldeInit = 'true';
+
       const targetId = ref.getAttribute('href')?.substring(1);
       if (!targetId) return;
       const targetSpan = document.getElementById(targetId);
@@ -157,10 +158,12 @@ const relaterteInnlegg = alleInnlegg
         }
       }
 
-      // Hover preview logikk
-      ref.addEventListener('mouseenter', (e) => {
+      // Hover og fokus preview-logikk
+      const visPreview = (e: Event) => {
         const kjeldeTekst = targetSpan.nextSibling?.textContent || targetSpan.parentElement?.textContent?.split(']')[1] || '';
         if (!kjeldeTekst.trim()) return;
+
+        document.querySelectorAll('.fotnote-preview').forEach(p => p.remove());
 
         const preview = document.createElement('div');
         preview.className = 'fotnote-preview';
@@ -207,34 +210,18 @@ const relaterteInnlegg = alleInnlegg
         const removePreview = () => {
           preview.remove();
           ref.removeEventListener('mouseleave', removePreview);
+          ref.removeEventListener('blur', removePreview);
         };
         ref.addEventListener('mouseleave', removePreview);
-      });
+        ref.addEventListener('blur', removePreview);
+      };
+
+      ref.addEventListener('mouseenter', visPreview);
+      ref.addEventListener('focus', visPreview);
     });
   }
 
-  // ScrollSpy for Innhaldstabell
-  function initScrollSpy() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          document.querySelectorAll('.innhaldstabell a').forEach(link => {
-            link.classList.toggle('aktiv', link.getAttribute('href') === `#${id}`);
-          });
-        }
-      });
-    }, { rootMargin: '-10% 0px -80% 0px' });
-
-    document.querySelectorAll('.artikkel-kropp h2, .artikkel-kropp h3').forEach(h => observer.observe(h));
-  }
-
-  initKjeldeSystem();
-  initScrollSpy();
-  document.addEventListener('astro:page-load', () => {
-    initKjeldeSystem();
-    initScrollSpy();
-  });
+  document.addEventListener('astro:page-load', initKjeldeSystem);
 </script>
 
 <style is:global>
@@ -262,11 +249,12 @@ const relaterteInnlegg = alleInnlegg
     border-color: #444;
   }
 
-  .innhaldstabell a.aktiv {
-    color: var(--raud) !important;
-    font-weight: 600;
-    border-left: 2px solid var(--raud);
-    padding-left: 0.5rem;
-    margin-left: -0.6rem;
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) .fotnote-preview {
+      background: #252220;
+      color: #e8e2d8;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border-color: #444;
+    }
   }
 </style>

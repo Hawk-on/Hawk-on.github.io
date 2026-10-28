@@ -64,9 +64,9 @@ scripts/
 
 - **`import.meta.env.BASE_URL` er tom streng.** Bloggen hadde `base: '/Blog'` før; no finst ingen base. Bruk `BLOGG_BASE` frå `src/utils/rutar.ts`.
 - **Skal-laget** (`.container`, `.nettstad-*`, `.meny-bryter`, `.tema-bryter`) kjem frå CV-delen og er med vilje ikkje duplisert i bloggseksjonen av `global.css`.
-- **Header er rutemedviten.** `aktuellSti` avgjer om CV-ankera eller bloggnavigasjonen vert viste. CV-delen har Nano Stores-språkknappen, bloggen ein `EN`/`NO`-knapp som går til den andre språkversjonen av artikkelen; dei to har ingenting med kvarandre å gjere. Logoen er hauk-merket + «hawk-on» under `/blog/`, «HHL» på CV-en.
+- **Header er rutemedviten.** `aktuellSti` avgjer om CV-ankera eller bloggnavigasjonen vert viste (`/blog/` og `/om/` viser bloggnavigasjonen). CV-delen har Nano Stores-språkknappen, bloggen ein `EN`/`NO`-knapp som går til den andre språkversjonen av artikkelen; dei to har ingenting med kvarandre å gjere. Logoen er hauk-merket + «hawk-on» under `/blog/` og `/om/`, «HHL» på CV-en.
 - **Umami har to ID-ar.** CV og blogg held kvar sin statistikkstraum; `Grunnoppsett.astro` vel ID etter rute.
-- **Komponent-CSS finst ved sida av `global.css`.** `ArtikkelListe`, `Innhaldstabell` og `LeseProgresjon` har kvar si `.css`-fil som komponenten importerer. Skriv du same markup direkte i ein `.astro`-fil, får du ikkje den stilen — det var slik tag-sida mista tagg-wrappen. Stil som gjeld på tvers høyrer heime i `global.css`.
+- **Komponent-CSS finst ved sida av `global.css`.** `ArtikkelListe`, `Innhaldstabell` og `LeseProgresjon` har kvar si `.css`-fil som komponenten importerer. Skriv du same markup direkte i ein `.astro`-fil, får du ikkje den stilen — det var slik tag-sida mista tagg-wrappen. Stil som gjeld på tvers (som `.artikkel-liste` og `.artikkel-kort`) høyrer heime i `global.css`.
 - **`/Blog/` (stor B) er redirect-stubbar,** ikkje ekte sider. `src/pages/Blog/[...sti].astro` genererer meta-refresh for alle innlegg og taggar; `Blog/rss.xml.ts` serverer feeden på nytt som gyldig XML, ikkje som redirect.
 
 ## Kjeldekritikk-system (obligatorisk for blogginnlegg)
@@ -361,11 +361,12 @@ eigennamn stod med stor bokstav.
 Dei to som gjaldt omsetjingsarbeidet er retta same dag: skriptet les no undermapper,
 og eit omsetjingspar som ikkje heng saman feilar bygget.
 
-**Kjeldekodar**
+**Kjeldekodar og endringslogg**
 Tala under er frå `scripts/kjende-avvik.json`, som er fasiten. Køyr `npm run sjekk`
 for gjeldande stoda.
 
-- **Heilt utan kodar:** `agentisk-identitet-og-tilgangskontroll` (2).
+- **Heilt utan kodar:** 0 (dei siste 2 i `agentisk-identitet-og-tilgangskontroll` er retta).
+- **`oppdatertDato` utan `### Endringslogg` (`dato-utan-endringslogg`):** `oljefondet-sosiologisk-okonomi-turchin-polanyi` (1), `palantir-moderniteten-sitt-skjulte-andlet` (1), `renteauk-feil-medisin-og-behovet-for-prisstyring` (1).
 
 Retta 14. september 2026: 51 tomme spanar er fylte ut, 35 spanar i fire artiklar er
 falda frå det gamle toespan-formatet, og ein motstridande kode i `narrativkrigen` er

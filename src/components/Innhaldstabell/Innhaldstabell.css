@@ -44,9 +44,16 @@
   transition: color 0.2s;
 }
 
-.innhaldstabell__liste a:hover,
+.innhaldstabell__liste a:hover {
+  color: var(--raud) !important;
+}
+
 .innhaldstabell__liste a.aktiv {
   color: var(--raud) !important;
+  font-weight: 600;
+  border-left: 2px solid var(--raud);
+  padding-left: 0.5rem;
+  margin-left: -0.6rem;
 }
 
 .innhaldstabell__element--h3 {

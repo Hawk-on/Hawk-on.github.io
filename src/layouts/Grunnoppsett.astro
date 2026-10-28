@@ -25,7 +25,7 @@ const {
 } = Astro.props;
 
 const aktuellSti = Astro.url.pathname;
-const erBlogg = aktuellSti.startsWith('/blog');
+const erBlogg = aktuellSti.startsWith('/blog') || aktuellSti.startsWith('/om');
 
 const siteUrl = Astro.site ? Astro.site.toString() : 'https://hawk-on.github.io';
 const kanoniskUrl = new URL(aktuellSti, siteUrl).toString();
@@ -147,7 +147,9 @@ const jsonLd = erArtikkel
   </script>
 </head>
 <body>
-  <a href="#hovudinnhald" class="hopp-til-innhald">Hopp til innhald</a>
+  <a href="#hovudinnhald" class="hopp-til-innhald">
+    {sprak === 'en' ? 'Skip to content' : 'Hopp til innhald'}
+  </a>
 
   <Header client:load aktuellSti={aktuellSti} spraakUrl={spraakUrl} sprak={sprak} />
 

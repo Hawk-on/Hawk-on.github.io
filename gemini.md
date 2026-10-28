@@ -10,7 +10,7 @@
 - **Arkitektur:** Astro 7 + React Islands + Nano Stores. CV på rota, blogg under `/blog/`.
 - **Ruting:** `BASE_URL` er tom streng. Bruk `BLOGG_BASE` frå `src/utils/rutar.ts`.
 - **Hydration:** Bruk `mounted` state i React-komponentar for å unngå hydration error (#418).
-- **Navigering:** Bruk `astro:page-load` for å re-initialisere animasjonar og i18n.
+- **Navigering:** Bruk `astro:page-load` på modulnivå for å re-initialisere animasjonar og i18n utan å duplisere event-lyttarar. Alle interne blogg- og tag-lenkjer skal ha avsluttande skråstrek (`/`).
 - **Artiklar:** feature-format, 2500–4000 ord, obligatorisk kjeldekritikk-matrise. Ingen tankestrek i nye tekstar.
 - **Omsetjingar:** nynorsk fyrst. Engelsk versjon er ei eiga fil i `src/content/blog/en/` med same slug, `sprak: en` og `omsetjing: <nynorskslug>` i begge filene.
 - **Kontroll:** `npm run sjekk` køyrer fyrst i `npm run build` og feilar på nye avvik.

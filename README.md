@@ -32,7 +32,7 @@ Statiske filer ligg i `public/`. Lokale bygg skal vere identiske med CI.
 - `src/pages/blog/`: Bloggen. `src/pages/Blog/` er redirect-stubbar frå den gamle stien.
 - `src/utils/rutar.ts`: `BLOGG_BASE`. Bruk denne, ikkje `BASE_URL`, som er tom streng etter samanslåinga.
 - `src/stores/spraakStore.ts`: Felles tilstand for språkval på CV-delen.
-- `src/components/BloggSveip/`: Hentar siste innlegg frå `/siste-innlegg.json` i same nettstad.
+- `src/components/BloggSveip/`: Viser siste innlegg på CV-en (mottek bygd liste frå `index.astro`, med `/siste-innlegg.json` som reserve).
 - `src/components/Kontakt/`: Antispam-verna kontaktinformasjon.
 
 ## Skrivereglar

@@ -20,7 +20,7 @@ const Innhaldstabell: React.FC<{ sprak?: Sprak }> = ({ sprak = 'nn' }) => {
           <li key={h.id} className={h.tagName === 'H3' ? 'innhaldstabell__element--h3' : ''}>
             <a 
               href={`#${h.id}`} 
-              className={activeId === h.id ? 'is-aktiv' : ''}
+              className={activeId === h.id ? 'aktiv' : ''}
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(h.id);

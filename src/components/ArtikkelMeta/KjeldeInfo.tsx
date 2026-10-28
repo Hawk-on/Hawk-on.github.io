@@ -15,18 +15,31 @@ const KjeldeInfo: React.FC<{ sprak?: Sprak }> = ({ sprak = 'nn' }) => {
 
   useEffect(() => {
     const handleOpen = () => setIsOpen(true);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
     window.addEventListener('opne-kjeldeinfo', handleOpen);
-    return () => window.removeEventListener('opne-kjeldeinfo', handleOpen);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('opne-kjeldeinfo', handleOpen);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, []);
 
   if (!isOpen) return null;
 
   return (
     <div className="kjelde-modal-overlay" onClick={() => setIsOpen(false)}>
-      <div className="kjelde-modal" onClick={e => e.stopPropagation()}>
+      <div
+        className="kjelde-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="kjelde-modal-tittel"
+        onClick={e => e.stopPropagation()}
+      >
         <header className="kjelde-modal__header">
-          <h2>{t.kjeldeTittel}</h2>
-          <button className="kjelde-modal__lukk" onClick={() => setIsOpen(false)}>×</button>
+          <h2 id="kjelde-modal-tittel">{t.kjeldeTittel}</h2>
+          <button type="button" className="kjelde-modal__lukk" onClick={() => setIsOpen(false)} aria-label="Lukk">×</button>
         </header>
         
         <div className="kjelde-modal__innhald">

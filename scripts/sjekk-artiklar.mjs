@@ -143,7 +143,8 @@ function sjekk(fil, tekst, fm) {
   if (ingress < INGRESS.min || ingress > INGRESS.maks) {
     legg('ingress-lengd', `${ingress} teikn`);
   }
-  const talTaggar = [...(fm.tags ?? '').matchAll(/"([^"]+)"/g)].length;
+  const tagInnhald = (fm.tags ?? '').replace(/^\[|\]$/g, '').trim();
+  const talTaggar = tagInnhald ? tagInnhald.split(',').map(s => s.trim()).filter(Boolean).length : 0;
   if (talTaggar < TAGGAR.min || talTaggar > TAGGAR.maks) {
     legg('tal-taggar', `${talTaggar} taggar`);
   }

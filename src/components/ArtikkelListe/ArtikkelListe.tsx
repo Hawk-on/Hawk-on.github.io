@@ -36,7 +36,7 @@ const ArtikkelListe: React.FC<ArtikkelListeProps> = ({ alleInnlegg, sorterteTags
             className={`tag tag--filter ${aktivTag === tag ? 'aktiv' : ''}`} 
             onClick={() => setAktivTag(tag)}
           >
-            #{tag}
+            #{visTag(tag)}
           </button>
         ))}
       </div>
@@ -53,7 +53,7 @@ const ArtikkelListe: React.FC<ArtikkelListeProps> = ({ alleInnlegg, sorterteTags
               <div className="artikkel-kort__dato">{innlegg.datoFormatert}</div>
               <div>
                 <h2 className="artikkel-kort__tittel">
-                  <a href={`${base}/${innlegg.slug}`}>{innlegg.tittel}</a>
+                  <a href={`${base}/${innlegg.slug}/`}>{innlegg.tittel}</a>
                 </h2>
                 {innlegg.ingress && <p className="artikkel-kort__ingress">{innlegg.ingress}</p>}
                 {innlegg.tags.length > 0 && (
@@ -61,7 +61,7 @@ const ArtikkelListe: React.FC<ArtikkelListeProps> = ({ alleInnlegg, sorterteTags
                     {innlegg.tags.map(tag => (
                       <a 
                         key={tag} 
-                        href={`${base}/tag/${tag}`} 
+                        href={`${base}/tag/${tag}/`} 
                         className="tag" 
                         data-umami-event="tagg-klikk" 
                         data-umami-event-tag={tag}
