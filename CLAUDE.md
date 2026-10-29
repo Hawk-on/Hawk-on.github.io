@@ -93,7 +93,7 @@ Serie om offentleg infrastruktur og teknoføydalisme.
 | 1 | **Den dyraste løysinga.** Konseptvalutgreiinga som konkluderte med at statleg sky er for dyrt, og kvifor nyttekostnadsmetoden avgjorde saka før politikken kom til orde. | Publisert 9. sept. 2026 |
 | 2 | **Modellen staten laga og ikkje driftar.** Noreg lagar språkmodellar gjennom Nasjonalbiblioteket, men ingen har fått i oppdrag å drifte dei som teneste. | Publisert 14. sept. 2026 |
 | 3 | **Forbrukaren som vart vald bort.** Minneprodusentane prioriterer datasenter, og forbrukarmarknaden vert ikkje utkonkurrert på pris, men vald bort. | Publisert 14. sept. 2026 |
-| 4 | **Kva ein offentleg leverandør faktisk kan løyse.** Tilgang, kvalitet og eigarskap til avkastninga er tre ulike klasseskilje, og ein offentleg leverandør løyser berre eitt. | Planlagt |
+| 4 | **Kva ein offentleg leverandør faktisk kan løyse.** Tilgang, kvalitet og eigarskap til avkastninga er tre ulike klasseskilje, og ein offentleg leverandør løyser berre eitt. | Publisert 28. okt. 2026 |
 | 5 | **Krigen som revisor.** Operation Epic Fury gav KI-sektoren eit etterspurnadssjokk som såg ut som validering: 13 000 mål på 38 dagar, toppbruk av token opp 4425 prosent, rekordkvartal for Palantir. Men det var eitt oppdrag på 38 dagar til 25 mrd. dollar, ikkje eit inntektsgrunnlag. Samstundes steig kostnadssida. Energigeopolitikken er den delen ingen skriv om: Iran og Venezuela stod for kring 17 prosent av Kinas oljeimport, og Chatham House og det spanske forsvarsinstituttet les åtaka som press mot kinesisk industri, medan East Asia Forum og kinesiske analytikarar meiner det gagna Kina. Usemja er saka. Skriv ikkje «proxykrig»; det rette omgrepet er økonomisk interdiksjon. | Vinkel klar, uskriven |
 
 ## Kjeldebruk og referansar
