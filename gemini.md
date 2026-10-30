@@ -9,6 +9,7 @@ Fullstendige husreglar, arkitekturval og kjend gjeld står i `CLAUDE.md` (les de
 
 ## Prosjektspesifikke instruksar
 - **Arkitektur:** Astro 7 + React Islands + Nano Stores. CV på rota, blogg under `/blog/`.
+- **Node:** 22.23.4 eller nyare, som kravd av Astro og byggjesteget i GitHub Actions.
 - **Ruting:** `BASE_URL` er tom streng. Bruk `BLOGG_BASE` frå `src/utils/rutar.ts`. Alle interne blogg- og tag-lenkjer skal ha avsluttande skråstrek (`/`).
 - **Header og meny:** `Header.tsx` og `Grunnoppsett.astro` viser bloggnavigasjonen under `/blog/` og `/om/`, og CV-navigasjonen på `/`.
 - **Styling:** Felles stilar (`.container`, `.artikkel-liste`, `.artikkel-kort`, mørkmodus med både `html[data-theme="dark"]` og `prefers-color-scheme: dark`) ligg i `src/styles/global.css`.

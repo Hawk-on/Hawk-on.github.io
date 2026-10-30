@@ -10,6 +10,7 @@ designsystem, layout og byggjesteg.
 - **State:** Nano Stores (sentral i18n, berre CV-delen)
 - **Søk:** Pagefind (statisk indeksering over heile `dist`)
 - **Kommentarar:** Giscus mot GitHub Discussions i dette repoet
+- **Node:** 22.23.4 eller nyare, som kravd av Astro
 - **Språk:** Nynorsk (kløyvd infinitiv). Artiklar kan ha ei engelsk omsetjing under
   `src/content/blog/en/`, som eiga fil og eiga adresse.
 
