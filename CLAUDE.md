@@ -64,9 +64,9 @@ scripts/
 
 - **`import.meta.env.BASE_URL` er tom streng.** Bloggen hadde `base: '/Blog'` før; no finst ingen base. Bruk `BLOGG_BASE` frå `src/utils/rutar.ts`.
 - **Skal-laget** (`.container`, `.nettstad-*`, `.meny-bryter`, `.tema-bryter`) kjem frå CV-delen og er med vilje ikkje duplisert i bloggseksjonen av `global.css`.
-- **Header er rutemedviten.** `aktuellSti` avgjer om CV-ankera eller bloggnavigasjonen vert viste. CV-delen har Nano Stores-språkknappen, bloggen ein `EN`/`NO`-knapp som går til den andre språkversjonen av artikkelen; dei to har ingenting med kvarandre å gjere. Logoen er hauk-merket + «hawk-on» under `/blog/`, «HHL» på CV-en.
+- **Header er rutemedviten.** `aktuellSti` avgjer om CV-ankera eller bloggnavigasjonen vert viste (`/blog/` og `/om/` viser bloggnavigasjonen). CV-delen har Nano Stores-språkknappen, bloggen ein `EN`/`NO`-knapp som går til den andre språkversjonen av artikkelen; dei to har ingenting med kvarandre å gjere. Logoen er hauk-merket + «hawk-on» under `/blog/` og `/om/`, «HHL» på CV-en.
 - **Umami har to ID-ar.** CV og blogg held kvar sin statistikkstraum; `Grunnoppsett.astro` vel ID etter rute.
-- **Komponent-CSS finst ved sida av `global.css`.** `ArtikkelListe`, `Innhaldstabell` og `LeseProgresjon` har kvar si `.css`-fil som komponenten importerer. Skriv du same markup direkte i ein `.astro`-fil, får du ikkje den stilen — det var slik tag-sida mista tagg-wrappen. Stil som gjeld på tvers høyrer heime i `global.css`.
+- **Komponent-CSS finst ved sida av `global.css`.** `ArtikkelListe`, `Innhaldstabell` og `LeseProgresjon` har kvar si `.css`-fil som komponenten importerer. Skriv du same markup direkte i ein `.astro`-fil, får du ikkje den stilen — det var slik tag-sida mista tagg-wrappen. Stil som gjeld på tvers (som `.artikkel-liste` og `.artikkel-kort`) høyrer heime i `global.css`.
 - **`/Blog/` (stor B) er redirect-stubbar,** ikkje ekte sider. `src/pages/Blog/[...sti].astro` genererer meta-refresh for alle innlegg og taggar; `Blog/rss.xml.ts` serverer feeden på nytt som gyldig XML, ikkje som redirect.
 
 ## Kjeldekritikk-system (obligatorisk for blogginnlegg)
@@ -93,7 +93,7 @@ Serie om offentleg infrastruktur og teknoføydalisme.
 | 1 | **Den dyraste løysinga.** Konseptvalutgreiinga som konkluderte med at statleg sky er for dyrt, og kvifor nyttekostnadsmetoden avgjorde saka før politikken kom til orde. | Publisert 9. sept. 2026 |
 | 2 | **Modellen staten laga og ikkje driftar.** Noreg lagar språkmodellar gjennom Nasjonalbiblioteket, men ingen har fått i oppdrag å drifte dei som teneste. | Publisert 14. sept. 2026 |
 | 3 | **Forbrukaren som vart vald bort.** Minneprodusentane prioriterer datasenter, og forbrukarmarknaden vert ikkje utkonkurrert på pris, men vald bort. | Publisert 14. sept. 2026 |
-| 4 | **Kva ein offentleg leverandør faktisk kan løyse.** Tilgang, kvalitet og eigarskap til avkastninga er tre ulike klasseskilje, og ein offentleg leverandør løyser berre eitt. | Planlagt |
+| 4 | **Kva ein offentleg leverandør faktisk kan løyse.** Tilgang, kvalitet og eigarskap til avkastninga er tre ulike klasseskilje, og ein offentleg leverandør løyser berre eitt. | Publisert 28. okt. 2026 |
 | 5 | **Krigen som revisor.** Operation Epic Fury gav KI-sektoren eit etterspurnadssjokk som såg ut som validering: 13 000 mål på 38 dagar, toppbruk av token opp 4425 prosent, rekordkvartal for Palantir. Men det var eitt oppdrag på 38 dagar til 25 mrd. dollar, ikkje eit inntektsgrunnlag. Samstundes steig kostnadssida. Energigeopolitikken er den delen ingen skriv om: Iran og Venezuela stod for kring 17 prosent av Kinas oljeimport, og Chatham House og det spanske forsvarsinstituttet les åtaka som press mot kinesisk industri, medan East Asia Forum og kinesiske analytikarar meiner det gagna Kina. Usemja er saka. Skriv ikkje «proxykrig»; det rette omgrepet er økonomisk interdiksjon. | Vinkel klar, uskriven |
 
 ## Kjeldebruk og referansar
@@ -361,11 +361,12 @@ eigennamn stod med stor bokstav.
 Dei to som gjaldt omsetjingsarbeidet er retta same dag: skriptet les no undermapper,
 og eit omsetjingspar som ikkje heng saman feilar bygget.
 
-**Kjeldekodar**
+**Kjeldekodar og endringslogg**
 Tala under er frå `scripts/kjende-avvik.json`, som er fasiten. Køyr `npm run sjekk`
 for gjeldande stoda.
 
-- **Heilt utan kodar:** `agentisk-identitet-og-tilgangskontroll` (2).
+- **Heilt utan kodar:** 0 (dei siste 2 i `agentisk-identitet-og-tilgangskontroll` er retta).
+- **`oppdatertDato` utan `### Endringslogg` (`dato-utan-endringslogg`):** `oljefondet-sosiologisk-okonomi-turchin-polanyi` (1), `palantir-moderniteten-sitt-skjulte-andlet` (1), `renteauk-feil-medisin-og-behovet-for-prisstyring` (1).
 
 Retta 14. september 2026: 51 tomme spanar er fylte ut, 35 spanar i fire artiklar er
 falda frå det gamle toespan-formatet, og ein motstridande kode i `narrativkrigen` er

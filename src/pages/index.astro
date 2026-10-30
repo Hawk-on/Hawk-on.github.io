@@ -1,9 +1,29 @@
 ---
 import Grunnoppsett from '../layouts/Grunnoppsett.astro';
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import profilBilete from '../assets/me.jpg';
 import Kontakt from '../components/Kontakt/Kontakt';
 import BloggSveip from '../components/BloggSveip/BloggSveip';
+import { BLOGG_BASE } from '../utils/rutar';
+
+const innlegg = await getCollection('blog', ({ data }) => {
+  return (import.meta.env.DEV || !data.utkast) && data.sprak !== 'en';
+});
+
+const sisteInnlegg = innlegg
+  .sort((a, b) => {
+    const datoA = a.data.oppdatertDato ?? a.data.publisertDato;
+    const datoB = b.data.oppdatertDato ?? b.data.publisertDato;
+    return datoB.valueOf() - datoA.valueOf();
+  })
+  .slice(0, 3)
+  .map(i => ({
+    tittel: i.data.tittel,
+    dato: i.data.publisertDato.toISOString(),
+    ingress: i.data.ingress,
+    url: `${BLOGG_BASE}/${i.id}/`,
+  }));
 ---
 
 <Grunnoppsett tittel="Håkon Hole Lønning">
@@ -185,7 +205,7 @@ import BloggSveip from '../components/BloggSveip/BloggSveip';
     </section>
 
     <!-- Siste frå bloggen -->
-    <BloggSveip client:idle />
+    <BloggSveip client:idle initialInnlegg={sisteInnlegg} />
 
     <!-- Kontakt -->
     <section id="kontakt" class="innfading">
@@ -224,16 +244,10 @@ import BloggSveip from '../components/BloggSveip/BloggSveip';
     });
   }
 
-  // Abonnementet er sett opp éin gong, på modulnivå. Låg det inne i
-  // page-load-lyttaren, ville det stable seg opp eitt lag for kvar navigering.
-  document.addEventListener('astro:page-load', oppdaterInnhald);
-  spraakStore.subscribe(oppdaterInnhald);
-</script>
-
-<script is:inline>
   function initAnimasjonar() {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
+    if (!erCv()) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('synleg');
           observer.unobserve(entry.target);
@@ -241,30 +255,33 @@ import BloggSveip from '../components/BloggSveip/BloggSveip';
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.innfading').forEach(function (el) {
+    document.querySelectorAll('.innfading').forEach((el) => {
       observer.observe(el);
     });
   }
 
-  function initNavScroll() {
-    var seksjonar = document.querySelectorAll('section[id]');
-    var navLenker = document.querySelectorAll('.nettstad-nav a[href^="#"]');
-
-    window.addEventListener('scroll', function () {
-      var scrollY = window.scrollY;
-      var aktivSeksjon = '';
-      seksjonar.forEach(function (s) {
-        if (scrollY >= s.offsetTop - 120) aktivSeksjon = s.id;
-      });
-      navLenker.forEach(function (a) {
-        a.classList.toggle('aktiv', a.getAttribute('href') === '#' + aktivSeksjon);
-      });
-    }, { passive: true });
+  function oppdaterNavScroll() {
+    if (!erCv()) return;
+    const seksjonar = document.querySelectorAll<HTMLElement>('section[id]');
+    const navLenker = document.querySelectorAll<HTMLAnchorElement>('.nettstad-nav a[href*="#"]');
+    const scrollY = window.scrollY;
+    let aktivSeksjon = '';
+    seksjonar.forEach((s) => {
+      if (scrollY >= s.offsetTop - 120) aktivSeksjon = s.id;
+    });
+    navLenker.forEach((a) => {
+      a.classList.toggle('aktiv', a.getAttribute('href') === `/#${aktivSeksjon}` || a.getAttribute('href') === `#${aktivSeksjon}`);
+    });
   }
 
-  // Sørg for at alt køyrer ved kvar navigering
+  // Abonnement og lyttarar er sette opp éin gong, på modulnivå. Låg dei inne i
+  // page-load-lyttaren eller i eit is:inline-skript, ville dei stable seg opp
+  // eitt lag for kvar navigering.
+  window.addEventListener('scroll', oppdaterNavScroll, { passive: true });
   document.addEventListener('astro:page-load', () => {
+    oppdaterInnhald();
     initAnimasjonar();
-    initNavScroll();
+    oppdaterNavScroll();
   });
+  spraakStore.subscribe(oppdaterInnhald);
 </script>

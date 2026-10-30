@@ -35,12 +35,12 @@ export const useInnhaldstabell = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+          if (entry.isIntersecting) {
             setActiveId(entry.target.id);
           }
         });
       },
-      { rootMargin: '-80px 0px -60% 0px', threshold: [0, 0.5, 1] }
+      { rootMargin: '-10% 0px -80% 0px' }
     );
 
     headingElements.forEach((el) => observer.observe(el));

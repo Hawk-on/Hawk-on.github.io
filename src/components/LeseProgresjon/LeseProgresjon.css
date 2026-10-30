@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   height: 3px;
-  background-color: var(--farge-hovud);
+  background-color: var(--raud);
   z-index: 1000;
   transition: width 0.1s ease-out;
 }
@@ -13,12 +13,12 @@
   position: fixed;
   bottom: 2rem;
   left: 2rem;
-  background-color: var(--farge-bakgrunn);
-  border: 1px solid var(--farge-border);
+  background-color: var(--kvit);
+  border: 1px solid var(--lys-grå);
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
-  font-family: var(--font-mono);
-  color: var(--farge-tekst-lys);
+  font-family: var(--skrift-kode);
+  color: var(--grå);
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
@@ -37,9 +37,9 @@
   right: 2rem;
   width: 45px;
   height: 45px;
-  background-color: var(--farge-bakgrunn);
-  border: 1px solid var(--farge-border);
-  color: var(--farge-tekst);
+  background-color: var(--kvit);
+  border: 1px solid var(--lys-grå);
+  color: var(--svart);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +58,6 @@
 }
 
 .til-toppen:hover {
-  border-color: var(--farge-hovud);
-  color: var(--farge-hovud);
+  border-color: var(--raud);
+  color: var(--raud);
 }

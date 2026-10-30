@@ -24,14 +24,15 @@ const Header: React.FC<HeaderProps> = ({ aktuellSti = '/', spraakUrl, sprak = 'n
   useEffect(() => {
     setMounted(true);
     const theme = document.documentElement.getAttribute('data-theme');
-    setIsDark(theme === 'dark');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setIsDark(theme === 'dark' || (!theme && prefersDark));
   }, []);
 
   // Ikkje vis noko som avvik frå server-HTML før me er "mounted" på klienten
   const visSpraak = mounted ? aktivSpraak : 'no';
 
-  // CV-en ligg på rota og har ankernavigasjon; alt under /blog/ har bloggnavigasjon
-  const erBlogg = aktuellSti.startsWith('/blog');
+  // CV-en ligg på rota og har ankernavigasjon; alt under /blog/ og /om/ har bloggnavigasjon
+  const erBlogg = aktuellSti.startsWith('/blog') || aktuellSti.startsWith('/om');
 
   const toggleTheme = () => {
     const html = document.documentElement;

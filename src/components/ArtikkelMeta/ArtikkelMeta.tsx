@@ -26,7 +26,7 @@ const ArtikkelMeta: React.FC<ArtikkelMetaProps> = ({ datoFormatert, oppdatertFor
         {tags.map(tag => (
           <a 
             key={tag} 
-            href={`${base}/tag/${tag}`} 
+            href={`${base}/tag/${tag}/`} 
             className="tag" 
             data-umami-event="tagg-klikk" 
             data-umami-event-tag={tag}

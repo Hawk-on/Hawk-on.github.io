@@ -61,7 +61,7 @@ const absolutt = omdiriger
   <Grunnoppsett tittel={`#${visTag(tag)}`} beskriving={`Alle innlegg merka med ${visTag(tag)}`}>
     <div class="container">
       <div class="tag-header">
-        <p class="seksjon-tittel"><a href={base} class="tag-header__tilbake">Alle innlegg</a></p>
+        <p class="seksjon-tittel"><a href={`${base}/`} class="tag-header__tilbake">← Alle innlegg</a></p>
         <h1 class="tag-header__tittel">#{visTag(tag)}</h1>
         <p class="tag-header__tal">
           {sortertInnlegg.length} {sortertInnlegg.length === 1 ? 'innlegg' : 'innlegg'}
@@ -79,13 +79,13 @@ const absolutt = omdiriger
               <div class="artikkel-kort__dato">{datoFormatert}</div>
               <div>
                 <h2 class="artikkel-kort__tittel">
-                  <a href={`${base}/${slug}`}>{tittel}</a>
+                  <a href={`${base}/${slug}/`}>{tittel}</a>
                 </h2>
                 {ingress && <p class="artikkel-kort__ingress">{ingress}</p>}
                 {taggar.length > 0 && (
                   <div class="artikkel-kort__tags">
                     {taggar.map((t: string) => (
-                      <a href={`${base}/tag/${t}`} class="tag" data-umami-event="tagg-klikk" data-umami-event-tag={t}>{visTag(t)}</a>
+                      <a href={`${base}/tag/${t}/`} class="tag" data-umami-event="tagg-klikk" data-umami-event-tag={t}>{visTag(t)}</a>
                     ))}
                   </div>
                 )}
