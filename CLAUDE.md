@@ -21,7 +21,7 @@ artikkelen på engelsk.
   dei ligg som to filer. Sjå «Tospråklege artiklar».
 - **Søk:** Pagefind (statisk indeksering, køyrer over heile `dist`)
 - **Kommentarar:** Giscus (React Island med dynamisk tema)
-- **Deploy:** GitHub Pages via GitHub Actions (Node 22), push til `master`
+- **Deploy:** GitHub Pages via GitHub Actions (Node 22.23.4+), push til `master`
 
 ## Struktur
 
