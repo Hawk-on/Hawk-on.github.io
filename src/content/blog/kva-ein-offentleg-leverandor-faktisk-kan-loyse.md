@@ -163,7 +163,7 @@ Tilgang kan du kjøpe på ein marknadsplass. Kvalitet kan du til dels sikre gjen
 
 ## Kjelder
 
-<span id="ref-1" data-kvalitet="A" data-habilitet="2">A2</span>\[1\] Digitaliserings- og forvaltningsdepartementet, «Vil styrke Norges digitale suverenitet og verdiskaping», pressemelding, 29. september 2026. [Online]. Available: https://www.regjeringen.no/no/aktuelt/vil-styrke-norges-digitale-suverenitet-og-verdiskaping/id3116812/. [Accessed: 28. oktober 2026]. Primærkjelde til varslet om ny stortingsmelding om digital suverenitet, verdikjeder og datasenter. Habilitet 2 fordi departementet omtalar eige politisk initiativ.
+<span id="ref-1" data-kvalitet="A" data-habilitet="2">A2</span>\[1\] Digitaliserings- og forvaltningsdepartementet, «Vil styrke Norges digitale suverenitet og verdiskaping», pressemelding, 29. september 2026. [Online]. Available: https://www.regjeringen.no/no/aktuelt/vil-styrke-norges-digitale-suverenitet-og-verdiskaping/id3174014/. [Accessed: 28. oktober 2026]. Primærkjelde til varslet om ny stortingsmelding om digital suverenitet, verdikjeder og datasenter. Habilitet 2 fordi departementet omtalar eige politisk initiativ.
 
 <span id="ref-2" data-kvalitet="A" data-habilitet="2">A2</span>\[2\] Finansdepartementet, «Prop. 1 S (2026–2027) For budsjettåret 2027 (Gul bok)», Del 1, tabell over nye digitaliseringstiltak i 2027, 7. oktober 2026. [Online]. Available: https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175333/. [Accessed: 28. oktober 2026]. Primærkjelde til den samla ramma på 2 151,2 millionar kroner og fordelinga mellom departementa.
 
