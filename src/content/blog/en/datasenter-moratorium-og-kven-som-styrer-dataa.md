@@ -5,7 +5,6 @@ sprak: en
 omsetjing: datasenter-moratorium-og-kven-som-styrer-dataa
 ingress: "Norway's Red Party proposes halting power allocations to new data centres until parliament adopts a new power policy. Around 90 per cent of the country's data centre capacity is foreign-owned, and a halt does not change that. The disclosure duty in the US CLOUD Act, moreover, applies to whoever controls the data, not whoever owns the building."
 tags: ["digital-suverenitet", "datasenter", "kraft", "teknofoydalisme", "stortinget", "noreg"]
-utkast: true
 ---
 
 ## The halt that was not about data centres
