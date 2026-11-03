@@ -1,5 +1,5 @@
 ---
-tittel: "Straumen er norsk. Dataa er det ikkje."
+tittel: "Ein stans i nye datasenter avgjer ikkje kven som kan krevje dataa"
 publisertDato: 2026-11-03
 ingress: "Raudt vil stanse nye datasenter til Stortinget har teke kontroll over krafta. Men ein stans flyttar ikkje eigarskapen, og amerikansk lov spør etter kven som har kontroll over dataa, ikkje kven som eig bygget. Det er der suvereniteten blir avgjord."
 tags: ["digital-suverenitet", "datasenter", "kraft", "teknofoydalisme", "stortinget", "noreg"]
