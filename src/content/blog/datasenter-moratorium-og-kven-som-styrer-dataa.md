@@ -35,7 +35,7 @@ Så snudde politikken, sakte. Kronologien ser slik ut:
 - **1. januar 2025:** Ny ekomlov. Datasenter over 500 kW må registrere seg, og det kjem krav til tryggleik og beredskap [\[7\]](#ref-7).
 - **24. mars 2025:** Digitaliseringsminister Karianne Tung avviser det fyrste stansforslaget frå Raudt. Grunngjevinga er nasjonal: «For regjeringen er det viktig å sikre en robust nasjonal infrastruktur med rask og trygg lagring av nasjonale data og digitale tjenester» [\[8\]](#ref-8).
 - **6. mai 2025:** Forslaget om mellombels forbod fell. Senterpartiet, SV og Raudt røystar for [\[9\]](#ref-9).
-- **27. juni 2025:** Ny datasenterstrategi. Regjeringa vil «investigate the need for more data centres in Norway with Norwegian majority ownership» [\[7\]](#ref-7).
+- **27. juni 2025:** Ny datasenterstrategi. Regjeringa vil «greie ut behovet for fleire datasenter i Noreg med norsk majoritetseigarskap» [\[7\]](#ref-7).
 - **5. mai 2026:** SV og Raudt fremjar eit nytt forslag om moratorium i ei nettsak. Det fell òg [\[10\]](#ref-10).
 - **9. juni 2026:** Stortinget vedtek samrøystes at nettkøen kan brytast av omsyn til nasjonal tryggleik [\[11\]](#ref-11).
 - **12. juni 2026:** Den amerikanske overvakingsheimelen FISA § 702 går ut. Overvakinga held fram [\[12\]](#ref-12).
@@ -72,7 +72,7 @@ Eigarskapen er òg samla på få hender. Fire anlegg står for om lag to tredela
 
 Green Mountain er det beste dømet på at merkenamnet ikkje seier noko om eigaren. Selskapet har norsk namn, norske anlegg og norsk opphav. Eigaren sit i Tel Aviv.
 
-Regjeringa ser det same. Datasenterstrategien frå 2025 skriv at datasentera er stader der «we process and store some of our most sensitive and strategic data, making both ownership and location crucial to security interests» [\[7\]](#ref-7). Departementet har definert evna til å lagre og behandle data i Noreg som ein grunnleggjande nasjonal funksjon etter tryggingslova. Strategien seier òg at nokre datasenter alt er underlagde lova, og at fleire skal vurderast [\[7\]](#ref-7).
+Regjeringa ser det same. Datasenterstrategien frå 2025 skriv at datasentera er stader der «vi behandlar og lagrar nokre av dei mest sensitive og strategiske dataa vi har». Det gjer «både eigarskap og lokasjon sentralt» for tryggleiken [\[7\]](#ref-7). Departementet har definert evna til å lagre og behandle data i Noreg som ein grunnleggjande nasjonal funksjon etter tryggingslova. Strategien seier òg: «Nokre datasenter er alt underlagde sikkerheitslova, og fleire vil bli vurderte i tida framover» [\[7\]](#ref-7).
 
 Punkt 5 i forslaget til Raudt ber altså om noko regjeringa seier at ho alt har sett i gang. Det er ikkje eit argument mot forslaget. Det er eit argument for å spørje kvifor det tek tid.
 
@@ -102,11 +102,9 @@ Selskapet har sjølv sagt kor langt lovnadene rekk. I juni 2025 vart den juridis
 
 Kor lite norske lovnader og amerikanske lovendringar betyr, viste seg i juni i år. Overvakingsheimelen FISA § 702 gjekk ut 12. juni 2026, fordi Kongressen ikkje vart samd om å fornye han. Overvakinga stoppa ikkje. Sertifikata som FISA-domstolen godkjende 17. mars 2026, gjeld til 17. mars 2027, same kva som skjer med lova. Brennan Center, som vil ha strengare reglar, skriv at leverandørane held fram med å samarbeide, «as they must under the law» [\[12\]](#ref-12).
 
-Kva seier så datasenterstrategien om dette? Han seier at dei mest kritiske tenestene skal leverast «from data centres in Norway or from data centres located with our allies» [\[7\]](#ref-7). USA er ein alliert. Strategien behandlar altså amerikansk jurisdiksjon som ein del av løysinga, ikkje som ein risiko.
+Kva seier så datasenterstrategien om dette? Han seier: «Dei mest kritiske digitale tenestene skal leverast frå datasenter i Noreg eller frå datasenter hos våre allierte» [\[7\]](#ref-7). USA er ein alliert. Strategien behandlar altså amerikansk jurisdiksjon som ein del av løysinga, ikkje som ein risiko.
 
-Ordet «CLOUD Act» står ikkje i den engelske utgåva av strategien. Eg fann heller ikkje ordet «jurisdiction». Strategien handlar om kvar dataa ligg og kven som eig bygget, men ikkje om kva lov som gjeld for den som driftar tenesta.
-
-<!-- MERKNAD: Søket er gjort i den engelske utgåva. Den nynorske originalen bør kontrollerast for «CLOUD Act» og «jurisdiksjon» før publisering. -->
+Ordet «CLOUD Act» står ikkje i strategien. Eg har søkt i både den nynorske originalen og den engelske utgåva. Orda «jurisdiksjon» og «utanlandsk» står heller ikkje der. USA og amerikanske selskap blir nemnde fire gonger, alle om sjøkablar og om eit samarbeid med Nvidia. Strategien handlar om kvar dataa ligg og kven som eig bygget, men ikkje om kva lov som gjeld for den som driftar tenesta.
 
 Difor er «norskeigde datasenter» naudsynt, men ikkje nok. Det avgjerande er kven som driftar tenesta. Punkt 7 i forslaget til Raudt er det einaste punktet som treffer dette laget. Det krev leverandørar som ikkje kan påleggjast utleveringsplikt av ein framand stat. Ein stans i nye hallar gjer det ikkje.
 
@@ -191,7 +189,7 @@ Straumen som går inn i hallane, er norsk. Dataa som ligg der, er det ikkje nød
 
 <span id="ref-6" data-kvalitet="A" data-habilitet="2">A2</span>\[6\] Green Mountain, «Green Mountain Data Centers acquired by Azrieli Group Ltd», pressemelding, 2021. [Online]. Available: https://greenmountain.no/green-mountain-data-centers-acquired-by-azrieli-group-ltd/. [Accessed: 3. november 2026]. Selskapet sin eigen omtale av oppkjøpet, publisert 19. juli 2021.
 
-<span id="ref-7" data-kvalitet="A" data-habilitet="2">A2</span>\[7\] Digitaliserings- og forvaltningsdepartementet, «The data centre industry: a sustainable industry for the future of digital Norway» (engelsk utgåve av «Datasenternæringa – ei berekraftig framtidsnæring for det digitale Noreg»), 27. juni 2025. [Online]. Available: https://www.regjeringen.no/contentassets/dff2f4dc656043be9ad5837ebbca6fae/en-gb/pdfs/datasenternaeringa-strategi-eng.pdf. [Accessed: 3. november 2026]. Primærkjelde til regjeringa sin politikk. Habilitet 2 fordi departementet omtalar eigen strategi. Søket etter «CLOUD Act» og «jurisdiction» er gjort i denne utgåva.
+<span id="ref-7" data-kvalitet="A" data-habilitet="2">A2</span>\[7\] Digitaliserings- og forvaltningsdepartementet, «Datasenternæringa – ei berekraftig framtidsnæring for det digitale Noreg», strategi, 27. juni 2025. Engelsk utgåve: «The data centre industry». [Online]. Available: https://www.regjeringen.no/contentassets/dff2f4dc656043be9ad5837ebbca6fae/en-gb/pdfs/datasenternaeringa-strategi-eng.pdf. [Accessed: 3. november 2026]. Primærkjelde til regjeringa sin politikk. Habilitet 2 fordi departementet omtalar eigen strategi. Sitata er frå den nynorske originalen. Lenkja går til den engelske utgåva, fordi eg ikkje har kunna stadfeste adressa til den nynorske PDF-en. Søket etter «CLOUD Act», «jurisdiksjon» og «utanlandsk» er gjort i begge.
 
 <span id="ref-8" data-kvalitet="A" data-habilitet="2">A2</span>\[8\] Digitaliserings- og forvaltningsministeren, brev til energi- og miljøkomiteen om Dokument 8:112 S (2024–2025), 24. mars 2025, med vurderingar frå energiministeren. Vedlegg til Innst. 280 S (2024–2025). [Online]. Available: https://www.stortinget.no/globalassets/pdf/innstillinger/stortinget/2024-2025/inns-202425-280s-vedlegg.pdf. [Accessed: 3. november 2026]. Primærkjelde til regjeringa si grunngjeving mot stans og mot prioritering etter samfunnsnytte.
 
