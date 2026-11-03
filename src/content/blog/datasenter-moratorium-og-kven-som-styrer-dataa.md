@@ -1,7 +1,7 @@
 ---
-tittel: "Ein stans i nye datasenter avgjer ikkje kven som kan krevje dataa"
+tittel: "Kva ein stans i nye datasenter kan og ikkje kan gjera med kontrollen over data"
 publisertDato: 2026-11-03
-ingress: "Raudt vil stanse nye datasenter til Stortinget har teke kontroll over krafta. Men ein stans flyttar ikkje eigarskapen, og amerikansk lov spør etter kven som har kontroll over dataa, ikkje kven som eig bygget. Det er der suvereniteten blir avgjord."
+ingress: "Raudt føreslår å stanse tildeling av straum til nye datasenter til Stortinget har vedteke ny kraftpolitikk. Om lag 90 prosent av kapasiteten er eigd frå utlandet, og ein stans endrar ikkje det. Utleveringsplikta i CLOUD Act gjeld dessutan den som har kontroll over dataa, ikkje den som eig bygget."
 tags: ["digital-suverenitet", "datasenter", "kraft", "teknofoydalisme", "stortinget", "noreg"]
 utkast: true
 ---
