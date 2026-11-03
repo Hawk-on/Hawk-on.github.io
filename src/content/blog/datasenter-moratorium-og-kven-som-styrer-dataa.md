@@ -5,7 +5,6 @@ sprak: nn
 omsetjing: datasenter-moratorium-og-kven-som-styrer-dataa
 ingress: "Raudt føreslår å stanse tildeling av straum til nye datasenter til Stortinget har vedteke ny kraftpolitikk. Om lag 90 prosent av kapasiteten er eigd frå utlandet, og ein stans endrar ikkje det. Utleveringsplikta i CLOUD Act gjeld dessutan den som har kontroll over dataa, ikkje den som eig bygget."
 tags: ["digital-suverenitet", "datasenter", "kraft", "teknofoydalisme", "stortinget", "noreg"]
-utkast: true
 ---
 
 ## Stoppen som ikkje handla om datasenter
