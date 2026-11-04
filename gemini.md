@@ -15,7 +15,7 @@ Fullstendige husreglar, arkitekturval og kjend gjeld står i `CLAUDE.md` (les de
 - **Styling:** Felles stilar (`.container`, `.artikkel-liste`, `.artikkel-kort`, mørkmodus med både `html[data-theme="dark"]` og `prefers-color-scheme: dark`) ligg i `src/styles/global.css`.
 - **Hydration:** Bruk `mounted` state i React-komponentar som les `localStorage` eller `spraakStore` for å unngå hydration error (#418).
 - **Navigering:** Bruk `astro:page-load` på modulnivå for å re-initialisere animasjonar og i18n utan å duplisere event-lyttarar.
-- **Artiklar:** Feature-format, 2500–4000 ord, 7–9 `##`-seksjonar, obligatorisk kjeldekritikk-matrise (`A–D` / `1–3`). Ingen tankestrek (`—`) i nye nynorsktekstar. Lesetid vert rekna ut i `src/utils/tekst.ts`.
+- **Artiklar:** Feature-format, typisk 2500–4000 ord (rettleiande, ikkje eit tak), 7–9 `##`-seksjonar, obligatorisk kjeldekritikk-matrise (`A–D` / `1–3`). Ingen tankestrek (`—`) i nye nynorsktekstar. Lesetid vert rekna ut i `src/utils/tekst.ts`.
 - **Omsetjingar:** Nynorsk fyrst. Engelsk versjon er ei eiga fil i `src/content/blog/en/` med same slug, `sprak: en` og `omsetjing: <nynorskslug>` i begge filene.
 - **Kontroll og CSP:** `npm run build` køyrer `npm run sjekk` (`scripts/sjekk-artiklar.mjs`), `astro build`, `scripts/csp-hashar.mjs` og `pagefind`.
 

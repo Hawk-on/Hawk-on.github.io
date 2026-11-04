@@ -78,7 +78,7 @@ Alle artiklar skal bruka den to-dimensjonale kjelde-matrisa.
 
 ## Artikkelformat
 Blogginnlegga er feature-artiklar, ikkje notisar.
-- **Lengd:** 2500–4000 ord for eit fullt innlegg. Kortare notisar kan finnast, men skal vere merkte som det i ingressen.
+- **Lengd:** typisk 2500–4000 ord for eit fullt innlegg. Grensa er rettleiande, ikkje eit tak: treng artikkelen meir plass for kronologi, kjelder eller motargument, får han bli lengre. Ikkje stryk innhald som ber argumentet berre for å kome under 4000. Kortare notisar kan finnast, men skal vere merkte som det i ingressen.
 - **Seksjonar:** 7–9 `##`-seksjonar med reelle mellomtitlar, ikkje «Bakgrunn» og «Konklusjon». Kvar seksjon skal bere eit sjølvstendig ledd i argumentet. Ein seksjon som berre gjentek tesen i nye ord, skal strykast.
 - **Kronologi:** minst éin sekvens med datoar som viser korleis noko faktisk gjekk føre seg. Det er dette som skil ein feature frå ein kommentar.
 - **Motargument:** skal ha eigen seksjon og byggjast i beste form før det vert svart på. Ikkje eit avsnitt til slutt.
