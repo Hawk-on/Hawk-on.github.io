@@ -1,6 +1,6 @@
 ---
 tittel: "Kva ein stans i nye datasenter kan og ikkje kan gjera med kontrollen over data"
-publisertDato: 2026-11-03
+publisertDato: 2026-11-04
 sprak: nn
 omsetjing: datasenter-moratorium-og-kven-som-styrer-dataa
 ingress: "Raudt føreslår å stanse tildeling av straum til nye datasenter til Stortinget har vedteke ny kraftpolitikk. Om lag 90 prosent av kapasiteten er eigd frå utlandet, og ein stans endrar ikkje det. Utleveringsplikta i CLOUD Act gjeld dessutan den som har kontroll over dataa, ikkje den som eig bygget."
@@ -11,11 +11,11 @@ tags: ["digital-suverenitet", "datasenter", "kraft", "teknofoydalisme", "stortin
 
 Den 22. april 2026 sette Statnett nye reservasjonar til stort industriforbruk nord for Svartisen på vent [\[1\]](#ref-1). Ingen fekk nye plassar i køen, heller ikkje på særlege vilkår. Seks månader seinare viser Raudt til avgjerda som ei åtvaring. Partiet skriv at «lignende situasjoner» kan oppstå i resten av landet om datasentera får halde fram som før [\[2\]](#ref-2).
 
-Det er verdt å lese kva Statnett faktisk skreiv. Grunngjevinga nemner ikkje datasenter. Ho nemner sjømat, transport og forsvaret. Forbruket i regionen skal auke med om lag 60 prosent på ti år, og nettet inn til landsdelen held ikkje [\[1\]](#ref-1).
+Grunngjevinga til Statnett nemner ikkje datasenter. Ho nemner sjømat, transport og forsvaret. Forbruket i regionen skal auke med om lag 60 prosent på ti år, og nettet inn til landsdelen held ikkje [\[1\]](#ref-1).
 
 Stoppen i nord er altså ikkje eit prov på at datasentera har teke krafta. Han er eit prov på noko anna: at straumnettet allereie er ein knapp ressurs som må fordelast. Den som står fyrst i køen, får. Det er dette Raudt vil endre. Datasentera er den største gruppa i køen: 56 prosent av prosjekta som ventar på å få reservere kapasitet hos Statnett, er datasenter [\[3\]](#ref-3).
 
-Tala frå NVE viser kor fort det har gått. I 2015 brukte norske datasenter knapt straum. I 2025 brukte dei 3,3 TWh. Kapasiteten som er reservert i nettet til nye datasenter, har auka frå 169 MW hausten 2020 til 4 217 MW i oktober 2026 [\[4\]](#ref-4). Det er meir enn 20 gonger så mykje på seks år.
+Tala frå NVE viser kor fort det har gått. I 2015 brukte norske datasenter knapt straum. I 2025 brukte dei 3,3 TWh. Kapasiteten som er reservert i nettet til nye datasenter, har auka frå 169 MW hausten 2020 til 4 217 MW i oktober 2026 [\[4\]](#ref-4).
 
 Arbeidsplassane har ikkje fylgt med. SSB rekna i april 2026 ut at næringa sysselsette 677 personar i 2024. Av dei var 344 tilsette direkte, og 333 var innleigde eller knytte til kundane [\[5\]](#ref-5).
 
@@ -27,9 +27,9 @@ Datasentera kom ikkje av seg sjølv. Dei kom fordi Noreg bad dei om å kome.
 
 I 2016 fekk store datasenter redusert elavgift. Ifølgje Raudt betalte vanlege straumkundar 16,32 øre per kWh, medan datasentera betalte 0,48 øre. To år seinare la Solberg-regjeringa fram strategien «Norge som datasenternasjon», og eigedomsskatten på datasenter vart fjerna. I 2021 lova næringsminister Linda Hofstad Helleland 11 000 tilsette i næringa innan 2025 [\[2\]](#ref-2). Tala for 2016 og 2021 har eg berre frå forslaget til Raudt, ikkje frå primærkjeldene.
 
-Same året, 19. juli 2021, vart det kjent at det israelske eigedomsselskapet Azrieli Group kjøper heile Green Mountain frå norske Smedvig [\[6\]](#ref-6). Det er eitt av dei mest kjende datasenterselskapa i landet. Kjøpet trong inga godkjenning av omsyn til nasjonal tryggleik. To år seinare, i 2023, vart anlegget til Green Mountain på Hamar lagt under tryggingslova [\[3\]](#ref-3). Kontrollen kom etter salet, ikkje før.
+Same året, 19. juli 2021, vart det kjent at det israelske eigedomsselskapet Azrieli Group kjøper heile Green Mountain frå norske Smedvig [\[6\]](#ref-6). Kjøpet trong inga godkjenning av omsyn til nasjonal tryggleik. To år seinare, i 2023, vart anlegget til Green Mountain på Hamar lagt under tryggingslova [\[3\]](#ref-3). Kontrollen kom etter salet, ikkje før.
 
-Så snudde politikken, sakte. Kronologien ser slik ut:
+Så snudde politikken, sakte:
 
 - **1. januar 2025:** Ny ekomlov. Datasenter over 500 kW må registrere seg, og det kjem krav til tryggleik og beredskap [\[7\]](#ref-7).
 - **24. mars 2025:** Digitaliseringsminister Karianne Tung avviser det fyrste stansforslaget frå Raudt. Grunngjevinga er nasjonal: «For regjeringen er det viktig å sikre en robust nasjonal infrastruktur med rask og trygg lagring av nasjonale data og digitale tjenester» [\[8\]](#ref-8).
@@ -41,10 +41,13 @@ Så snudde politikken, sakte. Kronologien ser slik ut:
 - **29. juni 2026:** Eit breitt fleirtal i Danmark, med Enhedslisten, blir samde om ein akuttplan for straumnettet. Datasenter skal som hovudregel bakarst i køen [\[13\]](#ref-13).
 - **1. oktober 2026:** Folketinget vedtek lova som gjev heimel for prioriteringa, med 89 mot 18 røyster [\[14\]](#ref-14).
 - **5. oktober 2026:** Raudt fremjar Dok. 8:6 S, det tredje forsøket [\[2\]](#ref-2).
+- **20. oktober 2026:** Frp vedtek ein resolusjon om datasenter. Stans og konsesjonsordning er ikkje med [\[15\]](#ref-15).
+- **2. november 2026:** Frp seier nei til hastebehandling av eit nytt stansforslag [\[16\]](#ref-16).
+- **3. november 2026:** Sp, SV, Raudt, MDG og KrF fremjar forslaget likevel, som Dok. 8:34 LS [\[17\]](#ref-17).
 
 To ting står fram. Den fyrste er at regjeringa brukte eit suverenitetsargument mot stansen i 2025. Lagring av nasjonale data var grunnen til å halde døra open. Den andre er at regjeringa same sommaren skreiv at ho ville sjå på behovet for fleire norskeigde datasenter. Ho delte altså premissen om eigarskap. Ho ville berre ikkje stanse dei andre medan ho tenkte.
 
-## To forslag i eitt dokument
+## Forslaga, og partiet som avgjer dei
 
 Dok. 8:6 S har sju punkt [\[2\]](#ref-2). Dei fire fyrste handlar om kraft:
 
@@ -63,6 +66,16 @@ Eg skal vera open om ei binding. Eg er medlem i SV, men ikkje aktiv i partiet. S
 
 Det eg vil vise, er at dei to delane av forslaget verkar på ulike lag. Kraftdelen verkar på bygget: kven som får straum til hallen. Jurisdiksjonsdelen verkar på tenesta: kven som kan krevje dataa i hallen. Ein stans i nye hallar gjer ingenting med dei som alt står der, og ingenting med kven som driv tenestene inni dei.
 
+Det nyaste forslaget går endå kortare. Dok. 8:34 LS frå 3. november er eit lovforslag frå Sp, SV, Raudt, MDG og KrF. Ein ny § 3-4 b i energilova skal fjerne tilknytingsplikta for nye kundar over 1 MW. Forslaget ber òg om at datasenter ikkje får tilknyting før Stortinget har behandla stortingsmeldinga om datasenter [\[17\]](#ref-17). Jurisdiksjonspunkta frå Dok. 8:6 S er borte. Unntaket for samfunnskritiske funksjonar står heller ikkje i forslagsteksten. Forslaget som kan kome til votering, handlar berre om kraft.
+
+Fleirtalet avheng av Frp. Dei fem partia har ikkje fleirtal åleine, og Høgre er imot stans [\[16\]](#ref-16). Frp sin resolusjon frå 20. oktober seier nei til både stans og konsesjonsordning [\[15\]](#ref-15). Den 2. november sa partiet nei til hastebehandling. Tor Mikkel Wara viste til at lovsekretariatet på Stortinget ikkje hadde hjelpt til med å utforme forslaget [\[18\]](#ref-18). Innvendinga er reell. Eit lovforslag som representantane har skrive sjølve, har ikkje vore på høyring.
+
+Resolusjonen går likevel lenger i jurisdiksjonsspørsmålet enn noko anna parti. Frp vil hindre at «utenlandske stater og aktører» får kontroll over norsk informasjon, og krev «åpenhet om eierskap, kontroll og leverandørkjeder» for datasenter som kan få betydning for samfunnskritiske tenester [\[18\]](#ref-18). Leverandørkjeder er det næraste nokon parti har kome driftslaget. Men same resolusjon seier at infrastrukturen skal «forbli på norske hender». Det er nettopp samanblandinga av hall og teneste.
+
+Frp har før brukt konsesjonssystemet til å stanse kommersielle prosjekt. I januar 2020 bad Sylvi Listhaug og to partifellar regjeringa om å «avslå søknad fra NorthConnect om anleggskonsesjon» [\[19\]](#ref-19). Kabelen til Skottland var eigd av kraftselskapa E-CO, Vattenfall, Agder Energi og Lyse [\[20\]](#ref-20). Partiprogrammet for 2025–2029 vil ha makspris på straum, ingen utanlandskablar «som presser norske strømpriser opp», og seier prinsipielt nei til vindkraft på land utan folkeavstemming [\[21\]](#ref-21). Frp vil altså regulere kablar, vindkraft og straumprisen hardt, men ikkje datasentera.
+
+Her går eg over i tolking, og hugs at Frp står på motsett side av partiet mitt i denne saka. Mønsteret kan lesast som konsekvent. I alle sakene vel Frp det som skal halde straumprisen nede for hushald og eksisterande industri. Kablar og vindkraft blir sett som prisdrivande, datasenter med eiga gasskraft ikkje. Men då er det prisen som styrer, ikkje eit prinsipp om kor mykje staten skal regulere næringslivet. Og då er det ikkje spørsmålet om kven som kan krevje dataa, som avgjer korleis partiet røystar.
+
 ## Kven som eig hallane
 
 Teknologirådet la i oktober 2026 fram ei utgreiing om datasenter i Noreg. Om lag 90 prosent av kapasiteten er eigd frå utlandet. Om lag 8 prosent er eigd av norske private, og om lag 2 prosent av kommunar og stat [\[3\]](#ref-3).
@@ -75,9 +88,9 @@ Regjeringa ser det same. Datasenterstrategien frå 2025 skriv at datasentera er 
 
 Punkt 5 i forslaget til Raudt ber altså om noko regjeringa seier at ho alt har sett i gang. Det er ikkje eit argument mot forslaget. Det er eit argument for å spørje kvifor det tek tid.
 
-Tryggingslova har eit verktøy som passar. Etter § 1-3 andre ledd kan eit departement vedta at kapittel 10 skal gjelde for verksemder med «vesentlig betydning for grunnleggende nasjonale funksjoner» [\[15\]](#ref-15). Kapittel 10 handlar om eigarskapskontroll. Den som vil kjøpe ein tredel eller meir av ei slik verksemd, må melde frå. Kongen i statsråd kan stanse kjøpet om det gjev «ikke ubetydelig risiko» for at nasjonale tryggingsinteresser blir truga [\[15\]](#ref-15).
+Tryggingslova har eit verktøy som passar. Etter § 1-3 andre ledd kan eit departement vedta at kapittel 10 skal gjelde for verksemder med «vesentlig betydning for grunnleggende nasjonale funksjoner» [\[22\]](#ref-22). Kapittel 10 handlar om eigarskapskontroll. Den som vil kjøpe ein tredel eller meir av ei slik verksemd, må melde frå. Kongen i statsråd kan stanse kjøpet om det gjev «ikke ubetydelig risiko» for at nasjonale tryggingsinteresser blir truga [\[22\]](#ref-22).
 
-Stortinget vedtok 9. juni 2023 å skjerpe denne regelen. Meldeplikta skulle gjelde alt frå 10 prosent, og på nytt ved 20 prosent, ein tredel, 50 prosent, to tredelar og 90 prosent [\[16\]](#ref-16). Ifølgje Lovdata er endringa framleis ikkje sett i kraft, over tre år seinare [\[15\]](#ref-15). Det er Kongen i statsråd som avgjer når. Regjeringa har altså hatt eit strengare verktøy liggjande sidan 2023 utan å ta det i bruk.
+Stortinget vedtok 9. juni 2023 å skjerpe denne regelen. Meldeplikta skulle gjelde alt frå 10 prosent, og på nytt ved 20 prosent, ein tredel, 50 prosent, to tredelar og 90 prosent [\[23\]](#ref-23). Ifølgje Lovdata er endringa framleis ikkje sett i kraft, over tre år seinare [\[22\]](#ref-22). Det er Kongen i statsråd som avgjer når. Regjeringa har altså hatt eit strengare verktøy liggjande sidan 2023 utan å ta det i bruk.
 
 Green Mountain på Hamar er no omfatta av denne kontrollen. Teknologirådet skriv at «de aller fleste datasentre i Norge» ikkje er det [\[3\]](#ref-3).
 
@@ -87,7 +100,7 @@ Den andre grensa er viktigare. Sjølv om alle hallane var norskeigde, ville det 
 
 ## Bygget er ikkje tenesta
 
-CLOUD Act frå 2018 er kort. Ein amerikansk tilbydar av elektronisk kommunikasjon eller fjerndatabehandling skal utlevere data innanfor tilbydaren sin «possession, custody, or control». Plikta gjeld «regardless of whether such communication, record, or other information is located within or outside of the United States» [\[17\]](#ref-17).
+CLOUD Act frå 2018 er kort. Ein amerikansk tilbydar av elektronisk kommunikasjon eller fjerndatabehandling skal utlevere data innanfor tilbydaren sin «possession, custody, or control». Plikta gjeld «regardless of whether such communication, record, or other information is located within or outside of the United States» [\[24\]](#ref-24).
 
 Lova nemner ikkje bygg. Ho nemner kontroll. Teknologirådet les henne på same måte: risikoen kjem frå amerikansk eigarskap «eller bruk av amerikanske tjenesteleverandører» [\[3\]](#ref-3). Det får to konsekvensar som går kvar sin veg.
 
@@ -95,9 +108,9 @@ Den fyrste: Eit norskeigd datasenter der Microsoft eller Amazon leiger plass og 
 
 Den andre: Eit amerikanskeigd datasenter der ei norsk verksemd leiger plass til eigne tenarar, gjev ikkje huseigaren kontroll over dataa. Ein huseigar som leiger ut straum, kjøling og hyllemeter, har ikkje dataa i sin «custody» i vanleg forstand. Her går eg over i tolking. Eg har ikkje funne rettspraksis som avgjer spørsmålet for rein utleige av plass. Men ordlyden peikar mot den som driftar tenesta, ikkje den som eig veggene.
 
-Microsoft har prøvd å møte uroa med lovnader. I april 2025 lova selskapet at det vil gå til retten om nokon styresmakt pålegg det å stanse skydrifta i Europa [\[18\]](#ref-18). Lovnaden gjeld å stanse drifta i Europa, ikkje å stengje ute einskildkundar. Og å gå til retten er ikkje det same som å nekte.
+Microsoft har prøvd å møte uroa med lovnader. I april 2025 lova selskapet at det vil gå til retten om nokon styresmakt pålegg det å stanse skydrifta i Europa [\[25\]](#ref-25). Lovnaden gjeld å stanse drifta i Europa, ikkje å stengje ute einskildkundar. Og å gå til retten er ikkje det same som å nekte.
 
-Selskapet har sjølv sagt kor langt lovnadene rekk. I juni 2025 vart den juridiske direktøren i Microsoft France, Anton Carniaux, spurd under eid i det franske senatet. Kunne han garantere at data om franske borgarar aldri vert sende til amerikanske styresmakter utan fransk samtykke? «Non, je ne peux pas le garantir» [\[19\]](#ref-19). Han la til at det aldri har skjedd.
+Selskapet har sjølv sagt kor langt lovnadene rekk. I juni 2025 vart den juridiske direktøren i Microsoft France, Anton Carniaux, spurd under eid i det franske senatet. Kunne han garantere at data om franske borgarar aldri vert sende til amerikanske styresmakter utan fransk samtykke? «Non, je ne peux pas le garantir» [\[26\]](#ref-26). Han la til at det aldri har skjedd.
 
 Kor lite norske lovnader og amerikanske lovendringar betyr, viste seg i juni i år. Overvakingsheimelen FISA § 702 gjekk ut 12. juni 2026, fordi Kongressen ikkje vart samd om å fornye han. Overvakinga stoppa ikkje. Sertifikata som FISA-domstolen godkjende 17. mars 2026, gjeld til 17. mars 2027, same kva som skjer med lova. Brennan Center, som vil ha strengare reglar, skriv at leverandørane held fram med å samarbeide, «as they must under the law» [\[12\]](#ref-12).
 
@@ -115,19 +128,19 @@ Datasenterdebatten blir ført i same valuta. SSB målte verdiskaping per MWh. Da
 
 Det er vanskeleg å setje ein pris på suverenitet og demokratisk styring. Men staten har nyleg vist at han ikkje alltid prøver. Då Stortinget i juni vedtok ny § 3-8 i energilova, fekk Kongen heimel til å bryte nettkøen når det er «nødvendig for å ivareta nasjonale sikkerhetsinteresser» [\[11\]](#ref-11).
 
-Proposisjonen forklarer kva det omgrepet femner om. Det skal forståast som i tryggingslova. Dei overordna interessene er «landets suverenitet, territorielle integritet og demokratiske styreform og overordnede sikkerhetspolitiske interesser». Under bokstav d kjem «økonomisk stabilitet og handlefrihet» [\[20\]](#ref-20).
+Proposisjonen forklarer kva det omgrepet femner om. Det skal forståast som i tryggingslova. Dei overordna interessene er «landets suverenitet, territorielle integritet og demokratiske styreform og overordnede sikkerhetspolitiske interesser». Under bokstav d kjem «økonomisk stabilitet og handlefrihet» [\[27\]](#ref-27).
 
 Dette vart vedteke samrøystes, utan nyttekostnadsanalyse. Ingen spurde kva det kostar å la ein forsvarsfabrikk gå framfor i køen. Suvereniteten var argumentet, og argumentet var nok.
 
 Det same omgrepet, suverenitet, vart altså handsama på to ulike måtar same vår. Når det heitte digital infrastruktur, gjekk det gjennom ein rekneskap og tapte. Når det heitte nasjonal tryggleik, gjekk det rett gjennom. Her går eg over i tolking: Skiljet ligg ikkje i kva som står på spel, men i kva departement saka høyrer til og kva ord ho blir skriven med.
 
-Proposisjonen opnar sjølv for datasenter. Bransjeorganisasjonen Norsk Datasenterindustri bad i høyringa om at «samfunnskritiske datasentre» skulle kunne prioriterast. Departementet svarte at det ikkje er ønskjeleg «verken å inkludere eller ekskludere enkeltnæringer» [\[20\]](#ref-20). Både Raudt og bransjen ber altså om det same unntaket for datasenter som tener samfunnskritiske funksjonar. Dei er usamde om resten.
+Proposisjonen opnar sjølv for datasenter. Bransjeorganisasjonen Norsk Datasenterindustri bad i høyringa om at «samfunnskritiske datasentre» skulle kunne prioriterast. Departementet svarte at det ikkje er ønskjeleg «verken å inkludere eller ekskludere enkeltnæringer» [\[27\]](#ref-27). Både Raudt og bransjen ber altså om det same unntaket for datasenter som tener samfunnskritiske funksjonar. Dei er usamde om resten.
 
 ## Danmark sorterte etter føremål
 
 Raudt viser til Danmark, og det er ei relevant samanlikning. Den 29. juni 2026 vart regjeringa og fem andre parti, mellom dei Enhedslisten, samde om ein akuttplan for straumnettet [\[13\]](#ref-13). Folketinget vedtok lova 1. oktober med 89 mot 18 røyster [\[14\]](#ref-14). Ho vart stadfesta som lov nr. 866 av 7. oktober 2026.
 
-Lova sjølv er kort. Ho gjev ministeren heimel til å fastsetje reglar om korleis nettselskapa skal prioritere søknader om tilknyting, og om å avslå dei [\[21\]](#ref-21). Ordet datasenter står ikkje i lovteksten. Sorteringa står i den politiske avtalen, som deler søknadene i fire kategoriar [\[13\]](#ref-13):
+Lova gjev ministeren heimel til å fastsetje reglar om korleis nettselskapa skal prioritere søknader om tilknyting, og om å avslå dei [\[28\]](#ref-28). Ordet datasenter står ikkje i lovteksten. Sorteringa står i den politiske avtalen, som deler søknadene i fire kategoriar [\[13\]](#ref-13):
 
 1. Verna behov og samfunnskritiske funksjonar: hushald, vanleg forbruksvekst, forsvar, helse og beredskap, «herunder datacentre knyttet til samfundskritiske funktioner».
 2. Elektrifisering, fornybar produksjon, karbonfangst, hydrogen og andre prosjekt i det grøne skiftet.
@@ -136,9 +149,9 @@ Lova sjølv er kort. Ho gjev ministeren heimel til å fastsetje reglar om korlei
 
 Avtalen sorterer etter kva straumen skal brukast til. Han nemner ikkje kven som eig prosjektet. Datasenter som tener samfunnskritiske funksjonar, går fyrst. Andre datasenter går sist.
 
-Retorikken var ein annan. Då regjeringa la fram planen i juni, sa klima- og energiminister Samira Nawa: «Vi vil vægte samfundshensyn øverst, og så må udenlandske datacentre stille sig bagerst» [\[22\]](#ref-22). Ministeren snakka om utanlandske datasenter. Avtalen snakkar om funksjon. Skilnaden er truleg ikkje tilfeldig. Eit krav knytt til nasjonalitet ville vore forskjellsbehandling som EU-retten set strenge grenser for. Eit krav knytt til funksjon er lettare å forsvare.
+Retorikken var ein annan. Då regjeringa la fram planen i juni, sa klima- og energiminister Samira Nawa: «Vi vil vægte samfundshensyn øverst, og så må udenlandske datacentre stille sig bagerst» [\[29\]](#ref-29). Ministeren snakka om utanlandske datasenter. Avtalen snakkar om funksjon. Skilnaden er truleg ikkje tilfeldig. Eit krav knytt til nasjonalitet ville vore forskjellsbehandling som EU-retten set strenge grenser for. Eit krav knytt til funksjon er lettare å forsvare.
 
-Prop. 49 L viser korleis den norske regjeringa resonnerer om same problemet. Departementet går ut frå at eit vedtak om prioritet kan vera ei forskjellsbehandling som må vera i samsvar med det tredje elmarknadsdirektivet. Det kan òg vera ein restriksjon på dei fire fridomane i EØS-avtalen. Men «offentlig sikkerhet» er eit legitimt omsyn etter EØS-avtalen artikkel 13, 33 og 39. Om det ikkje held, viser departementet til artikkel 123, som gjev unntak for vesentlege nasjonale tryggingsinteresser [\[20\]](#ref-20).
+Prop. 49 L viser korleis den norske regjeringa resonnerer om same problemet. Departementet går ut frå at eit vedtak om prioritet kan vera ei forskjellsbehandling som må vera i samsvar med det tredje elmarknadsdirektivet. Det kan òg vera ein restriksjon på dei fire fridomane i EØS-avtalen. Men «offentlig sikkerhet» er eit legitimt omsyn etter EØS-avtalen artikkel 13, 33 og 39. Om det ikkje held, viser departementet til artikkel 123, som gjev unntak for vesentlege nasjonale tryggingsinteresser [\[27\]](#ref-27).
 
 Berre fjorten månader tidlegare hadde energiministeren skrive det motsette om eit liknande forslag. Nettselskapa skal vera nøytrale, og det «tilligger ikke nettselskapene å gjøre politiske prioriteringer av om et planlagt forbruk er ønskelig eller ikke» [\[8\]](#ref-8). Den nøytrale køen var eit prinsipp i mars 2025. I juni 2026 var han eit prinsipp med unntak.
 
@@ -156,8 +169,6 @@ Lærdommen er ikkje at alt er lov. Lærdommen er at nasjonale tryggingsinteresse
 
 **Utanlandsk eigarskap er ikkje utanlandsk verdiskaping.** Teknologirådet peikar på at eit datasenter med utanlandsk eigar framleis er eit norsk selskap. Det betaler skatt i Noreg på same måte som eit norskeigd selskap [\[3\]](#ref-3). Talet på 90 prosent seier altså lite om kvar pengane hamnar. Det stemmer, og det er grunnen til at denne artikkelen ikkje byggjer på verdiskaping. Han byggjer på kven som kan krevje dataa. Det spørsmålet svarar skatteseddelen ikkje på.
 
-**Investeringane flyttar til nabolanda.** Ein norsk stans kan sende prosjekta til Sverige og Finland. Danmark har alt sett datasentera bakarst. Om det skjer, mister Noreg arbeidsplassane, men ikkje nødvendigvis noko av suvereniteten. Data i eit amerikanskdrive datasenter i Sverige er under same lov som data i eit amerikanskdrive datasenter i Noreg.
-
 ## Kva ein stans kan kjøpe
 
 Ein stans kan kjøpe tid. Spørsmålet er kva tida skal brukast til.
@@ -166,11 +177,11 @@ Om tida blir brukt til ein ny tilknytingsmodell, får Noreg kontroll med krafta.
 
 Om tida òg blir brukt til tre andre ting, kan ein stans bli meir enn kraftpolitikk:
 
-- **Eigarskapskontroll på dei rette verksemdene.** Departementet har heimel i tryggingslova § 1-3 andre ledd til å leggje kapittel 10 på datasenter med vesentleg betydning [\[15\]](#ref-15). Regjeringa sa i juni 2025 at arbeidet var i gang [\[7\]](#ref-7). Det vernar mot neste Azrieli-kjøp, ikkje mot det som har skjedd.
+- **Eigarskapskontroll på dei rette verksemdene.** Departementet har heimel i tryggingslova § 1-3 andre ledd til å leggje kapittel 10 på datasenter med vesentleg betydning [\[22\]](#ref-22). Regjeringa sa i juni 2025 at arbeidet var i gang [\[7\]](#ref-7). Det vernar mot neste Azrieli-kjøp, ikkje mot det som har skjedd.
 - **Krav til driftslaget, ikkje berre til bygget.** Punkt 7 i forslaget til Raudt er det einaste som rører det som faktisk avgjer jurisdiksjonen. Det kan gjerast gjennom offentlege innkjøp: krav om at samfunnskritiske data skal driftast av leverandørar som ikkje kan påleggjast utleveringsplikt av ein framand stat.
 - **Ei ærleg kartlegging.** Punkt 6 ber regjeringa finne ut kva norske data som i dag er under utanlandsk jurisdiksjon. At ein strategi om datasenter og tryggleik frå 2025 ikkje nemner CLOUD Act, tyder på at kartlegginga ikkje finst.
 
-Regjeringa har varsla ei stortingsmelding om digital suverenitet og datasenter. Ho kjem etter ein strategi som sa at eigarskap og lokalisering er avgjerande, og som så sa at datasenter hos allierte er godt nok. Den viktigaste prøva for meldinga er ikkje om ho seier noko om kraft. Det kjem ho til å gjera. Prøva er om ho skil mellom kven som eig hallen og kven som rår over tenesta inni han.
+Regjeringa har varsla ei stortingsmelding om digital suverenitet og datasenter. Ifølgje E24 kjem ho fyrst mot slutten av 2027 [\[30\]](#ref-30). Ho kjem etter ein strategi som sa at eigarskap og lokalisering er avgjerande, og som så sa at datasenter hos allierte er godt nok. Den viktigaste prøva for meldinga er ikkje om ho seier noko om kraft. Det kjem ho til å gjera. Prøva er om ho skil mellom kven som eig hallen og kven som rår over tenesta inni han.
 
 Straumen som går inn i hallane, er norsk. Dataa som ligg der, er det ikkje nødvendigvis. Ein stans i nye hallar endrar ikkje det.
 
@@ -204,18 +215,34 @@ Straumen som går inn i hallane, er norsk. Dataa som ligg der, er det ikkje nød
 
 <span id="ref-14" data-kvalitet="A" data-habilitet="1">A1</span>\[14\] Folketinget, «L 23 Forslag til lov om ændring af lov om elforsyning og lov om fremme af vedvarende energi (Prioritering af kapacitet i elnettet og hensigtsmæssig tilslutning til elnettet m.v.)», 2025–26 (2. samling), saksoversikt. [Online]. Available: https://www.ft.dk/samling/20252/lovforslag/l23/index.htm. [Accessed: 3. november 2026]. Kjelde til saksgangen, vedtaket 1. oktober 2026, røystinga 89 mot 18 og lov nr. 866 av 7. oktober 2026.
 
-<span id="ref-15" data-kvalitet="A" data-habilitet="1">A1</span>\[15\] Lov 1. juni 2018 nr. 24 om nasjonal sikkerhet (sikkerhetsloven), § 1-3 og kapittel 10, Lovdata, sist endra 12. juni 2026. [Online]. Available: https://lovdata.no/dokument/NL/lov/2018-06-01-24. [Accessed: 3. november 2026]. Primær lovtekst.
+<span id="ref-15" data-kvalitet="B" data-habilitet="1">B1</span>\[15\] A. Lea, «Frp vil kreve at datasentre investerer i kraftproduksjon», *E24*, 20. oktober 2026. [Online]. Available: https://e24.no/boers-og-finans/i/4OQEG9/frp-vil-kreve-at-datasentre-investerer-i-kraftproduksjon. [Accessed: 4. november 2026]. Kjelde til at konsesjonsordning og stans ikkje er ein del av løysinga til Frp.
 
-<span id="ref-16" data-kvalitet="A" data-habilitet="1">A1</span>\[16\] Stortinget, Lovvedtak 116 (2022–2023), «Vedtak til lov om endringer i sikkerhetsloven (eierskapskontroll og lovens virkeområde mv.)», 9. juni 2023. [Online]. Available: https://www.stortinget.no/globalassets/pdf/lovvedtak/2022-2023/vedtak-202223-116.pdf. [Accessed: 3. november 2026]. Primærkjelde til den nye ordlyden i § 10-1. At endringa ikkje er sett i kraft, fylgjer av merknaden «i kraft fra den tid Kongen bestemmer» ved § 10-1 i den konsoliderte lovteksten på Lovdata, sist endra 12. juni 2026.
+<span id="ref-16" data-kvalitet="B" data-habilitet="1">B1</span>\[16\] NTB, «Ingen hastebehandling i Stortinget av datasenterforslag», *digi.no*, 2. november 2026. [Online]. Available: https://www.digi.no/datasenter/ingen-hastebehandling-i-stortinget-av-datasenterforslag/7180620. [Accessed: 4. november 2026]. Kjelde til at Frp sa nei til hastebehandling, og til kva parti som står for og imot stans.
 
-<span id="ref-17" data-kvalitet="A" data-habilitet="1">A1</span>\[17\] 18 U.S.C. § 2713, «Required preservation and disclosure of communications and records», innført ved CLOUD Act, Pub. L. 115–141, 23. mars 2018. [Online]. Available: https://www.law.cornell.edu/uscode/text/18/2713. [Accessed: 3. november 2026]. Primær lovtekst.
+<span id="ref-17" data-kvalitet="A" data-habilitet="3">A3</span>\[17\] Dokument 8:34 LS (2026–2027), «Representantforslag om midlertidig stans av økt strømforbruk til datasentre», Stortinget, 3. november 2026. [Online]. Available: https://www.stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Representantforslag/2026-2027/dok8-202627-034ls/. [Accessed: 4. november 2026]. Fremja av representantar frå Sp, SV, Raudt, MDG og KrF. Partisk som politisk forslag, men primærkjelde til eigen ordlyd.
 
-<span id="ref-18" data-kvalitet="A" data-habilitet="2">A2</span>\[18\] B. Smith, «Microsoft announces new European digital commitments», Microsoft On the Issues, 30. april 2025. [Online]. Available: https://blogs.microsoft.com/on-the-issues/2025/04/30/european-digital-commitments/. [Accessed: 3. november 2026]. Primærkjelde til ordlyden i lovnaden. Habilitet 2 fordi selskapet omtalar eigne forpliktingar.
+<span id="ref-18" data-kvalitet="A" data-habilitet="3">A3</span>\[18\] Fremskrittspartiet, «FrP vil ha seriøs behandling av datasentre», med resolusjonen frå landsstyremøtet i oktober 2026, 2. november 2026. [Online]. Available: https://www.frp.no/nyheter/frp-vil-ha-serios-behandling-av-datasentre. [Accessed: 4. november 2026]. Partisk som partidokument, men primærkjelde til eigen ordlyd.
 
-<span id="ref-19" data-kvalitet="A" data-habilitet="1">A1</span>\[19\] Sénat, Commission d'enquête sur la commande publique, referat frå høyringa 10. juni 2025. [Online]. Available: https://www.senat.fr/compte-rendu-commissions/20250609/ce_commande_publique.html. [Accessed: 3. november 2026]. Primærkjelde til forklaringa frå Anton Carniaux, gjeven under eid tysdag 10. juni 2025. Spørsmålet gjaldt data om franske borgarar som er overlatne til Microsoft gjennom innkjøpssentralen Ugap.
+<span id="ref-19" data-kvalitet="A" data-habilitet="1">A1</span>\[19\] Innst. 220 S (2019–2020), «Innstilling fra energi- og miljøkomiteen om tre representantforslag som omhandler NorthConnect», Stortinget, 31. mars 2020. [Online]. Available: https://www.stortinget.no/globalassets/pdf/innstillinger/stortinget/2019-2020/inns-201920-220s.pdf. [Accessed: 4. november 2026]. Kjelde til Representantforslag 49 S (2019–2020) frå Listhaug, Hoksrud og Saudland, og til dei liknande forslaga frå Sp og Raudt.
 
-<span id="ref-20" data-kvalitet="A" data-habilitet="2">A2</span>\[20\] Energidepartementet, «Prop. 49 L (2025–2026) Endringer i energiloven mv. (prioritert tilknytning til strømnettet av hensyn til nasjonale sikkerhetsinteresser)», kap. 3.5 og 4.2. [Online]. Available: https://www.regjeringen.no/contentassets/b420cf3ba1014891a406601b702b5d9d/no/pdfs/prp202520260049000dddpdfs.pdf. [Accessed: 3. november 2026]. Primærkjelde til den EØS-rettslege vurderinga og til forståinga av «nasjonale sikkerhetsinteresser». Habilitet 2 fordi departementet grunngjev eige lovforslag.
+<span id="ref-20" data-kvalitet="B" data-habilitet="1">B1</span>\[20\] NTB, «Stortinget krever Statnett-monopol på fremtidige utenlandskabler», *E24*, 31. mars 2020. [Online]. Available: https://e24.no/energi-og-klima/i/RReya2/stortinget-krever-monopol-for-statnett-paa-framtidige-utenlandskabler-setter-bom-for-northconnect. [Accessed: 4. november 2026]. Kjelde til eigarane av NorthConnect.
 
-<span id="ref-21" data-kvalitet="A" data-habilitet="1">A1</span>\[21\] Lov nr. 866 af 7. oktober 2026 om ændring af lov om elforsyning og lov om fremme af vedvarende energi, Retsinformation. [Online]. Available: https://www.retsinformation.dk/eli/lta/2026/866. [Accessed: 3. november 2026]. Primær lovtekst. Lova gjev ministeren heimel til å fastsetje prioriteringsreglar og nemner ikkje datasenter.
+<span id="ref-21" data-kvalitet="A" data-habilitet="3">A3</span>\[21\] Fremskrittspartiet, «Fremskrittspartiets partiprogram 2025–2029», s. 84, 89 og 90. [Online]. Available: https://www.frp.no/files/Program/2025/FrP-Partiprogram-2025-2029.pdf. [Accessed: 4. november 2026]. Partisk som partiprogram, men primærkjelde til eigen ordlyd om makspris, utanlandskablar og vindkraft.
 
-<span id="ref-22" data-kvalitet="B" data-habilitet="1">B1</span>\[22\] Ritzau, «Regeringen vil med akutplan skubbe datacentre bag i køen på elnettet», *DR*, 17. juni 2026. [Online]. Available: https://www.dr.dk/nyheder/politik/regeringen-vil-med-akutplan-skubbe-datacentre-bag-i-koeen-paa-elnettet. [Accessed: 3. november 2026]. Kjelde til sitatet frå Samira Nawa om utanlandske datasenter.
+<span id="ref-22" data-kvalitet="A" data-habilitet="1">A1</span>\[22\] Lov 1. juni 2018 nr. 24 om nasjonal sikkerhet (sikkerhetsloven), § 1-3 og kapittel 10, Lovdata, sist endra 12. juni 2026. [Online]. Available: https://lovdata.no/dokument/NL/lov/2018-06-01-24. [Accessed: 3. november 2026]. Primær lovtekst.
+
+<span id="ref-23" data-kvalitet="A" data-habilitet="1">A1</span>\[23\] Stortinget, Lovvedtak 116 (2022–2023), «Vedtak til lov om endringer i sikkerhetsloven (eierskapskontroll og lovens virkeområde mv.)», 9. juni 2023. [Online]. Available: https://www.stortinget.no/globalassets/pdf/lovvedtak/2022-2023/vedtak-202223-116.pdf. [Accessed: 3. november 2026]. Primærkjelde til den nye ordlyden i § 10-1. At endringa ikkje er sett i kraft, fylgjer av merknaden «i kraft fra den tid Kongen bestemmer» ved § 10-1 i den konsoliderte lovteksten på Lovdata, sist endra 12. juni 2026.
+
+<span id="ref-24" data-kvalitet="A" data-habilitet="1">A1</span>\[24\] 18 U.S.C. § 2713, «Required preservation and disclosure of communications and records», innført ved CLOUD Act, Pub. L. 115–141, 23. mars 2018. [Online]. Available: https://www.law.cornell.edu/uscode/text/18/2713. [Accessed: 3. november 2026]. Primær lovtekst.
+
+<span id="ref-25" data-kvalitet="A" data-habilitet="2">A2</span>\[25\] B. Smith, «Microsoft announces new European digital commitments», Microsoft On the Issues, 30. april 2025. [Online]. Available: https://blogs.microsoft.com/on-the-issues/2025/04/30/european-digital-commitments/. [Accessed: 3. november 2026]. Primærkjelde til ordlyden i lovnaden. Habilitet 2 fordi selskapet omtalar eigne forpliktingar.
+
+<span id="ref-26" data-kvalitet="A" data-habilitet="1">A1</span>\[26\] Sénat, Commission d'enquête sur la commande publique, referat frå høyringa 10. juni 2025. [Online]. Available: https://www.senat.fr/compte-rendu-commissions/20250609/ce_commande_publique.html. [Accessed: 3. november 2026]. Primærkjelde til forklaringa frå Anton Carniaux, gjeven under eid tysdag 10. juni 2025. Spørsmålet gjaldt data om franske borgarar som er overlatne til Microsoft gjennom innkjøpssentralen Ugap.
+
+<span id="ref-27" data-kvalitet="A" data-habilitet="2">A2</span>\[27\] Energidepartementet, «Prop. 49 L (2025–2026) Endringer i energiloven mv. (prioritert tilknytning til strømnettet av hensyn til nasjonale sikkerhetsinteresser)», kap. 3.5 og 4.2. [Online]. Available: https://www.regjeringen.no/contentassets/b420cf3ba1014891a406601b702b5d9d/no/pdfs/prp202520260049000dddpdfs.pdf. [Accessed: 3. november 2026]. Primærkjelde til den EØS-rettslege vurderinga og til forståinga av «nasjonale sikkerhetsinteresser». Habilitet 2 fordi departementet grunngjev eige lovforslag.
+
+<span id="ref-28" data-kvalitet="A" data-habilitet="1">A1</span>\[28\] Lov nr. 866 af 7. oktober 2026 om ændring af lov om elforsyning og lov om fremme af vedvarende energi, Retsinformation. [Online]. Available: https://www.retsinformation.dk/eli/lta/2026/866. [Accessed: 3. november 2026]. Primær lovtekst. Lova gjev ministeren heimel til å fastsetje prioriteringsreglar og nemner ikkje datasenter.
+
+<span id="ref-29" data-kvalitet="B" data-habilitet="1">B1</span>\[29\] Ritzau, «Regeringen vil med akutplan skubbe datacentre bag i køen på elnettet», *DR*, 17. juni 2026. [Online]. Available: https://www.dr.dk/nyheder/politik/regeringen-vil-med-akutplan-skubbe-datacentre-bag-i-koeen-paa-elnettet. [Accessed: 3. november 2026]. Kjelde til sitatet frå Samira Nawa om utanlandske datasenter.
+
+<span id="ref-30" data-kvalitet="B" data-habilitet="1">B1</span>\[30\] A. Lea, «– Feigt av Frp», *E24*, 25. oktober 2026. [Online]. Available: https://e24.no/naeringsliv/i/qyMAkg/feigt-av-frp. [Accessed: 4. november 2026]. Kjelde til at Arbeidarpartiet har varsla stortingsmeldinga om datasenter mot slutten av 2027. Eg har ikkje funne tidspunktet i eit regjeringsdokument.
