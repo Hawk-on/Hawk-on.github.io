@@ -1,16 +1,144 @@
 User-agent: *
 Allow: /
 
-# Blokker AI-crawlarar for å verna innhaldet
+# ==========================================================
+# KI-crawlarar og skrapetenester
+# ==========================================================
+# Lista er kuratert frå ai-robots-txt/ai.robots.txt, henta 9. november 2026.
+# Ho er ikkje kopiert heil: prosjektet listar kring 200 agentar, og fleire av
+# dei ville gjort skade her. Sjå unntaka nedst.
+#
+# Hugs kva dette er. robots.txt er ei oppmoding, ikkje ei sperre. Trafikken som
+# fyller statistikken no melder seg som vanleg Chrome frå Singapore og bryr seg
+# ikkje om denne fila. Dette stengjer dei høflege, og berre dei.
+#
+# Alle agentane under står i éi samanhengande gruppe med éin Disallow til
+# slutt. Ikkje set inn tomme linjer mellom dei. RFC 9309 tillèt det, men
+# eldre og slurvete parsarar les ei tom linje som slutten på gruppa, og då
+# ville berre dei siste agentane vore blokkerte. Bruk kommentarlinjer, slik
+# som her.
+#
+# OpenAI
 User-agent: GPTBot
-Disallow: /
 User-agent: ChatGPT-User
-Disallow: /
+User-agent: ChatGPT Agent
+User-agent: OAI-SearchBot
+User-agent: OAI-AdsBot
+User-agent: Operator
+# Anthropic
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+# Google
 User-agent: Google-Extended
-Disallow: /
-User-agent: CCBot
-Disallow: /
+User-agent: GoogleOther
+User-agent: Google-CloudVertexBot
+User-agent: Google-NotebookLM
+User-agent: Gemini-Deep-Research
+# Meta
+User-agent: Meta-ExternalAgent
+User-agent: meta-externalagent
+User-agent: Meta-ExternalFetcher
+User-agent: meta-externalfetcher
+User-agent: meta-webindexer
 User-agent: FacebookBot
+# Apple
+User-agent: Applebot-Extended
+# Amazon
+User-agent: Amazonbot
+User-agent: bedrockbot
+User-agent: amazon-kendra
+User-agent: Amzn-SearchBot
+# ByteDance
+User-agent: Bytespider
+User-agent: TikTokSpider
+User-agent: DoubaoBot
+# Perplexity
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+# Mistral
+User-agent: MistralAI-Training
+User-agent: MistralAI-Index
+User-agent: MistralAI-User
+# Cohere
+User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+# xAI
+User-agent: xAI-Grok
+User-agent: GrokBot
+User-agent: Grok Bot
+# Kinesiske modellhus
+User-agent: DeepSeekBot
+User-agent: QwenBot
+User-agent: TongyiBot
+User-agent: KimiBot
+User-agent: Kimi-SearchBot
+User-agent: Kimi-User
+User-agent: MoonshotBot
+User-agent: ERNIEBot
+User-agent: YiyanBot
+User-agent: PanguBot
+User-agent: Hunyuan
+User-agent: ChatGLM-Spider
+# Datasett og forsking
+User-agent: AI2Bot
+User-agent: Ai2Bot-Dolma
+User-agent: CCBot
+User-agent: img2dataset
+User-agent: LAIONDownloader
+User-agent: ImagesiftBot
+# Svarmotorar
+User-agent: YouBot
+User-agent: PhindBot
+User-agent: ExaBot
+User-agent: DuckAssistBot
+User-agent: kagi-fetcher
+User-agent: LinerBot
+User-agent: iAskBot
+# Datainnsamlarar som sel vidare
+User-agent: Diffbot
+User-agent: omgili
+User-agent: omgilibot
+User-agent: Webzio-Extended
+User-agent: webzio-extended
+User-agent: Timpibot
+User-agent: VelenPublicWebCrawler
+User-agent: Panscient
+User-agent: panscient.com
+# Skrapeinfrastruktur
+User-agent: Crawl4AI
+User-agent: Crawlspace
+User-agent: ApifyBot
+User-agent: ApifyWebsiteContentCrawler
+User-agent: FirecrawlAgent
+User-agent: Scrapy
+# Yandex, KI-delen
+User-agent: YandexAdditional
+User-agent: YandexAdditionalBot
+# SEO-crawlarar som matar KI
+User-agent: SemrushBot-OCOB
+User-agent: SemrushBot-SWA
 Disallow: /
+
+# ==========================================================
+# Medvitne unntak
+# ==========================================================
+# Desse står i kjeldelista, men er ikkje blokkerte her, fordi blokkering av
+# dei ville kosta meir enn ho gav:
+#
+#   Googlebot              Søkjemotoren sjølv. Aldri blokker han.
+#                          Google-Extended over er opt-out for KI-trening og
+#                          er noko heilt anna.
+#   Applebot               Apple si søkjeindeksering for Siri og Spotlight.
+#                          Berre Applebot-Extended gjeld KI-trening.
+#   PetalBot               Huawei sin søkjemotor, ikkje ein KI-skrapar.
+#   facebookexternalhit    Hentar førehandsvisinga når nokon deler ei lenkje.
+#                          Blokkering fjernar kortet på Facebook, Messenger
+#                          og WhatsApp.
+#   Spider, Code, Dot      For generiske. Dei ville truffe tilfeldige agentar.
+#   Cursor, Devin, Codex   Kodeagentar som hentar ei side på vegner av ein
+#   Claude-Code, Trae      brukar som les. Det er noko anna enn trening.
 
 Sitemap: https://hawk-on.github.io/sitemap-index.xml
