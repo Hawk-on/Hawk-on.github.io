@@ -28,12 +28,13 @@
 **Artiklar** (stryk om det ikkje gjeld)
 
 - [ ] Alle nye kjelder er kontrollerte med nettsøk og peikar på spesifikke ressursar, ikkje landingssider
+- [ ] Kjeldegranskaren er køyrd, og kvart funn er retta eller grunngjeve under «Merknader»
 - [ ] Hovudargumentet kviler på A-kjelder; B, C og D er grunngjevne i teksten der dei blir brukte
 - [ ] Interesser er skrivne fram i brødteksten, og eigne bindingar er opplyste der dei er relevante
 - [ ] Motargumenta har eigen seksjon
 - [ ] `publisertDato` er datoen artikkelen faktisk går ut
 - [ ] Ved endring i publisert artikkel: `oppdatertDato` og `### Endringslogg` følgjer kvarandre
-- [ ] Tospråkleg: `sprak` og `omsetjing` står i begge filene, og kjeldenummereringa er lik
+- [ ] Tospråkleg: `sprak` og `omsetjing` står i begge filene, og `npm run kjelder -- <slug>` er køyrd etter siste endring i kjeldelista
 - [ ] Serietabellen i CLAUDE.md er oppdatert om artikkelen er del av serien
 
 **Kode og arkitektur** (stryk om det ikkje gjeld)
