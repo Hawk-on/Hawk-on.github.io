@@ -136,7 +136,7 @@ Kva seier så datasenterstrategien om dette? Han seier: «Dei mest kritiske digi
 
 Ordet «CLOUD Act» står ikkje i strategien. Eg har søkt i både den nynorske originalen og den engelske utgåva. Orda «jurisdiksjon» og «utanlandsk» står heller ikkje der. USA og amerikanske selskap blir nemnde fire gonger, alle om sjøkablar og om eit samarbeid med Nvidia. Strategien handlar om kvar dataa ligg og kven som eig bygget, men ikkje om kva lov som gjeld for den som driftar tenesta.
 
-Difor er «norskeigde datasenter» naudsynt, men ikkje nok. Det avgjerande er kven som driftar tenesta. Punkt 7 i forslaget til Raudt er det einaste punktet som treffer dette laget. Det krev leverandørar som ikkje kan påleggjast utleveringsplikt av ein framand stat. Ein stans i nye hallar gjer det ikkje.
+Difor er «norskeigde datasenter» ikkje svaret på utleveringsplikta. Eigarskapen til hallen kan ha verdi av andre grunnar, og det er difor tryggingslova kontrollerer kjøp av han. Men for kven som kan krevje dataa, er det avgjerande kven som driftar tenesta. Punkt 7 i forslaget til Raudt er det einaste punktet som treffer dette laget. Det krev leverandørar som ikkje kan påleggjast utleveringsplikt av ein framand stat. Ein stans i nye hallar gjer det ikkje.
 
 ## Kva suverenitet kostar når ho heiter tryggleik
 

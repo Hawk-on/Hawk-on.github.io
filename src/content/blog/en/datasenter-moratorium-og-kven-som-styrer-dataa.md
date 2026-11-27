@@ -136,7 +136,7 @@ What does the data centre strategy say about this? It says the most critical ser
 
 The term "CLOUD Act" does not appear in the strategy. I searched both the Nynorsk original and the English edition. Neither "jurisdiction" nor "foreign" appears either. The US and US companies are mentioned four times, all concerning subsea cables and a partnership with Nvidia. The strategy is about where the data are and who owns the building, not about which law applies to whoever runs the service.
 
-That is why "Norwegian-owned data centres" is necessary but not sufficient. What decides is who runs the service. Point 7 of the Red Party's proposal is the only one that reaches this layer. It requires suppliers that cannot be ordered to disclose data by a foreign state. A halt on new halls does not.
+That is why "Norwegian-owned data centres" is not the answer to the disclosure duty. Owning the hall can matter for other reasons, which is why the Security Act controls who buys one. But for who can demand the data, what decides is who runs the service. Point 7 of the Red Party's proposal is the only one that reaches this layer. It requires suppliers that cannot be ordered to disclose data by a foreign state. A halt on new halls does not.
 
 ## What sovereignty costs when it is called security
 
