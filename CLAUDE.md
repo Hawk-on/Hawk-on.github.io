@@ -54,10 +54,13 @@ src/
 
 scripts/
 ├── sjekk-artiklar.mjs         Artikkelkontroll (npm run sjekk)
+├── kjelder.mjs                Omnummerering av kjelder (npm run kjelder)
+├── kjelder-lib.mjs            Lesing av kjeldelista, delt av dei to over
 ├── kjende-avvik.json          Grunnlinja for skrallen
 └── csp-hashar.mjs             Byter 'unsafe-inline' mot hashar etter bygget
 
 .claude/skills/kjeldeartikkel/ Metoden for research og skriving
+.claude/agents/kjeldegranskar.md Kontrollerer påstandar mot kjeldene før PR
 ```
 
 ## Fallgruver etter samanslåinga
@@ -302,10 +305,22 @@ same personvernproblemet.
 ## Viktig mandat
 **Hugs å oppdatere denne fila (CLAUDE.md), README.md og gemini.md kvar gong det vert gjort endringar i arkitektur, teknisk stack eller viktige funksjonar.**
 
-## Skills
+## Skills og agentar
 `.claude/skills/kjeldeartikkel/` har metoden for å researche og skrive ein
 kjeldebasert artikkel: verifisering, negative funn, kronologi før årsak,
 habilitetskoding, klarspråksrunde og den tospråklege strukturen.
+
+`.claude/agents/kjeldegranskar.md` les kvar inline-referanse saman med kjelda og
+melder frå der teksten seier meir, mindre eller noko anna. Han endrar ingen filer.
+Han finst fordi `npm run sjekk` berre ser formatet: artikkel 6 hadde elleve slike
+feil etter at sjekken var grøn, og Copilot fann dei i PR-en i staden for at vi fann
+dei før.
+
+**`npm run kjelder -- <slug>`** nummererer kjeldene om etter fyrste sitering og
+brukar same kart på den engelske makkeren. `--tørr` viser endringane utan å skrive.
+Skriptet nektar når para har ulike nummer, og når artikkelen siterer med andre
+former enn `[\[N\]](#ref-N)`; nokre eldre artiklar brukar `[¹](#ref-1)` eller
+`[[3]](#ref-3)`, og der ville det synlege talet stått att uendra.
 
 Skillen gjentek med vilje ikkje formatreglane i denne fila. Held du dei to i synk
 for hand, driv dei frå kvarandre, og den seinare vinn i stillheit. Det har skjedd
@@ -326,8 +341,11 @@ søkjeresultat), ingress utanfor 120-400 teikn, færre enn 3 eller fleire enn 8 
 Kontrollerte reglar, datoar: `oppdatertDato` før `publisertDato`, datoar fram i tid,
 endringslogg utan `oppdatertDato`, og `oppdatertDato` utan endringslogg.
 
-Kontrollerte reglar, omsetjingar: `sprak` som ikkje svarar til mappa fila ligg i, og
-`omsetjing` som peikar på ei fil som ikkje finst. Den siste må køyre etter at alle
+Kontrollerte reglar, omsetjingar: `sprak` som ikkje svarar til mappa fila ligg i,
+`omsetjing` som peikar på ei fil som ikkje finst, og kjeldelister som har glidd frå
+kvarandre: ulike kjeldenummer, eller same nummer med ulik kode eller adresse. Adressa
+blir samanlikna utan språkdelen, så `/NO/` og `/EN/` av same EU-forordning er same
+kjelde. Avvika blir rekna på den engelske fila, så kvart blir talt éin gong. Den siste må køyre etter at alle
 filene er lesne, sidan han spør om ei anna fil enn den som blir kontrollert.
 Tankestrekregelen gjeld berre nynorsk; ein tankestrek er vanleg typografi på engelsk.
 

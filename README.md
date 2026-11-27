@@ -22,6 +22,7 @@ Dokumentasjonen (README.md, CLAUDE.md, gemini.md) skal alltid oppdaterast ved te
 npm install
 npm run build    # sjekk artiklane, astro build, CSP-hashar, pagefind
 npm run sjekk    # berre artikkelkontrollen
+npm run kjelder -- <slug>   # nummerer kjeldene om, i begge språka
 ```
 
 Statiske filer ligg i `public/`. Lokale bygg skal vere identiske med CI.

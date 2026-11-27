@@ -145,6 +145,35 @@ Den engelske er ei **tilpassing**, ikkje ei omsetjing. Forklar EØS, GDPR,
 Datatilsynet og norske etatar for lesarar som ikkje kjenner dei. Same struktur,
 same kjeldenummerering, så `ref-N` peikar på same kjelde i begge.
 
+**Nummerering er eit skript, ikkje handarbeid.** Legg ei ny kjelde inn med eit
+ledig nummer (t.d. 99) i *begge* filene, og køyr:
+
+```bash
+npm run kjelder -- <slug> --tørr   # sjå kva som flyttar seg
+npm run kjelder -- <slug>          # skriv begge filene
+```
+
+Skriptet nummererer etter fyrste sitering i nynorsken og brukar same kart på den
+engelske. Det nektar om para har ulike nummer, eller om artikkelen siterer med
+andre former enn `[\[N\]](#ref-N)`. `npm run sjekk` kontrollerer etterpå at kvart
+nummer har same kode og same adresse i begge språka.
+
+## 11. Gransk kjeldene før PR, ikkje etter
+
+`npm run sjekk` kontrollerer formatet. Han veit ikkje om kjelda seier det teksten
+seier, og det er der feila har vore. Ein gjennomgang av artikkel 6 fann elleve
+slike, alle etter at sjekken var grøn: eit skattefritak skrive som at skatten
+vart fjerna, innstillingsdato brukt som voteringsdato, prosent av prosjekt der
+kjelda målte MW, feil ministertittel, eit parti som «ikkje vil regulere» medan
+det føreslo fire verkemiddel.
+
+Agenten `kjeldegranskar` (`.claude/agents/kjeldegranskar.md`) går gjennom kvar
+referanse mot kjelda og leverer ein rapport. Han endrar ingenting. Gje han stien
+til artikkelen og, om du har ho, mappa med nedlasta kjelder. Rett funna, eller
+skriv kvifor du lèt dei stå, før du ber om PR.
+
+Køyr han på nytt etter større rettingar. Ei retting kan sjølv vere for sterk.
+
 ## Arbeidsgang
 
 1. Les 2–3 eksisterande artiklar og `CLAUDE.md`.
@@ -153,6 +182,7 @@ same kjeldenummerering, så `ref-N` peikar på same kjelde i begge.
 4. Skriv nynorsk ferdig, med merknader i teksten der du er usikker.
 5. Klarspråksrunde.
 6. `npm run sjekk` til han er grøn.
-7. Engelsk tilpassing.
+7. Engelsk tilpassing. `npm run kjelder -- <slug>` etter kvar endring i kjeldelista.
 8. `npm run build`, og kontroller at språkbyttet går begge vegar.
-9. Ikkje commit eller push utan at det er bede om.
+9. Kjeldegransking med `kjeldegranskar`. Rett, eller grunngje det som står.
+10. Ikkje commit eller push utan at det er bede om.

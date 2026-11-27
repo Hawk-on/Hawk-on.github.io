@@ -21,5 +21,6 @@ Fullstendige husreglar, arkitekturval og kjend gjeld står i `CLAUDE.md` (les de
 
 ## Verifisering
 - Sjekk mot `CLAUDE.md` sine språkvask-reglar og `.claude/skills/kjeldeartikkel/SKILL.md` ved artikkelskriving.
+- Kjeldenummerering: `npm run kjelder -- <slug>` (begge språka). Før PR: gå gjennom kvar referanse mot kjelda; framgangsmåten står i `.claude/agents/kjeldegranskar.md`.
 - Unngå bokmål: `videregående` (-> `vidaregåande`), `mulighet` (-> `moglegheit`), `første` (-> `fyrste`), `blei` (-> `vart`), `noen` (-> `nokon`).
 - Kvart inline-sitat `[\[N\]](#ref-N)` skal ha ein tilsvarande `<span id="ref-N" data-kvalitet="X" data-habilitet="Y">XY</span>`, og motsett. Ingen foreldrelause.
