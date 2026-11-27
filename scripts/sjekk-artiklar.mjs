@@ -14,6 +14,7 @@
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join, basename, relative, sep } from 'node:path';
+import { lesFrontmatter, kjeldekart } from './kjelder-lib.mjs';
 
 const ARTIKLAR = 'src/content/blog';
 const GRUNNLINJE = 'scripts/kjende-avvik.json';
@@ -42,6 +43,8 @@ const REGLAR = {
   'sprak-mot-mappe': 'sprak i frontmatter svarar ikkje til mappa fila ligg i',
   'omsetjing-utan-makker': 'omsetjing peikar på ei fil som ikkje finst',
   'omsetjing-ikkje-gjensidig': 'makkeren peikar ein annan stad attende',
+  'par-kjelder-ulikt-tal': 'omsetjinga har ikkje same kjeldenummer som nynorskversjonen',
+  'par-kjelde-ulik': 'same kjeldenummer har ulik kode eller adresse i dei to språkversjonane',
 };
 
 /**
@@ -76,7 +79,7 @@ function makkerTil(fm) {
  * på B medan B peikar på C, slepp begge gjennom ein rein eksistenssjekk, og
  * språkknappen fører lesaren til feil artikkel utan veg attende.
  */
-function sjekkPar(fil, fm, frontmatterar) {
+function sjekkPar(fil, fm, frontmatterar, innhald) {
   const funn = [];
   const iEnMappe = fil.startsWith('en/');
   const sprak = fm.sprak ?? 'nn';
@@ -103,27 +106,63 @@ function sjekkPar(fil, fm, frontmatterar) {
       kode: 'omsetjing-ikkje-gjensidig',
       detalj: `${fil} -> ${makker} -> ${attende ?? 'ingen stad'}`,
     });
+    return funn;
   }
+
+  if (iEnMappe) funn.push(...sjekkKjeldepar(innhald.get(makker), innhald.get(fil)));
   return funn;
 }
 
 /**
- * Frontmatter er enkel nok til at dette held; ingen nøstede strukturar i bruk.
+ * Same nummer skal peike på same kjelde i begge språka. Ein lesar som følgjer
+ * ref-12 på engelsk og ref-12 på nynorsk, skal kome til same dokument.
  *
- * YAML tillèt både doble og enkle hermeteikn rundt ein streng. Parsaren tok
- * berre dei doble, og då vart `omsetjing: 'a'` lese som strengen med hermeteikna
- * med. Makkersjekken leita etter `en/'a'.md`, og `sprak: 'en'` svara ikkje til
- * mappa. Eit gyldig par stoppa altså bygget på grunn av hermeteikna, ikkje på
- * grunn av innhaldet.
+ * Adressa er identiteten, ikkje teksten: kjeldenotatet er omsett og skal vere
+ * ulikt. Koden skal vere lik, sidan kvalitet og habilitet høyrer til kjelda og
+ * ikkje til språket.
+ *
+ * Kontrollen køyrer berre på den engelske fila, så eit avvik blir talt éin gong.
+ * Kjeldene utan adresse (bøker, utskrifter) blir samanlikna på kode åleine.
  */
-function lesFrontmatter(tekst) {
-  const blokk = tekst.split(/^---\s*$/m)[1] ?? '';
-  const felt = {};
-  for (const linje of blokk.split('\n')) {
-    const m = linje.match(/^([a-zA-ZæøåÆØÅ]+):\s*(.*)$/);
-    if (m) felt[m[1]] = m[2].trim().replace(/^"(.*)"$|^'(.*)'$/, '$1$2');
+/**
+ * Same dokument på eit anna språk er same kjelde. Den engelske tilpassinga kan
+ * peike på den engelske utgåva av ei EU-forordning eller ei regjeringsside, og
+ * då skil adressene seg berre i språkdelen (`/NO/` mot `/EN/`, `/no/` mot `/en/`).
+ */
+function utanSprak(url) {
+  if (!url) return url;
+  return url
+    .toLowerCase()
+    .replace(/^https?:\/\/(www\.)?/, '')
+    .replace(/\/(no|nb|nn|en)(?=\/)/g, '/*')
+    .replace(/([?&])(lang|language|locale)=[a-z-]+/g, '$1$2=*')
+    .replace(/\/+$/, '');
+}
+
+function sjekkKjeldepar(nnTekst, enTekst) {
+  const funn = [];
+  const nn = kjeldekart(nnTekst);
+  const en = kjeldekart(enTekst);
+  const berreNn = [...nn.keys()].filter(n => !en.has(n));
+  const berreEn = [...en.keys()].filter(n => !nn.has(n));
+  if (berreNn.length || berreEn.length) {
+    const del = [];
+    if (berreNn.length) del.push(`berre nynorsk: ${berreNn.join(', ')}`);
+    if (berreEn.length) del.push(`berre engelsk: ${berreEn.join(', ')}`);
+    funn.push({ kode: 'par-kjelder-ulikt-tal', detalj: del.join('; ') });
   }
-  return felt;
+  for (const [nr, a] of nn) {
+    const b = en.get(nr);
+    if (!b) continue;
+    const kodeA = `${a.kvalitet}${a.habilitet}`;
+    const kodeB = `${b.kvalitet}${b.habilitet}`;
+    if (kodeA !== kodeB) {
+      funn.push({ kode: 'par-kjelde-ulik', detalj: `ref-${nr}: kode ${kodeA} mot ${kodeB}` });
+    } else if (utanSprak(a.url) !== utanSprak(b.url)) {
+      funn.push({ kode: 'par-kjelde-ulik', detalj: `ref-${nr}: ${a.url ?? 'ingen adresse'} mot ${b.url ?? 'ingen adresse'}` });
+    }
+  }
+  return funn;
 }
 
 function sjekk(fil, tekst, fm) {
@@ -212,7 +251,7 @@ const detaljar = [];
 for (const f of filer) {
   const tekst = innhald.get(f);
   const fm = frontmatterar.get(f);
-  const funn = [...sjekk(f, tekst, fm), ...sjekkPar(f, fm, frontmatterar)];
+  const funn = [...sjekk(f, tekst, fm), ...sjekkPar(f, fm, frontmatterar, innhald)];
   for (const { kode, detalj } of funn) {
     const nykel = `${f}::${kode}`;
     faktisk[nykel] = (faktisk[nykel] ?? 0) + 1;
