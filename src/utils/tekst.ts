@@ -11,7 +11,12 @@ const ORD_PER_MINUTT = 200;
  * frontmatter; då driv dei to frå kvarandre, slik dei gjorde før.
  */
 export function reknaUtLesetid(tekst: string): number {
-  const brodtekst = tekst.split(/^##\s+(?:Kjelder|Sources)\s*$/m)[0];
+  // Overskrifta «Kjelder»/«Sources» er vanleg, men tre eldre artiklar skil
+  // lista frå teksten berre med ein skiljestrek. Difor blir teksten kutta ved
+  // overskrifta eller ved den fyrste kjeldeoppføringa, alt etter kva som kjem fyrst.
+  const brodtekst = tekst
+    .split(/^##\s+(?:Kjelder|Sources)\s*$/m)[0]
+    .split(/^<span id="ref-\d+"/m)[0];
 
   const reinTekst = brodtekst
     .replace(/```[\s\S]*?```/g, ' ')          // kodeblokker
