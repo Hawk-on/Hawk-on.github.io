@@ -81,7 +81,7 @@ Alle artiklar skal bruka den to-dimensjonale kjelde-matrisa.
 
 ## Artikkelformat
 Blogginnlegga er feature-artiklar, ikkje notisar.
-- **Lengd:** 2500–4000 ord for eit fullt innlegg. Kortare notisar kan finnast, men skal vere merkte som det i ingressen.
+- **Lengd:** typisk 2500–4000 ord for eit fullt innlegg. Grensa er rettleiande, ikkje eit tak: treng artikkelen meir plass for kronologi, kjelder eller motargument, får han bli lengre. Ikkje stryk innhald som ber argumentet berre for å kome under 4000. Kortare notisar kan finnast, men skal vere merkte som det i ingressen.
 - **Seksjonar:** 7–9 `##`-seksjonar med reelle mellomtitlar, ikkje «Bakgrunn» og «Konklusjon». Kvar seksjon skal bere eit sjølvstendig ledd i argumentet. Ein seksjon som berre gjentek tesen i nye ord, skal strykast.
 - **Kronologi:** minst éin sekvens med datoar som viser korleis noko faktisk gjekk føre seg. Det er dette som skil ein feature frå ein kommentar.
 - **Motargument:** skal ha eigen seksjon og byggjast i beste form før det vert svart på. Ikkje eit avsnitt til slutt.
@@ -101,6 +101,7 @@ Sjå «Tospråklege artiklar» for korleis paret heng saman.
 | 3 | **Forbrukaren som vart vald bort.** Minneprodusentane prioriterer datasenter, og forbrukarmarknaden vert ikkje utkonkurrert på pris, men vald bort. | Publisert 14. sept. 2026 | Nei |
 | 4 | **Kva ein offentleg leverandør faktisk kan løyse.** Tilgang, kvalitet og eigarskap til avkastninga er tre ulike klasseskilje, og ein offentleg leverandør løyser berre eitt. | Publisert 28. okt. 2026 | Ja |
 | 5 | **Krigen som revisor.** Operation Epic Fury gav KI-sektoren eit etterspurnadssjokk som såg ut som validering: 13 000 mål på 38 dagar, toppbruk av token opp 4425 prosent, rekordkvartal for Palantir. Men det var eitt oppdrag på 38 dagar til 25 mrd. dollar, ikkje eit inntektsgrunnlag. Samstundes steig kostnadssida. Energigeopolitikken er den delen ingen skriv om: Iran og Venezuela stod for kring 17 prosent av Kinas oljeimport, og Chatham House og det spanske forsvarsinstituttet les åtaka som press mot kinesisk industri, medan East Asia Forum og kinesiske analytikarar meiner det gagna Kina. Usemja er saka. Skriv ikkje «proxykrig»; det rette omgrepet er økonomisk interdiksjon. | Vinkel klar, uskriven | — |
+| 6 | **Kva ein stans i nye datasenter kan og ikkje kan gjera med kontrollen over data.** Statnett stansa nye reservasjonar til datasenter 9. nov. 2026 (til seinast 1. aug. 2027), og regjeringa varsla konsesjonsordning og utgreiing av statleg eigarskap. Stansforslaga (Dok. 8:6 S, 8:9 S, 8:34 LS) og dei nye grepa handlar om kraft og bygg; CLOUD Act fylgjer den som har kontroll over dataa. Suverenitet går rett gjennom når ho heiter tryggleik (energilova § 3-8), men taper når ho blir rekna på. Danmark sorterte etter funksjon, ikkje nasjonalitet. Partibidrag og habilitet er gjennomgåtte. Tospråkleg. | Publisert 27. nov. 2026 | Ja |
 
 ## Kjeldebruk og referansar
 - **Verifisering:** Ved kvar endring eller nytt innlegg skal alle nye kjelder verifiserast med nettsøk. Peik alltid til spesifikke ressursar, aldri berre landingssider.
@@ -410,3 +411,4 @@ rettast, må det gjerast saman med ein redirect-stubb og omdøyping av Discussio
 ## Git og Deploy
 - Push til `master` trigger auto-deploy via GitHub Actions.
 - Statiske filer ligg i `public/`. Ikkje bruk kopisteg i workflowen — lokale bygg skal vere identiske med CI.
+- **PR-mal:** `.github/pull_request_template.md` har sjekklista for artiklar og kode. Ho gjentek ikkje reglane i denne fila, berre peikar på dei; endrar du ein regel her, sjå om sjekkpunktet i malen må endrast òg. Dependabot brukar ikkje malen.
