@@ -131,12 +131,16 @@ function sjekkPar(fil, fm, frontmatterar, innhald) {
  */
 function utanSprak(url) {
   if (!url) return url;
-  return url
-    .toLowerCase()
-    .replace(/^https?:\/\/(www\.)?/, '')
-    .replace(/\/(no|nb|nn|en)(?=\/)/g, '/*')
-    .replace(/([?&])(lang|language|locale)=[a-z-]+/g, '$1$2=*')
-    .replace(/\/+$/, '');
+  // Berre vertsnamnet er utan omsyn til store og små bokstavar. Sti og
+  // query kan skilje dei, så `/ABC.pdf` og `/abc.pdf` kan vere ulike dokument.
+  const [, vert = '', rest = ''] = url.match(/^https?:\/\/([^/?#]*)(.*)$/) ?? [];
+  return (
+    vert.toLowerCase().replace(/^www\./, '') +
+    rest
+      .replace(/\/(no|nb|nn|en)(?=\/)/gi, '/*')
+      .replace(/([?&])(lang|language|locale)=[a-z-]+/gi, '$1$2=*')
+      .replace(/\/+$/, '')
+  );
 }
 
 function sjekkKjeldepar(nnTekst, enTekst) {

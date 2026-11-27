@@ -74,11 +74,15 @@ function bruk(tekst, kart) {
     const ny = nytt(o.nr);
     const t = inline(o.tekst)
       .replace(/^<span id="ref-\d+"/, `<span id="ref-${ny}"`)
-      .replace(/^(<span [^>]*>.*?<\/span>)\\\[\d+\\\]/, `$1\\[${ny}\\]`);
+      // Det synlege nummeret står som `\[N\]`, `[N]` eller ` [N]` i ulike
+      // artiklar. Alle tre blir skrivne om, og forma blir ståande som ho var.
+      .replace(/^(<span [^>]*>.*?<\/span>)(\s*)(\\?\[)\d+(\\?\])/, `$1$2$3${ny}$4`);
     return { nr: Number(ny), t };
   });
   omsett.sort((a, b) => a.nr - b.nr);
-  return inline(brodtekst) + omsett.map(o => o.t).join(skilje) + hale;
+  // Halen er det som står etter kjeldelista, til dømes ein endringslogg. Eit
+  // sitat der må følgje med, elles peikar det på kjelda som hadde nummeret før.
+  return inline(brodtekst) + omsett.map(o => o.t).join(skilje) + inline(hale);
 }
 
 /**

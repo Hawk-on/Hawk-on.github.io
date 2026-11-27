@@ -63,7 +63,7 @@ export function delOpp(tekst) {
       nr: m?.[1],
       kvalitet: attr.match(/data-kvalitet="([^"]*)"/)?.[1],
       habilitet: attr.match(/data-habilitet="([^"]*)"/)?.[1],
-      url: tekstBit.match(/Available:\s*(https?:\/\/\S+?)\.?(?:\s|\[|$)/)?.[1],
+      url: adresse(tekstBit),
       tekst: tekstBit,
     };
   });
@@ -76,6 +76,20 @@ export function delOpp(tekst) {
     skilje,
     hale: sisteRa + tekst.slice(slutt),
   };
+}
+
+/**
+ * Adressa til ei oppføring. IEEE-forma `Available: <url>` er vanlegast, men
+ * nokre artiklar lenkjer tittelen i Markdown (`["Tittel"](https://...)`). Utan
+ * den andre forma vart slike kjelder lesne som kjelder utan adresse, og to ulike
+ * dokument med same kode slapp gjennom parkontrollen.
+ */
+function adresse(tekst) {
+  return (
+    tekst.match(/Available:\s*(https?:\/\/\S+?)\.?(?:\s|\[|$)/)?.[1] ??
+    tekst.match(/\]\((https?:\/\/[^)\s]+)\)/)?.[1] ??
+    tekst.match(/(https?:\/\/[^\s)>\]]+?)\.?(?:[\s)>\]]|$)/)?.[1]
+  );
 }
 
 /** Nummer i den rekkjefølgja dei fyrst blir siterte i brødteksten. */
