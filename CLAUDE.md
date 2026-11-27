@@ -411,3 +411,4 @@ rettast, må det gjerast saman med ein redirect-stubb og omdøyping av Discussio
 ## Git og Deploy
 - Push til `master` trigger auto-deploy via GitHub Actions.
 - Statiske filer ligg i `public/`. Ikkje bruk kopisteg i workflowen — lokale bygg skal vere identiske med CI.
+- **PR-mal:** `.github/pull_request_template.md` har sjekklista for artiklar og kode. Ho gjentek ikkje reglane i denne fila, berre peikar på dei; endrar du ein regel her, sjå om sjekkpunktet i malen må endrast òg. Dependabot brukar ikkje malen.
